@@ -100,6 +100,7 @@ class _SavingsListScreenState extends ConsumerState<SavingsListScreen> {
         iconTheme: const IconThemeData(color: Colors.white),
         actions: [
           IconButton(
+            tooltip: 'Notifications',
             icon: const Icon(Icons.notifications_none, color: Colors.white),
             onPressed: () {},
           ),

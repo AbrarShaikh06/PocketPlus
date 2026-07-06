@@ -275,14 +275,36 @@ class _TransactionListTileState extends State<TransactionListTile>
       ),
     );
 
+    // Collapse the visually fragmented rows (title, category, source, amount,
+    // date, time) into one coherent screen-reader announcement instead of six
+    // disjointed reads.
+    final amountStr = CurrencyFormatter.format(widget.transaction.amount.abs());
+    final typeLabel = isIncome ? 'Income' : 'Expense';
+    final selectionPrefix = widget.isSelectionMode
+        ? (widget.isSelected ? 'Selected. ' : 'Not selected. ')
+        : '';
+    final semanticLabel = '$selectionPrefix$typeLabel, $amountStr, $title, '
+        'category ${widget.category.name}, $dateStr at $timeStr';
+
+    final semanticTile = Semantics(
+      container: true,
+      button: widget.onTap != null,
+      selected: widget.isSelectionMode ? widget.isSelected : null,
+      label: semanticLabel,
+      onTap: widget.onTap,
+      onLongPress: widget.onLongPress,
+      excludeSemantics: true,
+      child: tile,
+    );
+
     final disable = MediaQuery.disableAnimationsOf(context);
-    if (disable) return tile;
+    if (disable) return semanticTile;
 
     return SlideTransition(
       position: _appearSlide,
       child: FadeTransition(
         opacity: _appearOpacity,
-        child: tile,
+        child: semanticTile,
       ),
     );
   }

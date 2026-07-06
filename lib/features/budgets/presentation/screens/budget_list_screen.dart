@@ -30,6 +30,7 @@ class _BudgetListScreenState extends ConsumerState<BudgetListScreen> {
         title: const Text('Budgets'),
         actions: [
           IconButton(
+            tooltip: 'Create budget',
             icon: const Icon(Icons.add),
             onPressed: () => context.push('/budgets/new'),
           ),

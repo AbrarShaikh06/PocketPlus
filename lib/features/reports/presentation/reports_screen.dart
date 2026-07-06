@@ -166,11 +166,13 @@ class _ReportsScreenState extends ConsumerState<ReportsScreen> {
         backgroundColor: AppColors.primary,
         elevation: 0,
         leading: IconButton(
+          tooltip: 'Go back',
           icon: const Icon(Icons.arrow_back, color: Colors.white),
           onPressed: () => context.pop(),
         ),
         actions: [
           IconButton(
+            tooltip: 'Notifications',
             icon: const Icon(Icons.notifications_none, color: Colors.white),
             onPressed: () {},
           ),

@@ -37,6 +37,7 @@ class _SmsPermissionScreenState extends ConsumerState<SmsPermissionScreen> {
         backgroundColor: AppColors.surface,
         elevation: 0,
         leading: IconButton(
+          tooltip: 'Go back',
           icon: const Icon(Icons.arrow_back, color: AppColors.onSurface),
           onPressed: () => context.pop(),
         ),

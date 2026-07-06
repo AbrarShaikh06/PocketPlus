@@ -55,6 +55,7 @@ class _AddSavingsEntryBottomSheetState
                 style: AppTextStyles.titleMedium(context),
               ),
               IconButton(
+                tooltip: 'Close',
                 icon: const Icon(Icons.close),
                 onPressed: () => context.pop(),
               ),

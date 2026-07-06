@@ -32,6 +32,7 @@ class _CreateInvoiceScreenState extends ConsumerState<CreateInvoiceScreen> {
         backgroundColor: AppColors.surface,
         elevation: 0,
         leading: IconButton(
+          tooltip: 'Close',
           icon: const Icon(Icons.close),
           onPressed: () => context.pop(),
         ),
@@ -133,6 +134,7 @@ class _CreateInvoiceScreenState extends ConsumerState<CreateInvoiceScreen> {
           children: [
             Text('Line Items', style: AppTextStyles.titleMedium(context)),
             IconButton(
+              tooltip: 'Add line item',
               icon: const Icon(Icons.add_circle_outline),
               color: AppColors.primary,
               onPressed: notifier.addLineItem,

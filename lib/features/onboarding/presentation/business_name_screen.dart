@@ -58,6 +58,7 @@ class _BusinessNameScreenState extends ConsumerState<BusinessNameScreen> {
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: IconButton(
+          tooltip: 'Go back',
           icon: const Icon(Icons.arrow_back, color: AppColors.primary),
           onPressed: () => context.pop(),
         ),

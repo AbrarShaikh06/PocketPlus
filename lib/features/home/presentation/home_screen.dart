@@ -310,6 +310,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
         elevation: 0,
         leading: Builder(
           builder: (context) => IconButton(
+            tooltip: 'Open menu',
             icon: const Icon(Icons.menu, color: Colors.white),
             onPressed: () => Scaffold.of(context).openDrawer(),
           ),
@@ -1038,81 +1039,94 @@ class _NetProfitCardState extends State<NetProfitCard>
     final cardBgColor = isPositive ? AppColors.primary : AppColors.error;
     final disable = MediaQuery.disableAnimationsOf(context);
 
-    return Card(
-      elevation: 0,
-      color: cardBgColor,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(AppSizes.radius16),
-      ),
-      child: Stack(
-        children: [
-          // Decorative circle
-          Positioned(
-            right: -32,
-            top: -32,
-            child: Container(
-              width: 128,
-              height: 128,
-              decoration: BoxDecoration(
-                color: Colors.white.withValues(alpha: 0.05),
-                shape: BoxShape.circle,
+    // Announce a single stable figure to screen readers — the on-screen
+    // number animates, and excludeSemantics stops the counter from being
+    // read out digit-by-digit as it ticks.
+    final profitLabel = AppLocalizations.of(context)!.currentMonthNetProfit;
+    final profitAmount = CurrencyFormatter.formatRupees(widget.netProfit.abs());
+    final semanticValue =
+        '$profitLabel: ${isPositive ? '' : 'negative '}$profitAmount';
+
+    return Semantics(
+      container: true,
+      excludeSemantics: true,
+      label: semanticValue,
+      child: Card(
+        elevation: 0,
+        color: cardBgColor,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(AppSizes.radius16),
+        ),
+        child: Stack(
+          children: [
+            // Decorative circle
+            Positioned(
+              right: -32,
+              top: -32,
+              child: Container(
+                width: 128,
+                height: 128,
+                decoration: BoxDecoration(
+                  color: Colors.white.withValues(alpha: 0.05),
+                  shape: BoxShape.circle,
+                ),
               ),
             ),
-          ),
 
-          Padding(
-            padding: const EdgeInsets.all(AppSizes.spacing24),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Text(
-                  AppLocalizations.of(context)!.currentMonthNetProfit,
-                  style: AppTextStyles.bodyMedium(context).copyWith(
-                    color: Colors.white.withValues(alpha: 0.7),
+            Padding(
+              padding: const EdgeInsets.all(AppSizes.spacing24),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text(
+                    AppLocalizations.of(context)!.currentMonthNetProfit,
+                    style: AppTextStyles.bodyMedium(context).copyWith(
+                      color: Colors.white.withValues(alpha: 0.7),
+                    ),
                   ),
-                ),
-                const SizedBox(height: AppSizes.spacing12),
-                // Animated counter row
-                disable
-                    ? _buildAmountRow(
-                        context,
-                        widget.netProfit,
-                        isPositive,
-                        cardBgColor,
-                      )
-                    : AnimatedBuilder(
-                        animation: _counterAnim,
-                        builder: (context, _) {
-                          _displayedProfit = _counterAnim.value;
-                          return _buildAmountRow(
-                            context,
-                            _counterAnim.value,
-                            isPositive,
-                            cardBgColor,
-                          );
-                        },
-                      ),
-                const SizedBox(height: AppSizes.spacing12),
-                // Animated change-percent pill
-                disable
-                    ? _buildChangePill(context)
-                    : AnimatedBuilder(
-                        animation: _pillController,
-                        builder: (context, child) {
-                          return Transform.translate(
-                            offset: Offset(_pillSlide.value, 0),
-                            child: Opacity(
-                              opacity: _pillFade.value,
-                              child: child,
-                            ),
-                          );
-                        },
-                        child: _buildChangePill(context),
-                      ),
-              ],
+                  const SizedBox(height: AppSizes.spacing12),
+                  // Animated counter row
+                  disable
+                      ? _buildAmountRow(
+                          context,
+                          widget.netProfit,
+                          isPositive,
+                          cardBgColor,
+                        )
+                      : AnimatedBuilder(
+                          animation: _counterAnim,
+                          builder: (context, _) {
+                            _displayedProfit = _counterAnim.value;
+                            return _buildAmountRow(
+                              context,
+                              _counterAnim.value,
+                              isPositive,
+                              cardBgColor,
+                            );
+                          },
+                        ),
+                  const SizedBox(height: AppSizes.spacing12),
+                  // Animated change-percent pill
+                  disable
+                      ? _buildChangePill(context)
+                      : AnimatedBuilder(
+                          animation: _pillController,
+                          builder: (context, child) {
+                            return Transform.translate(
+                              offset: Offset(_pillSlide.value, 0),
+                              child: Opacity(
+                                opacity: _pillFade.value,
+                                child: child,
+                              ),
+                            );
+                          },
+                          child: _buildChangePill(context),
+                        ),
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

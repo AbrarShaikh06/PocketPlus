@@ -109,6 +109,7 @@ class _CaptureConfirmationScreenState
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: IconButton(
+          tooltip: 'Close',
           icon: const Icon(Icons.close, color: AppColors.primary),
           onPressed: () => Navigator.of(context).pop(),
         ),

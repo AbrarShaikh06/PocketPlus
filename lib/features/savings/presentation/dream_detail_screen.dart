@@ -286,6 +286,7 @@ class _DreamDetailScreenState extends ConsumerState<DreamDetailScreen> {
             ),
             actions: [
               IconButton(
+                tooltip: 'Edit goal',
                 icon: const Icon(Icons.edit_outlined),
                 onPressed: () => _showEditGoalDialog(context, goal),
               ),
