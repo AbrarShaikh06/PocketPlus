@@ -1257,4 +1257,100 @@ class AppLocalizationsSw extends AppLocalizations {
 
   @override
   String get cancelAction => 'Ghairi';
+
+  @override
+  String get sectionAccount => 'Akaunti';
+
+  @override
+  String get sectionPreferences => 'Mapendeleo';
+
+  @override
+  String get sectionSmsCapture => 'Kunasa SMS';
+
+  @override
+  String get sectionSupport => 'Msaada';
+
+  @override
+  String get sectionDataPrivacy => 'Data na Faragha';
+
+  @override
+  String get sectionAppInfo => 'Maelezo ya Programu';
+
+  @override
+  String get region => 'Eneo';
+
+  @override
+  String get fiscalYearStart => 'Mwanzo wa Mwaka wa Fedha';
+
+  @override
+  String get monthApril => 'Aprili';
+
+  @override
+  String get monthJanuary => 'Januari';
+
+  @override
+  String get smsAutoCapture => 'Kunasa SMS Kiotomatiki';
+
+  @override
+  String get smsAutoCaptureSubtitle =>
+      'Rekodi arifa za miamala ya benki kiotomatiki';
+
+  @override
+  String get replayTutorial => 'Rudia Mafunzo ya Utangulizi';
+
+  @override
+  String get replayTutorialSubtitle =>
+      'Weka upya vidokezo na uendeshe ziara tena';
+
+  @override
+  String get onboardingTutorialReset => 'Mafunzo ya utangulizi yamewekwa upya.';
+
+  @override
+  String get sendFeedback => 'Tuma Maoni';
+
+  @override
+  String get privacyPolicy => 'Sera ya Faragha';
+
+  @override
+  String get termsOfService => 'Masharti ya Huduma';
+
+  @override
+  String get rateOnPlayStore => 'Kadiria PocketPlus kwenye Play Store';
+
+  @override
+  String get exportMyData => 'Hamisha Data Yangu';
+
+  @override
+  String get exportMyDataSubtitle => 'Pakua data yako yote kama JSON';
+
+  @override
+  String get deleteAccount => 'Futa Akaunti';
+
+  @override
+  String get deleteAccountSubtitle => 'Ufutaji laini wenye kipindi cha siku 30';
+
+  @override
+  String get appVersion => 'Toleo la Programu';
+
+  @override
+  String get loadingLabel => 'Inapakia...';
+
+  @override
+  String get deleteAccountTitle => 'Futa akaunti yako?';
+
+  @override
+  String get deleteAccountBody =>
+      'Data yako itafutwa kwa njia laini na kipindi cha siku 30. Katika kipindi hiki, unaweza kuwasiliana na msaada kurejesha akaunti yako. Baada ya siku 30, data yote itafutwa kabisa.';
+
+  @override
+  String get continueAction => 'Endelea';
+
+  @override
+  String get typeDeleteToConfirm => 'Andika DELETE kuthibitisha';
+
+  @override
+  String get typeDeleteHint => 'Andika DELETE';
+
+  @override
+  String get confirmDelete => 'Thibitisha Kufuta';
 }

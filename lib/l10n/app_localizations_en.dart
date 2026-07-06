@@ -1256,4 +1256,99 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get cancelAction => 'Cancel';
+
+  @override
+  String get sectionAccount => 'Account';
+
+  @override
+  String get sectionPreferences => 'Preferences';
+
+  @override
+  String get sectionSmsCapture => 'SMS Capture';
+
+  @override
+  String get sectionSupport => 'Support';
+
+  @override
+  String get sectionDataPrivacy => 'Data & Privacy';
+
+  @override
+  String get sectionAppInfo => 'App Info';
+
+  @override
+  String get region => 'Region';
+
+  @override
+  String get fiscalYearStart => 'Fiscal Year Start';
+
+  @override
+  String get monthApril => 'April';
+
+  @override
+  String get monthJanuary => 'January';
+
+  @override
+  String get smsAutoCapture => 'SMS Auto-Capture';
+
+  @override
+  String get smsAutoCaptureSubtitle => 'Auto-log bank transaction alerts';
+
+  @override
+  String get replayTutorial => 'Replay Onboarding Tutorial';
+
+  @override
+  String get replayTutorialSubtitle =>
+      'Reset onboarding tips and run the tour again';
+
+  @override
+  String get onboardingTutorialReset => 'Onboarding tutorial reset.';
+
+  @override
+  String get sendFeedback => 'Send Feedback';
+
+  @override
+  String get privacyPolicy => 'Privacy Policy';
+
+  @override
+  String get termsOfService => 'Terms of Service';
+
+  @override
+  String get rateOnPlayStore => 'Rate PocketPlus on Play Store';
+
+  @override
+  String get exportMyData => 'Export My Data';
+
+  @override
+  String get exportMyDataSubtitle => 'Download all your data as JSON';
+
+  @override
+  String get deleteAccount => 'Delete Account';
+
+  @override
+  String get deleteAccountSubtitle => 'Soft delete with 30-day grace period';
+
+  @override
+  String get appVersion => 'App Version';
+
+  @override
+  String get loadingLabel => 'Loading...';
+
+  @override
+  String get deleteAccountTitle => 'Delete your account?';
+
+  @override
+  String get deleteAccountBody =>
+      'Your data will be soft-deleted with a 30-day grace period. During this time, you can contact support to restore your account. After 30 days, all data will be permanently removed.';
+
+  @override
+  String get continueAction => 'Continue';
+
+  @override
+  String get typeDeleteToConfirm => 'Type DELETE to confirm';
+
+  @override
+  String get typeDeleteHint => 'Type DELETE';
+
+  @override
+  String get confirmDelete => 'Confirm Delete';
 }

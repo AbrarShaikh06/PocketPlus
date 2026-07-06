@@ -1257,4 +1257,100 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get cancelAction => 'रद्द करें';
+
+  @override
+  String get sectionAccount => 'खाता';
+
+  @override
+  String get sectionPreferences => 'प्राथमिकताएं';
+
+  @override
+  String get sectionSmsCapture => 'एसएमएस कैप्चर';
+
+  @override
+  String get sectionSupport => 'सहायता';
+
+  @override
+  String get sectionDataPrivacy => 'डेटा और गोपनीयता';
+
+  @override
+  String get sectionAppInfo => 'ऐप जानकारी';
+
+  @override
+  String get region => 'क्षेत्र';
+
+  @override
+  String get fiscalYearStart => 'वित्तीय वर्ष प्रारंभ';
+
+  @override
+  String get monthApril => 'अप्रैल';
+
+  @override
+  String get monthJanuary => 'जनवरी';
+
+  @override
+  String get smsAutoCapture => 'एसएमएस ऑटो-कैप्चर';
+
+  @override
+  String get smsAutoCaptureSubtitle => 'बैंक लेनदेन अलर्ट स्वतः लॉग करें';
+
+  @override
+  String get replayTutorial => 'ऑनबोर्डिंग ट्यूटोरियल फिर से चलाएं';
+
+  @override
+  String get replayTutorialSubtitle =>
+      'ऑनबोर्डिंग टिप्स रीसेट करें और टूर फिर से चलाएं';
+
+  @override
+  String get onboardingTutorialReset => 'ऑनबोर्डिंग ट्यूटोरियल रीसेट किया गया।';
+
+  @override
+  String get sendFeedback => 'प्रतिक्रिया भेजें';
+
+  @override
+  String get privacyPolicy => 'गोपनीयता नीति';
+
+  @override
+  String get termsOfService => 'सेवा की शर्तें';
+
+  @override
+  String get rateOnPlayStore => 'Play Store पर PocketPlus को रेट करें';
+
+  @override
+  String get exportMyData => 'मेरा डेटा निर्यात करें';
+
+  @override
+  String get exportMyDataSubtitle =>
+      'अपना सारा डेटा JSON के रूप में डाउनलोड करें';
+
+  @override
+  String get deleteAccount => 'खाता हटाएं';
+
+  @override
+  String get deleteAccountSubtitle => '30-दिन की छूट अवधि के साथ सॉफ्ट डिलीट';
+
+  @override
+  String get appVersion => 'ऐप संस्करण';
+
+  @override
+  String get loadingLabel => 'लोड हो रहा है...';
+
+  @override
+  String get deleteAccountTitle => 'अपना खाता हटाएं?';
+
+  @override
+  String get deleteAccountBody =>
+      'आपका डेटा 30-दिन की छूट अवधि के साथ सॉफ्ट-डिलीट किया जाएगा। इस दौरान, आप अपना खाता बहाल करने के लिए सहायता से संपर्क कर सकते हैं। 30 दिनों के बाद, सारा डेटा स्थायी रूप से हटा दिया जाएगा।';
+
+  @override
+  String get continueAction => 'जारी रखें';
+
+  @override
+  String get typeDeleteToConfirm => 'पुष्टि के लिए DELETE टाइप करें';
+
+  @override
+  String get typeDeleteHint => 'DELETE टाइप करें';
+
+  @override
+  String get confirmDelete => 'हटाना पुष्टि करें';
 }

@@ -1255,4 +1255,100 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get cancelAction => 'إلغاء';
+
+  @override
+  String get sectionAccount => 'الحساب';
+
+  @override
+  String get sectionPreferences => 'التفضيلات';
+
+  @override
+  String get sectionSmsCapture => 'التقاط الرسائل';
+
+  @override
+  String get sectionSupport => 'الدعم';
+
+  @override
+  String get sectionDataPrivacy => 'البيانات والخصوصية';
+
+  @override
+  String get sectionAppInfo => 'معلومات التطبيق';
+
+  @override
+  String get region => 'المنطقة';
+
+  @override
+  String get fiscalYearStart => 'بداية السنة المالية';
+
+  @override
+  String get monthApril => 'أبريل';
+
+  @override
+  String get monthJanuary => 'يناير';
+
+  @override
+  String get smsAutoCapture => 'التقاط الرسائل تلقائيًا';
+
+  @override
+  String get smsAutoCaptureSubtitle =>
+      'تسجيل تنبيهات المعاملات البنكية تلقائيًا';
+
+  @override
+  String get replayTutorial => 'إعادة تشغيل الجولة التعريفية';
+
+  @override
+  String get replayTutorialSubtitle =>
+      'إعادة تعيين التلميحات وتشغيل الجولة مرة أخرى';
+
+  @override
+  String get onboardingTutorialReset => 'تمت إعادة تعيين الجولة التعريفية.';
+
+  @override
+  String get sendFeedback => 'إرسال ملاحظات';
+
+  @override
+  String get privacyPolicy => 'سياسة الخصوصية';
+
+  @override
+  String get termsOfService => 'شروط الخدمة';
+
+  @override
+  String get rateOnPlayStore => 'قيّم PocketPlus على Play Store';
+
+  @override
+  String get exportMyData => 'تصدير بياناتي';
+
+  @override
+  String get exportMyDataSubtitle => 'نزّل جميع بياناتك بصيغة JSON';
+
+  @override
+  String get deleteAccount => 'حذف الحساب';
+
+  @override
+  String get deleteAccountSubtitle => 'حذف مؤقت مع مهلة 30 يومًا';
+
+  @override
+  String get appVersion => 'إصدار التطبيق';
+
+  @override
+  String get loadingLabel => 'جارٍ التحميل...';
+
+  @override
+  String get deleteAccountTitle => 'حذف حسابك؟';
+
+  @override
+  String get deleteAccountBody =>
+      'سيتم حذف بياناتك مؤقتًا مع مهلة 30 يومًا. خلال هذه المدة، يمكنك التواصل مع الدعم لاستعادة حسابك. بعد 30 يومًا، ستُحذف جميع البيانات نهائيًا.';
+
+  @override
+  String get continueAction => 'متابعة';
+
+  @override
+  String get typeDeleteToConfirm => 'اكتب DELETE للتأكيد';
+
+  @override
+  String get typeDeleteHint => 'اكتب DELETE';
+
+  @override
+  String get confirmDelete => 'تأكيد الحذف';
 }

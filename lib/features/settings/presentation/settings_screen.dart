@@ -134,14 +134,22 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
             Padding(
               padding: const EdgeInsets.all(AppSizes.spacing16),
               child: Text(
-                'Fiscal Year Start',
+                AppLocalizations.of(context)!.fiscalYearStart,
                 style: AppTextStyles.titleLarge(context).copyWith(
                   color: AppColors.onSurface,
                 ),
               ),
             ),
-            _fiscalTile(ctx, FiscalYearStart.apr, 'April'),
-            _fiscalTile(ctx, FiscalYearStart.jan, 'January'),
+            _fiscalTile(
+              ctx,
+              FiscalYearStart.apr,
+              AppLocalizations.of(context)!.monthApril,
+            ),
+            _fiscalTile(
+              ctx,
+              FiscalYearStart.jan,
+              AppLocalizations.of(context)!.monthJanuary,
+            ),
           ],
         ),
       ),
@@ -166,19 +174,16 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
   }
 
   Future<void> _handleDeleteAccount() async {
+    final l = AppLocalizations.of(context)!;
     await showDialog(
       context: context,
       builder: (ctx) => AlertDialog(
-        title: const Text('Delete your account?'),
-        content: const Text(
-          'Your data will be soft-deleted with a 30-day grace period. '
-          'During this time, you can contact support to restore your account. '
-          'After 30 days, all data will be permanently removed.',
-        ),
+        title: Text(l.deleteAccountTitle),
+        content: Text(l.deleteAccountBody),
         actions: [
           TextButton(
             onPressed: () => Navigator.of(ctx).pop(),
-            child: const Text('Cancel'),
+            child: Text(l.cancel),
           ),
           TextButton(
             onPressed: () {
@@ -186,7 +191,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
               _showConfirmDeleteDialog();
             },
             style: TextButton.styleFrom(foregroundColor: AppColors.error),
-            child: const Text('Continue'),
+            child: Text(l.continueAction),
           ),
         ],
       ),
@@ -194,23 +199,24 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
   }
 
   void _showConfirmDeleteDialog() {
+    final l = AppLocalizations.of(context)!;
     final controller = TextEditingController();
 
     showDialog(
       context: context,
       builder: (ctx) => AlertDialog(
-        title: const Text('Type DELETE to confirm'),
+        title: Text(l.typeDeleteToConfirm),
         content: TextField(
           controller: controller,
           autofocus: true,
-          decoration: const InputDecoration(
-            hintText: 'Type DELETE',
+          decoration: InputDecoration(
+            hintText: l.typeDeleteHint,
           ),
         ),
         actions: [
           TextButton(
             onPressed: () => Navigator.of(ctx).pop(),
-            child: const Text('Cancel'),
+            child: Text(l.cancel),
           ),
           TextButton(
             onPressed: () async {
@@ -225,7 +231,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
               }
             },
             style: TextButton.styleFrom(foregroundColor: AppColors.error),
-            child: const Text('Confirm Delete'),
+            child: Text(l.confirmDelete),
           ),
         ],
       ),
@@ -234,6 +240,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final l = AppLocalizations.of(context)!;
     final settings = ref.watch(settingsViewModelProvider);
     final auth = ref.watch(firebaseAuthProvider);
     final user = auth.currentUser;
@@ -250,12 +257,12 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Settings'),
+        title: Text(l.settings),
       ),
       body: ListView(
         padding: const EdgeInsets.all(AppSizes.spacing16),
         children: [
-          _buildSectionTitle('Account'),
+          _buildSectionTitle(l.sectionAccount),
           Card(
             child: Column(
               children: [
@@ -274,13 +281,13 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
             ),
           ),
           const SizedBox(height: AppSizes.spacing24),
-          _buildSectionTitle('Preferences'),
+          _buildSectionTitle(l.sectionPreferences),
           Card(
             child: Column(
               children: [
                 ListTile(
                   leading: const Icon(Icons.language, color: AppColors.primary),
-                  title: const Text('Language'),
+                  title: Text(l.language),
                   subtitle: Text(settings.language.displayLabel),
                   trailing: const Icon(Icons.chevron_right),
                   onTap: _showLanguagePicker,
@@ -288,7 +295,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                 const Divider(height: 1),
                 ListTile(
                   leading: const Icon(Icons.public, color: AppColors.primary),
-                  title: const Text('Region'),
+                  title: Text(l.region),
                   subtitle: Text(_countryLabel(settings.country)),
                   trailing: const Icon(Icons.chevron_right),
                   onTap: _showCountryPicker,
@@ -299,7 +306,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                     Icons.calendar_month,
                     color: AppColors.primary,
                   ),
-                  title: const Text('Fiscal Year Start'),
+                  title: Text(l.fiscalYearStart),
                   trailing: const Icon(Icons.chevron_right),
                   onTap: _showFiscalYearPicker,
                 ),
@@ -307,12 +314,12 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
             ),
           ),
           const SizedBox(height: AppSizes.spacing24),
-          _buildSectionTitle('SMS Capture'),
+          _buildSectionTitle(l.sectionSmsCapture),
           Card(
             child: SwitchListTile(
               secondary: const Icon(Icons.sms, color: AppColors.primary),
-              title: const Text('SMS Auto-Capture'),
-              subtitle: const Text('Auto-log bank transaction alerts'),
+              title: Text(l.smsAutoCapture),
+              subtitle: Text(l.smsAutoCaptureSubtitle),
               value: settings.smsEnabled,
               onChanged: (v) {
                 ref
@@ -322,19 +329,17 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
             ),
           ),
           const SizedBox(height: AppSizes.spacing24),
-          _buildSectionTitle(AppLocalizations.of(context)!.security),
+          _buildSectionTitle(l.security),
           _buildAppLockSection(),
           const SizedBox(height: AppSizes.spacing24),
-          _buildSectionTitle('Support'),
+          _buildSectionTitle(l.sectionSupport),
           Card(
             child: Column(
               children: [
                 ListTile(
                   leading: const Icon(Icons.replay, color: AppColors.primary),
-                  title: const Text('Replay Onboarding Tutorial'),
-                  subtitle: const Text(
-                    'Reset onboarding tips and run the tour again',
-                  ),
+                  title: Text(l.replayTutorial),
+                  subtitle: Text(l.replayTutorialSubtitle),
                   onTap: () async {
                     final authUid =
                         ref.read(firebaseAuthProvider).currentUser?.uid;
@@ -346,8 +351,11 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                           .update({'tutorialCompleted': false});
                       if (context.mounted) {
                         ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(
-                            content: Text('Onboarding tutorial reset.'),
+                          SnackBar(
+                            content: Text(
+                              AppLocalizations.of(context)!
+                                  .onboardingTutorialReset,
+                            ),
                             backgroundColor: AppColors.primary,
                           ),
                         );
@@ -358,7 +366,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                 const Divider(height: 1),
                 ListTile(
                   leading: const Icon(Icons.feedback, color: AppColors.primary),
-                  title: const Text('Send Feedback'),
+                  title: Text(l.sendFeedback),
                   trailing: const Icon(Icons.chevron_right),
                   onTap: () => context.push(RouteNames.feedback),
                 ),
@@ -366,7 +374,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                 ListTile(
                   leading:
                       const Icon(Icons.privacy_tip, color: AppColors.primary),
-                  title: const Text('Privacy Policy'),
+                  title: Text(l.privacyPolicy),
                   trailing: const Icon(Icons.open_in_new, size: 18),
                   onTap: () =>
                       launchUrl(Uri.parse('https://pocketplus.in/privacy')),
@@ -375,7 +383,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                 ListTile(
                   leading:
                       const Icon(Icons.description, color: AppColors.primary),
-                  title: const Text('Terms of Service'),
+                  title: Text(l.termsOfService),
                   trailing: const Icon(Icons.open_in_new, size: 18),
                   onTap: () =>
                       launchUrl(Uri.parse('https://pocketplus.in/terms')),
@@ -383,7 +391,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                 const Divider(height: 1),
                 ListTile(
                   leading: const Icon(Icons.star, color: AppColors.primary),
-                  title: const Text('Rate PocketPlus on Play Store'),
+                  title: Text(l.rateOnPlayStore),
                   trailing: const Icon(Icons.open_in_new, size: 18),
                   onTap: () async {
                     await ref
@@ -400,14 +408,14 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
             ),
           ),
           const SizedBox(height: AppSizes.spacing24),
-          _buildSectionTitle('Data & Privacy'),
+          _buildSectionTitle(l.sectionDataPrivacy),
           Card(
             child: Column(
               children: [
                 ListTile(
                   leading: const Icon(Icons.download, color: AppColors.primary),
-                  title: const Text('Export My Data'),
-                  subtitle: const Text('Download all your data as JSON'),
+                  title: Text(l.exportMyData),
+                  subtitle: Text(l.exportMyDataSubtitle),
                   trailing: settings.isExporting
                       ? const SizedBox(
                           width: 20,
@@ -425,8 +433,8 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                 ListTile(
                   leading:
                       const Icon(Icons.delete_forever, color: AppColors.error),
-                  title: const Text('Delete Account'),
-                  subtitle: const Text('Soft delete with 30-day grace period'),
+                  title: Text(l.deleteAccount),
+                  subtitle: Text(l.deleteAccountSubtitle),
                   textColor: AppColors.error,
                   onTap: settings.isDeleting ? null : _handleDeleteAccount,
                 ),
@@ -434,15 +442,15 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
             ),
           ),
           const SizedBox(height: AppSizes.spacing24),
-          _buildSectionTitle('App Info'),
+          _buildSectionTitle(l.sectionAppInfo),
           Card(
             child: ListTile(
               leading: const Icon(Icons.info_outline, color: AppColors.primary),
-              title: const Text('App Version'),
+              title: Text(l.appVersion),
               subtitle: Text(
                 _packageInfo != null
                     ? '${_packageInfo!.version} (${_packageInfo!.buildNumber})'
-                    : 'Loading...',
+                    : l.loadingLabel,
               ),
             ),
           ),

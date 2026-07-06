@@ -2408,6 +2408,192 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Cancel'**
   String get cancelAction;
+
+  /// No description provided for @sectionAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Account'**
+  String get sectionAccount;
+
+  /// No description provided for @sectionPreferences.
+  ///
+  /// In en, this message translates to:
+  /// **'Preferences'**
+  String get sectionPreferences;
+
+  /// No description provided for @sectionSmsCapture.
+  ///
+  /// In en, this message translates to:
+  /// **'SMS Capture'**
+  String get sectionSmsCapture;
+
+  /// No description provided for @sectionSupport.
+  ///
+  /// In en, this message translates to:
+  /// **'Support'**
+  String get sectionSupport;
+
+  /// No description provided for @sectionDataPrivacy.
+  ///
+  /// In en, this message translates to:
+  /// **'Data & Privacy'**
+  String get sectionDataPrivacy;
+
+  /// No description provided for @sectionAppInfo.
+  ///
+  /// In en, this message translates to:
+  /// **'App Info'**
+  String get sectionAppInfo;
+
+  /// No description provided for @region.
+  ///
+  /// In en, this message translates to:
+  /// **'Region'**
+  String get region;
+
+  /// No description provided for @fiscalYearStart.
+  ///
+  /// In en, this message translates to:
+  /// **'Fiscal Year Start'**
+  String get fiscalYearStart;
+
+  /// No description provided for @monthApril.
+  ///
+  /// In en, this message translates to:
+  /// **'April'**
+  String get monthApril;
+
+  /// No description provided for @monthJanuary.
+  ///
+  /// In en, this message translates to:
+  /// **'January'**
+  String get monthJanuary;
+
+  /// No description provided for @smsAutoCapture.
+  ///
+  /// In en, this message translates to:
+  /// **'SMS Auto-Capture'**
+  String get smsAutoCapture;
+
+  /// No description provided for @smsAutoCaptureSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Auto-log bank transaction alerts'**
+  String get smsAutoCaptureSubtitle;
+
+  /// No description provided for @replayTutorial.
+  ///
+  /// In en, this message translates to:
+  /// **'Replay Onboarding Tutorial'**
+  String get replayTutorial;
+
+  /// No description provided for @replayTutorialSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Reset onboarding tips and run the tour again'**
+  String get replayTutorialSubtitle;
+
+  /// No description provided for @onboardingTutorialReset.
+  ///
+  /// In en, this message translates to:
+  /// **'Onboarding tutorial reset.'**
+  String get onboardingTutorialReset;
+
+  /// No description provided for @sendFeedback.
+  ///
+  /// In en, this message translates to:
+  /// **'Send Feedback'**
+  String get sendFeedback;
+
+  /// No description provided for @privacyPolicy.
+  ///
+  /// In en, this message translates to:
+  /// **'Privacy Policy'**
+  String get privacyPolicy;
+
+  /// No description provided for @termsOfService.
+  ///
+  /// In en, this message translates to:
+  /// **'Terms of Service'**
+  String get termsOfService;
+
+  /// No description provided for @rateOnPlayStore.
+  ///
+  /// In en, this message translates to:
+  /// **'Rate PocketPlus on Play Store'**
+  String get rateOnPlayStore;
+
+  /// No description provided for @exportMyData.
+  ///
+  /// In en, this message translates to:
+  /// **'Export My Data'**
+  String get exportMyData;
+
+  /// No description provided for @exportMyDataSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Download all your data as JSON'**
+  String get exportMyDataSubtitle;
+
+  /// No description provided for @deleteAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete Account'**
+  String get deleteAccount;
+
+  /// No description provided for @deleteAccountSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Soft delete with 30-day grace period'**
+  String get deleteAccountSubtitle;
+
+  /// No description provided for @appVersion.
+  ///
+  /// In en, this message translates to:
+  /// **'App Version'**
+  String get appVersion;
+
+  /// No description provided for @loadingLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Loading...'**
+  String get loadingLabel;
+
+  /// No description provided for @deleteAccountTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete your account?'**
+  String get deleteAccountTitle;
+
+  /// No description provided for @deleteAccountBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Your data will be soft-deleted with a 30-day grace period. During this time, you can contact support to restore your account. After 30 days, all data will be permanently removed.'**
+  String get deleteAccountBody;
+
+  /// No description provided for @continueAction.
+  ///
+  /// In en, this message translates to:
+  /// **'Continue'**
+  String get continueAction;
+
+  /// No description provided for @typeDeleteToConfirm.
+  ///
+  /// In en, this message translates to:
+  /// **'Type DELETE to confirm'**
+  String get typeDeleteToConfirm;
+
+  /// No description provided for @typeDeleteHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Type DELETE'**
+  String get typeDeleteHint;
+
+  /// No description provided for @confirmDelete.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm Delete'**
+  String get confirmDelete;
 }
 
 class _AppLocalizationsDelegate
