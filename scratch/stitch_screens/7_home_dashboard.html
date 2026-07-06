@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>HisaabPro - Home Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#0D3A35",
+                        "secondary": "#276152",
+                        "neutral-sage": "#B1B7AB",
+                        "background": "#FBF6F0",
+                        "on-primary": "#ffffff",
+                        "on-background": "#0D3A35",
+                        "on-surface": "#0D3A35",
+                        "surface": "#ffffff",
+                        "surface-container": "#F2F4F0",
+                        "success": "#27AE60",
+                        "warning": "#d97706",
+                        "error": "#ba1a1a",
+                        "surface-variant": "#E0E3DB",
+                        "on-surface-variant": "#43493E"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-gap-lg": "24px",
+                        "stack-gap-sm": "8px",
+                        "card-padding": "16px",
+                        "touch-target-min": "48px",
+                        "stack-gap-md": "16px",
+                        "container-margin": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Noto Sans"],
+                        "label-sm": ["Noto Sans"],
+                        "hero-amount": ["Noto Sans"],
+                        "body-lg": ["Noto Sans"],
+                        "headline-md": ["Noto Sans"],
+                        "body-md": ["Noto Sans"],
+                        "label-bold": ["Noto Sans"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+                        "hero-amount": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "label-bold": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            -webkit-tap-highlight-color: transparent;
+        }
+        .mobile-container {
+            max-width: 480px;
+            margin: 0 auto;
+            min-height: 100vh;
+            background-color: #FBF6F0;
+            position: relative;
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-neutral-sage text-on-surface">
+<div class="mobile-container flex flex-col h-screen">
+<!-- TopAppBar -->
+<header class="flex justify-between items-center px-container-margin h-touch-target-min w-full bg-primary shadow-sm sticky top-0 z-50">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-white text-primary flex items-center justify-center font-headline-md text-headline-md">
+                    M
+                </div>
+<h1 class="text-headline-md font-headline-md text-white">HisaabPro</h1>
+</div>
+<button class="relative w-10 h-10 flex items-center justify-center text-white/80 hover:bg-white/10 transition-colors rounded-full active:scale-95 transition-transform duration-100">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 w-2.5 h-2.5 bg-error rounded-full border-2 border-primary"></span>
+</button>
+</header>
+<!-- Main Scrollable Content Canvas -->
+<main class="flex-1 overflow-y-auto pb-24 px-container-margin pt-stack-gap-md space-y-stack-gap-lg">
+<!-- Hero Balance Card -->
+<section class="bg-primary rounded-xl p-card-padding shadow-lg relative overflow-hidden">
+<div class="absolute -right-8 -top-8 w-32 h-32 bg-white/5 rounded-full blur-2xl"></div>
+<div class="relative z-10 flex flex-col items-center text-center space-y-2">
+<p class="text-white/70 text-body-md font-body-md">Current Month Net Profit</p>
+<div class="flex items-center justify-center gap-1 text-white">
+<span class="text-headline-lg font-headline-lg mt-1">₹</span>
+<h2 class="text-hero-amount font-hero-amount text-success bg-white px-4 py-1 rounded-full shadow-inner">12,450</h2>
+</div>
+<div class="inline-flex items-center gap-1 bg-white/10 text-white px-3 py-1 rounded-full text-label-sm font-label-sm mt-2">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+<span>+14% vs last month</span>
+</div>
+</div>
+</section>
+<!-- Today's Summary Grid -->
+<section class="grid grid-cols-2 gap-stack-gap-md">
+<!-- Income Card -->
+<div class="bg-surface p-card-padding rounded-xl shadow-sm border border-neutral-sage/30 flex flex-col space-y-3">
+<div class="flex items-center gap-2 text-success">
+<div class="w-8 h-8 rounded-full bg-success/10 flex items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">arrow_downward</span>
+</div>
+<span class="text-label-bold font-label-bold">Today's Income</span>
+</div>
+<div class="text-headline-md font-headline-md text-on-surface">₹4,200</div>
+</div>
+<!-- Expense Card -->
+<div class="bg-surface p-card-padding rounded-xl shadow-sm border border-neutral-sage/30 flex flex-col space-y-3">
+<div class="flex items-center gap-2 text-warning">
+<div class="w-8 h-8 rounded-full bg-warning/10 flex items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">arrow_upward</span>
+</div>
+<span class="text-label-bold font-label-bold">Today's Expense</span>
+</div>
+<div class="text-headline-md font-headline-md text-on-surface">₹1,150</div>
+</div>
+</section>
+<!-- Mini Bar Chart Section -->
+<section class="bg-surface p-card-padding rounded-xl shadow-sm border border-neutral-sage/30 space-y-stack-gap-md">
+<div class="flex justify-between items-center">
+<h3 class="text-body-lg font-body-lg font-semibold text-on-surface">Profit (Last 6 Months)</h3>
+<span class="material-symbols-outlined text-on-surface-variant">more_horiz</span>
+</div>
+<div class="h-32 flex items-end justify-between gap-2 pt-4">
+<!-- Bars -->
+<div class="flex flex-col items-center flex-1 gap-2">
+<div class="w-full bg-secondary/20 rounded-t-sm h-[40%] relative group"></div>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Jul</span>
+</div>
+<div class="flex flex-col items-center flex-1 gap-2">
+<div class="w-full bg-secondary/40 rounded-t-sm h-[60%] relative group"></div>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Aug</span>
+</div>
+<div class="flex flex-col items-center flex-1 gap-2">
+<div class="w-full bg-secondary/60 rounded-t-sm h-[80%] relative group"></div>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Sep</span>
+</div>
+<div class="flex flex-col items-center flex-1 gap-2">
+<div class="w-full bg-secondary/30 rounded-t-sm h-[50%] relative group"></div>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Oct</span>
+</div>
+<div class="flex flex-col items-center flex-1 gap-2">
+<div class="w-full bg-secondary/80 rounded-t-sm h-[90%] relative group"></div>
+<span class="text-label-sm font-label-sm text-on-surface-variant">Nov</span>
+</div>
+<div class="flex flex-col items-center flex-1 gap-2">
+<div class="w-full bg-primary rounded-t-sm h-[100%] shadow-[0_0_8px_rgba(13,58,53,0.2)] relative group"></div>
+<span class="text-label-bold font-label-bold text-primary">Dec</span>
+</div>
+</div>
+</section>
+<!-- Recent Transactions Preview -->
+<section class="space-y-stack-gap-sm">
+<h3 class="text-body-lg font-body-lg font-semibold text-on-surface px-1">Recent Activity</h3>
+<div class="bg-surface rounded-xl shadow-sm border border-neutral-sage/30 overflow-hidden">
+<!-- Transaction Item 1 -->
+<div class="flex items-center justify-between p-card-padding border-b border-surface-variant">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-success/10 flex items-center justify-center text-success">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<div>
+<p class="text-body-lg font-body-lg text-on-surface">Sale - Invoice #1024</p>
+<p class="text-body-md font-body-md text-on-surface-variant">Today, 2:30 PM</p>
+</div>
+</div>
+<div class="text-headline-md font-headline-md text-success">+₹1,200</div>
+</div>
+<!-- Transaction Item 2 -->
+<div class="flex items-center justify-between p-card-padding">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-warning/10 flex items-center justify-center text-warning">
+<span class="material-symbols-outlined">shopping_cart</span>
+</div>
+<div>
+<p class="text-body-lg font-body-lg text-on-surface">Supplier Payment</p>
+<p class="text-body-md font-body-md text-on-surface-variant">Today, 11:15 AM</p>
+</div>
+</div>
+<div class="text-headline-md font-headline-md text-on-surface">-₹850</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Floating Action Button -->
+<button class="absolute bottom-24 right-6 w-14 h-14 bg-primary text-white rounded-2xl shadow-lg flex items-center justify-center active:scale-95 transition-transform duration-150 z-40">
+<span class="material-symbols-outlined text-[32px]">add</span>
+</button>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full max-w-[480px] flex justify-around items-center py-stack-gap-sm px-2 pb-safe bg-surface shadow-[0_-4px_12px_rgba(0,0,0,0.05)] z-50 border-t border-neutral-sage/20">
+<!-- Home (Active) -->
+<a class="flex flex-col items-center justify-center text-primary bg-secondary/10 rounded-xl px-4 py-1 active:scale-90 transition-transform duration-150 group" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="text-label-bold font-label-bold mt-1">Home</span>
+</a>
+<!-- Charts (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 hover:text-primary transition-all active:scale-90 duration-150 group" href="#">
+<span class="material-symbols-outlined">bar_chart</span>
+<span class="text-label-bold font-label-bold mt-1 group-hover:text-primary">Charts</span>
+</a>
+<!-- Reports (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 hover:text-primary transition-all active:scale-90 duration-150 group" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="text-label-bold font-label-bold mt-1 group-hover:text-primary">Reports</span>
+</a>
+<!-- Support (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 hover:text-primary transition-all active:scale-90 duration-150 group" href="#">
+<span class="material-symbols-outlined">support_agent</span>
+<span class="text-label-bold font-label-bold mt-1 group-hover:text-primary">Support</span>
+</a>
+</nav>
+</div>
+</body></html>

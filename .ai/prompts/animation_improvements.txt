@@ -1,0 +1,171 @@
+## PocketPlus — Animation & Micro-interaction Enhancement Pass
+
+### Load before starting:
+- memory/project-context.md
+- .ai/rules/flutter-conventions.md
+- .ai/skills/specialized/frontend-design.md
+- .ai/skills/specialized/sleek-design-mobile-apps.md
+- .ai/skills/pocketplus-bug-hunter.md
+
+---
+
+## Objective
+Make PocketPlus feel premium, fluid, and addictive to use.
+Target feeling: "This app feels alive" — every tap, swipe, 
+and transition should feel satisfying and intentional.
+Inspired by: GPay, Zepto, Blinkit — apps Indian users 
+already love and find addictive.
+
+---
+
+## Animation Philosophy for PocketPlus
+- Animations should REWARD the user (adding money = celebration)
+- Animations should COMMUNICATE state (loading, success, error)
+- Animations should feel FAST — never slow the user down
+- Every interaction should have a micro-response
+- Never animate just for decoration — every animation has a job
+
+---
+
+## Phase 1 — Audit Existing Animations
+Scan all files in lib/ and list:
+- All existing animations and their current duration/curve
+- Any missing animations on interactive elements
+- Any janky or laggy animations
+- Any animations that ignore MediaQuery.disableAnimations
+- Any raw CircularProgressIndicator (replace with custom)
+
+Output audit results before doing anything.
+Wait for approval.
+
+---
+
+## Phase 2 — Screen Transitions
+Improve GoRouter transitions in lib/core/router/app_router.dart:
+
+- Push (forward): slide from right, 280ms, Curves.easeOutCubic
+- Pop (back): slide to right, 250ms, Curves.easeInCubic  
+- Modal/Bottom sheet: slide from bottom, 320ms, Curves.easeOutQuart
+- Fade (for tab switches): 200ms, Curves.easeInOut
+- Replace (auth → home): fade through, 400ms, Curves.easeInOut
+
+Use CustomTransitionPage in GoRouter for each route type.
+Do NOT use default slide — it feels generic.
+
+---
+
+## Phase 3 — Micro-interactions (do each one)
+
+### Buttons (AppButton)
+- Press down: scale 1.0 → 0.96, 80ms easeInOut
+- Release: scale 0.96 → 1.02 → 1.0 (slight bounce), 150ms
+- Success state: green checkmark morphs in, 300ms
+- Loading: shimmer pulse on button, not just spinner
+
+### Cards (AppCard)
+- Press: scale 1.0 → 0.97 + slight shadow reduction, 80ms
+- Release: scale back with spring physics
+- Appear on screen: fade + slide up 8dp, staggered if in a list
+
+### FAB (Add Transaction button)
+- Idle: subtle breathing pulse (scale 1.0 → 1.03), 2s loop
+- Press: scale 1.0 → 0.9 → 1.1 → 1.0, 300ms with haptic
+- Rotate icon on press: 0° → 45° when opening options
+
+### Transaction List Items
+- Appear: staggered slide up + fade, 50ms delay between each item
+- Swipe to delete: red background slides in with trash icon
+- Delete: item collapses with height animation, 250ms
+- Undo: item expands back with bounce, 350ms
+
+### Bottom Navigation
+- Tab switch: icon bounces up 4dp + scale 1.0 → 1.2 → 1.0
+- Active indicator: pill slides between tabs, 250ms easeOutCubic
+- Label: fade in on active, fade out on inactive
+
+---
+
+## Phase 4 — Reward Animations (most important for addiction)
+
+### Adding a Transaction (most frequent action)
+- Save button press → success checkmark animation (300ms)
+- Amount counter: numbers roll up like a slot machine
+- Dashboard net profit: animated number change (AnimatedSwitcher)
+  digits flip up when amount increases, flip down when decreases
+
+### Savings Goal Progress (IGR-054)
+- Progress bar fills with liquid animation, 800ms easeOutCubic
+- Each contribution: confetti burst from the amount entered
+- 100% complete: full confetti explosion + trophy animation
+- Near goal (>80%): progress bar glows/pulses orange
+
+### SMS Auto-Capture
+- Notification appear: slide in from top + bounce settle
+- Confirm button: ripple explosion outward on tap
+- Dismissed: card flips over and fades, 400ms
+
+### Home Dashboard
+- Net profit card: numbers count up from 0 on first load, 600ms
+- Income/Expense cards: slide in from sides simultaneously
+- Chart bars: grow from bottom with spring, staggered 30ms each
+- Profile switch: entire dashboard fades out → data reloads → fades in
+
+---
+
+## Phase 5 — Loading States (replace all generic spinners)
+
+Replace ALL CircularProgressIndicator with:
+
+### Skeleton Loading (already have LoadingShimmer — enhance it)
+- Shimmer direction: left to right (already done ✅)
+- Add: subtle scale pulse alongside shimmer
+- Add: rounded shimmer shapes matching actual content layout
+
+### Custom PocketPlus Loader
+Create: lib/shared/widgets/pocketplus_loader.dart
+- Animated PocketPlus logo (trending_up icon)
+- Icon draws itself (stroke animation), 800ms
+- Color pulses primary green
+- Use this for: initial app load, Firebase sync waits
+
+### Button Loading (enhance AppButton)
+- Current: CircularProgressIndicator (generic)
+- New: 3 dots that bounce in sequence (like WhatsApp typing)
+- Duration: 400ms per cycle, infinite loop while loading
+
+---
+
+## Phase 6 — Haptic Feedback
+Add haptic feedback (HapticFeedback from flutter/services.dart):
+
+- Transaction saved: HapticFeedback.mediumImpact()
+- Error/validation fail: HapticFeedback.heavyImpact() x2 (double tap)
+- Swipe to delete: HapticFeedback.lightImpact() as swipe starts
+- Goal 100% complete: HapticFeedback.heavyImpact() + vibration pattern
+- OTP digit entered: HapticFeedback.selectionClick()
+- Tab switch: HapticFeedback.selectionClick()
+
+---
+
+## Phase 7 — Performance Rules (never violate)
+- ALL animations use AnimationController with vsync: this
+- ALL controllers disposed in dispose()
+- NO animations on main thread — use RepaintBoundary for complex ones
+- NO rebuilding entire widget tree for animation — use AnimatedBuilder
+- Test on low-end device (not just Poco F5) — animations must be 60fps
+- All animations respect:
+  if (MediaQuery.disableAnimationsOf(context)) return; // skip animation
+
+---
+
+## Execution Rules
+- Do ONE phase at a time
+- After each phase: run flutter analyze → must be zero errors
+- Test on device after Phase 3 and Phase 4
+- Do NOT change any business logic — animations only
+- Do NOT change AppColors, AppSizes, or any Firestore logic
+- Do NOT break existing Riverpod providers
+
+Start with Phase 1 (audit).
+Output the audit report.
+Wait for my approval before Phase 2.

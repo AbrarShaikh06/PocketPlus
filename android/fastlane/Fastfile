@@ -1,0 +1,18 @@
+default_platform(:android)
+
+platform :android do
+  desc "Build and deploy to Play Store internal track"
+  lane :deploy_internal do
+    gradle(
+      task: "bundle",
+      build_type: "Release",
+      print_command: true,
+    )
+    supply(
+      aab: "build/app/outputs/bundle/release/app-release.aab",
+      track: "internal",
+      rollout: "0.1",
+      package_name: "in.pocketplus.app",
+    )
+  end
+end

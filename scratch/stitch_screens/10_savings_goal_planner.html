@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HisaabPro - Savings Goals</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-tint": "#005cbb",
+                        "on-background": "#1a1c1c",
+                        "outline": "#727784",
+                        "tertiary-fixed": "#7efba4",
+                        "primary-fixed-dim": "#abc7ff",
+                        "surface-dim": "#dadada",
+                        "inverse-surface": "#2f3131",
+                        "inverse-on-surface": "#f1f1f1",
+                        "background": "#FBF6F0", // Warm cream background as requested
+                        "secondary": "#255dae",
+                        "on-secondary-fixed-variant": "#004590",
+                        "on-tertiary-fixed": "#00210c",
+                        "tertiary-fixed-dim": "#61de8a",
+                        "surface-container-low": "#f3f3f3",
+                        "primary-fixed": "#d7e2ff",
+                        "on-secondary-fixed": "#001a40",
+                        "on-surface": "#1a1c1c",
+                        "primary": "#0057b1",
+                        "surface-container-high": "#e8e8e8",
+                        "on-error-container": "#93000a",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed-variant": "#00458f",
+                        "surface-container": "#eeeeee",
+                        "on-surface-variant": "#414753",
+                        "surface-variant": "#e2e2e2",
+                        "surface-bright": "#f9f9f9",
+                        "on-error": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "secondary-container": "#78a8ff",
+                        "outline-variant": "#c1c6d5",
+                        "tertiary-container": "#008343", // Success green deep
+                        "surface": "#ffffff",
+                        "on-tertiary-container": "#e2ffe4",
+                        "on-primary": "#ffffff",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-tertiary-fixed-variant": "#005228",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-primary": "#abc7ff",
+                        "error-container": "#ffdad6",
+                        "error": "#ba1a1a",
+                        "primary-container": "#1a6fd8",
+                        "on-primary-fixed": "#001b3f",
+                        "tertiary": "#006733", // Success Green
+                        "secondary-fixed": "#d7e2ff",
+                        "on-secondary-container": "#003c7f",
+                        "secondary-fixed-dim": "#acc7ff",
+                        "on-primary-container": "#f6f6ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "8px",
+                        "lg": "12px",
+                        "xl": "16px",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-gap-sm": "8px",
+                        "stack-gap-md": "16px",
+                        "stack-gap-lg": "24px",
+                        "container-margin": "16px",
+                        "touch-target-min": "48px",
+                        "card-padding": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Noto Sans"],
+                        "label-bold": ["Noto Sans"],
+                        "hero-amount": ["Noto Sans"],
+                        "headline-md": ["Noto Sans"],
+                        "label-sm": ["Noto Sans"],
+                        "body-md": ["Noto Sans"],
+                        "body-lg": ["Noto Sans"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                        "label-bold": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "hero-amount": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+                        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Noto Sans', sans-serif;
+            background-color: #FBF6F0; /* Warm cream background */
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .goal-card-shadow {
+            box-shadow: 0 4px 12px rgba(0, 87, 177, 0.08);
+        }
+        .progress-bar-fill {
+            transition: width 1s ease-out;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="text-on-background min-h-screen pb-32">
+<!-- Header: TopAppBar Implementation -->
+<header class="bg-surface docked full-width top-0 z-50 shadow-sm flex justify-between items-center px-container-margin h-touch-target-min w-full sticky">
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-surface-container-low transition-colors rounded-full Active: scale-95 transition-transform duration-100">
+<span class="material-symbols-outlined text-primary">arrow_back</span>
+</button>
+<h1 class="text-headline-md font-headline-md text-primary">Savings Goals</h1>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant hover:bg-surface-container-low p-2 rounded-full cursor-pointer">notifications</span>
+<div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center border border-primary/20 overflow-hidden">
+<img alt="Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0VvnuvSMp7Vhaab3nceUFvL46XpdQhMCrNZKsDErXdASEuhzI8jkfF5qmnJ5F7aOWMka1L3pU2Yhj-LIkK_5FKPIyAlalS20UEJzArCMut1n4KDrj9gMKE__AT_xfWYq0XsoS73TXra4xO-4QjDLUpNlPYbfZ56uxvf_Pso3gKLiaQFWaNfWdDt4Y17M77uPY4-kOTNSOO8mJfW18mjwcvvXxiFWciwNViA9LeA0BITnMUn6-Gj9jyny2dA1BZxxaMzzhR_Ug1eA"/>
+</div>
+</div>
+</header>
+<main class="max-w-[420px] mx-auto px-container-margin mt-stack-gap-lg space-y-stack-gap-lg">
+<!-- Top Section: Total Saved Summary Card -->
+<section>
+<div class="bg-surface goal-card-shadow rounded-xl p-card-padding border border-primary/5 overflow-hidden relative">
+<!-- Decorative background elements -->
+<div class="absolute -top-10 -right-10 w-32 h-32 bg-tertiary/5 rounded-full blur-2xl"></div>
+<div class="relative z-10">
+<p class="text-label-bold font-label-bold text-on-surface-variant mb-1 uppercase tracking-wider">Total Saved</p>
+<div class="flex items-baseline gap-1">
+<span class="text-hero-amount font-hero-amount text-tertiary">₹1,45,000</span>
+</div>
+<div class="mt-4 flex items-center gap-2 bg-tertiary/10 text-tertiary font-label-bold py-1.5 px-3 rounded-full w-fit">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">trending_up</span>
+<span>12% more than last month</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Goal List Header -->
+<div class="flex justify-between items-end">
+<h2 class="text-headline-md font-headline-md text-on-surface">Your Dreams</h2>
+<button class="text-primary font-label-bold text-label-bold hover:underline">View History</button>
+</div>
+<!-- Goal Cards Stack -->
+<div class="space-y-stack-gap-md">
+<!-- Goal 1: Shop Expansion -->
+<div class="bg-surface goal-card-shadow rounded-xl p-card-padding flex flex-col gap-3 group active:scale-[0.98] transition-transform duration-150">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[28px]" data-icon="storefront">storefront</span>
+</div>
+<div>
+<h3 class="text-body-lg font-bold text-on-surface">Shop Expansion</h3>
+<p class="text-label-sm font-label-sm text-on-surface-variant">Target: ₹2,00,000</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-body-lg font-bold text-tertiary">37.5%</p>
+<p class="text-label-sm font-label-sm text-outline">Complete</p>
+</div>
+</div>
+<div class="space-y-2">
+<div class="w-full bg-surface-container-high h-2.5 rounded-full overflow-hidden">
+<div class="progress-bar-fill bg-tertiary h-full rounded-full" style="width: 37.5%;"></div>
+</div>
+<div class="flex justify-between items-center text-label-bold font-label-bold">
+<span class="text-on-surface">₹75,000 saved</span>
+<span class="text-on-surface-variant">₹1,25,000 left</span>
+</div>
+</div>
+</div>
+<!-- Goal 2: New Delivery Van -->
+<div class="bg-surface goal-card-shadow rounded-xl p-card-padding flex flex-col gap-3 group active:scale-[0.98] transition-transform duration-150">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-[28px]" data-icon="local_shipping">local_shipping</span>
+</div>
+<div>
+<h3 class="text-body-lg font-bold text-on-surface">New Delivery Van</h3>
+<p class="text-label-sm font-label-sm text-on-surface-variant">Target: ₹5,00,000</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-body-lg font-bold text-tertiary">10%</p>
+<p class="text-label-sm font-label-sm text-outline">Complete</p>
+</div>
+</div>
+<div class="space-y-2">
+<div class="w-full bg-surface-container-high h-2.5 rounded-full overflow-hidden">
+<div class="progress-bar-fill bg-tertiary h-full rounded-full" style="width: 10%;"></div>
+</div>
+<div class="flex justify-between items-center text-label-bold font-label-bold">
+<span class="text-on-surface">₹50,000 saved</span>
+<span class="text-on-surface-variant">₹4,50,000 left</span>
+</div>
+</div>
+</div>
+<!-- Goal 3: Children's Education -->
+<div class="bg-surface goal-card-shadow rounded-xl p-card-padding flex flex-col gap-3 group active:scale-[0.98] transition-transform duration-150">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 bg-tertiary/10 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary text-[28px]" data-icon="school">school</span>
+</div>
+<div>
+<h3 class="text-body-lg font-bold text-on-surface">Children's Education</h3>
+<p class="text-label-sm font-label-sm text-on-surface-variant">Target: ₹1,00,000</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-body-lg font-bold text-tertiary">20%</p>
+<p class="text-label-sm font-label-sm text-outline">Complete</p>
+</div>
+</div>
+<div class="space-y-2">
+<div class="w-full bg-surface-container-high h-2.5 rounded-full overflow-hidden">
+<div class="progress-bar-fill bg-tertiary h-full rounded-full" style="width: 20%;"></div>
+</div>
+<div class="flex justify-between items-center text-label-bold font-label-bold">
+<span class="text-on-surface">₹20,000 saved</span>
+<span class="text-on-surface-variant">₹80,000 left</span>
+</div>
+</div>
+</div>
+<!-- Empty State / Suggestion card -->
+<div class="border-2 border-dashed border-outline-variant rounded-xl p-card-padding flex flex-col items-center justify-center text-center gap-2 opacity-60 mt-4">
+<span class="material-symbols-outlined text-outline text-3xl">savings</span>
+<p class="text-body-md font-body-md text-on-surface-variant italic">"A penny saved is a penny earned."</p>
+</div>
+</div>
+</main>
+<!-- Bottom Action: Floating Action Button -->
+<div class="fixed bottom-24 right-container-margin z-50">
+<button class="bg-[#0D3A35] text-white flex items-center gap-2 px-6 py-4 rounded-full shadow-lg hover:shadow-xl active:scale-90 transition-all duration-150">
+<span class="material-symbols-outlined">add</span>
+<span class="font-bold">Add New Goal</span>
+</button>
+</div>
+<!-- BottomNavBar Implementation -->
+<nav class="fixed bottom-0 w-full flex justify-around items-center py-stack-gap-sm px-2 pb-safe bg-surface shadow-[0_-4px_12px_rgba(0,87,177,0.08)] z-50">
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="text-label-bold font-label-bold">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary bg-primary-container/10 rounded-xl px-4 py-1 scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="bar_chart" style="font-variation-settings: 'FILL' 1;">bar_chart</span>
+<span class="text-label-bold font-label-bold">Charts</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="text-label-bold font-label-bold">Reports</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-1 hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="support_agent">support_agent</span>
+<span class="text-label-bold font-label-bold">Support</span>
+</a>
+</nav>
+<script>
+        // Simple interactive micro-interaction for progress bars
+        window.addEventListener('DOMContentLoaded', () => {
+            const progressBars = document.querySelectorAll('.progress-bar-fill');
+            progressBars.forEach(bar => {
+                const targetWidth = bar.style.width;
+                bar.style.width = '0%';
+                setTimeout(() => {
+                    bar.style.width = targetWidth;
+                }, 300);
+            });
+        });
+    </script>
+</body></html>

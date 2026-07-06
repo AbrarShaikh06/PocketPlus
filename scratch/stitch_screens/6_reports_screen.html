@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HisaabPro - Reports</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#0D3A35",
+                        "secondary": "#276152",
+                        "tertiary": "#B1B7AB",
+                        "background": "#FBF6F0",
+                        "surface": "#FBF6F0",
+                        "on-background": "#0D3A35",
+                        "on-surface": "#0D3A35",
+                        "on-primary": "#FBF6F0",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container": "#B1B7AB",
+                        "outline": "#276152",
+                        "surface-variant": "#B1B7AB"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-gap-lg": "24px",
+                        "stack-gap-sm": "8px",
+                        "card-padding": "16px",
+                        "touch-target-min": "48px",
+                        "stack-gap-md": "16px",
+                        "container-margin": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Noto Sans"],
+                        "label-sm": ["Noto Sans"],
+                        "hero-amount": ["Noto Sans"],
+                        "body-lg": ["Noto Sans"],
+                        "headline-md": ["Noto Sans"],
+                        "body-md": ["Noto Sans"],
+                        "label-bold": ["Noto Sans"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+                        "hero-amount": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "label-bold": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            min-height: max(884px, 100dvh);
+            background-color: #FBF6F0;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col pb-[100px]">
+<!-- TopAppBar -->
+<header class="bg-surface docked full-width top-0 z-50 shadow-sm flex justify-between items-center px-container-margin h-touch-target-min w-full sticky border-b border-tertiary/20">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-sm">
+                MP
+            </div>
+<h1 class="text-headline-md font-headline-md text-primary tracking-tight">HisaabPro</h1>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full text-primary hover:bg-tertiary/10 transition-colors active:scale-95 duration-100">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</header>
+<main class="flex-1 px-container-margin pt-stack-gap-md space-y-stack-gap-lg max-w-[600px] mx-auto w-full">
+<!-- Date Range Selector -->
+<div class="bg-white rounded-xl p-1 flex shadow-sm border border-tertiary/30">
+<button class="flex-1 py-2 text-center rounded-lg text-secondary font-label-bold text-label-bold transition-colors">Week</button>
+<button class="flex-1 py-2 text-center rounded-lg bg-primary text-on-primary font-label-bold text-label-bold transition-colors">Month</button>
+<button class="flex-1 py-2 text-center rounded-lg text-secondary font-label-bold text-label-bold transition-colors">Custom</button>
+</div>
+<!-- Summary Cards Bento Grid -->
+<div class="grid grid-cols-2 gap-stack-gap-md">
+<!-- Net Profit (Hero) -->
+<div class="col-span-2 bg-primary rounded-xl p-card-padding shadow-lg">
+<div class="flex justify-between items-start mb-2">
+<span class="text-tertiary font-body-md text-body-md">Net Profit</span>
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 1;">trending_up</span>
+</div>
+<div class="font-hero-amount text-hero-amount text-white">₹45,200</div>
+<div class="text-tertiary font-label-sm text-label-sm mt-1">+12% vs last month</div>
+</div>
+<!-- Total Income -->
+<div class="bg-primary rounded-xl p-card-padding shadow-md">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-tertiary text-sm" style="font-variation-settings: 'FILL' 1;">arrow_downward</span>
+<span class="text-tertiary font-body-md text-body-md">Income</span>
+</div>
+<div class="font-headline-md text-headline-md text-white">₹1,25,500</div>
+</div>
+<!-- Total Expenses -->
+<div class="bg-primary rounded-xl p-card-padding shadow-md">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-tertiary text-sm" style="font-variation-settings: 'FILL' 1;">arrow_upward</span>
+<span class="text-tertiary font-body-md text-body-md">Expenses</span>
+</div>
+<div class="font-headline-md text-headline-md text-white">₹80,300</div>
+</div>
+</div>
+<!-- Category Breakdown -->
+<div class="bg-white rounded-xl p-card-padding shadow-sm border border-tertiary/30">
+<h2 class="font-headline-md text-headline-md text-primary mb-stack-gap-md">Category Breakdown</h2>
+<div class="space-y-4">
+<!-- Item 1 -->
+<div>
+<div class="flex justify-between items-center mb-1">
+<span class="font-body-md text-body-md text-secondary">Inventory Purchase</span>
+<span class="font-label-bold text-label-bold text-primary">45%</span>
+</div>
+<div class="w-full bg-tertiary/20 rounded-full h-2">
+<div class="bg-secondary h-2 rounded-full" style="width: 45%"></div>
+</div>
+</div>
+<!-- Item 2 -->
+<div>
+<div class="flex justify-between items-center mb-1">
+<span class="font-body-md text-body-md text-secondary">Shop Rent</span>
+<span class="font-label-bold text-label-bold text-primary">25%</span>
+</div>
+<div class="w-full bg-tertiary/20 rounded-full h-2">
+<div class="bg-secondary/80 h-2 rounded-full" style="width: 25%"></div>
+</div>
+</div>
+<!-- Item 3 -->
+<div>
+<div class="flex justify-between items-center mb-1">
+<span class="font-body-md text-body-md text-secondary">Staff Salary</span>
+<span class="font-label-bold text-label-bold text-primary">20%</span>
+</div>
+<div class="w-full bg-tertiary/20 rounded-full h-2">
+<div class="bg-tertiary h-2 rounded-full" style="width: 20%"></div>
+</div>
+</div>
+<!-- Item 4 -->
+<div>
+<div class="flex justify-between items-center mb-1">
+<span class="font-body-md text-body-md text-secondary">Electricity &amp; Bills</span>
+<span class="font-label-bold text-label-bold text-primary">10%</span>
+</div>
+<div class="w-full bg-tertiary/20 rounded-full h-2">
+<div class="bg-tertiary/60 h-2 rounded-full" style="width: 10%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex gap-stack-gap-md pt-stack-gap-sm">
+<button class="flex-1 flex items-center justify-center gap-2 h-touch-target-min rounded-lg border border-primary text-primary font-label-bold text-label-bold hover:bg-tertiary/10 transition-colors">
+<span class="material-symbols-outlined text-[20px]">picture_as_pdf</span>
+                Export PDF
+            </button>
+<button class="flex-1 flex items-center justify-center gap-2 h-touch-target-min rounded-lg bg-primary text-white font-label-bold text-label-bold hover:bg-secondary transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">share</span>
+                Share WhatsApp
+            </button>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="bg-surface shadow-[0_-4px_12px_rgba(13,58,53,0.08)] fixed bottom-0 w-full flex justify-around items-center py-stack-gap-sm px-2 pb-safe z-50 md:hidden border-t border-tertiary/20">
+<a class="flex flex-col items-center justify-center text-secondary px-4 py-1 hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined mb-1">home</span>
+<span class="text-label-bold font-label-bold">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary px-4 py-1 hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined mb-1">bar_chart</span>
+<span class="text-label-bold font-label-bold">Charts</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary bg-primary/10 rounded-xl px-4 py-1 scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">analytics</span>
+<span class="text-label-bold font-label-bold font-bold">Reports</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary px-4 py-1 hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined mb-1">support_agent</span>
+<span class="text-label-bold font-label-bold">Support</span>
+</a>
+</nav>
+</body></html>

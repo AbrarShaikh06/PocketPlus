@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Feedback &amp; Support - HisaabPro</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-primary": "#abc7ff",
+                        "on-secondary-fixed": "#001a40",
+                        "on-secondary-fixed-variant": "#004590",
+                        "on-error": "#ffffff",
+                        "inverse-on-surface": "#f1f1f1",
+                        "on-tertiary-container": "#e2ffe4",
+                        "secondary-fixed": "#d7e2ff",
+                        "error-container": "#ffdad6",
+                        "on-secondary-container": "#003c7f",
+                        "inverse-surface": "#2f3131",
+                        "on-background": "#0D3A35",
+                        "on-surface": "#0D3A35",
+                        "primary": "#0D3A35",
+                        "tertiary-container": "#008343",
+                        "surface-container-high": "#B1B7AB",
+                        "tertiary-fixed": "#7efba4",
+                        "primary-fixed": "#d7e2ff",
+                        "surface-variant": "#B1B7AB",
+                        "on-surface-variant": "#276152",
+                        "surface-container-lowest": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-tertiary": "#ffffff",
+                        "outline-variant": "#B1B7AB",
+                        "surface-container-highest": "#B1B7AB",
+                        "secondary-fixed-dim": "#acc7ff",
+                        "on-tertiary-fixed-variant": "#005228",
+                        "tertiary-fixed-dim": "#61de8a",
+                        "on-primary-container": "#f6f6ff",
+                        "primary-fixed-dim": "#abc7ff",
+                        "secondary-container": "#276152",
+                        "surface-bright": "#FBF6F0",
+                        "outline": "#B1B7AB",
+                        "surface-container": "#eeeeee",
+                        "surface-container-low": "#f3f3f3",
+                        "background": "#FBF6F0",
+                        "surface-tint": "#0D3A35",
+                        "surface": "#FBF6F0",
+                        "on-primary": "#ffffff",
+                        "surface-dim": "#dadada",
+                        "on-tertiary-fixed": "#00210c",
+                        "secondary": "#276152",
+                        "tertiary": "#006733",
+                        "on-primary-fixed-variant": "#00458f",
+                        "primary-container": "#0D3A35",
+                        "on-primary-fixed": "#001b3f",
+                        "on-secondary": "#ffffff",
+                        "on-error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-gap-lg": "24px",
+                        "stack-gap-sm": "8px",
+                        "card-padding": "16px",
+                        "touch-target-min": "48px",
+                        "stack-gap-md": "16px",
+                        "container-margin": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Noto Sans"],
+                        "label-sm": ["Noto Sans"],
+                        "hero-amount": ["Noto Sans"],
+                        "body-lg": ["Noto Sans"],
+                        "headline-md": ["Noto Sans"],
+                        "body-md": ["Noto Sans"],
+                        "label-bold": ["Noto Sans"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+                        "hero-amount": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "label-bold": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Noto Sans', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom styles for the NPS slider */
+        input[type=range] {
+            -webkit-appearance: none;
+            width: 100%;
+            background: transparent;
+        }
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 24px;
+            width: 24px;
+            border-radius: 50%;
+            background: #276152; /* Updated to secondary */
+            cursor: pointer;
+            margin-top: -10px;
+            box-shadow: 0 2px 6px rgba(39, 97, 82, 0.3);
+        }
+        input[type=range]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 4px;
+            cursor: pointer;
+            background: #B1B7AB; /* Updated to outline-variant */
+            border-radius: 2px;
+        }
+        input[type=range]:focus {
+            outline: none;
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col antialiased">
+<!-- TopAppBar -->
+<header class="bg-surface text-primary text-headline-md font-headline-md docked full-width top-0 z-50 shadow-sm flex justify-between items-center px-container-margin h-touch-target-min w-full sticky">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:bg-surface-container-low transition-colors rounded-full p-1" style="font-variation-settings: 'FILL' 0;">arrow_back</span>
+</div>
+<div class="text-headline-md font-headline-md text-primary truncate mx-4 flex-1 text-center">
+            HisaabPro
+        </div>
+<div class="flex items-center">
+<span class="material-symbols-outlined text-primary cursor-pointer hover:bg-surface-container-low transition-colors rounded-full p-1">notifications</span>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 px-container-margin py-stack-gap-lg flex flex-col gap-stack-gap-lg max-w-[600px] mx-auto w-full pb-24">
+<!-- Header Section -->
+<div class="text-center mb-4">
+<h1 class="text-headline-lg font-headline-lg text-primary mb-2">We're here to help</h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant">How can we make HisaabPro better for your business today?</p>
+</div>
+<!-- 4-Card Bento Grid -->
+<div class="grid grid-cols-2 gap-stack-gap-md">
+<!-- Send Feedback -->
+<button class="bg-[#0D3A35] rounded-xl p-card-padding flex flex-col items-center justify-center gap-3 shadow-[0_4px_12px_rgba(0,0,0,0.1)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.15)] transition-all active:scale-95 text-center aspect-square border border-[#276152]">
+<div class="w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-sm">
+<span class="text-2xl">⭐</span>
+</div>
+<span class="text-body-md font-body-md font-semibold text-white">Send Feedback</span>
+</button>
+<!-- Request a Feature -->
+<button class="bg-[#0D3A35] rounded-xl p-card-padding flex flex-col items-center justify-center gap-3 shadow-[0_4px_12px_rgba(0,0,0,0.1)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.15)] transition-all active:scale-95 text-center aspect-square border border-[#276152]">
+<div class="w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-sm">
+<span class="text-2xl">💡</span>
+</div>
+<span class="text-body-md font-body-md font-semibold text-white">Request a Feature</span>
+</button>
+<!-- Report a Bug -->
+<button class="bg-[#0D3A35] rounded-xl p-card-padding flex flex-col items-center justify-center gap-3 shadow-[0_4px_12px_rgba(0,0,0,0.1)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.15)] transition-all active:scale-95 text-center aspect-square border border-[#276152]">
+<div class="w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-sm">
+<span class="text-2xl">🐛</span>
+</div>
+<span class="text-body-md font-body-md font-semibold text-white">Report a Bug</span>
+</button>
+<!-- Talk on WhatsApp -->
+<button class="bg-[#0D3A35] rounded-xl p-card-padding flex flex-col items-center justify-center gap-3 shadow-[0_4px_12px_rgba(0,0,0,0.1)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.15)] transition-all active:scale-95 text-center aspect-square border border-[#276152]">
+<div class="w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-sm">
+<span class="text-2xl">💬</span>
+</div>
+<span class="text-body-md font-body-md font-semibold text-white">Talk on WhatsApp</span>
+</button>
+</div>
+<!-- NPS Widget Widget -->
+<div class="bg-surface-container-lowest rounded-xl p-card-padding shadow-[0_4px_12px_rgba(0,0,0,0.05)] mt-4">
+<div class="text-center mb-6">
+<h2 class="text-headline-md font-headline-md text-on-surface mb-2">Rate HisaabPro</h2>
+<p class="text-body-md font-body-md text-on-surface-variant">How likely are you to recommend us to another merchant?</p>
+</div>
+<div class="px-2 mb-6">
+<input class="w-full" max="10" min="0" type="range" value="8"/>
+<div class="flex justify-between mt-3 text-label-sm font-label-sm text-outline">
+<span>0 - Unlikely</span>
+<span>10 - Very Likely</span>
+</div>
+</div>
+<button class="w-full bg-[#0D3A35] text-on-primary h-touch-target-min rounded-lg text-body-lg font-body-lg font-bold flex items-center justify-center hover:bg-[#276152] transition-colors active:scale-95">
+                Submit Rating
+            </button>
+</div>
+</main>
+<!-- BottomNavBar Suppressed -->
+</body></html>

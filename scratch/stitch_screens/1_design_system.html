@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HisaabPro - Onboarding SMS Permission</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-primary": "#abc7ff",
+                        "on-secondary-fixed": "#001a40",
+                        "on-secondary-fixed-variant": "#004590",
+                        "on-error": "#ffffff",
+                        "inverse-on-surface": "#f1f1f1",
+                        "on-tertiary-container": "#e2ffe4",
+                        "secondary-fixed": "#d7e2ff",
+                        "error-container": "#ffdad6",
+                        "on-secondary-container": "#003c7f",
+                        "inverse-surface": "#2f3131",
+                        "on-background": "#1a1c1c",
+                        "on-surface": "#1a1c1c",
+                        "primary": "#0057b1",
+                        "tertiary-container": "#008343",
+                        "surface-container-high": "#e8e8e8",
+                        "tertiary-fixed": "#7efba4",
+                        "primary-fixed": "#d7e2ff",
+                        "surface-variant": "#e2e2e2",
+                        "on-surface-variant": "#414753",
+                        "surface-container-lowest": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-tertiary": "#ffffff",
+                        "outline-variant": "#c1c6d5",
+                        "surface-container-highest": "#e2e2e2",
+                        "secondary-fixed-dim": "#acc7ff",
+                        "on-tertiary-fixed-variant": "#005228",
+                        "tertiary-fixed-dim": "#61de8a",
+                        "on-primary-container": "#f6f6ff",
+                        "primary-fixed-dim": "#abc7ff",
+                        "secondary-container": "#78a8ff",
+                        "surface-bright": "#f9f9f9",
+                        "outline": "#727784",
+                        "surface-container": "#eeeeee",
+                        "surface-container-low": "#f3f3f3",
+                        "background": "#f9f9f9",
+                        "surface-tint": "#005cbb",
+                        "surface": "#f9f9f9",
+                        "on-primary": "#ffffff",
+                        "surface-dim": "#dadada",
+                        "on-tertiary-fixed": "#00210c",
+                        "secondary": "#255dae",
+                        "tertiary": "#006733",
+                        "on-primary-fixed-variant": "#00458f",
+                        "primary-container": "#1a6fd8",
+                        "on-primary-fixed": "#001b3f",
+                        "on-secondary": "#ffffff",
+                        "on-error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-gap-lg": "24px",
+                        "stack-gap-sm": "8px",
+                        "card-padding": "16px",
+                        "touch-target-min": "48px",
+                        "stack-gap-md": "16px",
+                        "container-margin": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Noto Sans"],
+                        "label-sm": ["Noto Sans"],
+                        "hero-amount": ["Noto Sans"],
+                        "body-lg": ["Noto Sans"],
+                        "headline-md": ["Noto Sans"],
+                        "body-md": ["Noto Sans"],
+                        "label-bold": ["Noto Sans"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+                        "hero-amount": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "label-bold": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface antialiased min-h-screen flex flex-col items-center selection:bg-primary-container selection:text-on-primary-container">
+<!-- Main Container - Mobile optimized width -->
+<div class="w-full max-w-[390px] min-h-screen flex flex-col px-container-margin py-stack-gap-lg mx-auto relative">
+<!-- Progress Indicators (Optional but good for onboarding flow) -->
+<div class="w-full flex justify-center gap-2 mb-stack-gap-lg mt-stack-gap-md">
+<div class="w-2 h-2 rounded-full bg-surface-variant"></div>
+<div class="w-6 h-2 rounded-full bg-primary"></div>
+<div class="w-2 h-2 rounded-full bg-surface-variant"></div>
+</div>
+<!-- Scrollable Content Area -->
+<main class="flex-1 flex flex-col items-center justify-center text-center pb-stack-gap-lg">
+<!-- Visual Hero Graphic -->
+<div class="w-64 h-64 mb-stack-gap-lg rounded-2xl overflow-hidden shadow-[0_4px_12px_rgba(0,87,177,0.08)] bg-secondary-fixed flex items-center justify-center relative">
+<!-- Using an image placeholder with detailed descriptive prompt for the generative model -->
+<img alt="SMS Auto-capture illustration" class="w-full h-full object-cover" data-alt="A high-quality 3D illustration of a sleek smartphone screen displaying an incoming SMS notification bubble. The notification bubble transforms dynamically into a glowing, metallic rupee symbol, symbolizing automatic payment tracking. The visual style is modern, approachable, and corporate, utilizing a bright light-mode aesthetic with soft shades of primary blue and crisp white. Gentle, ambient lighting creates soft shadows that give the elements a premium, tangible quality, perfectly suited for a modern financial application." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAumNIIRpkW9WdyVLo_Jz-PR1To0OR24vItRDZxbWo1BB63w0O-owBebqHKUpcvYe9d-xtahHOPVPkUtdQdWIPsH9eO_jZgSM8SvKfyS5l-d6Z2RkJP28-ZlHsFrds18i_V56KRBUugUs6TLSiOX2bIu3wxA2MQaVea43qwv9CiQMMIxC4J0v7DQ0hrxyU_R5ZlZo9I92UGnxZdUmMnqemeBMRf1kgJB_7Y7gfXw7fRS9lsLiArDrptO7BejGn1Hwc6i8FkH5UpG9Y"/>
+<!-- Decorative element overlay to add slight depth without breaking rules -->
+<div class="absolute inset-0 bg-gradient-to-tr from-surface/20 to-transparent pointer-events-none"></div>
+</div>
+<!-- Typography Content -->
+<h1 class="font-headline-lg text-headline-lg text-on-surface mb-stack-gap-sm px-2">
+                Let us do the typing for you
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant px-4">
+                A friendly explanation that auto-detecting SMS helps track payments instantly without manual entry.
+            </p>
+</main>
+<!-- Sticky Bottom Actions -->
+<div class="w-full flex flex-col gap-stack-gap-sm mt-auto pb-6">
+<button class="w-full h-touch-target-min bg-primary text-on-primary font-label-bold text-label-bold rounded-xl shadow-[0_4px_12px_rgba(0,87,177,0.08)] hover:bg-surface-tint active:scale-95 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined" data-icon="bolt" data-weight="fill" style="font-variation-settings: 'FILL' 1;">bolt</span>
+                Enable Auto-Capture
+            </button>
+<button class="w-full h-touch-target-min text-primary font-label-bold text-label-bold rounded-xl hover:bg-primary-fixed hover:text-on-primary-fixed active:scale-95 transition-all flex items-center justify-center">
+                Maybe Later
+            </button>
+</div>
+</div>
+</body></html>

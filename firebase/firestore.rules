@@ -1,0 +1,100 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(uid) {
+      return isSignedIn() && request.auth.uid == uid;
+    }
+
+
+    // User profile document.
+    match /users/{userId} {
+      allow read: if isOwner(userId);
+      allow create, update: if isOwner(userId);
+      allow delete: if false; // soft-delete only
+    }
+
+    // Business profiles.
+    match /profiles/{id} {
+      allow read: if isOwner(resource.data.userId);
+      allow create: if isOwner(request.resource.data.userId);
+      allow update: if isOwner(resource.data.userId);
+      allow delete: if false;
+    }
+
+    // Owner-owned financial collections.
+    match /budgets/{id} {
+      allow read: if isOwner(resource.data.userId);
+      allow create: if isOwner(request.resource.data.userId);
+      allow update: if isOwner(resource.data.userId);
+      allow delete: if false;
+    }
+    match /transactions/{id} {
+      allow read: if isOwner(resource.data.userId);
+      allow create: if isOwner(request.resource.data.userId);
+      allow update: if isOwner(resource.data.userId);
+      allow delete: if false;
+    }
+    match /categories/{id} {
+      allow read: if isOwner(resource.data.userId);
+      allow create: if isOwner(request.resource.data.userId);
+      allow update: if isOwner(resource.data.userId);
+      allow delete: if false;
+    }
+    match /invoices/{id} {
+      allow read: if isOwner(resource.data.userId);
+      allow create: if isOwner(request.resource.data.userId);
+      allow update: if isOwner(resource.data.userId);
+      allow delete: if false;
+    }
+    match /khata_customers/{id} {
+      allow read: if isOwner(resource.data.userId);
+      allow create: if isOwner(request.resource.data.userId);
+      allow update: if isOwner(resource.data.userId);
+      allow delete: if false;
+    }
+    match /khata_entries/{id} {
+      allow read: if isOwner(resource.data.userId);
+      allow create: if isOwner(request.resource.data.userId);
+      allow update: if isOwner(resource.data.userId);
+      allow delete: if false;
+    }
+    match /savings_goals/{id} {
+      allow read: if isOwner(resource.data.userId);
+      allow create: if isOwner(request.resource.data.userId);
+      allow update: if isOwner(resource.data.userId);
+      allow delete: if false;
+    }
+    match /savings_entries/{id} {
+      allow read: if isOwner(resource.data.userId);
+      allow create: if isOwner(request.resource.data.userId);
+      allow update: if isOwner(resource.data.userId);
+      allow delete: if false;
+    }
+
+    // Atomic invoice-number counters (doc id = `{userId}_{profileId}`).
+    match /invoice_counters/{id} {
+      allow read, write: if isSignedIn() && id.matches(request.auth.uid + '_.*');
+    }
+
+    // SMS dedup log (doc id = `{userId}_{smsHash}`). Only the SHA-256 hash is
+    // stored — never raw SMS text (CLAUDE.md). Owner-only; not CA-readable.
+    // Gated by doc-id prefix so the `exists()` read works even when the doc
+    // is absent (no resource.data to evaluate).
+    match /sms_dedup_log/{id} {
+      allow read, write: if isSignedIn() && id.matches(request.auth.uid + '_.*');
+    }
+
+    // Feedback: users submit; not client-readable.
+    match /feedback/{id} {
+      allow read: if false;
+      allow create: if isSignedIn();
+      allow update, delete: if false;
+    }
+  }
+}

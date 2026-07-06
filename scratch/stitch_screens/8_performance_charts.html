@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Performance Charts - HisaabPro</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#0D3A35",
+                        "secondary": "#276152",
+                        "surface": "#ffffff",
+                        "surface-variant": "#B1B7AB",
+                        "background": "#FBF6F0",
+                        "on-background": "#0D3A35",
+                        "on-surface": "#0D3A35",
+                        "on-surface-variant": "#0D3A35",
+                        "outline": "#B1B7AB",
+                        "outline-variant": "#B1B7AB",
+                        "tertiary": "#006733",
+                        "tertiary-container": "#e2ffe4",
+                        "error": "#ba1a1a",
+                        "inverse-surface": "#0D3A35",
+                        "inverse-on-surface": "#FBF6F0",
+                        "surface-container-low": "#FBF6F0",
+                        "surface-container-high": "#B1B7AB",
+                        "surface-container": "#eeeeee",
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-gap-lg": "24px",
+                        "stack-gap-sm": "8px",
+                        "card-padding": "16px",
+                        "touch-target-min": "48px",
+                        "stack-gap-md": "16px",
+                        "container-margin": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Noto Sans"],
+                        "label-sm": ["Noto Sans"],
+                        "hero-amount": ["Noto Sans"],
+                        "body-lg": ["Noto Sans"],
+                        "headline-md": ["Noto Sans"],
+                        "body-md": ["Noto Sans"],
+                        "label-bold": ["Noto Sans"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+                        "hero-amount": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "label-bold": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Noto Sans', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .card-shadow {
+            box-shadow: 0 4px 12px rgba(13, 58, 53, 0.08);
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col antialiased w-full max-w-[390px] mx-auto overflow-x-hidden md:max-w-full">
+<!-- TopAppBar -->
+<header class="bg-primary docked full-width top-0 z-50 shadow-sm">
+<div class="flex justify-between items-center px-container-margin h-touch-target-min w-full">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-background" style="font-variation-settings: 'FILL' 1;">account_circle</span>
+</div>
+<h1 class="text-headline-md font-headline-md text-background">HisaabPro</h1>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-background/80 hover:bg-white/10 transition-colors p-2 rounded-full cursor-pointer">notifications</span>
+</div>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="flex-grow flex flex-col pb-[80px]">
+<!-- Tab Switcher -->
+<div class="px-container-margin py-stack-gap-sm sticky top-[48px] bg-background z-40">
+<div class="flex bg-secondary p-1 rounded-lg">
+<button class="flex-1 text-center py-2 bg-background text-primary rounded shadow-sm text-body-md font-body-md font-bold transition-all">Net Profit</button>
+<button class="flex-1 text-center py-2 text-background/80 rounded hover:bg-white/5 text-body-md font-body-md transition-all">Income</button>
+<button class="flex-1 text-center py-2 text-background/80 rounded hover:bg-white/5 text-body-md font-body-md transition-all">Expenses</button>
+</div>
+</div>
+<!-- Large Chart Area -->
+<div class="px-container-margin py-stack-gap-md flex-shrink-0 relative">
+<div class="bg-surface rounded-xl card-shadow p-card-padding flex flex-col relative overflow-hidden h-[300px] md:h-[400px]">
+<div class="flex justify-between items-start mb-4 relative z-10">
+<div>
+<p class="text-label-sm font-label-sm text-on-surface-variant/70 uppercase tracking-wider">Total Net Profit</p>
+<h2 class="text-hero-amount font-hero-amount text-tertiary mt-1">₹4,52,000</h2>
+</div>
+<div class="bg-tertiary-container px-2 py-1 rounded flex items-center gap-1 border border-tertiary/10">
+<span class="material-symbols-outlined text-tertiary text-[14px]">trending_up</span>
+<span class="text-label-bold font-label-bold text-tertiary">+12.5%</span>
+</div>
+</div>
+<!-- Chart structure using #B1B7AB -->
+<div class="flex-grow flex items-end gap-2 mt-4 relative z-10">
+<div class="flex-1 flex flex-col items-center gap-2">
+<div class="w-full bg-surface-variant/30 rounded-t-sm h-[30%] relative group">
+<div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-primary text-background text-label-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity whitespace-nowrap">₹32k</div>
+</div>
+<span class="text-label-sm text-on-surface-variant/60">Jan</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2">
+<div class="w-full bg-surface-variant/30 rounded-t-sm h-[45%] relative group">
+<div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-primary text-background text-label-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity whitespace-nowrap">₹45k</div>
+</div>
+<span class="text-label-sm text-on-surface-variant/60">Feb</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2">
+<div class="w-full bg-surface-variant/50 rounded-t-sm h-[20%] relative group">
+<div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-primary text-background text-label-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity whitespace-nowrap">₹20k</div>
+</div>
+<span class="text-label-sm text-on-surface-variant/60">Mar</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2">
+<div class="w-full bg-surface-variant/70 rounded-t-sm h-[60%] relative group">
+<div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-primary text-background text-label-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity whitespace-nowrap">₹60k</div>
+</div>
+<span class="text-label-sm text-on-surface-variant/60">Apr</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2">
+<div class="w-full bg-surface-variant/90 rounded-t-sm h-[85%] relative group">
+<div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-primary text-background text-label-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity whitespace-nowrap">₹85k</div>
+</div>
+<span class="text-label-sm text-on-surface-variant/60">May</span>
+</div>
+<div class="flex-1 flex flex-col items-center gap-2">
+<div class="w-full bg-secondary rounded-t-sm h-[100%] relative group shadow-sm">
+<div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-primary text-background text-label-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity whitespace-nowrap">₹110k</div>
+</div>
+<span class="text-label-sm text-secondary font-bold">Jun</span>
+</div>
+</div>
+<!-- Decorative grid lines -->
+<div class="absolute inset-x-card-padding top-[100px] bottom-[40px] flex flex-col justify-between pointer-events-none z-0">
+<div class="w-full border-t border-surface-variant/20 border-dashed"></div>
+<div class="w-full border-t border-surface-variant/20 border-dashed"></div>
+<div class="w-full border-t border-surface-variant/20 border-dashed"></div>
+<div class="w-full border-t border-surface-variant/20 border-dashed"></div>
+</div>
+</div>
+</div>
+<!-- Insights -->
+<div class="px-container-margin pb-stack-gap-lg flex-grow">
+<h3 class="text-headline-md font-headline-md text-on-surface mb-stack-gap-sm">Insights</h3>
+<div class="grid grid-cols-2 gap-stack-gap-md">
+<!-- Card 1 -->
+<div class="bg-surface rounded-xl card-shadow p-4 flex flex-col border border-surface-variant/10">
+<div class="flex items-center gap-2 mb-2 text-tertiary">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">emoji_events</span>
+<span class="text-label-sm font-label-sm font-bold uppercase tracking-wide">Best Month</span>
+</div>
+<p class="text-headline-lg font-headline-lg text-on-surface mt-auto">June</p>
+<p class="text-body-md font-body-md text-tertiary font-bold mt-1">₹1,10,000</p>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface rounded-xl card-shadow p-4 flex flex-col border border-surface-variant/10">
+<div class="flex items-center gap-2 mb-2 text-error">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">warning</span>
+<span class="text-label-sm font-label-sm font-bold uppercase tracking-wide">Worst Month</span>
+</div>
+<p class="text-headline-lg font-headline-lg text-on-surface mt-auto">March</p>
+<p class="text-body-md font-body-md text-on-surface-variant/70 mt-1">₹20,000</p>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface rounded-xl card-shadow p-4 flex flex-col col-span-2 md:col-span-1 border border-surface-variant/10">
+<div class="flex items-center gap-2 mb-2 text-secondary">
+<span class="material-symbols-outlined text-[20px]">calculate</span>
+<span class="text-label-sm font-label-sm font-bold uppercase tracking-wide">Avg Monthly Profit</span>
+</div>
+<p class="text-headline-lg font-headline-lg text-on-surface mt-2">₹75,333</p>
+<div class="mt-2 h-1 w-full bg-surface-variant/20 rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-2/3 rounded-full"></div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-tertiary-container border border-tertiary/20 rounded-xl card-shadow p-4 flex flex-col justify-center items-center text-center col-span-2 md:col-span-1">
+<span class="text-label-sm font-label-sm font-bold text-tertiary uppercase tracking-wide mb-1">Growth vs Last Mth</span>
+<div class="flex items-center justify-center gap-1 text-tertiary">
+<span class="material-symbols-outlined text-[28px] font-bold">arrow_upward</span>
+<p class="text-hero-amount font-hero-amount">29.4%</p>
+</div>
+<p class="text-label-sm font-label-sm text-tertiary/80 mt-1">Looking good!</p>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="bg-primary shadow-lg fixed bottom-0 w-full flex justify-around items-center py-stack-gap-sm px-2 pb-safe z-50 md:hidden">
+<a class="flex flex-col items-center justify-center text-background/60 px-4 py-1 hover:text-background transition-all" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-label-bold font-label-bold mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-background bg-secondary/30 rounded-xl px-4 py-1 scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">bar_chart</span>
+<span class="text-label-bold font-label-bold mt-1">Charts</span>
+</a>
+<a class="flex flex-col items-center justify-center text-background/60 px-4 py-1 hover:text-background transition-all" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="text-label-bold font-label-bold mt-1">Reports</span>
+</a>
+<a class="flex flex-col items-center justify-center text-background/60 px-4 py-1 hover:text-background transition-all" href="#">
+<span class="material-symbols-outlined">support_agent</span>
+<span class="text-label-bold font-label-bold mt-1">Support</span>
+</a>
+</nav>
+</body></html>

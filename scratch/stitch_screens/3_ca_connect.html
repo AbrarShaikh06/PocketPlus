@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>CA Connect - HisaabPro</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#0D3A35",
+                        "secondary": "#276152",
+                        "outline": "#B1B7AB",
+                        "background": "#FBF6F0",
+                        "surface": "#FBF6F0",
+                        "on-surface": "#0D3A35",
+                        "on-background": "#0D3A35",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container": "#F1F4F0",
+                        "surface-variant": "#B1B7AB",
+                        "on-surface-variant": "#276152",
+                        "primary-fixed": "#B1B7AB",
+                        "primary-container": "#0D3A35",
+                        "on-primary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "error-container": "#ffdad6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-gap-lg": "24px",
+                        "stack-gap-sm": "8px",
+                        "card-padding": "16px",
+                        "touch-target-min": "48px",
+                        "stack-gap-md": "16px",
+                        "container-margin": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Noto Sans"],
+                        "label-sm": ["Noto Sans"],
+                        "hero-amount": ["Noto Sans"],
+                        "body-lg": ["Noto Sans"],
+                        "headline-md": ["Noto Sans"],
+                        "body-md": ["Noto Sans"],
+                        "label-bold": ["Noto Sans"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+                        "hero-amount": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "label-bold": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { -webkit-tap-highlight-color: transparent; min-height: max(884px, 100dvh); }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased min-h-screen flex flex-col font-body-md">
+<!-- TopAppBar -->
+<header class="bg-surface docked full-width top-0 z-50 shadow-sm sticky border-b border-outline/20">
+<div class="flex justify-between items-center px-container-margin h-touch-target-min w-full">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-2xl">arrow_back</span>
+<span class="text-headline-md font-headline-md text-primary">HisaabPro</span>
+</div>
+<div class="flex items-center gap-3 text-secondary">
+<span class="material-symbols-outlined hover:bg-surface-container transition-colors p-2 rounded-full cursor-pointer">notifications</span>
+</div>
+</div>
+</header>
+<main class="flex-1 w-full max-w-[390px] mx-auto px-container-margin py-stack-gap-lg pb-24 space-y-stack-gap-lg">
+<!-- Page Title -->
+<div>
+<h1 class="text-headline-lg font-headline-lg text-primary">CA Connect</h1>
+<p class="text-body-md font-body-md text-secondary mt-1">Manage your accountant's access and view their feedback securely.</p>
+</div>
+<!-- Section 1: Connected CA Profile Card -->
+<section class="bg-surface-container-lowest rounded-xl shadow-[0_4px_12px_rgba(13,58,53,0.08)] p-card-padding flex items-center gap-4 border border-outline/10">
+<img alt="CA Profile" class="w-16 h-16 rounded-full object-cover border-2 border-outline" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQCPzaErE0E7QVWfZYSWu3Ah6TWfXU0Yl3Z1qr_E55eNC6xhJCCr8nJ_dj4_MUg_bgO94-62BPuD-QgX5v9MpRKnTUQAmjJT1bLE-2L_Luv3ZBL2XXi8ZSkpyHnT9QgerTBXjv2CfzXtH25x1ImMnChyhhoXgY5vS75U0rLrdk7bBr25Mh9-krj7t7ASwtX4_fZHIxPOrqT5FJm78LCoQsl1oJbJb0IBmNQetoQ5_TIMHBTUOOZJNSdhHwU7EmdMdUz_ifkg25_tE"/>
+<div class="flex-1">
+<div class="flex items-center gap-2">
+<h2 class="text-headline-md font-headline-md text-primary">Rahul Sharma</h2>
+<span class="bg-secondary/10 text-secondary text-label-sm font-label-sm px-2 py-0.5 rounded-full flex items-center gap-1 border border-secondary/20">
+<span class="material-symbols-outlined text-[14px]">verified</span> Active
+                    </span>
+</div>
+<p class="text-label-sm font-label-sm text-secondary flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span> Last viewed: 2 hours ago
+                </p>
+</div>
+<button class="text-error bg-error-container/20 p-2 rounded-full hover:bg-error-container/40 transition-colors">
+<span class="material-symbols-outlined">person_remove</span>
+</button>
+</section>
+<!-- Section 3: Access Toggles -->
+<section class="bg-surface-container-lowest rounded-xl shadow-[0_4px_12px_rgba(13,58,53,0.08)] overflow-hidden border border-outline/10">
+<div class="p-card-padding border-b border-outline/20 bg-surface-container/30">
+<h3 class="text-body-lg font-body-lg font-semibold text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">visibility</span> What your CA can see
+                </h3>
+<p class="text-label-sm font-label-sm text-secondary mt-1">Control which data sets are shared for auditing.</p>
+</div>
+<div class="flex flex-col">
+<!-- Toggle 1 -->
+<div class="flex items-center justify-between p-card-padding border-b border-outline/10 last:border-0 hover:bg-surface-container/20 transition-colors">
+<div>
+<div class="text-body-md font-body-md text-primary font-semibold">Sales &amp; Income</div>
+<div class="text-label-sm font-label-sm text-secondary">Invoices, received payments, and daily sales.</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-outline/40 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-secondary"></div>
+</label>
+</div>
+<!-- Toggle 2 -->
+<div class="flex items-center justify-between p-card-padding border-b border-outline/10 last:border-0 hover:bg-surface-container/20 transition-colors">
+<div>
+<div class="text-body-md font-body-md text-primary font-semibold">Expenses &amp; Purchases</div>
+<div class="text-label-sm font-label-sm text-secondary">Bills, supplier payments, and overheads.</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-outline/40 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-secondary"></div>
+</label>
+</div>
+<!-- Toggle 3 -->
+<div class="flex items-center justify-between p-card-padding border-b border-outline/10 last:border-0 hover:bg-surface-container/20 transition-colors">
+<div>
+<div class="text-body-md font-body-md text-primary font-semibold">Tax Reports</div>
+<div class="text-label-sm font-label-sm text-secondary">GST summaries and automated tax calculations.</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-outline/40 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-secondary"></div>
+</label>
+</div>
+</div>
+</section>
+<!-- Section 4: Recent CA Comments -->
+<section class="space-y-stack-gap-md">
+<h3 class="text-body-lg font-body-lg font-semibold text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">chat</span> Recent CA Comments
+            </h3>
+<div class="space-y-4">
+<!-- Comment Bubble -->
+<div class="flex gap-3">
+<img alt="CA Profile" class="w-8 h-8 rounded-full object-cover flex-shrink-0 mt-1" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwMIOQsXj5pQEQhGST4KUNDvIuBEzO9hLCWsz_UmJuL5eT19OeOrlI-K4Et4o9881ylo4iCKj_AhW82s54lK7Cw4C_CtRioJYfrH9QIPeG10KxVr6tDwpjVwrkK7Q0nYWRgZc3yFp6VJKIWXDeJLKv76oV8Q4Cw3Ex2MaYlihu2aBKbvI8WYsD7O1T9snD-x1lRgEHQcfCyRKTms0iLZUjcm6bDTR8mi3hRpXSV_UviJEr3IzC9N-CZdPoebUESxm2-j0lCxj6nUs"/>
+<div class="bg-surface-container-lowest shadow-sm rounded-2xl rounded-tl-none p-3 max-w-[85%] border border-outline/20">
+<p class="text-body-md font-body-md text-primary">Please categorize the recent payment to 'Tech Solutions Pvt' as Office Equipment.</p>
+<p class="text-[10px] text-secondary mt-1 text-right">Yesterday, 10:30 AM</p>
+</div>
+</div>
+<!-- Reply / Action Bubble -->
+<div class="flex gap-3 flex-row-reverse">
+<div class="w-8 h-8 rounded-full bg-outline flex items-center justify-center flex-shrink-0 mt-1">
+<span class="material-symbols-outlined text-primary text-[16px]">storefront</span>
+</div>
+<div class="bg-primary text-on-primary shadow-sm rounded-2xl rounded-tr-none p-3 max-w-[85%]">
+<p class="text-body-md font-body-md">Done. I've updated the category in expenses.</p>
+<p class="text-[10px] text-outline mt-1 text-right">Yesterday, 11:15 AM</p>
+</div>
+</div>
+</div>
+<button class="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-lg bg-primary hover:bg-secondary transition-colors text-white font-label-bold text-label-bold mt-2 shadow-sm">
+<span class="material-symbols-outlined text-[18px]">add_comment</span> Send Message
+            </button>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full flex justify-around items-center py-stack-gap-sm px-2 pb-safe bg-surface shadow-[0_-4px_12px_rgba(13,58,53,0.08)] z-50 border-t border-outline/20">
+<a class="flex flex-col items-center justify-center text-secondary px-4 py-1 hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-label-bold font-label-bold mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary px-4 py-1 hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined">bar_chart</span>
+<span class="text-label-bold font-label-bold mt-1">Charts</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary px-4 py-1 hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="text-label-bold font-label-bold mt-1">Reports</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary bg-secondary/10 rounded-xl px-4 py-1 scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined">support_agent</span>
+<span class="text-label-bold font-label-bold mt-1">Support</span>
+</a>
+</nav>
+</body></html>

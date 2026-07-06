@@ -1,0 +1,48 @@
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.buildDir = "C:/Users/abrar/.gemini/antigravity-ide/builds/igrow/build"
+
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+}
+
+subprojects {
+    project.evaluationDependsOn(":app")
+}
+
+subprojects {
+    // Strip package attribute immediately during configuration if the manifest exists
+    def manifestFile = file("src/main/AndroidManifest.xml")
+    if (manifestFile.exists()) {
+        def content = manifestFile.text
+        if (content.contains("package=")) {
+            println "Stripping package attribute from ${manifestFile.absolutePath} to prevent AGP 8.0+ build error"
+            content = content.replaceAll(/package="[^"]*"/, "")
+            manifestFile.text = content
+        }
+    }
+
+    plugins.withId("com.android.library") {
+        project.android {
+            if (namespace == null) {
+                namespace = "in.pocketplus.app.fallback." + project.name.replace("-", "_")
+            }
+        }
+    }
+    plugins.withId("com.android.application") {
+        project.android {
+            if (namespace == null) {
+                namespace = "in.pocketplus.app.fallback." + project.name.replace("-", "_")
+            }
+        }
+    }
+}
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}

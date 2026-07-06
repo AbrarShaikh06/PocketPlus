@@ -1,0 +1,22 @@
+include: package:flutter_lints/flutter.yaml
+
+linter:
+  rules:
+    prefer_const_constructors: true
+    prefer_const_declarations: true
+    avoid_print: true
+    # Comma placement is owned by `dart format` (Dart 3.7+ style), which
+    # inserts/removes trailing commas itself and conflicts with this lint.
+    # The project deliberately uses SCREAMING_SNAKE for enum values
+    # (see CLAUDE.md naming conventions, e.g. TransactionType.INCOME,
+    # SavingsCategory.CAR) — these are also serialized to Firestore via
+    # `.name`, so renaming would break stored data. Disable the lint that
+    # fights this intentional convention.
+    constant_identifier_names: false
+
+analyzer:
+  exclude:
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"
+    # Rules-test tooling ships stray .dart templates the analyzer must ignore.
+    - "firebase/node_modules/**"

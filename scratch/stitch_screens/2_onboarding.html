@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HisaabPro - Onboarding</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#0D3A35",
+                        "secondary": "#276152",
+                        "outline": "#B1B7AB",
+                        "background": "#FBF6F0",
+                        "on-background": "#0D3A35",
+                        "surface": "#FBF6F0",
+                        "on-surface": "#0D3A35",
+                        "surface-container-low": "#F1EBE4",
+                        "on-surface-variant": "#276152",
+                        "outline-variant": "#B1B7AB",
+                        "on-primary": "#FBF6F0",
+                        "primary-container": "#276152"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-gap-lg": "24px",
+                        "stack-gap-sm": "8px",
+                        "card-padding": "16px",
+                        "touch-target-min": "48px",
+                        "stack-gap-md": "16px",
+                        "container-margin": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Noto Sans"],
+                        "label-sm": ["Noto Sans"],
+                        "hero-amount": ["Noto Sans"],
+                        "body-lg": ["Noto Sans"],
+                        "headline-md": ["Noto Sans"],
+                        "body-md": ["Noto Sans"],
+                        "label-bold": ["Noto Sans"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+                        "hero-amount": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "label-bold": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased min-h-screen flex flex-col items-center justify-center p-container-margin md:p-8">
+<div class="w-full max-w-[390px] mx-auto flex flex-col h-full min-h-[884px] bg-surface rounded-xl shadow-sm overflow-hidden relative border border-outline/20">
+<!-- Header / Logo Area -->
+<header class="w-full py-stack-gap-lg px-container-margin flex justify-center items-center">
+<h1 class="text-headline-lg font-headline-lg text-primary">HisaabPro</h1>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 flex flex-col px-container-margin pt-stack-gap-md pb-stack-gap-lg">
+<!-- Illustration Container -->
+<div class="w-full flex justify-center items-center mb-stack-gap-lg rounded-2xl overflow-hidden bg-surface-container-low p-8 aspect-square" style="max-height: 240px;">
+<img alt="Friendly local shop illustration" class="object-contain w-full h-full" data-alt="A clean, minimalist 3D illustration of a friendly local storefront or shop with a modern Indian aesthetic. The style is bright, welcoming, and uses a soft color palette anchored by primary greens and warm neutrals. The lighting is soft and even, creating a high-key, light-mode environment. The background is isolated or very simple." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBh3x1RNMcpziTJI5CG67f4TCUIv3alp2Mr1hKrlVH5lKDkkbouOQ8oupW1PmHIh06Y-GhUMnVxXmYos9XbZuGFY1IjnTwBRTZ8oWzlayv1yxLoXDpS0EsL8q7Y_wMnT96-H2IUrNChK32wAZhSqSy11imFLJMNnCzxdUm9GdzR8lk4Cy6C3XXAX_UPojyXhG0xofGO_cu2x_dtnG96DLbhWAyUffHEbhKZC62XmieI5gYZwgD8Ka53oIc20zlNTCJ0HxZACC4b3nk"/>
+</div>
+<!-- Form Area -->
+<div class="flex-1 flex flex-col justify-start">
+<h2 class="text-headline-md font-headline-md text-on-surface mb-stack-gap-sm text-center">What's your business name?</h2>
+<p class="text-body-md font-body-md text-on-surface-variant text-center mb-stack-gap-lg">This helps us personalize your ledger.</p>
+<div class="relative w-full">
+<input class="w-full h-touch-target-min px-4 py-3 bg-surface border border-outline-variant rounded-lg text-body-lg font-body-lg text-on-surface placeholder:text-outline/60 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all shadow-sm" id="businessName" placeholder="e.g. Sharma General Store" type="text"/>
+</div>
+</div>
+<!-- Bottom Sticky Action -->
+<div class="mt-auto pt-stack-gap-lg w-full pb-safe">
+<button class="w-full h-touch-target-min bg-primary hover:bg-secondary text-on-primary text-body-lg font-bold rounded-full flex items-center justify-center transition-colors shadow-[0_4px_12px_rgba(13,58,53,0.15)]" type="button">
+                    Next
+                </button>
+</div>
+</main>
+</div>
+</body></html>

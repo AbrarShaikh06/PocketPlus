@@ -1,0 +1,67 @@
+name: Deploy
+
+# Single, non-flavored deploy pipeline. Builds the release app bundle for the
+# one Firebase project / one application (in.pocketplus.app) and ships it to the
+# Play Store internal track. Triggered manually.
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
+jobs:
+  build_release:
+    name: Build & Deploy to Play Store
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.22.x'
+
+      - run: flutter pub get
+
+      - name: Decode keystore
+        run: |
+          echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 --decode > release-keystore.jks
+
+      - name: Decode Play Store service account
+        run: |
+          echo "${{ secrets.PLAY_STORE_JSON_KEY }}" | base64 --decode > play-store-key.json
+
+      - name: Build release app bundle
+        run: >
+          flutter build appbundle --release
+          --dart-define=GEMINI_API_KEY=${{ secrets.GEMINI_API_KEY }}
+        env:
+          KEYSTORE_PATH: ${{ github.workspace }}/release-keystore.jks
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+
+      - name: Generate release notes
+        run: |
+          git log --oneline -10 > RELEASE_NOTES.md
+          echo "" >> RELEASE_NOTES.md
+          echo "Built from commit: ${{ github.sha }}" >> RELEASE_NOTES.md
+
+      - name: Set up Ruby for Fastlane
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: true
+
+      - name: Install Fastlane
+        run: gem install fastlane
+
+      - name: Deploy to Play Store Internal Track
+        run: |
+          fastlane run supply \
+            --aab build/app/outputs/bundle/release/app-release.aab \
+            --track internal \
+            --rollout 0.1 \
+            --json_key play-store-key.json \
+            --package_name "in.pocketplus.app" \
+            --release_notes_file RELEASE_NOTES.md

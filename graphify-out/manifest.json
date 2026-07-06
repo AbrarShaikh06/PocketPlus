@@ -1,0 +1,1642 @@
+{
+  "A:\\IGrow\\android\\app\\build.gradle": {
+    "mtime": 1781343010.9567912,
+    "ast_hash": "eb2019be8e6630720bbd0ee77f893bd6",
+    "semantic_hash": "eb2019be8e6630720bbd0ee77f893bd6"
+  },
+  "A:\\IGrow\\android\\app\\src\\main\\java\\io\\flutter\\plugins\\GeneratedPluginRegistrant.java": {
+    "mtime": 1781521188.039499,
+    "ast_hash": "884870c4f82e5ef215f6306dfef724c9",
+    "semantic_hash": "884870c4f82e5ef215f6306dfef724c9"
+  },
+  "A:\\IGrow\\android\\app\\src\\main\\kotlin\\in\\igrow\\app\\MainActivity.kt": {
+    "mtime": 1781174765.490728,
+    "ast_hash": "6e3d482c176eec6cf825b14b1bff3629",
+    "semantic_hash": "6e3d482c176eec6cf825b14b1bff3629"
+  },
+  "A:\\IGrow\\android\\app\\src\\main\\kotlin\\in\\igrow\\app\\SmsReceiver.kt": {
+    "mtime": 1781171627.285813,
+    "ast_hash": "827a78464444e13afc2bdc35f595d8c5",
+    "semantic_hash": "827a78464444e13afc2bdc35f595d8c5"
+  },
+  "A:\\IGrow\\android\\build.gradle": {
+    "mtime": 1781239337.3946934,
+    "ast_hash": "94e73b766cb1466b7a70dbc1b4cfc859",
+    "semantic_hash": "94e73b766cb1466b7a70dbc1b4cfc859"
+  },
+  "A:\\IGrow\\android\\gradlew": {
+    "mtime": 1780797994.6010163,
+    "ast_hash": "7f1cd7eb3f75a1dc85cd37753972a6e2",
+    "semantic_hash": "7f1cd7eb3f75a1dc85cd37753972a6e2"
+  },
+  "A:\\IGrow\\android\\settings.gradle": {
+    "mtime": 1781521137.296162,
+    "ast_hash": "e58491ba3797723f2a7e07ec817325e0",
+    "semantic_hash": "e58491ba3797723f2a7e07ec817325e0"
+  },
+  "A:\\IGrow\\build-release.ps1": {
+    "mtime": 1781341174.4594204,
+    "ast_hash": "141b12e8191bf577fa04ed052b0e919a",
+    "semantic_hash": "141b12e8191bf577fa04ed052b0e919a"
+  },
+  "A:\\IGrow\\firebase.json": {
+    "mtime": 1781239337.4100437,
+    "ast_hash": "90b85ca1dab72909645763f10a35bcbe",
+    "semantic_hash": "90b85ca1dab72909645763f10a35bcbe"
+  },
+  "A:\\IGrow\\firebase\\firebase.json": {
+    "mtime": 1781339468.8958662,
+    "ast_hash": "3adb5e2183a4ad214db40a2f63680576",
+    "semantic_hash": "3adb5e2183a4ad214db40a2f63680576"
+  },
+  "A:\\IGrow\\firebase\\test\\firestore_rules_test.js": {
+    "mtime": 1781141506.4707267,
+    "ast_hash": "68d6bcde5b617741a19e04a535fe923a",
+    "semantic_hash": "68d6bcde5b617741a19e04a535fe923a"
+  },
+  "A:\\IGrow\\functions\\jest.config.js": {
+    "mtime": 1781339410.9111261,
+    "ast_hash": "6637c015b0b40c59eaec47eafb246e30",
+    "semantic_hash": "6637c015b0b40c59eaec47eafb246e30"
+  },
+  "A:\\IGrow\\functions\\package.json": {
+    "mtime": 1781339403.0822349,
+    "ast_hash": "7c62d773108d86a627a8096f7d857e9f",
+    "semantic_hash": "7c62d773108d86a627a8096f7d857e9f"
+  },
+  "A:\\IGrow\\functions\\src\\index.ts": {
+    "mtime": 1781339439.9781373,
+    "ast_hash": "eba457a01050ca7e4d1cb223cff2965c",
+    "semantic_hash": "eba457a01050ca7e4d1cb223cff2965c"
+  },
+  "A:\\IGrow\\functions\\test\\index.test.ts": {
+    "mtime": 1781339464.7966855,
+    "ast_hash": "861e944b8d147c28985bb230cb8d6878",
+    "semantic_hash": "861e944b8d147c28985bb230cb8d6878"
+  },
+  "A:\\IGrow\\functions\\test\\setup.ts": {
+    "mtime": 1781339414.3318143,
+    "ast_hash": "d63223e3d9d4b5275a57b01d781e9ae7",
+    "semantic_hash": "d63223e3d9d4b5275a57b01d781e9ae7"
+  },
+  "A:\\IGrow\\functions\\tsconfig.json": {
+    "mtime": 1781339406.8316605,
+    "ast_hash": "57ac9e3d4483d424d764ec5945ffe51a",
+    "semantic_hash": "57ac9e3d4483d424d764ec5945ffe51a"
+  },
+  "A:\\IGrow\\lib\\core\\analytics\\analytics_service.dart": {
+    "mtime": 1781335388.5156536,
+    "ast_hash": "c608a88d50ea1c13b520544f12ec658e",
+    "semantic_hash": "c608a88d50ea1c13b520544f12ec658e"
+  },
+  "A:\\IGrow\\lib\\core\\bootstrap\\firebase_bootstrap.dart": {
+    "mtime": 1780795810.620567,
+    "ast_hash": "5973cd0b327f1c5e4cb366b11ece8957",
+    "semantic_hash": "5973cd0b327f1c5e4cb366b11ece8957"
+  },
+  "A:\\IGrow\\lib\\core\\constants\\app_colors.dart": {
+    "mtime": 1781441623.6069374,
+    "ast_hash": "bed500f1cd94d5b0c9f8203b9ddc860d",
+    "semantic_hash": "bed500f1cd94d5b0c9f8203b9ddc860d"
+  },
+  "A:\\IGrow\\lib\\core\\constants\\app_sizes.dart": {
+    "mtime": 1781404435.582379,
+    "ast_hash": "00b1c8b8462cf84f4d5494ba7c1c4980",
+    "semantic_hash": "00b1c8b8462cf84f4d5494ba7c1c4980"
+  },
+  "A:\\IGrow\\lib\\core\\constants\\app_strings.dart": {
+    "mtime": 1780795810.620567,
+    "ast_hash": "df9795b005365fae72ad1cbc0ff6f12a",
+    "semantic_hash": "df9795b005365fae72ad1cbc0ff6f12a"
+  },
+  "A:\\IGrow\\lib\\core\\constants\\app_text_styles.dart": {
+    "mtime": 1781149196.0451355,
+    "ast_hash": "6652fdd204b3c5a111dae8a2eb7ab16d",
+    "semantic_hash": "6652fdd204b3c5a111dae8a2eb7ab16d"
+  },
+  "A:\\IGrow\\lib\\core\\errors\\app_exception.dart": {
+    "mtime": 1780795810.620567,
+    "ast_hash": "42e65d024ffb5c606ea43478ead82ea5",
+    "semantic_hash": "42e65d024ffb5c606ea43478ead82ea5"
+  },
+  "A:\\IGrow\\lib\\core\\errors\\error_mapper.dart": {
+    "mtime": 1780795810.620567,
+    "ast_hash": "a493ca7f98b30a4c4f5d96e2bed4d214",
+    "semantic_hash": "a493ca7f98b30a4c4f5d96e2bed4d214"
+  },
+  "A:\\IGrow\\lib\\core\\errors\\failures.dart": {
+    "mtime": 1781298950.3685338,
+    "ast_hash": "746d407be140e34e3108d04d644b175a",
+    "semantic_hash": "746d407be140e34e3108d04d644b175a"
+  },
+  "A:\\IGrow\\lib\\core\\network\\connectivity_checker.dart": {
+    "mtime": 1780795810.620567,
+    "ast_hash": "6b2cc18f5882d873b355dc6517e21e58",
+    "semantic_hash": "6b2cc18f5882d873b355dc6517e21e58"
+  },
+  "A:\\IGrow\\lib\\core\\network\\network_info.dart": {
+    "mtime": 1780795810.620567,
+    "ast_hash": "ddde4a222c69a1b95a7bfb57ec388f3a",
+    "semantic_hash": "ddde4a222c69a1b95a7bfb57ec388f3a"
+  },
+  "A:\\IGrow\\lib\\core\\notifications\\fcm_service.dart": {
+    "mtime": 1781302178.2590792,
+    "ast_hash": "cc53b05fcf3f6df0c33d1b631d62bfba",
+    "semantic_hash": "cc53b05fcf3f6df0c33d1b631d62bfba"
+  },
+  "A:\\IGrow\\lib\\core\\notifications\\local_notification_service.dart": {
+    "mtime": 1781301963.0364196,
+    "ast_hash": "8d9f33d276e964ecd333289a20211c93",
+    "semantic_hash": "8d9f33d276e964ecd333289a20211c93"
+  },
+  "A:\\IGrow\\lib\\core\\notifications\\notification_payload.dart": {
+    "mtime": 1781302111.5476632,
+    "ast_hash": "d819d52c4a1f6e1128195aa7b2690cbc",
+    "semantic_hash": "d819d52c4a1f6e1128195aa7b2690cbc"
+  },
+  "A:\\IGrow\\lib\\core\\router\\app_router.dart": {
+    "mtime": 1781528043.637983,
+    "ast_hash": "29bfd74543c464bb24717c53e8bf59e7",
+    "semantic_hash": "29bfd74543c464bb24717c53e8bf59e7"
+  },
+  "A:\\IGrow\\lib\\core\\router\\route_names.dart": {
+    "mtime": 1781401444.6361773,
+    "ast_hash": "00fc6807fedb32c717aeb4ca409b4405",
+    "semantic_hash": "00fc6807fedb32c717aeb4ca409b4405"
+  },
+  "A:\\IGrow\\lib\\core\\security\\app_lifecycle_observer.dart": {
+    "mtime": 1781331320.4704323,
+    "ast_hash": "fc9651efe71b709b37b39222d9522c92",
+    "semantic_hash": "fc9651efe71b709b37b39222d9522c92"
+  },
+  "A:\\IGrow\\lib\\core\\security\\biometric_lock_overlay.dart": {
+    "mtime": 1781331433.8508773,
+    "ast_hash": "ebffe2bf180c4b97a9034805894fcea4",
+    "semantic_hash": "ebffe2bf180c4b97a9034805894fcea4"
+  },
+  "A:\\IGrow\\lib\\core\\security\\biometric_lock_provider.dart": {
+    "mtime": 1781307415.6036232,
+    "ast_hash": "7f0fd340f55c02dfae9a12e8a3872b0c",
+    "semantic_hash": "7f0fd340f55c02dfae9a12e8a3872b0c"
+  },
+  "A:\\IGrow\\lib\\core\\theme\\app_theme.dart": {
+    "mtime": 1781338748.9303946,
+    "ast_hash": "9740e77a480326421d07757221323d96",
+    "semantic_hash": "9740e77a480326421d07757221323d96"
+  },
+  "A:\\IGrow\\lib\\core\\utils\\currency_formatter.dart": {
+    "mtime": 1781472042.002951,
+    "ast_hash": "1d789f176358e09ee92138c99e5bc8f2",
+    "semantic_hash": "1d789f176358e09ee92138c99e5bc8f2"
+  },
+  "A:\\IGrow\\lib\\core\\utils\\date_formatter.dart": {
+    "mtime": 1781145028.620559,
+    "ast_hash": "65ac9432220d7f12d6475fce8556e470",
+    "semantic_hash": "65ac9432220d7f12d6475fce8556e470"
+  },
+  "A:\\IGrow\\lib\\core\\utils\\logger.dart": {
+    "mtime": 1780795810.620567,
+    "ast_hash": "4527e0770c6fd4f14c5554d279844caf",
+    "semantic_hash": "4527e0770c6fd4f14c5554d279844caf"
+  },
+  "A:\\IGrow\\lib\\core\\utils\\phone_validator.dart": {
+    "mtime": 1781471845.8891933,
+    "ast_hash": "dace0a2e03a5ce6834de11c5f2a8b95a",
+    "semantic_hash": "dace0a2e03a5ce6834de11c5f2a8b95a"
+  },
+  "A:\\IGrow\\lib\\core\\utils\\whatsapp_utils.dart": {
+    "mtime": 1781471900.617127,
+    "ast_hash": "00330d5b42b70c0709088ea895f0f40f",
+    "semantic_hash": "00330d5b42b70c0709088ea895f0f40f"
+  },
+  "A:\\IGrow\\lib\\features\\analytics\\presentation\\analytics_providers.dart": {
+    "mtime": 1781441105.5214465,
+    "ast_hash": "54918496db0699df246ba2b4fe34575e",
+    "semantic_hash": "54918496db0699df246ba2b4fe34575e"
+  },
+  "A:\\IGrow\\lib\\features\\analytics\\presentation\\analytics_screen.dart": {
+    "mtime": 1781528570.9596615,
+    "ast_hash": "f1ad1c5dc2848facce280fbf0b9056b8",
+    "semantic_hash": "f1ad1c5dc2848facce280fbf0b9056b8"
+  },
+  "A:\\IGrow\\lib\\features\\auth\\data\\auth_repository_impl.dart": {
+    "mtime": 1781375828.3363514,
+    "ast_hash": "8e28d5348d3f9d8a28a8986d8b0362c9",
+    "semantic_hash": "8e28d5348d3f9d8a28a8986d8b0362c9"
+  },
+  "A:\\IGrow\\lib\\features\\auth\\data\\firebase_auth_data_source.dart": {
+    "mtime": 1781145028.6248748,
+    "ast_hash": "00930fd31cb8ae5470055648728b2078",
+    "semantic_hash": "00930fd31cb8ae5470055648728b2078"
+  },
+  "A:\\IGrow\\lib\\features\\auth\\domain\\auth_repository.dart": {
+    "mtime": 1781145028.6275685,
+    "ast_hash": "5dad965f2501c372b91c9d8fc5a872d4",
+    "semantic_hash": "5dad965f2501c372b91c9d8fc5a872d4"
+  },
+  "A:\\IGrow\\lib\\features\\auth\\presentation\\auth_view_model.dart": {
+    "mtime": 1781301074.5529268,
+    "ast_hash": "50e036f447c0b6ef45eeb0ecc31f8533",
+    "semantic_hash": "50e036f447c0b6ef45eeb0ecc31f8533"
+  },
+  "A:\\IGrow\\lib\\features\\auth\\presentation\\login_screen.dart": {
+    "mtime": 1781402235.4342537,
+    "ast_hash": "557ac832f1feff42930d725fc9c083fd",
+    "semantic_hash": "557ac832f1feff42930d725fc9c083fd"
+  },
+  "A:\\IGrow\\lib\\features\\auth\\presentation\\otp_screen.dart": {
+    "mtime": 1781473684.8866887,
+    "ast_hash": "6cecb488580d63d18db6f7127ce938c6",
+    "semantic_hash": "6cecb488580d63d18db6f7127ce938c6"
+  },
+  "A:\\IGrow\\lib\\features\\ca_connect\\ca_connect_providers.dart": {
+    "mtime": 1781300010.3417423,
+    "ast_hash": "b95543043b4bce71b5910967542190b0",
+    "semantic_hash": "b95543043b4bce71b5910967542190b0"
+  },
+  "A:\\IGrow\\lib\\features\\ca_connect\\data\\ca_connect_repository_impl.dart": {
+    "mtime": 1781471881.1125343,
+    "ast_hash": "11a1bb4cd3a24fb4a9a27bb82a9808c2",
+    "semantic_hash": "11a1bb4cd3a24fb4a9a27bb82a9808c2"
+  },
+  "A:\\IGrow\\lib\\features\\ca_connect\\data\\firestore_ca_connect_data_source.dart": {
+    "mtime": 1781298942.2665126,
+    "ast_hash": "d88059f697514480ee4472977a851a7c",
+    "semantic_hash": "d88059f697514480ee4472977a851a7c"
+  },
+  "A:\\IGrow\\lib\\features\\ca_connect\\domain\\ca_connect_repository.dart": {
+    "mtime": 1781299848.6985936,
+    "ast_hash": "e1e9dc3008331b6083f3aa54dc3696d9",
+    "semantic_hash": "e1e9dc3008331b6083f3aa54dc3696d9"
+  },
+  "A:\\IGrow\\lib\\features\\ca_connect\\domain\\entities\\ca_comment.dart": {
+    "mtime": 1781297269.4307134,
+    "ast_hash": "dea2f055c78bc93275fc33d0198e7dc8",
+    "semantic_hash": "dea2f055c78bc93275fc33d0198e7dc8"
+  },
+  "A:\\IGrow\\lib\\features\\ca_connect\\domain\\entities\\ca_comment.freezed.dart": {
+    "mtime": 1781297360.9552808,
+    "ast_hash": "36a8ea02b252c364f0267d877fe9c1da",
+    "semantic_hash": "36a8ea02b252c364f0267d877fe9c1da"
+  },
+  "A:\\IGrow\\lib\\features\\ca_connect\\domain\\entities\\ca_comment.g.dart": {
+    "mtime": 1781297360.9592798,
+    "ast_hash": "322462598d7a25f9002d03abc6c421b0",
+    "semantic_hash": "322462598d7a25f9002d03abc6c421b0"
+  },
+  "A:\\IGrow\\lib\\features\\ca_connect\\domain\\entities\\ca_connection.dart": {
+    "mtime": 1781299021.1050577,
+    "ast_hash": "9bbd88c38e967593231a9e2822a407b0",
+    "semantic_hash": "9bbd88c38e967593231a9e2822a407b0"
+  },
+  "A:\\IGrow\\lib\\features\\ca_connect\\domain\\entities\\ca_connection.freezed.dart": {
+    "mtime": 1781299042.016782,
+    "ast_hash": "f0c817eba57481fe5d79528dd5a368c7",
+    "semantic_hash": "f0c817eba57481fe5d79528dd5a368c7"
+  },
+  "A:\\IGrow\\lib\\features\\ca_connect\\domain\\entities\\ca_connection.g.dart": {
+    "mtime": 1781299042.0205054,
+    "ast_hash": "22d2e316eb1be4da294444a028e5b40b",
+    "semantic_hash": "22d2e316eb1be4da294444a028e5b40b"
+  },
+  "A:\\IGrow\\lib\\features\\ca_connect\\presentation\\ca_accept_screen.dart": {
+    "mtime": 1781335383.0238492,
+    "ast_hash": "bd59284328e4c2f2321a16890612ca9a",
+    "semantic_hash": "bd59284328e4c2f2321a16890612ca9a"
+  },
+  "A:\\IGrow\\lib\\features\\ca_connect\\presentation\\ca_client_list_screen.dart": {
+    "mtime": 1781355005.7380714,
+    "ast_hash": "f092343db74263eb648c2cc1ef0bf04b",
+    "semantic_hash": "f092343db74263eb648c2cc1ef0bf04b"
+  },
+  "A:\\IGrow\\lib\\features\\ca_connect\\presentation\\ca_connect_screen.dart": {
+    "mtime": 1781528610.755439,
+    "ast_hash": "9f5b48f4ce8701f0e04667965bbded05",
+    "semantic_hash": "9f5b48f4ce8701f0e04667965bbded05"
+  },
+  "A:\\IGrow\\lib\\features\\ca_connect\\presentation\\ca_connect_view_model.dart": {
+    "mtime": 1781471908.1819463,
+    "ast_hash": "d75e67d4a758cf81b2c9704578037501",
+    "semantic_hash": "d75e67d4a758cf81b2c9704578037501"
+  },
+  "A:\\IGrow\\lib\\features\\ca_connect\\presentation\\ca_connect_view_model.freezed.dart": {
+    "mtime": 1781297360.956771,
+    "ast_hash": "eddd4e6906c9ee1de8b1141a9a032dc0",
+    "semantic_hash": "eddd4e6906c9ee1de8b1141a9a032dc0"
+  },
+  "A:\\IGrow\\lib\\features\\ca_connect\\presentation\\ca_owner_books_screen.dart": {
+    "mtime": 1781335395.304365,
+    "ast_hash": "c24e7d27118be91888a1a22a1e8a0144",
+    "semantic_hash": "c24e7d27118be91888a1a22a1e8a0144"
+  },
+  "A:\\IGrow\\lib\\features\\categories\\categories_providers.dart": {
+    "mtime": 1781143497.1694818,
+    "ast_hash": "cd7caba53893f929f555b90da4564dcf",
+    "semantic_hash": "cd7caba53893f929f555b90da4564dcf"
+  },
+  "A:\\IGrow\\lib\\features\\categories\\data\\category_repository_impl.dart": {
+    "mtime": 1781145063.7546005,
+    "ast_hash": "0521d2710a8dea93bd52eaeb1580fc78",
+    "semantic_hash": "0521d2710a8dea93bd52eaeb1580fc78"
+  },
+  "A:\\IGrow\\lib\\features\\categories\\data\\firestore_category_data_source.dart": {
+    "mtime": 1781145028.641132,
+    "ast_hash": "927df0efd6ae5810f5d916a879d86c27",
+    "semantic_hash": "927df0efd6ae5810f5d916a879d86c27"
+  },
+  "A:\\IGrow\\lib\\features\\categories\\domain\\category_repository.dart": {
+    "mtime": 1781145063.7555978,
+    "ast_hash": "c759a0863471b3d71e7130df286fe5d9",
+    "semantic_hash": "c759a0863471b3d71e7130df286fe5d9"
+  },
+  "A:\\IGrow\\lib\\features\\categories\\domain\\entities\\category.dart": {
+    "mtime": 1781145063.7555978,
+    "ast_hash": "d4cb4693414cf62430ff62d4b36d0fe3",
+    "semantic_hash": "d4cb4693414cf62430ff62d4b36d0fe3"
+  },
+  "A:\\IGrow\\lib\\features\\categories\\domain\\entities\\category.freezed.dart": {
+    "mtime": 1781143045.6231532,
+    "ast_hash": "f1efcae6e3c74a45029b6816a8e1a90c",
+    "semantic_hash": "f1efcae6e3c74a45029b6816a8e1a90c"
+  },
+  "A:\\IGrow\\lib\\features\\categories\\domain\\entities\\category.g.dart": {
+    "mtime": 1781143045.6231532,
+    "ast_hash": "b46f2c088926a8fb85861d81c2ab4dbc",
+    "semantic_hash": "b46f2c088926a8fb85861d81c2ab4dbc"
+  },
+  "A:\\IGrow\\lib\\features\\feedback\\data\\feedback_repository_impl.dart": {
+    "mtime": 1781335162.2379982,
+    "ast_hash": "fffd298701c8a0c5e2a8422764e93756",
+    "semantic_hash": "fffd298701c8a0c5e2a8422764e93756"
+  },
+  "A:\\IGrow\\lib\\features\\feedback\\data\\firestore_feedback_data_source.dart": {
+    "mtime": 1781334993.71839,
+    "ast_hash": "539866dc968d09437dc1ff6e7ddaabf8",
+    "semantic_hash": "539866dc968d09437dc1ff6e7ddaabf8"
+  },
+  "A:\\IGrow\\lib\\features\\feedback\\domain\\entities\\feedback_item.dart": {
+    "mtime": 1781335456.4786963,
+    "ast_hash": "1a675fe3f862cdb3f1ccd9fed6455e6e",
+    "semantic_hash": "1a675fe3f862cdb3f1ccd9fed6455e6e"
+  },
+  "A:\\IGrow\\lib\\features\\feedback\\domain\\entities\\feedback_item.freezed.dart": {
+    "mtime": 1781335148.4993036,
+    "ast_hash": "4b3a6b2f0bb0e2ba025b7fdd449350ec",
+    "semantic_hash": "4b3a6b2f0bb0e2ba025b7fdd449350ec"
+  },
+  "A:\\IGrow\\lib\\features\\feedback\\domain\\entities\\feedback_item.g.dart": {
+    "mtime": 1781335148.5169828,
+    "ast_hash": "2dee08bc9f9e7893d959ae122f0f6a48",
+    "semantic_hash": "2dee08bc9f9e7893d959ae122f0f6a48"
+  },
+  "A:\\IGrow\\lib\\features\\feedback\\domain\\feedback_repository.dart": {
+    "mtime": 1781335157.401611,
+    "ast_hash": "8f080223734f3ff6c804c3441ae5f490",
+    "semantic_hash": "8f080223734f3ff6c804c3441ae5f490"
+  },
+  "A:\\IGrow\\lib\\features\\feedback\\feedback_providers.dart": {
+    "mtime": 1781335173.6391423,
+    "ast_hash": "997c3960927899e185e84950e15633a9",
+    "semantic_hash": "997c3960927899e185e84950e15633a9"
+  },
+  "A:\\IGrow\\lib\\features\\feedback\\presentation\\feedback_screen.dart": {
+    "mtime": 1781426860.920952,
+    "ast_hash": "4dfe0f911830ddfcbc015a3d96fe0658",
+    "semantic_hash": "4dfe0f911830ddfcbc015a3d96fe0658"
+  },
+  "A:\\IGrow\\lib\\features\\home\\presentation\\home_providers.dart": {
+    "mtime": 1781441040.903441,
+    "ast_hash": "78811f22a256ed5fa49b287d9c8d3e0b",
+    "semantic_hash": "78811f22a256ed5fa49b287d9c8d3e0b"
+  },
+  "A:\\IGrow\\lib\\features\\home\\presentation\\home_screen.dart": {
+    "mtime": 1781529093.3537917,
+    "ast_hash": "0f08f933ad9f8e92bf660b0dd9a060a8",
+    "semantic_hash": "0f08f933ad9f8e92bf660b0dd9a060a8"
+  },
+  "A:\\IGrow\\lib\\features\\invoices\\data\\firestore_invoice_data_source.dart": {
+    "mtime": 1781256415.628227,
+    "ast_hash": "3fe63c69eb5a4d50c5de901b1b186ad5",
+    "semantic_hash": "3fe63c69eb5a4d50c5de901b1b186ad5"
+  },
+  "A:\\IGrow\\lib\\features\\invoices\\data\\invoice_repository_impl.dart": {
+    "mtime": 1781256419.4450276,
+    "ast_hash": "a6dca462a2a86126e265adfe650e0c35",
+    "semantic_hash": "a6dca462a2a86126e265adfe650e0c35"
+  },
+  "A:\\IGrow\\lib\\features\\invoices\\domain\\entities\\invoice.dart": {
+    "mtime": 1781256071.6631162,
+    "ast_hash": "57ef61a66417f4f512f3be2179ae4eaf",
+    "semantic_hash": "57ef61a66417f4f512f3be2179ae4eaf"
+  },
+  "A:\\IGrow\\lib\\features\\invoices\\domain\\entities\\invoice.freezed.dart": {
+    "mtime": 1781256266.4399428,
+    "ast_hash": "eaf302a90c97d1a405078ef544b8abfa",
+    "semantic_hash": "eaf302a90c97d1a405078ef544b8abfa"
+  },
+  "A:\\IGrow\\lib\\features\\invoices\\domain\\entities\\invoice.g.dart": {
+    "mtime": 1781256266.4435332,
+    "ast_hash": "71877a3247eaf39bc1c9c6b84f090852",
+    "semantic_hash": "71877a3247eaf39bc1c9c6b84f090852"
+  },
+  "A:\\IGrow\\lib\\features\\invoices\\domain\\invoice_repository.dart": {
+    "mtime": 1781256072.8274345,
+    "ast_hash": "70b9c5cfc15910b4303021f4d623b99c",
+    "semantic_hash": "70b9c5cfc15910b4303021f4d623b99c"
+  },
+  "A:\\IGrow\\lib\\features\\invoices\\invoice_providers.dart": {
+    "mtime": 1781256425.7112665,
+    "ast_hash": "fa42a57fc85b21aa909218b714d77f2d",
+    "semantic_hash": "fa42a57fc85b21aa909218b714d77f2d"
+  },
+  "A:\\IGrow\\lib\\features\\invoices\\presentation\\create_invoice_screen.dart": {
+    "mtime": 1781295893.108892,
+    "ast_hash": "400e31cd306e24a1f0c3b5e57bd61e79",
+    "semantic_hash": "400e31cd306e24a1f0c3b5e57bd61e79"
+  },
+  "A:\\IGrow\\lib\\features\\invoices\\presentation\\invoice_detail_screen.dart": {
+    "mtime": 1781471801.548997,
+    "ast_hash": "659e49a5cd3bf36cfd0e1128b88a2913",
+    "semantic_hash": "659e49a5cd3bf36cfd0e1128b88a2913"
+  },
+  "A:\\IGrow\\lib\\features\\invoices\\presentation\\invoice_list_screen.dart": {
+    "mtime": 1781331029.4292877,
+    "ast_hash": "95b580fd46c4dadcc5395c802122e786",
+    "semantic_hash": "95b580fd46c4dadcc5395c802122e786"
+  },
+  "A:\\IGrow\\lib\\features\\invoices\\presentation\\invoice_view_model.dart": {
+    "mtime": 1781471875.1734018,
+    "ast_hash": "ecfc999d3e5a5c3c61d0c56ccc721cb1",
+    "semantic_hash": "ecfc999d3e5a5c3c61d0c56ccc721cb1"
+  },
+  "A:\\IGrow\\lib\\features\\invoices\\presentation\\invoice_view_model.freezed.dart": {
+    "mtime": 1781256266.4399428,
+    "ast_hash": "e6542388c7adcc0c0e271f0e33fa6cc6",
+    "semantic_hash": "e6542388c7adcc0c0e271f0e33fa6cc6"
+  },
+  "A:\\IGrow\\lib\\features\\khata\\data\\firestore_khata_data_source.dart": {
+    "mtime": 1781253281.0758638,
+    "ast_hash": "3dfc6cf3b8087ac11da71a34eca1ceaa",
+    "semantic_hash": "3dfc6cf3b8087ac11da71a34eca1ceaa"
+  },
+  "A:\\IGrow\\lib\\features\\khata\\data\\khata_repository_impl.dart": {
+    "mtime": 1781252979.5473135,
+    "ast_hash": "53b7b857a636e0c3a96acefa4ae3b43a",
+    "semantic_hash": "53b7b857a636e0c3a96acefa4ae3b43a"
+  },
+  "A:\\IGrow\\lib\\features\\khata\\domain\\entities\\khata_customer.dart": {
+    "mtime": 1781252834.158535,
+    "ast_hash": "e086931aceb31e6d83ba24c2fe0fe36f",
+    "semantic_hash": "e086931aceb31e6d83ba24c2fe0fe36f"
+  },
+  "A:\\IGrow\\lib\\features\\khata\\domain\\entities\\khata_customer.freezed.dart": {
+    "mtime": 1781253088.5270417,
+    "ast_hash": "8253f60027d08d0200d7baa29e003cd8",
+    "semantic_hash": "8253f60027d08d0200d7baa29e003cd8"
+  },
+  "A:\\IGrow\\lib\\features\\khata\\domain\\entities\\khata_customer.g.dart": {
+    "mtime": 1781253088.5343668,
+    "ast_hash": "f06d6295413ba2b2c204dfd35b1f79b5",
+    "semantic_hash": "f06d6295413ba2b2c204dfd35b1f79b5"
+  },
+  "A:\\IGrow\\lib\\features\\khata\\domain\\entities\\khata_entry.dart": {
+    "mtime": 1781252836.6680367,
+    "ast_hash": "bddbefac457918c2378f9fabce930572",
+    "semantic_hash": "bddbefac457918c2378f9fabce930572"
+  },
+  "A:\\IGrow\\lib\\features\\khata\\domain\\entities\\khata_entry.freezed.dart": {
+    "mtime": 1781253088.5281587,
+    "ast_hash": "209ead7d381e8ffa59f2070c77251f8d",
+    "semantic_hash": "209ead7d381e8ffa59f2070c77251f8d"
+  },
+  "A:\\IGrow\\lib\\features\\khata\\domain\\entities\\khata_entry.g.dart": {
+    "mtime": 1781253088.5343668,
+    "ast_hash": "080fef98ef2322b1f4e5abf2cb64bf92",
+    "semantic_hash": "080fef98ef2322b1f4e5abf2cb64bf92"
+  },
+  "A:\\IGrow\\lib\\features\\khata\\domain\\khata_repository.dart": {
+    "mtime": 1781252838.1774185,
+    "ast_hash": "51622f4c12864e234278d2b6a137a897",
+    "semantic_hash": "51622f4c12864e234278d2b6a137a897"
+  },
+  "A:\\IGrow\\lib\\features\\khata\\khata_providers.dart": {
+    "mtime": 1781252980.6430285,
+    "ast_hash": "c650d3c9b5a1980c447b0b47517f4904",
+    "semantic_hash": "c650d3c9b5a1980c447b0b47517f4904"
+  },
+  "A:\\IGrow\\lib\\features\\khata\\presentation\\add_entry_bottom_sheet.dart": {
+    "mtime": 1781331029.4329536,
+    "ast_hash": "5908eb9c79645a7fd28c899b0f66ad3c",
+    "semantic_hash": "5908eb9c79645a7fd28c899b0f66ad3c"
+  },
+  "A:\\IGrow\\lib\\features\\khata\\presentation\\add_khata_customer_bottom_sheet.dart": {
+    "mtime": 1781253258.665121,
+    "ast_hash": "8d4af5a28c1dce23bdbe862f07601c80",
+    "semantic_hash": "8d4af5a28c1dce23bdbe862f07601c80"
+  },
+  "A:\\IGrow\\lib\\features\\khata\\presentation\\khata_customer_detail_screen.dart": {
+    "mtime": 1781471905.5305471,
+    "ast_hash": "6715237c911016dbf88ac953e28cb1d0",
+    "semantic_hash": "6715237c911016dbf88ac953e28cb1d0"
+  },
+  "A:\\IGrow\\lib\\features\\khata\\presentation\\khata_list_screen.dart": {
+    "mtime": 1781331029.4339783,
+    "ast_hash": "91900f771d9eee6e2390cf803c656607",
+    "semantic_hash": "91900f771d9eee6e2390cf803c656607"
+  },
+  "A:\\IGrow\\lib\\features\\khata\\presentation\\khata_view_model.dart": {
+    "mtime": 1781471874.357838,
+    "ast_hash": "82fb66bea41992e0d95282d5c468781e",
+    "semantic_hash": "82fb66bea41992e0d95282d5c468781e"
+  },
+  "A:\\IGrow\\lib\\features\\khata\\presentation\\khata_view_model.freezed.dart": {
+    "mtime": 1781256266.4414449,
+    "ast_hash": "bae77a2daa61fd75f66934d1d0fbc0db",
+    "semantic_hash": "bae77a2daa61fd75f66934d1d0fbc0db"
+  },
+  "A:\\IGrow\\lib\\features\\onboarding\\data\\onboarding_repository_impl.dart": {
+    "mtime": 1781403516.7708068,
+    "ast_hash": "3d90f3126d125b661a321ed4a86edbf3",
+    "semantic_hash": "3d90f3126d125b661a321ed4a86edbf3"
+  },
+  "A:\\IGrow\\lib\\features\\onboarding\\data\\tutorial_steps_provider.dart": {
+    "mtime": 1781336830.0515313,
+    "ast_hash": "e19cd4b6aa80425b8c72697cf9241d82",
+    "semantic_hash": "e19cd4b6aa80425b8c72697cf9241d82"
+  },
+  "A:\\IGrow\\lib\\features\\onboarding\\domain\\onboarding_repository.dart": {
+    "mtime": 1781140918.9366045,
+    "ast_hash": "93b10528ab16815850a7905acbe5e4f0",
+    "semantic_hash": "93b10528ab16815850a7905acbe5e4f0"
+  },
+  "A:\\IGrow\\lib\\features\\onboarding\\domain\\tutorial_step.dart": {
+    "mtime": 1781336750.2945855,
+    "ast_hash": "dd9a6e6c08dec031b9529b119306e342",
+    "semantic_hash": "dd9a6e6c08dec031b9529b119306e342"
+  },
+  "A:\\IGrow\\lib\\features\\onboarding\\presentation\\business_name_screen.dart": {
+    "mtime": 1781425031.897942,
+    "ast_hash": "030ed57fed2f9b83cd4878e5f700e73c",
+    "semantic_hash": "030ed57fed2f9b83cd4878e5f700e73c"
+  },
+  "A:\\IGrow\\lib\\features\\onboarding\\presentation\\onboarding_done_screen.dart": {
+    "mtime": 1781140978.318302,
+    "ast_hash": "270bfccb0b5a7b22ab127f401165b84c",
+    "semantic_hash": "270bfccb0b5a7b22ab127f401165b84c"
+  },
+  "A:\\IGrow\\lib\\features\\onboarding\\presentation\\onboarding_view_model.dart": {
+    "mtime": 1781145028.670377,
+    "ast_hash": "96b04ec52a7db6a05c6259653d148062",
+    "semantic_hash": "96b04ec52a7db6a05c6259653d148062"
+  },
+  "A:\\IGrow\\lib\\features\\onboarding\\presentation\\role_selection_screen.dart": {
+    "mtime": 1781331029.435955,
+    "ast_hash": "46b9c49fc738172aab76673e5a621f53",
+    "semantic_hash": "46b9c49fc738172aab76673e5a621f53"
+  },
+  "A:\\IGrow\\lib\\features\\onboarding\\presentation\\sms_permission_screen.dart": {
+    "mtime": 1781335314.4578688,
+    "ast_hash": "cf013729d13f1623a46d88e5a112157d",
+    "semantic_hash": "cf013729d13f1623a46d88e5a112157d"
+  },
+  "A:\\IGrow\\lib\\features\\onboarding\\presentation\\tutorial_controller.dart": {
+    "mtime": 1781336859.3887134,
+    "ast_hash": "39b74845e0efa48a71f33f9a8d07fbca",
+    "semantic_hash": "39b74845e0efa48a71f33f9a8d07fbca"
+  },
+  "A:\\IGrow\\lib\\features\\onboarding\\presentation\\widgets\\progress_dots.dart": {
+    "mtime": 1781140943.9886904,
+    "ast_hash": "7af6d25a46d554e2f2d36a1bfdbe71e2",
+    "semantic_hash": "7af6d25a46d554e2f2d36a1bfdbe71e2"
+  },
+  "A:\\IGrow\\lib\\features\\profiles\\data\\firestore_profile_data_source.dart": {
+    "mtime": 1781145028.6791224,
+    "ast_hash": "74bf50c278e24caaeace1e0f7061e28e",
+    "semantic_hash": "74bf50c278e24caaeace1e0f7061e28e"
+  },
+  "A:\\IGrow\\lib\\features\\profiles\\data\\profile_repository_impl.dart": {
+    "mtime": 1781145063.7562768,
+    "ast_hash": "fbd151dd5ad1628d6bac67f523f8fd2d",
+    "semantic_hash": "fbd151dd5ad1628d6bac67f523f8fd2d"
+  },
+  "A:\\IGrow\\lib\\features\\profiles\\domain\\entities\\profile.dart": {
+    "mtime": 1781145063.7567804,
+    "ast_hash": "807f0d4dc7745fed0d3f22fd5af36a63",
+    "semantic_hash": "807f0d4dc7745fed0d3f22fd5af36a63"
+  },
+  "A:\\IGrow\\lib\\features\\profiles\\domain\\entities\\profile.freezed.dart": {
+    "mtime": 1781143855.0911143,
+    "ast_hash": "54028ecd70f616caa326480ab1fb35e5",
+    "semantic_hash": "54028ecd70f616caa326480ab1fb35e5"
+  },
+  "A:\\IGrow\\lib\\features\\profiles\\domain\\entities\\profile.g.dart": {
+    "mtime": 1781143855.0942276,
+    "ast_hash": "d5ae3c0de24a406afc11cc25230ce7e0",
+    "semantic_hash": "d5ae3c0de24a406afc11cc25230ce7e0"
+  },
+  "A:\\IGrow\\lib\\features\\profiles\\domain\\profile_repository.dart": {
+    "mtime": 1781143789.155871,
+    "ast_hash": "89a0dceb1e919ab0ff285650d80e8ff2",
+    "semantic_hash": "89a0dceb1e919ab0ff285650d80e8ff2"
+  },
+  "A:\\IGrow\\lib\\features\\profiles\\presentation\\active_profile_provider.dart": {
+    "mtime": 1781143805.9755692,
+    "ast_hash": "67eaab755fe9eef05cc98af84e3bbcd6",
+    "semantic_hash": "67eaab755fe9eef05cc98af84e3bbcd6"
+  },
+  "A:\\IGrow\\lib\\features\\profiles\\profiles_providers.dart": {
+    "mtime": 1781333248.521293,
+    "ast_hash": "1381ef4f0ff431d97d0eb45aab8bc917",
+    "semantic_hash": "1381ef4f0ff431d97d0eb45aab8bc917"
+  },
+  "A:\\IGrow\\lib\\features\\reports\\data\\firestore_report_data_source.dart": {
+    "mtime": 1781441023.7787676,
+    "ast_hash": "09deb9f847981db7efef08556f328b61",
+    "semantic_hash": "09deb9f847981db7efef08556f328b61"
+  },
+  "A:\\IGrow\\lib\\features\\reports\\data\\pdf_export_service.dart": {
+    "mtime": 1781471800.9487288,
+    "ast_hash": "cab1bf5ea0fde6bd285bb06806ec46e9",
+    "semantic_hash": "cab1bf5ea0fde6bd285bb06806ec46e9"
+  },
+  "A:\\IGrow\\lib\\features\\reports\\data\\report_repository_impl.dart": {
+    "mtime": 1781441031.6629398,
+    "ast_hash": "53f7ff38af96cc3789934ac205fd3f47",
+    "semantic_hash": "53f7ff38af96cc3789934ac205fd3f47"
+  },
+  "A:\\IGrow\\lib\\features\\reports\\data\\rewarded_ad_service.dart": {
+    "mtime": 1781148547.8740308,
+    "ast_hash": "24b82d76ac98e397e233e474bcdf77ae",
+    "semantic_hash": "24b82d76ac98e397e233e474bcdf77ae"
+  },
+  "A:\\IGrow\\lib\\features\\reports\\domain\\entities\\report_summary.dart": {
+    "mtime": 1781145539.256608,
+    "ast_hash": "d27b59910617f461647afa9f5ebeb043",
+    "semantic_hash": "d27b59910617f461647afa9f5ebeb043"
+  },
+  "A:\\IGrow\\lib\\features\\reports\\domain\\entities\\report_summary.freezed.dart": {
+    "mtime": 1781145527.421171,
+    "ast_hash": "494e44e5ccdcaffca6a1655a88aa9bc1",
+    "semantic_hash": "494e44e5ccdcaffca6a1655a88aa9bc1"
+  },
+  "A:\\IGrow\\lib\\features\\reports\\domain\\entities\\report_summary.g.dart": {
+    "mtime": 1781145527.4236116,
+    "ast_hash": "6e7f459ba4d5cbdc534cd7d157d990ee",
+    "semantic_hash": "6e7f459ba4d5cbdc534cd7d157d990ee"
+  },
+  "A:\\IGrow\\lib\\features\\reports\\domain\\report_repository.dart": {
+    "mtime": 1781441027.5253127,
+    "ast_hash": "235cf8c2a89def68ae055b82d085a1cc",
+    "semantic_hash": "235cf8c2a89def68ae055b82d085a1cc"
+  },
+  "A:\\IGrow\\lib\\features\\reports\\presentation\\report_summary_provider.dart": {
+    "mtime": 1781441036.0568533,
+    "ast_hash": "6d2606c02b9202982ed10136e77d68bd",
+    "semantic_hash": "6d2606c02b9202982ed10136e77d68bd"
+  },
+  "A:\\IGrow\\lib\\features\\reports\\presentation\\reports_screen.dart": {
+    "mtime": 1781529210.7437394,
+    "ast_hash": "712d9dfd7065a2a52f8d119ba153dfdb",
+    "semantic_hash": "712d9dfd7065a2a52f8d119ba153dfdb"
+  },
+  "A:\\IGrow\\lib\\features\\reports\\presentation\\reports_view_model.dart": {
+    "mtime": 1781335286.6537707,
+    "ast_hash": "48e713bdf8cb176672599efe6893a7d8",
+    "semantic_hash": "48e713bdf8cb176672599efe6893a7d8"
+  },
+  "A:\\IGrow\\lib\\features\\reports\\presentation\\reports_view_model.freezed.dart": {
+    "mtime": 1781148612.5603487,
+    "ast_hash": "d40acae39de46c05d474a453e8757c8f",
+    "semantic_hash": "d40acae39de46c05d474a453e8757c8f"
+  },
+  "A:\\IGrow\\lib\\features\\reports\\reports_providers.dart": {
+    "mtime": 1781145464.054584,
+    "ast_hash": "430ee864245757db080f31531ebe6c70",
+    "semantic_hash": "430ee864245757db080f31531ebe6c70"
+  },
+  "A:\\IGrow\\lib\\features\\savings\\data\\savings_data_source.dart": {
+    "mtime": 1781401354.6354594,
+    "ast_hash": "ddcc17853b0313e1b6eaa159aa4229c1",
+    "semantic_hash": "ddcc17853b0313e1b6eaa159aa4229c1"
+  },
+  "A:\\IGrow\\lib\\features\\savings\\data\\savings_repository_impl.dart": {
+    "mtime": 1781401358.980304,
+    "ast_hash": "d89de5ee7d5a9a80eca5ad643afefdd9",
+    "semantic_hash": "d89de5ee7d5a9a80eca5ad643afefdd9"
+  },
+  "A:\\IGrow\\lib\\features\\savings\\domain\\savings_entry.dart": {
+    "mtime": 1781401534.3347313,
+    "ast_hash": "46934deb802095058f74eb89afe0dfec",
+    "semantic_hash": "46934deb802095058f74eb89afe0dfec"
+  },
+  "A:\\IGrow\\lib\\features\\savings\\domain\\savings_entry.freezed.dart": {
+    "mtime": 1781401361.2477863,
+    "ast_hash": "e7528612921f86c20e9a44e189c3d1c6",
+    "semantic_hash": "e7528612921f86c20e9a44e189c3d1c6"
+  },
+  "A:\\IGrow\\lib\\features\\savings\\domain\\savings_entry.g.dart": {
+    "mtime": 1781401361.25006,
+    "ast_hash": "7accdf983efc4f7d838c520a92eca67d",
+    "semantic_hash": "7accdf983efc4f7d838c520a92eca67d"
+  },
+  "A:\\IGrow\\lib\\features\\savings\\domain\\savings_goal.dart": {
+    "mtime": 1781401538.2280881,
+    "ast_hash": "151c351b9f8e059848f599b8ddccab85",
+    "semantic_hash": "151c351b9f8e059848f599b8ddccab85"
+  },
+  "A:\\IGrow\\lib\\features\\savings\\domain\\savings_goal.freezed.dart": {
+    "mtime": 1781401361.2477863,
+    "ast_hash": "0b303faade6d9a573e7779baf78774ca",
+    "semantic_hash": "0b303faade6d9a573e7779baf78774ca"
+  },
+  "A:\\IGrow\\lib\\features\\savings\\domain\\savings_goal.g.dart": {
+    "mtime": 1781401361.2510715,
+    "ast_hash": "b16bdc2a6c697ff65d17fdd38dc366a1",
+    "semantic_hash": "b16bdc2a6c697ff65d17fdd38dc366a1"
+  },
+  "A:\\IGrow\\lib\\features\\savings\\domain\\savings_repository.dart": {
+    "mtime": 1781401327.6027641,
+    "ast_hash": "e934b856cf9edeba0d58fc27cc121b7c",
+    "semantic_hash": "e934b856cf9edeba0d58fc27cc121b7c"
+  },
+  "A:\\IGrow\\lib\\features\\savings\\presentation\\create_dream_screen.dart": {
+    "mtime": 1781401421.6320982,
+    "ast_hash": "4d072e66127810621f0e5de6fee06a15",
+    "semantic_hash": "4d072e66127810621f0e5de6fee06a15"
+  },
+  "A:\\IGrow\\lib\\features\\savings\\presentation\\dream_detail_screen.dart": {
+    "mtime": 1781401567.8433404,
+    "ast_hash": "d91f64b9f57d25a7ad498cb756a0b838",
+    "semantic_hash": "d91f64b9f57d25a7ad498cb756a0b838"
+  },
+  "A:\\IGrow\\lib\\features\\savings\\presentation\\savings_list_screen.dart": {
+    "mtime": 1781471644.218575,
+    "ast_hash": "85e7a6b08a2136ade6ece1129ce9e98f",
+    "semantic_hash": "85e7a6b08a2136ade6ece1129ce9e98f"
+  },
+  "A:\\IGrow\\lib\\features\\savings\\presentation\\savings_providers.dart": {
+    "mtime": 1781401365.5888424,
+    "ast_hash": "6a266aff9004acc2bdb22204f1ccb4c9",
+    "semantic_hash": "6a266aff9004acc2bdb22204f1ccb4c9"
+  },
+  "A:\\IGrow\\lib\\features\\savings\\presentation\\savings_view_model.dart": {
+    "mtime": 1781471667.3745313,
+    "ast_hash": "01374414554678052a79066f60aca825",
+    "semantic_hash": "01374414554678052a79066f60aca825"
+  },
+  "A:\\IGrow\\lib\\features\\savings\\presentation\\savings_view_model.freezed.dart": {
+    "mtime": 1781401383.6339757,
+    "ast_hash": "0b7eac31195297f8e580c9930d3e17a9",
+    "semantic_hash": "0b7eac31195297f8e580c9930d3e17a9"
+  },
+  "A:\\IGrow\\lib\\features\\savings\\presentation\\widgets\\add_entry_bottom_sheet.dart": {
+    "mtime": 1781401406.6393259,
+    "ast_hash": "48a832dc60c09293623dcd3509c6eef1",
+    "semantic_hash": "48a832dc60c09293623dcd3509c6eef1"
+  },
+  "A:\\IGrow\\lib\\features\\savings\\presentation\\widgets\\confetti_animation.dart": {
+    "mtime": 1781401430.3954616,
+    "ast_hash": "e167b4d1d03a8eb3bd6d04faab8eebec",
+    "semantic_hash": "e167b4d1d03a8eb3bd6d04faab8eebec"
+  },
+  "A:\\IGrow\\lib\\features\\savings\\presentation\\widgets\\dream_card.dart": {
+    "mtime": 1781427230.1010113,
+    "ast_hash": "dcfac4dc83c8b0f88b0209e98ed0a664",
+    "semantic_hash": "dcfac4dc83c8b0f88b0209e98ed0a664"
+  },
+  "A:\\IGrow\\lib\\features\\savings\\presentation\\widgets\\savings_progress_bar.dart": {
+    "mtime": 1781473606.3680985,
+    "ast_hash": "5fb5659d68f6a74823eece6a2e46c3bf",
+    "semantic_hash": "5fb5659d68f6a74823eece6a2e46c3bf"
+  },
+  "A:\\IGrow\\lib\\features\\settings\\data\\biometric_service.dart": {
+    "mtime": 1781307711.0601368,
+    "ast_hash": "9e8acb1d834b5f9ede2d76c41c21d8f6",
+    "semantic_hash": "9e8acb1d834b5f9ede2d76c41c21d8f6"
+  },
+  "A:\\IGrow\\lib\\features\\settings\\data\\pin_storage_service.dart": {
+    "mtime": 1781307406.7685409,
+    "ast_hash": "817ab30115abd94b5049094a518bb6fb",
+    "semantic_hash": "817ab30115abd94b5049094a518bb6fb"
+  },
+  "A:\\IGrow\\lib\\features\\settings\\presentation\\settings_screen.dart": {
+    "mtime": 1781338780.1090126,
+    "ast_hash": "4218f990169914324790886614346d9c",
+    "semantic_hash": "4218f990169914324790886614346d9c"
+  },
+  "A:\\IGrow\\lib\\features\\settings\\presentation\\settings_view_model.dart": {
+    "mtime": 1781338805.515782,
+    "ast_hash": "756b4acfaeb61bf608047cb0ff282689",
+    "semantic_hash": "756b4acfaeb61bf608047cb0ff282689"
+  },
+  "A:\\IGrow\\lib\\features\\shell\\presentation\\main_shell.dart": {
+    "mtime": 1781473582.3283503,
+    "ast_hash": "cf9418d4a27199d021db952422311520",
+    "semantic_hash": "cf9418d4a27199d021db952422311520"
+  },
+  "A:\\IGrow\\lib\\features\\sms_capture\\data\\bank_pattern_matcher.dart": {
+    "mtime": 1781173077.1697156,
+    "ast_hash": "07ebfe690fc3f63c8ac0c257a53a2eb9",
+    "semantic_hash": "07ebfe690fc3f63c8ac0c257a53a2eb9"
+  },
+  "A:\\IGrow\\lib\\features\\sms_capture\\data\\firestore_sms_dedup_data_source.dart": {
+    "mtime": 1781173494.2897317,
+    "ast_hash": "f36e71fc629349467ab8d6e3cf2012b5",
+    "semantic_hash": "f36e71fc629349467ab8d6e3cf2012b5"
+  },
+  "A:\\IGrow\\lib\\features\\sms_capture\\data\\gemini_categoriser.dart": {
+    "mtime": 1781245818.392082,
+    "ast_hash": "dab8e642c906c2db5b3896df0cce0f9e",
+    "semantic_hash": "dab8e642c906c2db5b3896df0cce0f9e"
+  },
+  "A:\\IGrow\\lib\\features\\sms_capture\\data\\sms_capture_service.dart": {
+    "mtime": 1781173226.2508423,
+    "ast_hash": "bd0433d310abe8ee27e8b063ed7ae645",
+    "semantic_hash": "bd0433d310abe8ee27e8b063ed7ae645"
+  },
+  "A:\\IGrow\\lib\\features\\sms_capture\\data\\sms_dedup_repository.dart": {
+    "mtime": 1781173091.1831782,
+    "ast_hash": "32be1aa2512f0590a2f18b28af4062ac",
+    "semantic_hash": "32be1aa2512f0590a2f18b28af4062ac"
+  },
+  "A:\\IGrow\\lib\\features\\sms_capture\\data\\sms_parser.dart": {
+    "mtime": 1781335255.6631753,
+    "ast_hash": "0f15aa7444d1df1040006d93b9eb4f61",
+    "semantic_hash": "0f15aa7444d1df1040006d93b9eb4f61"
+  },
+  "A:\\IGrow\\lib\\features\\sms_capture\\data\\sms_permission_service.dart": {
+    "mtime": 1781171844.85965,
+    "ast_hash": "ae7fbf837a4093251a6dbd7079a63fd9",
+    "semantic_hash": "ae7fbf837a4093251a6dbd7079a63fd9"
+  },
+  "A:\\IGrow\\lib\\features\\sms_capture\\data\\sms_platform_channel.dart": {
+    "mtime": 1781171664.8797734,
+    "ast_hash": "fe9ccda8c4099275b1a8761beb7d32b1",
+    "semantic_hash": "fe9ccda8c4099275b1a8761beb7d32b1"
+  },
+  "A:\\IGrow\\lib\\features\\sms_capture\\domain\\entities\\parsed_sms.dart": {
+    "mtime": 1781172871.096857,
+    "ast_hash": "44bba0160d0a9f1910aeed22b0559fbb",
+    "semantic_hash": "44bba0160d0a9f1910aeed22b0559fbb"
+  },
+  "A:\\IGrow\\lib\\features\\sms_capture\\domain\\entities\\parsed_sms.freezed.dart": {
+    "mtime": 1781173137.6013136,
+    "ast_hash": "4d1678d261975b60dd9faa1371035d8f",
+    "semantic_hash": "4d1678d261975b60dd9faa1371035d8f"
+  },
+  "A:\\IGrow\\lib\\features\\sms_capture\\domain\\entities\\parsed_sms.g.dart": {
+    "mtime": 1781173137.6029122,
+    "ast_hash": "ec31f62d82a2f85a4438b4534a508851",
+    "semantic_hash": "ec31f62d82a2f85a4438b4534a508851"
+  },
+  "A:\\IGrow\\lib\\features\\sms_capture\\domain\\services\\capture_notification_service.dart": {
+    "mtime": 1781171648.7304056,
+    "ast_hash": "8530f4d6f12db489932f0b1393de7f63",
+    "semantic_hash": "8530f4d6f12db489932f0b1393de7f63"
+  },
+  "A:\\IGrow\\lib\\features\\sms_capture\\domain\\use_cases\\process_sms_use_case.dart": {
+    "mtime": 1781335249.4310875,
+    "ast_hash": "e26816501cf02a10ee3d9421f91ddd6c",
+    "semantic_hash": "e26816501cf02a10ee3d9421f91ddd6c"
+  },
+  "A:\\IGrow\\lib\\features\\sms_capture\\presentation\\capture_confirmation_screen.dart": {
+    "mtime": 1781425261.9169924,
+    "ast_hash": "bbcbb21445eccb33504d2a536a678c44",
+    "semantic_hash": "bbcbb21445eccb33504d2a536a678c44"
+  },
+  "A:\\IGrow\\lib\\features\\sms_capture\\presentation\\capture_view_model.dart": {
+    "mtime": 1781335262.241213,
+    "ast_hash": "5f08dbcd4f484c856d0475fec964e00f",
+    "semantic_hash": "5f08dbcd4f484c856d0475fec964e00f"
+  },
+  "A:\\IGrow\\lib\\features\\sms_capture\\presentation\\capture_view_model.freezed.dart": {
+    "mtime": 1781242294.171134,
+    "ast_hash": "0d85b6b96ea0b094b2d9444fe98b646e",
+    "semantic_hash": "0d85b6b96ea0b094b2d9444fe98b646e"
+  },
+  "A:\\IGrow\\lib\\features\\sms_capture\\presentation\\sms_permission_provider.dart": {
+    "mtime": 1781171849.49106,
+    "ast_hash": "3d470b8ba42f3c3887e167dc60f9aa41",
+    "semantic_hash": "3d470b8ba42f3c3887e167dc60f9aa41"
+  },
+  "A:\\IGrow\\lib\\features\\sms_capture\\presentation\\sms_permission_provider.freezed.dart": {
+    "mtime": 1781171745.618263,
+    "ast_hash": "a50ba1a4cda5e8bddbf17114baca31a5",
+    "semantic_hash": "a50ba1a4cda5e8bddbf17114baca31a5"
+  },
+  "A:\\IGrow\\lib\\features\\transactions\\data\\firestore_transaction_data_source.dart": {
+    "mtime": 1781148399.1132083,
+    "ast_hash": "1eb7e985be3e8af2a4c422542a2308ca",
+    "semantic_hash": "1eb7e985be3e8af2a4c422542a2308ca"
+  },
+  "A:\\IGrow\\lib\\features\\transactions\\data\\gemini_ocr_parser.dart": {
+    "mtime": 1781250117.981285,
+    "ast_hash": "86cec2897b72f8a11d4d1a9c734f0fc7",
+    "semantic_hash": "86cec2897b72f8a11d4d1a9c734f0fc7"
+  },
+  "A:\\IGrow\\lib\\features\\transactions\\data\\gemini_ocr_parser.freezed.dart": {
+    "mtime": 1781249550.9054852,
+    "ast_hash": "2ef137f4ebcf2cdb909a95f9273dfc26",
+    "semantic_hash": "2ef137f4ebcf2cdb909a95f9273dfc26"
+  },
+  "A:\\IGrow\\lib\\features\\transactions\\data\\gemini_voice_parser.dart": {
+    "mtime": 1781248882.6690903,
+    "ast_hash": "868fb3cdc5629b6156f4d7bfbe755e77",
+    "semantic_hash": "868fb3cdc5629b6156f4d7bfbe755e77"
+  },
+  "A:\\IGrow\\lib\\features\\transactions\\data\\gemini_voice_parser.freezed.dart": {
+    "mtime": 1781248728.6375782,
+    "ast_hash": "6ca5b5e478e453c7f9366e6ab8ae0057",
+    "semantic_hash": "6ca5b5e478e453c7f9366e6ab8ae0057"
+  },
+  "A:\\IGrow\\lib\\features\\transactions\\data\\speech_service.dart": {
+    "mtime": 1781248698.021124,
+    "ast_hash": "89beca2e8e139c1a92ab8246ccee9c12",
+    "semantic_hash": "89beca2e8e139c1a92ab8246ccee9c12"
+  },
+  "A:\\IGrow\\lib\\features\\transactions\\data\\transaction_repository_impl.dart": {
+    "mtime": 1781148413.053941,
+    "ast_hash": "dc54a11b040052615ec116ffe55853d7",
+    "semantic_hash": "dc54a11b040052615ec116ffe55853d7"
+  },
+  "A:\\IGrow\\lib\\features\\transactions\\data\\voice_permission_service.dart": {
+    "mtime": 1781248693.413054,
+    "ast_hash": "68c0ce8266f8595fd1b94d3cedfa1bc3",
+    "semantic_hash": "68c0ce8266f8595fd1b94d3cedfa1bc3"
+  },
+  "A:\\IGrow\\lib\\features\\transactions\\domain\\entities\\transaction.dart": {
+    "mtime": 1781145063.7578366,
+    "ast_hash": "8d264b91edd080bcad5588d75eae9213",
+    "semantic_hash": "8d264b91edd080bcad5588d75eae9213"
+  },
+  "A:\\IGrow\\lib\\features\\transactions\\domain\\entities\\transaction.freezed.dart": {
+    "mtime": 1781142012.4281712,
+    "ast_hash": "df5a1735ab80a5e1ecff55f6e64952fd",
+    "semantic_hash": "df5a1735ab80a5e1ecff55f6e64952fd"
+  },
+  "A:\\IGrow\\lib\\features\\transactions\\domain\\entities\\transaction.g.dart": {
+    "mtime": 1781142012.430698,
+    "ast_hash": "8b5642329a1adb63a17934f804f0a8e8",
+    "semantic_hash": "8b5642329a1adb63a17934f804f0a8e8"
+  },
+  "A:\\IGrow\\lib\\features\\transactions\\domain\\transaction_repository.dart": {
+    "mtime": 1781148405.7226503,
+    "ast_hash": "496583086a2b854e04cd3af8891b3f3c",
+    "semantic_hash": "496583086a2b854e04cd3af8891b3f3c"
+  },
+  "A:\\IGrow\\lib\\features\\transactions\\presentation\\add_transaction_screen.dart": {
+    "mtime": 1781473674.7237492,
+    "ast_hash": "0e4e39cb89b99fae229a3c58eb6aa192",
+    "semantic_hash": "0e4e39cb89b99fae229a3c58eb6aa192"
+  },
+  "A:\\IGrow\\lib\\features\\transactions\\presentation\\add_transaction_view_model.dart": {
+    "mtime": 1781335232.219593,
+    "ast_hash": "6c453e52d17352e5c5f121f602d822f8",
+    "semantic_hash": "6c453e52d17352e5c5f121f602d822f8"
+  },
+  "A:\\IGrow\\lib\\features\\transactions\\presentation\\add_transaction_view_model.freezed.dart": {
+    "mtime": 1781249550.9054852,
+    "ast_hash": "f8c3213a520bf30824630f7390b67235",
+    "semantic_hash": "f8c3213a520bf30824630f7390b67235"
+  },
+  "A:\\IGrow\\lib\\features\\transactions\\presentation\\selection_calculator_bar.dart": {
+    "mtime": 1781471817.763684,
+    "ast_hash": "1b3cfd4b550def3791638be08fe4244a",
+    "semantic_hash": "1b3cfd4b550def3791638be08fe4244a"
+  },
+  "A:\\IGrow\\lib\\features\\transactions\\presentation\\selection_mode_provider.dart": {
+    "mtime": 1781339821.1730666,
+    "ast_hash": "d43d75040a5b6045c2226f997c575815",
+    "semantic_hash": "d43d75040a5b6045c2226f997c575815"
+  },
+  "A:\\IGrow\\lib\\features\\transactions\\presentation\\transaction_detail_screen.dart": {
+    "mtime": 1781471736.7803638,
+    "ast_hash": "7ecfba03001ee6f331835485ff8a9ab1",
+    "semantic_hash": "7ecfba03001ee6f331835485ff8a9ab1"
+  },
+  "A:\\IGrow\\lib\\features\\transactions\\presentation\\transaction_history_screen.dart": {
+    "mtime": 1781339879.752001,
+    "ast_hash": "ead34572fbcf646dfd35a68fceab9c73",
+    "semantic_hash": "ead34572fbcf646dfd35a68fceab9c73"
+  },
+  "A:\\IGrow\\lib\\features\\transactions\\presentation\\transaction_history_view_model.dart": {
+    "mtime": 1781298998.9415407,
+    "ast_hash": "f8b603f8a5bef31a2729f999bd27907b",
+    "semantic_hash": "f8b603f8a5bef31a2729f999bd27907b"
+  },
+  "A:\\IGrow\\lib\\features\\transactions\\transactions_providers.dart": {
+    "mtime": 1781141991.4055388,
+    "ast_hash": "79ffba706e0818d8ca4bc24396aab912",
+    "semantic_hash": "79ffba706e0818d8ca4bc24396aab912"
+  },
+  "A:\\IGrow\\lib\\features\\upgrade\\data\\billing_service.dart": {
+    "mtime": 1781333259.6326537,
+    "ast_hash": "2bc5efcc7051b27049209ebbdf5239ac",
+    "semantic_hash": "2bc5efcc7051b27049209ebbdf5239ac"
+  },
+  "A:\\IGrow\\lib\\features\\upgrade\\presentation\\upgrade_screen.dart": {
+    "mtime": 1781333505.7064958,
+    "ast_hash": "c1f0ca01a898678fb721c46f83ff5817",
+    "semantic_hash": "c1f0ca01a898678fb721c46f83ff5817"
+  },
+  "A:\\IGrow\\lib\\features\\upgrade\\presentation\\upgrade_view_model.dart": {
+    "mtime": 1781335207.422385,
+    "ast_hash": "c9db252ec3d7251459fbdb100beb0f51",
+    "semantic_hash": "c9db252ec3d7251459fbdb100beb0f51"
+  },
+  "A:\\IGrow\\lib\\firebase_options.dart": {
+    "mtime": 1781239337.4023361,
+    "ast_hash": "a3e2812bbff53f8966fe8de7923db3e4",
+    "semantic_hash": "a3e2812bbff53f8966fe8de7923db3e4"
+  },
+  "A:\\IGrow\\lib\\main.dart": {
+    "mtime": 1781527577.0780873,
+    "ast_hash": "48eea2708abfdd8977308d21bb9db027",
+    "semantic_hash": "48eea2708abfdd8977308d21bb9db027"
+  },
+  "A:\\IGrow\\lib\\shared\\models\\fiscal_year_start.dart": {
+    "mtime": 1781143774.1888056,
+    "ast_hash": "b1dcda269eb2737c4b9fe43926775075",
+    "semantic_hash": "b1dcda269eb2737c4b9fe43926775075"
+  },
+  "A:\\IGrow\\lib\\shared\\models\\gst_head.dart": {
+    "mtime": 1781143469.2205515,
+    "ast_hash": "c9ebad83e2f9fead6c01d35e3fcbb06e",
+    "semantic_hash": "c9ebad83e2f9fead6c01d35e3fcbb06e"
+  },
+  "A:\\IGrow\\lib\\shared\\models\\language_code.dart": {
+    "mtime": 1780795810.620567,
+    "ast_hash": "1634662334bdecad9eacc83f8b40b62d",
+    "semantic_hash": "1634662334bdecad9eacc83f8b40b62d"
+  },
+  "A:\\IGrow\\lib\\shared\\models\\models.dart": {
+    "mtime": 1781143778.3173697,
+    "ast_hash": "e8a378a5c10857ef940bb498c6d727f5",
+    "semantic_hash": "e8a378a5c10857ef940bb498c6d727f5"
+  },
+  "A:\\IGrow\\lib\\shared\\models\\plan_type.dart": {
+    "mtime": 1780795810.620567,
+    "ast_hash": "29dac20a1b38411848709cb428df49c9",
+    "semantic_hash": "29dac20a1b38411848709cb428df49c9"
+  },
+  "A:\\IGrow\\lib\\shared\\models\\profile_type.dart": {
+    "mtime": 1780795810.5766633,
+    "ast_hash": "7eca98c5f7556c5dd5a28dad6ae9cf17",
+    "semantic_hash": "7eca98c5f7556c5dd5a28dad6ae9cf17"
+  },
+  "A:\\IGrow\\lib\\shared\\models\\sync_status.dart": {
+    "mtime": 1780795810.620567,
+    "ast_hash": "7ed6228524e11eacf0afbc649071a1f0",
+    "semantic_hash": "7ed6228524e11eacf0afbc649071a1f0"
+  },
+  "A:\\IGrow\\lib\\shared\\models\\transaction_filter.dart": {
+    "mtime": 1781152805.9196596,
+    "ast_hash": "e8be4c5d89e7338e328cdcc1b0201ec1",
+    "semantic_hash": "e8be4c5d89e7338e328cdcc1b0201ec1"
+  },
+  "A:\\IGrow\\lib\\shared\\models\\transaction_source.dart": {
+    "mtime": 1780795810.620567,
+    "ast_hash": "c9842291b1c10b4c418e4d1ba9340240",
+    "semantic_hash": "c9842291b1c10b4c418e4d1ba9340240"
+  },
+  "A:\\IGrow\\lib\\shared\\models\\transaction_type.dart": {
+    "mtime": 1780795810.620567,
+    "ast_hash": "059ab34caa941ba9d527f0b677a7c9b3",
+    "semantic_hash": "059ab34caa941ba9d527f0b677a7c9b3"
+  },
+  "A:\\IGrow\\lib\\shared\\providers\\auth_state_provider.dart": {
+    "mtime": 1781145028.8733387,
+    "ast_hash": "9df4a4d390887bede207bd269ce2fb29",
+    "semantic_hash": "9df4a4d390887bede207bd269ce2fb29"
+  },
+  "A:\\IGrow\\lib\\shared\\providers\\ca_comments_provider.dart": {
+    "mtime": 1781297307.3526895,
+    "ast_hash": "54aabf385b81ff626e785beed567d79c",
+    "semantic_hash": "54aabf385b81ff626e785beed567d79c"
+  },
+  "A:\\IGrow\\lib\\shared\\providers\\firebase_providers.dart": {
+    "mtime": 1781335169.5749838,
+    "ast_hash": "4497fcbc0973f523a6cf4b725ecce1b4",
+    "semantic_hash": "4497fcbc0973f523a6cf4b725ecce1b4"
+  },
+  "A:\\IGrow\\lib\\shared\\providers\\user_provider.dart": {
+    "mtime": 1781145028.875775,
+    "ast_hash": "d92557cbcbf46d69b828f7c06a293348",
+    "semantic_hash": "d92557cbcbf46d69b828f7c06a293348"
+  },
+  "A:\\IGrow\\lib\\shared\\widgets\\animated_counter.dart": {
+    "mtime": 1781473631.7387283,
+    "ast_hash": "76dd08ab8dd308b91eb7fc40fbf13ec7",
+    "semantic_hash": "76dd08ab8dd308b91eb7fc40fbf13ec7"
+  },
+  "A:\\IGrow\\lib\\shared\\widgets\\animated_fab.dart": {
+    "mtime": 1781528492.1722705,
+    "ast_hash": "54fbdd53c8f8296446832fc177cbee5f",
+    "semantic_hash": "54fbdd53c8f8296446832fc177cbee5f"
+  },
+  "A:\\IGrow\\lib\\shared\\widgets\\app_button.dart": {
+    "mtime": 1781527373.9046109,
+    "ast_hash": "895f4755a9dcbb4308b28b61106c75ce",
+    "semantic_hash": "895f4755a9dcbb4308b28b61106c75ce"
+  },
+  "A:\\IGrow\\lib\\shared\\widgets\\app_card.dart": {
+    "mtime": 1781473570.625388,
+    "ast_hash": "544b54ee9a1a4616bb03d4a64d7332a0",
+    "semantic_hash": "544b54ee9a1a4616bb03d4a64d7332a0"
+  },
+  "A:\\IGrow\\lib\\shared\\widgets\\app_text_field.dart": {
+    "mtime": 1780795810.620567,
+    "ast_hash": "50b82d7c0c312aadd275a1aa3de901e7",
+    "semantic_hash": "50b82d7c0c312aadd275a1aa3de901e7"
+  },
+  "A:\\IGrow\\lib\\shared\\widgets\\empty_state.dart": {
+    "mtime": 1780795810.620567,
+    "ast_hash": "a306e8261da021d74dbfd91444bb8759",
+    "semantic_hash": "a306e8261da021d74dbfd91444bb8759"
+  },
+  "A:\\IGrow\\lib\\shared\\widgets\\igrow_loader.dart": {
+    "mtime": 1781473615.3367517,
+    "ast_hash": "eba562e4694f031513c5feb5b698c71f",
+    "semantic_hash": "eba562e4694f031513c5feb5b698c71f"
+  },
+  "A:\\IGrow\\lib\\shared\\widgets\\loading_shimmer.dart": {
+    "mtime": 1781473622.558277,
+    "ast_hash": "722d6ce32a4a6d6888cf0b45f7e18cfa",
+    "semantic_hash": "722d6ce32a4a6d6888cf0b45f7e18cfa"
+  },
+  "A:\\IGrow\\lib\\shared\\widgets\\min_touch_target.dart": {
+    "mtime": 1780795810.620567,
+    "ast_hash": "a6d7b1d87c8c1be740020447556facf3",
+    "semantic_hash": "a6d7b1d87c8c1be740020447556facf3"
+  },
+  "A:\\IGrow\\lib\\shared\\widgets\\pressable_scale.dart": {
+    "mtime": 1781473530.2831802,
+    "ast_hash": "48eea52db6e302f87dd166b15b07e0c7",
+    "semantic_hash": "48eea52db6e302f87dd166b15b07e0c7"
+  },
+  "A:\\IGrow\\lib\\shared\\widgets\\transaction_list_tile.dart": {
+    "mtime": 1781473596.8483562,
+    "ast_hash": "919e7aedad5b6cf6b48247982538f8f2",
+    "semantic_hash": "919e7aedad5b6cf6b48247982538f8f2"
+  },
+  "A:\\IGrow\\lib\\shared\\widgets\\widgets.dart": {
+    "mtime": 1781528502.578251,
+    "ast_hash": "60e14b87f63fba4e94bb1abf4be2604c",
+    "semantic_hash": "60e14b87f63fba4e94bb1abf4be2604c"
+  },
+  "A:\\IGrow\\scratch\\analyze_charts.py": {
+    "mtime": 1781404416.9622917,
+    "ast_hash": "492bf80cdc542df603d763bb18f602c7",
+    "semantic_hash": "492bf80cdc542df603d763bb18f602c7"
+  },
+  "A:\\IGrow\\scratch\\check_colors.py": {
+    "mtime": 1781404405.057573,
+    "ast_hash": "d10b00645c1a00d9515bf6e3aa2ea904",
+    "semantic_hash": "d10b00645c1a00d9515bf6e3aa2ea904"
+  },
+  "A:\\IGrow\\scratch\\download_screens.py": {
+    "mtime": 1781404372.9644508,
+    "ast_hash": "73370041c9d4fc141e1cfe69c6909a7a",
+    "semantic_hash": "73370041c9d4fc141e1cfe69c6909a7a"
+  },
+  "A:\\IGrow\\test\\core\\notifications\\fcm_service_test.dart": {
+    "mtime": 1781302276.6908872,
+    "ast_hash": "814478dc832ab9ade0f3c36d62f3199b",
+    "semantic_hash": "814478dc832ab9ade0f3c36d62f3199b"
+  },
+  "A:\\IGrow\\test\\core\\security\\biometric_lock_test.dart": {
+    "mtime": 1781331412.5952387,
+    "ast_hash": "aca24434f1f93934c33392525ee06d4a",
+    "semantic_hash": "aca24434f1f93934c33392525ee06d4a"
+  },
+  "A:\\IGrow\\test\\core\\utils\\currency_formatter_test.dart": {
+    "mtime": 1781138980.6800814,
+    "ast_hash": "a57133473c477010741dadda222e0d9e",
+    "semantic_hash": "a57133473c477010741dadda222e0d9e"
+  },
+  "A:\\IGrow\\test\\features\\analytics\\analytics_screen_test.dart": {
+    "mtime": 1781472056.7632203,
+    "ast_hash": "d2c01ae65afee82c7b7c146c2ad73e02",
+    "semantic_hash": "d2c01ae65afee82c7b7c146c2ad73e02"
+  },
+  "A:\\IGrow\\test\\features\\ca_connect\\ca_accept_test.dart": {
+    "mtime": 1781300142.4098053,
+    "ast_hash": "57c352f1118122c88fab648841c3932d",
+    "semantic_hash": "57c352f1118122c88fab648841c3932d"
+  },
+  "A:\\IGrow\\test\\features\\ca_connect\\ca_connect_test.dart": {
+    "mtime": 1781297523.8063765,
+    "ast_hash": "f3545884ef8c0001161587977ceb7843",
+    "semantic_hash": "f3545884ef8c0001161587977ceb7843"
+  },
+  "A:\\IGrow\\test\\features\\categories\\category_repository_test.dart": {
+    "mtime": 1781145063.7578366,
+    "ast_hash": "c4b3629ff80b510096820d34bbb436df",
+    "semantic_hash": "c4b3629ff80b510096820d34bbb436df"
+  },
+  "A:\\IGrow\\test\\features\\feedback\\feedback_screen_test.dart": {
+    "mtime": 1781335673.9872475,
+    "ast_hash": "77b7e946de509e27055fa73cfa796c33",
+    "semantic_hash": "77b7e946de509e27055fa73cfa796c33"
+  },
+  "A:\\IGrow\\test\\features\\home\\home_screen_test.dart": {
+    "mtime": 1781404744.6543283,
+    "ast_hash": "f8316fed627317d96caaaf9d2c66f6cf",
+    "semantic_hash": "f8316fed627317d96caaaf9d2c66f6cf"
+  },
+  "A:\\IGrow\\test\\features\\invoices\\invoice_quota_test.dart": {
+    "mtime": 1781296344.3519547,
+    "ast_hash": "6a89d4b2b71b95ee711ef28efd554648",
+    "semantic_hash": "6a89d4b2b71b95ee711ef28efd554648"
+  },
+  "A:\\IGrow\\test\\features\\invoices\\invoice_repository_test.dart": {
+    "mtime": 1781256446.3429387,
+    "ast_hash": "faf8d12fa36436ddb7bc322abd26fb1a",
+    "semantic_hash": "faf8d12fa36436ddb7bc322abd26fb1a"
+  },
+  "A:\\IGrow\\test\\features\\invoices\\invoice_screen_test.dart": {
+    "mtime": 1781296112.4187279,
+    "ast_hash": "0696e1fc598a78e05b2a611d17deabb1",
+    "semantic_hash": "0696e1fc598a78e05b2a611d17deabb1"
+  },
+  "A:\\IGrow\\test\\features\\khata\\khata_repository_test.dart": {
+    "mtime": 1781253300.04291,
+    "ast_hash": "d5a8fb4a9b4e54d8f08ba34b7a66e3dc",
+    "semantic_hash": "d5a8fb4a9b4e54d8f08ba34b7a66e3dc"
+  },
+  "A:\\IGrow\\test\\features\\navigation\\navigation_shell_test.dart": {
+    "mtime": 1781145028.8939817,
+    "ast_hash": "0bbb42cfd65a9b18644ed7e74c816045",
+    "semantic_hash": "0bbb42cfd65a9b18644ed7e74c816045"
+  },
+  "A:\\IGrow\\test\\features\\onboarding\\onboarding_test.dart": {
+    "mtime": 1781145028.8970225,
+    "ast_hash": "c444cbd0c10c2100311f333886a8c16e",
+    "semantic_hash": "c444cbd0c10c2100311f333886a8c16e"
+  },
+  "A:\\IGrow\\test\\features\\onboarding\\tutorial_onboarding_test.dart": {
+    "mtime": 1781355112.364377,
+    "ast_hash": "67dcede4a8e996dfbaf9e4cb4e83d0d1",
+    "semantic_hash": "67dcede4a8e996dfbaf9e4cb4e83d0d1"
+  },
+  "A:\\IGrow\\test\\features\\profiles\\profile_repository_test.dart": {
+    "mtime": 1781145063.7578366,
+    "ast_hash": "070a31a3d24339599747101c71bc22ff",
+    "semantic_hash": "070a31a3d24339599747101c71bc22ff"
+  },
+  "A:\\IGrow\\test\\features\\reports\\report_repository_test.dart": {
+    "mtime": 1781441056.189223,
+    "ast_hash": "ce6e5f08ab1e2417c51f8117909b356d",
+    "semantic_hash": "ce6e5f08ab1e2417c51f8117909b356d"
+  },
+  "A:\\IGrow\\test\\features\\reports\\reports_screen_test.dart": {
+    "mtime": 1781335580.0172546,
+    "ast_hash": "ae97a34d0f07cfd8aee8d5a3cfa46762",
+    "semantic_hash": "ae97a34d0f07cfd8aee8d5a3cfa46762"
+  },
+  "A:\\IGrow\\test\\features\\sms_capture\\capture_confirmation_screen_test.dart": {
+    "mtime": 1781246149.85535,
+    "ast_hash": "42fab4a595cb9f3b7068067497ce7bb9",
+    "semantic_hash": "42fab4a595cb9f3b7068067497ce7bb9"
+  },
+  "A:\\IGrow\\test\\features\\sms_capture\\sms_parser_test.dart": {
+    "mtime": 1781335492.0513594,
+    "ast_hash": "d0d7fd89f7ebfbade835251185340ddc",
+    "semantic_hash": "d0d7fd89f7ebfbade835251185340ddc"
+  },
+  "A:\\IGrow\\test\\features\\sms_capture\\sms_permission_test.dart": {
+    "mtime": 1781335679.180819,
+    "ast_hash": "063370e606096be7faa78cb282e0862d",
+    "semantic_hash": "063370e606096be7faa78cb282e0862d"
+  },
+  "A:\\IGrow\\test\\features\\transactions\\ocr_test.dart": {
+    "mtime": 1781249990.4841795,
+    "ast_hash": "2059b5069777b0ae7ecfbe6e084d41d5",
+    "semantic_hash": "2059b5069777b0ae7ecfbe6e084d41d5"
+  },
+  "A:\\IGrow\\test\\features\\transactions\\transaction_history_screen_test.dart": {
+    "mtime": 1781172211.6769414,
+    "ast_hash": "7a69e368108314d10d1d67a97ec11cda",
+    "semantic_hash": "7a69e368108314d10d1d67a97ec11cda"
+  },
+  "A:\\IGrow\\test\\features\\transactions\\transaction_repository_test.dart": {
+    "mtime": 1781171958.2548344,
+    "ast_hash": "ffcad1d93705c83beb5a851f0bf152b7",
+    "semantic_hash": "ffcad1d93705c83beb5a851f0bf152b7"
+  },
+  "A:\\IGrow\\test\\features\\transactions\\voice_entry_test.dart": {
+    "mtime": 1781405106.922964,
+    "ast_hash": "21999b7b68e48564de2f0bcb615c54ad",
+    "semantic_hash": "21999b7b68e48564de2f0bcb615c54ad"
+  },
+  "A:\\IGrow\\test\\features\\upgrade\\upgrade_screen_test.dart": {
+    "mtime": 1781333475.5646126,
+    "ast_hash": "b7be9b41a322edf9c75d70f40f935e04",
+    "semantic_hash": "b7be9b41a322edf9c75d70f40f935e04"
+  },
+  "A:\\IGrow\\test\\shared\\widgets\\design_system_test.dart": {
+    "mtime": 1781441627.9522712,
+    "ast_hash": "92be99163d685b25610a12354e690fbe",
+    "semantic_hash": "92be99163d685b25610a12354e690fbe"
+  },
+  "A:\\IGrow\\test\\unit\\features\\savings\\savings_repository_test.dart": {
+    "mtime": 1781401593.5690093,
+    "ast_hash": "9612847df0d54fc32ec7dac614f6ec62",
+    "semantic_hash": "9612847df0d54fc32ec7dac614f6ec62"
+  },
+  "A:\\IGrow\\test\\widget\\features\\savings\\savings_widgets_test.dart": {
+    "mtime": 1781401645.0221078,
+    "ast_hash": "090aa59664269f3c8f67815c268853c7",
+    "semantic_hash": "090aa59664269f3c8f67815c268853c7"
+  },
+  "A:\\IGrow\\test\\widget_test.dart": {
+    "mtime": 1781335504.9324481,
+    "ast_hash": "3ea1c2afc15bba3434fab3b1cef56ab4",
+    "semantic_hash": "3ea1c2afc15bba3434fab3b1cef56ab4"
+  },
+  "A:\\IGrow\\.ai\\memory\\project-context.md": {
+    "mtime": 1781138889.608395,
+    "ast_hash": "ded138272cf3caeefd7443616d52a061",
+    "semantic_hash": "ded138272cf3caeefd7443616d52a061"
+  },
+  "A:\\IGrow\\.ai\\prompts\\animation_improvements.txt": {
+    "mtime": 1781472862.6414645,
+    "ast_hash": "44ad4dd80cf0277440a1cc99ea712398",
+    "semantic_hash": "44ad4dd80cf0277440a1cc99ea712398"
+  },
+  "A:\\IGrow\\.ai\\rules\\igrow-flutter-conventions.md": {
+    "mtime": 1781118076.9221325,
+    "ast_hash": "14452a1498b765dbaa787a8aac31de1d",
+    "semantic_hash": "14452a1498b765dbaa787a8aac31de1d"
+  },
+  "A:\\IGrow\\.ai\\skills\\igrow-architect.md": {
+    "mtime": 1781118076.9141147,
+    "ast_hash": "423257856d1487378f7d4e75b71c1f05",
+    "semantic_hash": "423257856d1487378f7d4e75b71c1f05"
+  },
+  "A:\\IGrow\\.ai\\skills\\igrow-bug-hunter.md": {
+    "mtime": 1781118076.9841535,
+    "ast_hash": "d56cc4099a963f2c31a29059d9410dd5",
+    "semantic_hash": "d56cc4099a963f2c31a29059d9410dd5"
+  },
+  "A:\\IGrow\\.ai\\skills\\igrow-feature-builder.md": {
+    "mtime": 1781118076.9659598,
+    "ast_hash": "7ec22f7d8cebb7aebf7daa31529a5a5a",
+    "semantic_hash": "7ec22f7d8cebb7aebf7daa31529a5a5a"
+  },
+  "A:\\IGrow\\.ai\\skills\\igrow-orchestrator.md": {
+    "mtime": 1781402078.404998,
+    "ast_hash": "5390ae3df93e8072434497c64770fcd3",
+    "semantic_hash": "5390ae3df93e8072434497c64770fcd3"
+  },
+  "A:\\IGrow\\.ai\\skills\\igrow-qa-engineer.md": {
+    "mtime": 1781118076.9439223,
+    "ast_hash": "0621936d61eb1cbc2944255b4ad8cd88",
+    "semantic_hash": "0621936d61eb1cbc2944255b4ad8cd88"
+  },
+  "A:\\IGrow\\.ai\\skills\\igrow-security-auditor.md": {
+    "mtime": 1781118076.9916773,
+    "ast_hash": "8cbb053e0a35ebe2df15a435fb0d045d",
+    "semantic_hash": "8cbb053e0a35ebe2df15a435fb0d045d"
+  },
+  "A:\\IGrow\\.ai\\skills\\specialized\\frontend-design.md": {
+    "mtime": 1781401510.9024477,
+    "ast_hash": "f5c3db69b9c6a00578301dd0cbe90253",
+    "semantic_hash": "f5c3db69b9c6a00578301dd0cbe90253"
+  },
+  "A:\\IGrow\\.ai\\skills\\specialized\\igrow-firebase-architect.md": {
+    "mtime": 1781118076.9341614,
+    "ast_hash": "87a4d4bcb1908732aa0f2ca845b87bc2",
+    "semantic_hash": "87a4d4bcb1908732aa0f2ca845b87bc2"
+  },
+  "A:\\IGrow\\.ai\\skills\\specialized\\igrow-sms-specialist.md": {
+    "mtime": 1781118076.953923,
+    "ast_hash": "04b540731d79c641124119378c006b02",
+    "semantic_hash": "04b540731d79c641124119378c006b02"
+  },
+  "A:\\IGrow\\.ai\\skills\\specialized\\igrow-transaction-specialist.md": {
+    "mtime": 1781118077.0012014,
+    "ast_hash": "ff9d935844c5b250b36ddb31f75728be",
+    "semantic_hash": "ff9d935844c5b250b36ddb31f75728be"
+  },
+  "A:\\IGrow\\.ai\\skills\\specialized\\sleek-design-mobile-apps.md": {
+    "mtime": 1781401359.8653347,
+    "ast_hash": "d2ae529582b182c6e58d228344f92b15",
+    "semantic_hash": "d2ae529582b182c6e58d228344f92b15"
+  },
+  "A:\\IGrow\\.ai\\workflow\\igrow-workflows.md": {
+    "mtime": 1781138742.1076472,
+    "ast_hash": "6ecdf65f33ca261a9a3a1ae2d06747cc",
+    "semantic_hash": "6ecdf65f33ca261a9a3a1ae2d06747cc"
+  },
+  "A:\\IGrow\\.github\\workflows\\deploy_production.yml": {
+    "mtime": 1781339131.3601632,
+    "ast_hash": "9dc74e0a18c6418977c78ec5e3080a2a",
+    "semantic_hash": "9dc74e0a18c6418977c78ec5e3080a2a"
+  },
+  "A:\\IGrow\\.github\\workflows\\deploy_staging.yml": {
+    "mtime": 1781339120.5703783,
+    "ast_hash": "7343a66de63d3444c950f2bcd91cb1e2",
+    "semantic_hash": "7343a66de63d3444c950f2bcd91cb1e2"
+  },
+  "A:\\IGrow\\.github\\workflows\\pr_checks.yml": {
+    "mtime": 1781339111.1523366,
+    "ast_hash": "9445880afa8186c011c010f5e1bf6595",
+    "semantic_hash": "9445880afa8186c011c010f5e1bf6595"
+  },
+  "A:\\IGrow\\.planning\\PROJECT.md": {
+    "mtime": 1781139137.0922308,
+    "ast_hash": "608a1f901b8bd2f8bd565eb92a25b040",
+    "semantic_hash": "608a1f901b8bd2f8bd565eb92a25b040"
+  },
+  "A:\\IGrow\\.planning\\REQUIREMENTS.md": {
+    "mtime": 1781139142.8156328,
+    "ast_hash": "bb698c4c7a591eaad411c6c301dc6520",
+    "semantic_hash": "bb698c4c7a591eaad411c6c301dc6520"
+  },
+  "A:\\IGrow\\.planning\\ROADMAP.md": {
+    "mtime": 1781401715.8482282,
+    "ast_hash": "a068ec84bea8527e8f93a31a1b8a0a4a",
+    "semantic_hash": "a068ec84bea8527e8f93a31a1b8a0a4a"
+  },
+  "A:\\IGrow\\.planning\\STATE.md": {
+    "mtime": 1781441264.2767308,
+    "ast_hash": "77dbb845be3d5c426dbd83aeef2fe0f1",
+    "semantic_hash": "77dbb845be3d5c426dbd83aeef2fe0f1"
+  },
+  "A:\\IGrow\\analysis_options.yaml": {
+    "mtime": 1780795810.620567,
+    "ast_hash": "8d5fcce1c1a5f7866fd6bd47872b5b69",
+    "semantic_hash": "8d5fcce1c1a5f7866fd6bd47872b5b69"
+  },
+  "A:\\IGrow\\analyze.txt": {
+    "mtime": 1781299261.4123163,
+    "ast_hash": "4f6c212da68c807db96d6962c1d3e224",
+    "semantic_hash": "4f6c212da68c807db96d6962c1d3e224"
+  },
+  "A:\\IGrow\\analyze_utf8.txt": {
+    "mtime": 1781299835.456947,
+    "ast_hash": "f8a0ddc9d84598a12cd7a2a6bbb09268",
+    "semantic_hash": "f8a0ddc9d84598a12cd7a2a6bbb09268"
+  },
+  "A:\\IGrow\\docs\\IGrow_Engineering_Spec_v1.md": {
+    "mtime": 1780722280.3983922,
+    "ast_hash": "86e1a3fcfbe0b0f124ef5f226332fe1a",
+    "semantic_hash": "86e1a3fcfbe0b0f124ef5f226332fe1a"
+  },
+  "A:\\IGrow\\docs\\IGrow_Feature_Tickets.md": {
+    "mtime": 1781401710.570788,
+    "ast_hash": "6af643ecd8c39684d17ffd1696e2eb87",
+    "semantic_hash": "6af643ecd8c39684d17ffd1696e2eb87"
+  },
+  "A:\\IGrow\\docs\\IGrow_Frontend_Spec.md": {
+    "mtime": 1781140657.823932,
+    "ast_hash": "2a3a60247696090dcc19d92f598271be",
+    "semantic_hash": "2a3a60247696090dcc19d92f598271be"
+  },
+  "A:\\IGrow\\docs\\IGrow_Security_Access.md": {
+    "mtime": 1780722333.54234,
+    "ast_hash": "ec1d527c633d6234e88397b659b259c7",
+    "semantic_hash": "ec1d527c633d6234e88397b659b259c7"
+  },
+  "A:\\IGrow\\docs\\IGrow_Technical_Architecture.md": {
+    "mtime": 1780722339.7658894,
+    "ast_hash": "73d9df42fc5a9e24414c00a6defc00cf",
+    "semantic_hash": "73d9df42fc5a9e24414c00a6defc00cf"
+  },
+  "A:\\IGrow\\flutter_run_error.txt": {
+    "mtime": 1781526835.969352,
+    "ast_hash": "784e32107210879627b48373b096336a",
+    "semantic_hash": "784e32107210879627b48373b096336a"
+  },
+  "A:\\IGrow\\flutter_run_error_2.txt": {
+    "mtime": 1781527821.591316,
+    "ast_hash": "784e32107210879627b48373b096336a",
+    "semantic_hash": "784e32107210879627b48373b096336a"
+  },
+  "A:\\IGrow\\flutter_run_error_3.txt": {
+    "mtime": 1781529021.4272237,
+    "ast_hash": "4f4cad66a322c8ce09fd3cdb0f935da2",
+    "semantic_hash": "4f4cad66a322c8ce09fd3cdb0f935da2"
+  },
+  "A:\\IGrow\\flutter_run_error_4.txt": {
+    "mtime": 1781529755.6965632,
+    "ast_hash": "466e572b6befac119888de9c6791b27d",
+    "semantic_hash": "466e572b6befac119888de9c6791b27d"
+  },
+  "A:\\IGrow\\flutter_run_output.txt": {
+    "mtime": 1781527588.1492493,
+    "ast_hash": "647096c5ce7eb7d75d5e246c0281902e",
+    "semantic_hash": "647096c5ce7eb7d75d5e246c0281902e"
+  },
+  "A:\\IGrow\\flutter_run_output_2.txt": {
+    "mtime": 1781528156.3397405,
+    "ast_hash": "8ae4616934650f0ca61f36f36a441f2a",
+    "semantic_hash": "8ae4616934650f0ca61f36f36a441f2a"
+  },
+  "A:\\IGrow\\flutter_run_output_3.txt": {
+    "mtime": 1781529021.3805883,
+    "ast_hash": "e4b97728260469f1a60b35fffaa496b3",
+    "semantic_hash": "e4b97728260469f1a60b35fffaa496b3"
+  },
+  "A:\\IGrow\\flutter_run_output_4.txt": {
+    "mtime": 1781529755.6038187,
+    "ast_hash": "7d598755e3ad220598e2c7d7ca27b48a",
+    "semantic_hash": "7d598755e3ad220598e2c7d7ca27b48a"
+  },
+  "A:\\IGrow\\pubspec.yaml": {
+    "mtime": 1781521161.353168,
+    "ast_hash": "5fefd9f86ac89aa8c1592921342e1258",
+    "semantic_hash": "5fefd9f86ac89aa8c1592921342e1258"
+  },
+  "A:\\IGrow\\scratch\\dart_files.txt": {
+    "mtime": 1781470721.0434432,
+    "ast_hash": "1376b5dd7ef638d68513b62625ee2226",
+    "semantic_hash": "1376b5dd7ef638d68513b62625ee2226"
+  },
+  "A:\\IGrow\\scratch\\stitch_screens\\10_savings_goal_planner.html": {
+    "mtime": 1781404389.3507676,
+    "ast_hash": "33289bac58e22f88c1bfb4773e4807ff",
+    "semantic_hash": "33289bac58e22f88c1bfb4773e4807ff"
+  },
+  "A:\\IGrow\\scratch\\stitch_screens\\1_design_system.html": {
+    "mtime": 1781404385.8428197,
+    "ast_hash": "2e3aee0c633079735c93830506f87559",
+    "semantic_hash": "2e3aee0c633079735c93830506f87559"
+  },
+  "A:\\IGrow\\scratch\\stitch_screens\\2_onboarding.html": {
+    "mtime": 1781404386.2087553,
+    "ast_hash": "1104a3757218807bd4668b3fe10646bd",
+    "semantic_hash": "1104a3757218807bd4668b3fe10646bd"
+  },
+  "A:\\IGrow\\scratch\\stitch_screens\\3_ca_connect.html": {
+    "mtime": 1781404386.5907583,
+    "ast_hash": "1a07ca9e11e74e8ab42ed394d8688ae5",
+    "semantic_hash": "1a07ca9e11e74e8ab42ed394d8688ae5"
+  },
+  "A:\\IGrow\\scratch\\stitch_screens\\4_feedback_support.html": {
+    "mtime": 1781404386.9630578,
+    "ast_hash": "19ff2ddc5749f370712fe18263481920",
+    "semantic_hash": "19ff2ddc5749f370712fe18263481920"
+  },
+  "A:\\IGrow\\scratch\\stitch_screens\\5_auto_capture.html": {
+    "mtime": 1781404387.3205566,
+    "ast_hash": "42052d6de7edd06c5a5a3b625cb38c24",
+    "semantic_hash": "42052d6de7edd06c5a5a3b625cb38c24"
+  },
+  "A:\\IGrow\\scratch\\stitch_screens\\6_reports_screen.html": {
+    "mtime": 1781404387.6742227,
+    "ast_hash": "1d6f15151074d2826d147dbf2c3a5980",
+    "semantic_hash": "1d6f15151074d2826d147dbf2c3a5980"
+  },
+  "A:\\IGrow\\scratch\\stitch_screens\\7_home_dashboard.html": {
+    "mtime": 1781404388.2668269,
+    "ast_hash": "7db8cafa35a204f32bff5930f7acba16",
+    "semantic_hash": "7db8cafa35a204f32bff5930f7acba16"
+  },
+  "A:\\IGrow\\scratch\\stitch_screens\\8_performance_charts.html": {
+    "mtime": 1781404388.6277049,
+    "ast_hash": "99864b55ca4ed85a4dfbedf92e221a76",
+    "semantic_hash": "99864b55ca4ed85a4dfbedf92e221a76"
+  },
+  "A:\\IGrow\\scratch\\stitch_screens\\9_add_transaction.html": {
+    "mtime": 1781404388.9935763,
+    "ast_hash": "c4bb92270e213913be9234a78822484d",
+    "semantic_hash": "c4bb92270e213913be9234a78822484d"
+  },
+  "A:\\IGrow\\test_output.txt": {
+    "mtime": 1781354589.8179204,
+    "ast_hash": "f37caf65bb406c1274e4258423c633e9",
+    "semantic_hash": "f37caf65bb406c1274e4258423c633e9"
+  },
+  "A:\\IGrow\\android\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png": {
+    "mtime": 1781343122.9647346,
+    "ast_hash": "0f86b199018b8239e08bdf6d4cdbec81",
+    "semantic_hash": "0f86b199018b8239e08bdf6d4cdbec81"
+  },
+  "A:\\IGrow\\android\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png": {
+    "mtime": 1781343122.9734254,
+    "ast_hash": "25c78c10cfb01283278a498770b0b3e1",
+    "semantic_hash": "25c78c10cfb01283278a498770b0b3e1"
+  },
+  "A:\\IGrow\\android\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png": {
+    "mtime": 1781343122.96941,
+    "ast_hash": "7ee1570f1170ecd01d82f84337d02831",
+    "semantic_hash": "7ee1570f1170ecd01d82f84337d02831"
+  },
+  "A:\\IGrow\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png": {
+    "mtime": 1781343122.96066,
+    "ast_hash": "0922f6d6db7d70fdc81144aed1076c86",
+    "semantic_hash": "0922f6d6db7d70fdc81144aed1076c86"
+  },
+  "A:\\IGrow\\android\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png": {
+    "mtime": 1781343122.930028,
+    "ast_hash": "e5f656a853ac50a24da8b8288192350b",
+    "semantic_hash": "e5f656a853ac50a24da8b8288192350b"
+  },
+  "A:\\IGrow\\screen.png": {
+    "mtime": 1781441776.7197914,
+    "ast_hash": "1ecb37c7ebbec08a65a4c2b028be80c1",
+    "semantic_hash": "1ecb37c7ebbec08a65a4c2b028be80c1"
+  }
+}

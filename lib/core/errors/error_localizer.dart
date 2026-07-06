@@ -1,0 +1,70 @@
+import 'package:flutter/material.dart';
+
+import '../../l10n/app_localizations.dart';
+import 'error_codes.dart';
+
+String localizeError(
+  BuildContext context,
+  String? errorCode, [
+  String? fallback,
+]) {
+  if (errorCode == null) return fallback ?? '';
+  final l = AppLocalizations.of(context)!;
+  return switch (errorCode) {
+    ErrorCodes.tooManyAttempts => l.errorTooManyAttempts,
+    ErrorCodes.sessionExpired => l.sessionExpired,
+    ErrorCodes.authenticationFailed => l.errorAuthenticationFailed,
+    ErrorCodes.usernameTaken => l.errorUsernameTaken,
+    ErrorCodes.usernameNotFound => l.errorUsernameNotFound,
+    ErrorCodes.incorrectPassword => l.errorIncorrectPassword,
+    ErrorCodes.invalidEmail => l.errorInvalidEmailAddress,
+    ErrorCodes.weakPassword => l.errorWeakPassword,
+    ErrorCodes.emailAlreadyInUse => l.errorEmailAlreadyInUse,
+    ErrorCodes.networkError => l.errorNoInternet,
+    ErrorCodes.somethingWrong => l.errorSomethingWrong,
+    ErrorCodes.firestoreError => l.firestoreError,
+    ErrorCodes.inviteExpired => l.inviteExpiredOrInvalid,
+    ErrorCodes.phoneMismatch => l.invitePhoneMismatch,
+    ErrorCodes.pendingInvitation => l.pendingInvitationExists,
+    ErrorCodes.cannotInviteOwnNumber => l.cannotInviteOwnNumber,
+    ErrorCodes.invalidMobileNumber => l.invalidMobileNumberError,
+    ErrorCodes.selectRole => l.selectRole,
+    ErrorCodes.businessNameLength => l.businessNameLength,
+    ErrorCodes.enterAmountAndCategory => l.enterAmountAndCategory,
+    ErrorCodes.amountExceedsMax => l.amountExceedsMax,
+    ErrorCodes.userNotLoggedIn => l.userNotLoggedIn,
+    ErrorCodes.futureDatesNotAllowed => l.futureDatesNotAllowed,
+    ErrorCodes.couldNotInitializeSpeech => l.couldNotInitializeSpeech,
+    ErrorCodes.couldNotUnderstand => l.couldNotUnderstand,
+    ErrorCodes.couldNotProcessVoice => l.couldNotProcessVoice,
+    ErrorCodes.cameraAccessFailed => l.cameraAccessFailed,
+    ErrorCodes.couldNotReadAmount => l.couldNotReadAmount,
+    ErrorCodes.couldNotReadBill => l.couldNotReadBill,
+    ErrorCodes.noReceiptFound => l.noReceiptFound,
+    ErrorCodes.selectCategoryRequired => l.selectCategory,
+    ErrorCodes.nameMinLength => l.nameMinLengthError,
+    ErrorCodes.nameMaxLength => l.nameMaxLengthError,
+    ErrorCodes.amountRequired => l.amountRequiredError,
+    ErrorCodes.invalidAmount => l.invalidAmountError,
+    ErrorCodes.couldNotSave => l.couldNotSaveError,
+    ErrorCodes.failedToCreateCustomer => l.failedToCreateCustomer,
+    ErrorCodes.failedToRecordCredit => l.failedToRecordCredit,
+    ErrorCodes.failedToRecordRepayment => l.failedToRecordRepayment,
+    ErrorCodes.failedToDeleteCustomer => l.failedToDeleteCustomer,
+    ErrorCodes.nameLength2to100 => l.nameLength2to100,
+    ErrorCodes.targetDateFuture => l.targetDateFuture,
+    ErrorCodes.invalidTargetAmount => l.invalidTargetAmount,
+    ErrorCodes.noActiveProfile => l.noActiveProfile,
+    ErrorCodes.amountRequiredGeneric => l.amountRequiredGeneric,
+    ErrorCodes.invalidAmountGeneric => l.invalidAmountGeneric,
+    ErrorCodes.amountExceedsRemaining => l.amountExceedsRemaining,
+    ErrorCodes.couldNotOpenWhatsapp => l.couldNotOpenWhatsapp,
+    ErrorCodes.purchaseFailed => l.purchaseFailedError,
+    ErrorCodes.verificationFailed => l.verificationFailedError,
+    ErrorCodes.descriptionRequired => l.descriptionRequired,
+    ErrorCodes.watchAdToCreateInvoice => l.watchAdToCreateInvoice,
+    ErrorCodes.watchAdToExport => l.watchAdToExport,
+    ErrorCodes.activeProfileNotFound => l.activeProfileNotFound,
+    _ => fallback ?? errorCode,
+  };
+}
