@@ -50,7 +50,7 @@ This document outlines the sequential phases and ticket milestones for PocketPlu
 - ~~**IGR-023:** CA Connect~~ — **REMOVED 2026-07-06** (product decision: keep the app simple; reconsider after production launch)
 - ~~**IGR-024:** CA Accept Flow~~ — **REMOVED 2026-07-06** (same decision as IGR-023)
 - [x] **IGR-025:** Firebase Cloud Messaging Push notification receivers
-- [ ] **IGR-026:** Biometric App Lock & PIN fallback — *not present in the codebase (no `local_auth` dependency); decide whether to build or descope*
+- [x] **IGR-026:** Biometric App Lock & PIN fallback — *built 2026-07-06: `local_auth` + PIN (SHA256+salt in keystore), 5-min background auto-lock, Settings toggle, lock/setup screens. Biometric prompt needs on-device verification.*
 - ~~**IGR-027:** Play Billing API integration~~ — **REMOVED** (paywalls/IAP dropped; banner ads only, see pubspec.yaml)
 - [x] **IGR-028:** Feedback NPS Survey & telemetry analytics events
 - [x] **IGR-029:** Dynamic role-based coach marks

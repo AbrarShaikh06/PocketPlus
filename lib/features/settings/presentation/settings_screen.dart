@@ -9,6 +9,7 @@ import '../../../core/constants/app_colors.dart';
 import '../../../core/constants/app_sizes.dart';
 import '../../../core/constants/app_text_styles.dart';
 import '../../../core/router/route_names.dart';
+import '../../security/presentation/app_lock_provider.dart';
 import '../../../shared/models/models.dart';
 import '../../../shared/providers/firebase_providers.dart';
 import '../../../l10n/app_localizations.dart';
@@ -321,6 +322,9 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
             ),
           ),
           const SizedBox(height: AppSizes.spacing24),
+          _buildSectionTitle('Security'),
+          _buildAppLockSection(),
+          const SizedBox(height: AppSizes.spacing24),
           _buildSectionTitle('Support'),
           Card(
             child: Column(
@@ -461,6 +465,85 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
         style: AppTextStyles.titleMedium(context),
       ),
     );
+  }
+
+  Widget _buildAppLockSection() {
+    final lock = ref.watch(appLockControllerProvider);
+    return Card(
+      child: Column(
+        children: [
+          SwitchListTile(
+            secondary: const Icon(Icons.lock_outline, color: AppColors.primary),
+            title: const Text('App Lock'),
+            subtitle: const Text('Require a PIN or biometric to open the app'),
+            value: lock.isEnabled,
+            onChanged: (enable) {
+              if (enable) {
+                context.push(RouteNames.pinSetup);
+              } else {
+                _confirmDisableAppLock();
+              }
+            },
+          ),
+          if (lock.isEnabled) ...[
+            const Divider(height: 1),
+            ListTile(
+              leading: const Icon(Icons.pin_outlined, color: AppColors.primary),
+              title: const Text('Change PIN'),
+              trailing: const Icon(Icons.chevron_right),
+              onTap: () => context.push(RouteNames.pinSetup),
+            ),
+          ],
+        ],
+      ),
+    );
+  }
+
+  /// Turning the lock off requires the current PIN (CLAUDE.md: the lock cannot
+  /// be disabled without it).
+  Future<void> _confirmDisableAppLock() async {
+    final controller = TextEditingController();
+    final pin = await showDialog<String>(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        title: const Text('Enter PIN to turn off App Lock'),
+        content: TextField(
+          controller: controller,
+          keyboardType: TextInputType.number,
+          obscureText: true,
+          maxLength: 6,
+          autofocus: true,
+          decoration: const InputDecoration(hintText: 'Current PIN'),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(ctx),
+            child: const Text('Cancel'),
+          ),
+          FilledButton(
+            onPressed: () => Navigator.pop(ctx, controller.text),
+            child: const Text('Turn off'),
+          ),
+        ],
+      ),
+    );
+    if (pin == null || pin.isEmpty) return;
+
+    final ok = await ref.read(appLockServiceProvider).disableLock(pin);
+    if (!mounted) return;
+    if (ok) {
+      ref.read(appLockControllerProvider.notifier).markDisabled();
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('App lock turned off.')),
+      );
+    } else {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('Incorrect PIN.'),
+          backgroundColor: AppColors.error,
+        ),
+      );
+    }
   }
 
   Widget _planBadge(PlanType plan) {

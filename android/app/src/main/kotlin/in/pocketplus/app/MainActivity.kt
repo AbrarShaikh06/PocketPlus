@@ -4,11 +4,13 @@ import android.database.Cursor
 import android.net.Uri
 import android.provider.Telephony
 import android.util.Log
-import io.flutter.embedding.android.FlutterActivity
+import io.flutter.embedding.android.FlutterFragmentActivity
 import io.flutter.embedding.engine.FlutterEngine
 import io.flutter.plugin.common.MethodChannel
 
-class MainActivity: FlutterActivity() {
+// FlutterFragmentActivity (not FlutterActivity) is required by local_auth so
+// the biometric prompt can attach to a FragmentActivity host.
+class MainActivity: FlutterFragmentActivity() {
     companion object {
         var channel: MethodChannel? = null
     }

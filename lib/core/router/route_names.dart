@@ -34,4 +34,6 @@ abstract final class RouteNames {
   static String captureConfirm(String smsId) => '/capture/$smsId';
   static const String smsDiagnostics = '/sms-diagnostics';
   static const String maintenance = '/maintenance';
+  static const String lock = '/lock';
+  static const String pinSetup = '/settings/pin-setup';
 }

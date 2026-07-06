@@ -63,4 +63,7 @@
 
     <!-- Voice transaction entry (speech_to_text) -->
     <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+
+    <!-- Biometric app lock (local_auth) -->
+    <uses-permission android:name="android.permission.USE_BIOMETRIC"/>
 </manifest>

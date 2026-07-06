@@ -12,6 +12,9 @@ import '../../features/onboarding/presentation/user_info_screen.dart';
 import '../../features/shell/presentation/main_shell.dart';
 import '../../shared/providers/auth_state_provider.dart';
 import '../../shared/providers/user_provider.dart';
+import '../../features/security/presentation/app_lock_provider.dart';
+import '../../features/security/presentation/lock_screen.dart';
+import '../../features/security/presentation/pin_setup_screen.dart';
 import '../../core/config/remote_config_service.dart';
 import '../../core/constants/app_colors.dart';
 import '../../shared/widgets/pocketplus_loader.dart';
@@ -129,15 +132,19 @@ class RouterRefreshListenable extends ChangeNotifier {
     _subscription = ref.listen(authStateProvider, (_, __) => notifyListeners());
     _userDocSubscription =
         ref.listen(userDocProvider, (_, __) => notifyListeners());
+    _lockSubscription =
+        ref.listen(appLockControllerProvider, (_, __) => notifyListeners());
   }
 
   late final ProviderSubscription _subscription;
   late final ProviderSubscription _userDocSubscription;
+  late final ProviderSubscription _lockSubscription;
 
   @override
   void dispose() {
     _subscription.close();
     _userDocSubscription.close();
+    _lockSubscription.close();
     super.dispose();
   }
 }
@@ -171,6 +178,18 @@ final appRouterProvider = Provider<GoRouter>((ref) {
       final isAuth = authState.isAuthenticated;
       final isGoingToAuth = state.matchedLocation.startsWith('/auth');
       final isGoingToSplash = state.matchedLocation == RouteNames.splash;
+
+      // Biometric / PIN app lock — gate the authenticated session. Only
+      // authenticated users can have configured a lock, so an unauthenticated
+      // session falls through to the login redirect below.
+      final lock = ref.read(appLockControllerProvider);
+      final isGoingToLock = state.matchedLocation == RouteNames.lock;
+      if (isAuth && lock.initialized && lock.isEnabled && lock.isLocked) {
+        return isGoingToLock ? null : RouteNames.lock;
+      }
+      if (isGoingToLock) {
+        return isAuth ? RouteNames.home : RouteNames.login;
+      }
 
       if (!isAuth && !isGoingToAuth && !isGoingToSplash) {
         return RouteNames.login;
@@ -228,6 +247,20 @@ final appRouterProvider = Provider<GoRouter>((ref) {
         pageBuilder: (context, state) => _ReplaceFadePage(
           key: state.pageKey,
           child: const _SplashScreen(),
+        ),
+      ),
+      GoRoute(
+        path: RouteNames.lock,
+        pageBuilder: (context, state) => _FadePage(
+          key: state.pageKey,
+          child: const LockScreen(),
+        ),
+      ),
+      GoRoute(
+        path: RouteNames.pinSetup,
+        pageBuilder: (context, state) => _SlideRightPage(
+          key: state.pageKey,
+          child: const PinSetupScreen(),
         ),
       ),
       GoRoute(
