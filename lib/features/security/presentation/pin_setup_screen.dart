@@ -5,6 +5,7 @@ import 'package:go_router/go_router.dart';
 import '../../../core/constants/app_colors.dart';
 import '../../../core/constants/app_sizes.dart';
 import '../../../core/constants/app_text_styles.dart';
+import '../../../l10n/app_localizations.dart';
 import 'app_lock_provider.dart';
 import 'widgets/pin_pad.dart';
 
@@ -82,8 +83,8 @@ class _PinSetupScreenState extends ConsumerState<PinSetupScreen> {
 
     if (mounted) {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text('App lock enabled.'),
+        SnackBar(
+          content: Text(AppLocalizations.of(context)!.appLockEnabled),
           backgroundColor: AppColors.primary,
         ),
       );
@@ -92,22 +93,20 @@ class _PinSetupScreenState extends ConsumerState<PinSetupScreen> {
   }
 
   Future<bool?> _askEnableBiometric() {
+    final l = AppLocalizations.of(context)!;
     return showDialog<bool>(
       context: context,
       builder: (ctx) => AlertDialog(
-        title: const Text('Enable biometric unlock?'),
-        content: const Text(
-          'Use your fingerprint or face to unlock PocketPlus instead of '
-          'typing your PIN each time.',
-        ),
+        title: Text(l.enableBiometricTitle),
+        content: Text(l.enableBiometricBody),
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(ctx, false),
-            child: const Text('Not now'),
+            child: Text(l.notNow),
           ),
           FilledButton(
             onPressed: () => Navigator.pop(ctx, true),
-            child: const Text('Enable'),
+            child: Text(l.enable),
           ),
         ],
       ),
@@ -117,17 +116,18 @@ class _PinSetupScreenState extends ConsumerState<PinSetupScreen> {
   @override
   Widget build(BuildContext context) {
     final isConfirm = _step == _Step.confirm;
+    final l = AppLocalizations.of(context)!;
     return Scaffold(
       backgroundColor: AppColors.surface,
       appBar: AppBar(
         backgroundColor: AppColors.surface,
         elevation: 0,
         leading: IconButton(
-          tooltip: 'Cancel',
+          tooltip: l.cancelAction,
           icon: const Icon(Icons.close),
           onPressed: () => context.pop(),
         ),
-        title: const Text('Set app PIN'),
+        title: Text(l.setAppPin),
       ),
       body: SafeArea(
         child: Padding(
@@ -136,7 +136,7 @@ class _PinSetupScreenState extends ConsumerState<PinSetupScreen> {
             children: [
               const Spacer(),
               Text(
-                isConfirm ? 'Confirm your PIN' : 'Choose a 4-digit PIN',
+                isConfirm ? l.confirmYourPin : l.chooseFourDigitPin,
                 style: AppTextStyles.titleMedium(context),
               ),
               const SizedBox(height: AppSizes.spacing8),
@@ -144,7 +144,7 @@ class _PinSetupScreenState extends ConsumerState<PinSetupScreen> {
                 height: 20,
                 child: _error
                     ? Text(
-                        "PINs didn't match. Start again.",
+                        l.pinsDidntMatch,
                         style: AppTextStyles.labelSmall(
                           context,
                           color: AppColors.error,

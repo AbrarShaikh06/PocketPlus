@@ -322,7 +322,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
             ),
           ),
           const SizedBox(height: AppSizes.spacing24),
-          _buildSectionTitle('Security'),
+          _buildSectionTitle(AppLocalizations.of(context)!.security),
           _buildAppLockSection(),
           const SizedBox(height: AppSizes.spacing24),
           _buildSectionTitle('Support'),
@@ -469,13 +469,14 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
 
   Widget _buildAppLockSection() {
     final lock = ref.watch(appLockControllerProvider);
+    final l = AppLocalizations.of(context)!;
     return Card(
       child: Column(
         children: [
           SwitchListTile(
             secondary: const Icon(Icons.lock_outline, color: AppColors.primary),
-            title: const Text('App Lock'),
-            subtitle: const Text('Require a PIN or biometric to open the app'),
+            title: Text(l.appLock),
+            subtitle: Text(l.appLockSubtitle),
             value: lock.isEnabled,
             onChanged: (enable) {
               if (enable) {
@@ -489,7 +490,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
             const Divider(height: 1),
             ListTile(
               leading: const Icon(Icons.pin_outlined, color: AppColors.primary),
-              title: const Text('Change PIN'),
+              title: Text(l.changePin),
               trailing: const Icon(Icons.chevron_right),
               onTap: () => context.push(RouteNames.pinSetup),
             ),
@@ -502,27 +503,28 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
   /// Turning the lock off requires the current PIN (CLAUDE.md: the lock cannot
   /// be disabled without it).
   Future<void> _confirmDisableAppLock() async {
+    final l = AppLocalizations.of(context)!;
     final controller = TextEditingController();
     final pin = await showDialog<String>(
       context: context,
       builder: (ctx) => AlertDialog(
-        title: const Text('Enter PIN to turn off App Lock'),
+        title: Text(l.enterPinToTurnOff),
         content: TextField(
           controller: controller,
           keyboardType: TextInputType.number,
           obscureText: true,
           maxLength: 6,
           autofocus: true,
-          decoration: const InputDecoration(hintText: 'Current PIN'),
+          decoration: InputDecoration(hintText: l.currentPin),
         ),
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(ctx),
-            child: const Text('Cancel'),
+            child: Text(l.cancelAction),
           ),
           FilledButton(
             onPressed: () => Navigator.pop(ctx, controller.text),
-            child: const Text('Turn off'),
+            child: Text(l.turnOff),
           ),
         ],
       ),
@@ -534,12 +536,12 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
     if (ok) {
       ref.read(appLockControllerProvider.notifier).markDisabled();
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('App lock turned off.')),
+        SnackBar(content: Text(l.appLockTurnedOff)),
       );
     } else {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text('Incorrect PIN.'),
+        SnackBar(
+          content: Text(l.incorrectPinTryAgain),
           backgroundColor: AppColors.error,
         ),
       );

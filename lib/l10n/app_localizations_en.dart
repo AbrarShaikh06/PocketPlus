@@ -1180,4 +1180,80 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get sessionExpired => 'Session expired.';
+
+  @override
+  String get budgets => 'Budgets';
+
+  @override
+  String get exitAppTitle => 'Exit App';
+
+  @override
+  String get exitAppMessage => 'Do you want to exit the app?';
+
+  @override
+  String get security => 'Security';
+
+  @override
+  String get appLock => 'App Lock';
+
+  @override
+  String get appLockSubtitle => 'Require a PIN or biometric to open the app';
+
+  @override
+  String get changePin => 'Change PIN';
+
+  @override
+  String get enterYourPin => 'Enter your PIN';
+
+  @override
+  String get incorrectPinTryAgain => 'Incorrect PIN. Try again.';
+
+  @override
+  String get unlockWithBiometrics => 'Unlock with biometrics';
+
+  @override
+  String get deleteAction => 'Delete';
+
+  @override
+  String get setAppPin => 'Set app PIN';
+
+  @override
+  String get chooseFourDigitPin => 'Choose a 4-digit PIN';
+
+  @override
+  String get confirmYourPin => 'Confirm your PIN';
+
+  @override
+  String get pinsDidntMatch => 'PINs didn\'t match. Start again.';
+
+  @override
+  String get enableBiometricTitle => 'Enable biometric unlock?';
+
+  @override
+  String get enableBiometricBody =>
+      'Use your fingerprint or face to unlock PocketPlus instead of typing your PIN each time.';
+
+  @override
+  String get notNow => 'Not now';
+
+  @override
+  String get enable => 'Enable';
+
+  @override
+  String get appLockEnabled => 'App lock enabled.';
+
+  @override
+  String get appLockTurnedOff => 'App lock turned off.';
+
+  @override
+  String get enterPinToTurnOff => 'Enter PIN to turn off App Lock';
+
+  @override
+  String get currentPin => 'Current PIN';
+
+  @override
+  String get turnOff => 'Turn off';
+
+  @override
+  String get cancelAction => 'Cancel';
 }

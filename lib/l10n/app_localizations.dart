@@ -2258,6 +2258,156 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Session expired.'**
   String get sessionExpired;
+
+  /// No description provided for @budgets.
+  ///
+  /// In en, this message translates to:
+  /// **'Budgets'**
+  String get budgets;
+
+  /// No description provided for @exitAppTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Exit App'**
+  String get exitAppTitle;
+
+  /// No description provided for @exitAppMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Do you want to exit the app?'**
+  String get exitAppMessage;
+
+  /// No description provided for @security.
+  ///
+  /// In en, this message translates to:
+  /// **'Security'**
+  String get security;
+
+  /// No description provided for @appLock.
+  ///
+  /// In en, this message translates to:
+  /// **'App Lock'**
+  String get appLock;
+
+  /// No description provided for @appLockSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Require a PIN or biometric to open the app'**
+  String get appLockSubtitle;
+
+  /// No description provided for @changePin.
+  ///
+  /// In en, this message translates to:
+  /// **'Change PIN'**
+  String get changePin;
+
+  /// No description provided for @enterYourPin.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter your PIN'**
+  String get enterYourPin;
+
+  /// No description provided for @incorrectPinTryAgain.
+  ///
+  /// In en, this message translates to:
+  /// **'Incorrect PIN. Try again.'**
+  String get incorrectPinTryAgain;
+
+  /// No description provided for @unlockWithBiometrics.
+  ///
+  /// In en, this message translates to:
+  /// **'Unlock with biometrics'**
+  String get unlockWithBiometrics;
+
+  /// No description provided for @deleteAction.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete'**
+  String get deleteAction;
+
+  /// No description provided for @setAppPin.
+  ///
+  /// In en, this message translates to:
+  /// **'Set app PIN'**
+  String get setAppPin;
+
+  /// No description provided for @chooseFourDigitPin.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose a 4-digit PIN'**
+  String get chooseFourDigitPin;
+
+  /// No description provided for @confirmYourPin.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm your PIN'**
+  String get confirmYourPin;
+
+  /// No description provided for @pinsDidntMatch.
+  ///
+  /// In en, this message translates to:
+  /// **'PINs didn\'t match. Start again.'**
+  String get pinsDidntMatch;
+
+  /// No description provided for @enableBiometricTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Enable biometric unlock?'**
+  String get enableBiometricTitle;
+
+  /// No description provided for @enableBiometricBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Use your fingerprint or face to unlock PocketPlus instead of typing your PIN each time.'**
+  String get enableBiometricBody;
+
+  /// No description provided for @notNow.
+  ///
+  /// In en, this message translates to:
+  /// **'Not now'**
+  String get notNow;
+
+  /// No description provided for @enable.
+  ///
+  /// In en, this message translates to:
+  /// **'Enable'**
+  String get enable;
+
+  /// No description provided for @appLockEnabled.
+  ///
+  /// In en, this message translates to:
+  /// **'App lock enabled.'**
+  String get appLockEnabled;
+
+  /// No description provided for @appLockTurnedOff.
+  ///
+  /// In en, this message translates to:
+  /// **'App lock turned off.'**
+  String get appLockTurnedOff;
+
+  /// No description provided for @enterPinToTurnOff.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter PIN to turn off App Lock'**
+  String get enterPinToTurnOff;
+
+  /// No description provided for @currentPin.
+  ///
+  /// In en, this message translates to:
+  /// **'Current PIN'**
+  String get currentPin;
+
+  /// No description provided for @turnOff.
+  ///
+  /// In en, this message translates to:
+  /// **'Turn off'**
+  String get turnOff;
+
+  /// No description provided for @cancelAction.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel'**
+  String get cancelAction;
 }
 
 class _AppLocalizationsDelegate

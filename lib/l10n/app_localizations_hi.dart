@@ -1180,4 +1180,81 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get sessionExpired => 'Session expired.';
+
+  @override
+  String get budgets => 'बजट';
+
+  @override
+  String get exitAppTitle => 'ऐप से बाहर निकलें';
+
+  @override
+  String get exitAppMessage => 'क्या आप ऐप से बाहर निकलना चाहते हैं?';
+
+  @override
+  String get security => 'सुरक्षा';
+
+  @override
+  String get appLock => 'ऐप लॉक';
+
+  @override
+  String get appLockSubtitle =>
+      'ऐप खोलने के लिए पिन या बायोमेट्रिक ज़रूरी करें';
+
+  @override
+  String get changePin => 'पिन बदलें';
+
+  @override
+  String get enterYourPin => 'अपना पिन दर्ज करें';
+
+  @override
+  String get incorrectPinTryAgain => 'गलत पिन। फिर से कोशिश करें।';
+
+  @override
+  String get unlockWithBiometrics => 'बायोमेट्रिक से अनलॉक करें';
+
+  @override
+  String get deleteAction => 'हटाएं';
+
+  @override
+  String get setAppPin => 'ऐप पिन सेट करें';
+
+  @override
+  String get chooseFourDigitPin => '4 अंकों का पिन चुनें';
+
+  @override
+  String get confirmYourPin => 'अपने पिन की पुष्टि करें';
+
+  @override
+  String get pinsDidntMatch => 'पिन मेल नहीं खाए। फिर से शुरू करें।';
+
+  @override
+  String get enableBiometricTitle => 'बायोमेट्रिक अनलॉक सक्षम करें?';
+
+  @override
+  String get enableBiometricBody =>
+      'हर बार पिन टाइप करने के बजाय PocketPlus को अनलॉक करने के लिए अपनी फिंगरप्रिंट या चेहरे का उपयोग करें।';
+
+  @override
+  String get notNow => 'अभी नहीं';
+
+  @override
+  String get enable => 'सक्षम करें';
+
+  @override
+  String get appLockEnabled => 'ऐप लॉक सक्षम किया गया।';
+
+  @override
+  String get appLockTurnedOff => 'ऐप लॉक बंद कर दिया गया।';
+
+  @override
+  String get enterPinToTurnOff => 'ऐप लॉक बंद करने के लिए पिन दर्ज करें';
+
+  @override
+  String get currentPin => 'वर्तमान पिन';
+
+  @override
+  String get turnOff => 'बंद करें';
+
+  @override
+  String get cancelAction => 'रद्द करें';
 }

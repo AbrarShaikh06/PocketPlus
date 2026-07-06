@@ -1179,4 +1179,80 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get sessionExpired => 'Session expired.';
+
+  @override
+  String get budgets => 'الميزانيات';
+
+  @override
+  String get exitAppTitle => 'الخروج من التطبيق';
+
+  @override
+  String get exitAppMessage => 'هل تريد الخروج من التطبيق؟';
+
+  @override
+  String get security => 'الأمان';
+
+  @override
+  String get appLock => 'قفل التطبيق';
+
+  @override
+  String get appLockSubtitle => 'طلب رمز PIN أو السمة الحيوية لفتح التطبيق';
+
+  @override
+  String get changePin => 'تغيير رمز PIN';
+
+  @override
+  String get enterYourPin => 'أدخل رمز PIN';
+
+  @override
+  String get incorrectPinTryAgain => 'رمز PIN غير صحيح. حاول مرة أخرى.';
+
+  @override
+  String get unlockWithBiometrics => 'الفتح بالسمة الحيوية';
+
+  @override
+  String get deleteAction => 'حذف';
+
+  @override
+  String get setAppPin => 'تعيين رمز PIN للتطبيق';
+
+  @override
+  String get chooseFourDigitPin => 'اختر رمز PIN من 4 أرقام';
+
+  @override
+  String get confirmYourPin => 'أكّد رمز PIN';
+
+  @override
+  String get pinsDidntMatch => 'رمزا PIN غير متطابقين. ابدأ من جديد.';
+
+  @override
+  String get enableBiometricTitle => 'تفعيل الفتح بالسمة الحيوية؟';
+
+  @override
+  String get enableBiometricBody =>
+      'استخدم بصمة إصبعك أو وجهك لفتح PocketPlus بدلاً من كتابة رمز PIN في كل مرة.';
+
+  @override
+  String get notNow => 'ليس الآن';
+
+  @override
+  String get enable => 'تفعيل';
+
+  @override
+  String get appLockEnabled => 'تم تفعيل قفل التطبيق.';
+
+  @override
+  String get appLockTurnedOff => 'تم إيقاف قفل التطبيق.';
+
+  @override
+  String get enterPinToTurnOff => 'أدخل رمز PIN لإيقاف قفل التطبيق';
+
+  @override
+  String get currentPin => 'رمز PIN الحالي';
+
+  @override
+  String get turnOff => 'إيقاف';
+
+  @override
+  String get cancelAction => 'إلغاء';
 }

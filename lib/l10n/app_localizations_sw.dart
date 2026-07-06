@@ -1180,4 +1180,81 @@ class AppLocalizationsSw extends AppLocalizations {
 
   @override
   String get sessionExpired => 'Session expired.';
+
+  @override
+  String get budgets => 'Bajeti';
+
+  @override
+  String get exitAppTitle => 'Funga Programu';
+
+  @override
+  String get exitAppMessage => 'Je, unataka kufunga programu?';
+
+  @override
+  String get security => 'Usalama';
+
+  @override
+  String get appLock => 'Kufuli la Programu';
+
+  @override
+  String get appLockSubtitle =>
+      'Hitaji PIN au alama ya kibayometriki kufungua programu';
+
+  @override
+  String get changePin => 'Badilisha PIN';
+
+  @override
+  String get enterYourPin => 'Weka PIN yako';
+
+  @override
+  String get incorrectPinTryAgain => 'PIN si sahihi. Jaribu tena.';
+
+  @override
+  String get unlockWithBiometrics => 'Fungua kwa kibayometriki';
+
+  @override
+  String get deleteAction => 'Futa';
+
+  @override
+  String get setAppPin => 'Weka PIN ya programu';
+
+  @override
+  String get chooseFourDigitPin => 'Chagua PIN ya tarakimu 4';
+
+  @override
+  String get confirmYourPin => 'Thibitisha PIN yako';
+
+  @override
+  String get pinsDidntMatch => 'PIN hazikulingana. Anza upya.';
+
+  @override
+  String get enableBiometricTitle => 'Wezesha ufunguzi wa kibayometriki?';
+
+  @override
+  String get enableBiometricBody =>
+      'Tumia alama ya kidole au uso wako kufungua PocketPlus badala ya kuandika PIN kila mara.';
+
+  @override
+  String get notNow => 'Si sasa';
+
+  @override
+  String get enable => 'Wezesha';
+
+  @override
+  String get appLockEnabled => 'Kufuli la programu limewezeshwa.';
+
+  @override
+  String get appLockTurnedOff => 'Kufuli la programu limezimwa.';
+
+  @override
+  String get enterPinToTurnOff => 'Weka PIN kuzima Kufuli la Programu';
+
+  @override
+  String get currentPin => 'PIN ya sasa';
+
+  @override
+  String get turnOff => 'Zima';
+
+  @override
+  String get cancelAction => 'Ghairi';
 }

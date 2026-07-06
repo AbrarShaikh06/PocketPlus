@@ -6,8 +6,26 @@ import 'package:go_router/go_router.dart';
 import '../../../core/constants/app_colors.dart';
 import '../../../core/constants/app_text_styles.dart';
 import '../../../core/router/route_names.dart';
+import '../../../l10n/app_localizations.dart';
 import '../../../shared/widgets/banner_ad_slot.dart';
 import '../../onboarding/data/tutorial_steps_provider.dart';
+
+/// Localized bottom-nav label for the tab at [index].
+String _navLabel(BuildContext context, int index) {
+  final l = AppLocalizations.of(context)!;
+  switch (index) {
+    case 0:
+      return l.home;
+    case 1:
+      return l.analytics;
+    case 2:
+      return l.reports;
+    case 3:
+      return l.budgets;
+    default:
+      return '';
+  }
+}
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Nav item data
@@ -117,22 +135,23 @@ class MainShell extends ConsumerWidget {
   }
 
   void _onBackAtHome(BuildContext context) {
+    final l = AppLocalizations.of(context)!;
     showDialog(
       context: context,
       builder: (ctx) => AlertDialog(
-        title: const Text('Exit App'),
-        content: const Text('Do you want to exit the app?'),
+        title: Text(l.exitAppTitle),
+        content: Text(l.exitAppMessage),
         actions: [
           TextButton(
             onPressed: () => Navigator.of(ctx).pop(),
-            child: const Text('No'),
+            child: Text(l.no),
           ),
           TextButton(
             onPressed: () {
               Navigator.of(ctx).pop();
               SystemNavigator.pop();
             },
-            child: const Text('Yes'),
+            child: Text(l.yes),
           ),
         ],
       ),
@@ -341,7 +360,7 @@ class _PremiumNavBarState extends State<_PremiumNavBar>
                                   opacity: isActive ? 1.0 : 0.55,
                                   duration: const Duration(milliseconds: 200),
                                   child: Text(
-                                    item.label,
+                                    _navLabel(context, index),
                                     style: AppTextStyles.labelSmall(
                                       context,
                                       color: isActive

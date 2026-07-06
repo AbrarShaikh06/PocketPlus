@@ -3,11 +3,14 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:go_router/go_router.dart';
 import 'package:pocket_plus/features/shell/presentation/main_shell.dart';
+import 'package:pocket_plus/l10n/app_localizations.dart';
 
 void main() {
   Widget buildTestWidget({required GoRouter router}) {
     return ProviderScope(
       child: MaterialApp.router(
+        localizationsDelegates: AppLocalizations.localizationsDelegates,
+        supportedLocales: AppLocalizations.supportedLocales,
         routerConfig: router,
       ),
     );

@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../core/constants/app_colors.dart';
 import '../../../core/constants/app_sizes.dart';
 import '../../../core/constants/app_text_styles.dart';
+import '../../../l10n/app_localizations.dart';
 import '../../../shared/widgets/pocketplus_loader.dart';
 import 'app_lock_provider.dart';
 import 'widgets/pin_pad.dart';
@@ -81,6 +82,7 @@ class _LockScreenState extends ConsumerState<LockScreen> {
   Widget build(BuildContext context) {
     final biometricEnabled =
         ref.watch(appLockControllerProvider).biometricEnabled;
+    final l = AppLocalizations.of(context)!;
 
     return Scaffold(
       backgroundColor: AppColors.surface,
@@ -93,7 +95,7 @@ class _LockScreenState extends ConsumerState<LockScreen> {
               const PocketPlusLoader(size: 56, color: AppColors.primary),
               const SizedBox(height: AppSizes.spacing24),
               Text(
-                'Enter your PIN',
+                l.enterYourPin,
                 style: AppTextStyles.titleMedium(context),
               ),
               const SizedBox(height: AppSizes.spacing8),
@@ -101,7 +103,7 @@ class _LockScreenState extends ConsumerState<LockScreen> {
                 height: 20,
                 child: _error
                     ? Text(
-                        'Incorrect PIN. Try again.',
+                        l.incorrectPinTryAgain,
                         style: AppTextStyles.labelSmall(
                           context,
                           color: AppColors.error,

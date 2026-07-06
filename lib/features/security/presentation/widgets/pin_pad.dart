@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import '../../../../core/constants/app_colors.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/constants/app_text_styles.dart';
+import '../../../../l10n/app_localizations.dart';
 
 /// Row of filled/empty dots showing how many PIN digits have been entered.
 class PinDots extends StatelessWidget {
@@ -57,6 +58,7 @@ class PinPad extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l = AppLocalizations.of(context)!;
     return GridView.count(
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
@@ -68,7 +70,7 @@ class PinPad extends StatelessWidget {
         if (onBiometric != null)
           _IconKey(
             icon: Icons.fingerprint,
-            tooltip: 'Unlock with biometrics',
+            tooltip: l.unlockWithBiometrics,
             onTap: onBiometric!,
           )
         else
@@ -76,7 +78,7 @@ class PinPad extends StatelessWidget {
         _DigitKey(digit: '0', onTap: onDigit),
         _IconKey(
           icon: Icons.backspace_outlined,
-          tooltip: 'Delete',
+          tooltip: l.deleteAction,
           onTap: onBackspace,
         ),
       ],
