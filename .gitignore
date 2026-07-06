@@ -83,3 +83,13 @@ GoogleService-Info.plist
 .env
 *.env
 dart_defines.json
+
+# Node dependencies (Firestore rules tests) — install via `npm install`
+node_modules/
+
+# Tool caches & scratch output
+**/.impeccable/
+analyze.txt
+
+# Machine-local Claude Code settings
+.claude/settings.local.json
