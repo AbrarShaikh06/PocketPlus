@@ -38,7 +38,8 @@ This document tracks the active development status, latest decisions, and blocke
   - ✅ Wave 2: entire settings screen (31 keys).
   - ✅ Wave 3: reports + all three budget screens + all three invoice screens (~140 keys total; interpolations use ARB placeholders).
   - ✅ Wave 4: savings flow, feedback screen, SMS capture confirmation, home drawer/overview, login/signup remnants. sms_diagnostics left English (developer tool).
-  - ⏳ Wave 5 (remaining): onboarding flow (role/user-info/business-name/sms-permission/done/tutorial), dashboard_screen, add_transaction, small budget/savings widgets, and a CI grep guard against new hardcoded strings.
+  - ✅ Wave 5: onboarding flow (role/user-info/business-name/sms-permission/done), dashboard, add-transaction. The generated PDF and the demo bank-SMS example stay English by design.
+  - **User-facing localization is now essentially complete.** Any residual English lives in developer/diagnostic surfaces (sms_diagnostics) or intentionally-English content (PDF export, sample bank SMS). A CI grep guard against new hardcoded `Text('...')` is still optional/not added.
   - **Decision:** the generated invoice/report **PDF stays English** (GST/accounting convention) — only on-screen UI is localized.
 
 ### Earlier this session

@@ -257,7 +257,8 @@ class _NetProfitCard extends StatelessWidget {
     final formatted = CurrencyFormatter.format(netProfit.abs());
 
     return Semantics(
-      label: 'Net profit for $monthLabel: $formatted',
+      label: AppLocalizations.of(context)!
+          .netProfitForMonthArg(monthLabel, formatted),
       child: Container(
         decoration: BoxDecoration(
           color: bgColor,
@@ -321,7 +322,7 @@ class _NetProfitCard extends StatelessWidget {
                     Text(
                       isPositive
                           ? AppLocalizations.of(context)!.netProfit
-                          : 'Net Loss',
+                          : AppLocalizations.of(context)!.netLoss,
                       style: AppTextStyles.labelSmall(context).copyWith(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
@@ -380,7 +381,7 @@ class _QuickStatsRow extends StatelessWidget {
         const SizedBox(width: AppSizes.spacing12),
         Expanded(
           child: _StatCard(
-            label: 'Transactions',
+            label: AppLocalizations.of(context)!.transactionsLabel,
             amount: count,
             icon: Icons.receipt_long,
             iconColor: AppColors.primary,
@@ -531,7 +532,7 @@ class _RecentTransactionsSection extends StatelessWidget {
               ),
               child: Center(
                 child: Text(
-                  'No recent transactions',
+                  AppLocalizations.of(context)!.noRecentTransactions,
                   style: AppTextStyles.bodyMedium(context).copyWith(
                     color: AppColors.onSurfaceMuted,
                   ),
@@ -578,12 +579,12 @@ class _QuickActions extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Semantics(
-      label: 'Quick actions',
+      label: AppLocalizations.of(context)!.quickActions,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Text(
-            'Quick Actions',
+            AppLocalizations.of(context)!.quickActions,
             style: AppTextStyles.titleMedium(context).copyWith(
               fontWeight: FontWeight.bold,
               color: AppColors.onSurface,
@@ -603,7 +604,7 @@ class _QuickActions extends StatelessWidget {
               Expanded(
                 child: _ActionButton(
                   icon: Icons.sms_outlined,
-                  label: 'Capture SMS',
+                  label: AppLocalizations.of(context)!.captureSms,
                   onTap: onCaptureSms,
                 ),
               ),

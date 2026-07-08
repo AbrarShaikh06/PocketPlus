@@ -1972,4 +1972,153 @@ class AppLocalizationsSw extends AppLocalizations {
 
   @override
   String get npsVeryLikely => '10 — Inawezekana Sana';
+
+  @override
+  String get chooseYourRole => 'Chagua Jukumu Lako';
+
+  @override
+  String get selectAccountType =>
+      'Chagua aina ya akaunti inayolingana na mahitaji yako ya kufuatilia fedha.';
+
+  @override
+  String get personalLedger => 'Leja ya Kibinafsi';
+
+  @override
+  String get personalLedgerDesc =>
+      'Fuatilia mtiririko wa fedha binafsi, matumizi ya kila siku, na akiba binafsi.';
+
+  @override
+  String get businessOwner => 'Mmiliki wa Biashara';
+
+  @override
+  String get businessOwnerDesc =>
+      'Dhibiti miamala ya duka, leja ya mkopo (khata udhaar), utengenezaji wa ankara, na vitabu vya wakati halisi.';
+
+  @override
+  String get pleaseEnterName => 'Tafadhali weka jina lako';
+
+  @override
+  String get enterValidPhone => 'Weka namba sahihi ya simu';
+
+  @override
+  String get nameLength => 'Jina lazima liwe kati ya herufi 2 na 200';
+
+  @override
+  String get tellUsAboutYourself => 'Tuambie kukuhusu';
+
+  @override
+  String get yourName => 'Jina Lako';
+
+  @override
+  String get phoneNumber => 'Namba ya Simu';
+
+  @override
+  String get ageOptional => 'Umri (hiari)';
+
+  @override
+  String get enterPracticeName => 'Weka Jina la Mazoezi';
+
+  @override
+  String get letUsKnowFirmName =>
+      'Tujulishe jina la kampuni yako ya uhasibu au mazoezi.';
+
+  @override
+  String get nameLengthPeriod => 'Jina lazima liwe kati ya herufi 2 na 200.';
+
+  @override
+  String get practiceFirmName => 'Jina la Mazoezi / Kampuni';
+
+  @override
+  String get autoCaptureIncome => 'Nasa Mapato Kiotomatiki';
+
+  @override
+  String get enableSmsProcessing =>
+      'Wezesha uchakataji wa SMS ili kurekodi mauzo na matumizi kiotomatiki wakati arifa za benki zinawasili.';
+
+  @override
+  String get enableInSettings => 'Wezesha katika Mipangilio';
+
+  @override
+  String get allowSms => 'Ruhusu SMS';
+
+  @override
+  String analyticsLogErrorArg(String msg) {
+    return 'Hitilafu ya kumbukumbu za uchambuzi: $msg';
+  }
+
+  @override
+  String get skipForNow => 'Ruka kwa sasa';
+
+  @override
+  String get simulatedBankMessage => 'Ujumbe wa benki wa kuiga';
+
+  @override
+  String get pocketplusAutoLogs => 'PocketPlus Inarekodi Kiotomatiki:';
+
+  @override
+  String get incomeDemoAmount => 'Mapato ya ₹12,500.00';
+
+  @override
+  String get setupComplete => 'Usanidi Umekamilika!';
+
+  @override
+  String get ledgerConfigured =>
+      'Wasifu wa leja yako umesanidiwa kwa mafanikio. Sasa uko tayari kufuatilia na kukuza mapato yako.';
+
+  @override
+  String get goToDashboard => 'Nenda kwenye Dashibodi';
+
+  @override
+  String netProfitForMonthArg(String month, String amount) {
+    return 'Faida halisi ya $month: $amount';
+  }
+
+  @override
+  String get netLoss => 'Hasara Halisi';
+
+  @override
+  String get transactionsLabel => 'Miamala';
+
+  @override
+  String get noRecentTransactions => 'Hakuna miamala ya hivi karibuni';
+
+  @override
+  String get quickActions => 'Vitendo vya Haraka';
+
+  @override
+  String get captureSms => 'Nasa SMS';
+
+  @override
+  String get enterDetailsBusinessName =>
+      'Weka maelezo yako na jina la biashara.';
+
+  @override
+  String get personalizeExperience => 'Tusaidie kubinafsisha matumizi yako.';
+
+  @override
+  String get nameHintExample => 'mf. Ravi Sharma';
+
+  @override
+  String get businessPracticeName => 'Jina la Biashara / Mazoezi';
+
+  @override
+  String get businessNameHintStore => 'mf. Duka la Sharma';
+
+  @override
+  String get phoneHintExample => 'mf. 9876543210';
+
+  @override
+  String get ageHintExample => 'mf. 28';
+
+  @override
+  String get whatsYourBusinessName => 'Jina la biashara yako ni nini?';
+
+  @override
+  String get personalizeYourLedger => 'Hii inatusaidia kubinafsisha leja yako.';
+
+  @override
+  String get businessNameLabel => 'Jina la Biashara';
+
+  @override
+  String get practiceHintExample => 'mf. Verma & Associates';
 }

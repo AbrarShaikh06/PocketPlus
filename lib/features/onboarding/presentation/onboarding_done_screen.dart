@@ -6,6 +6,7 @@ import '../../../core/constants/app_colors.dart';
 import '../../../core/constants/app_sizes.dart';
 import '../../../core/constants/app_text_styles.dart';
 import '../../../core/router/route_names.dart';
+import '../../../l10n/app_localizations.dart';
 import '../../../shared/widgets/widgets.dart';
 
 class OnboardingDoneScreen extends ConsumerWidget {
@@ -40,13 +41,13 @@ class OnboardingDoneScreen extends ConsumerWidget {
               ),
               const SizedBox(height: AppSizes.spacing32),
               Text(
-                'Setup Complete!',
+                AppLocalizations.of(context)!.setupComplete,
                 style: AppTextStyles.displayLarge(context),
                 textAlign: TextAlign.center,
               ),
               const SizedBox(height: AppSizes.spacing12),
               Text(
-                'Your ledger profile has been successfully configured. You are now ready to track and grow your income.',
+                AppLocalizations.of(context)!.ledgerConfigured,
                 style: AppTextStyles.bodyLarge(context).copyWith(
                   color: AppColors.onSurfaceMuted,
                 ),
@@ -54,7 +55,7 @@ class OnboardingDoneScreen extends ConsumerWidget {
               ),
               const Spacer(),
               AppButton(
-                label: 'Go to Dashboard',
+                label: AppLocalizations.of(context)!.goToDashboard,
                 onPressed: () {
                   context.go(RouteNames.home);
                 },

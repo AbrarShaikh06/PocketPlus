@@ -9,6 +9,7 @@ import '../../../core/constants/app_sizes.dart';
 import '../../../core/constants/app_text_styles.dart';
 import '../../../core/router/route_names.dart';
 import '../../../core/analytics/analytics_service.dart';
+import '../../../l10n/app_localizations.dart';
 import '../../../shared/widgets/widgets.dart';
 import '../../sms_capture/data/sms_permission_service.dart';
 import '../../sms_capture/presentation/sms_permission_provider.dart';
@@ -37,7 +38,7 @@ class _SmsPermissionScreenState extends ConsumerState<SmsPermissionScreen> {
         backgroundColor: AppColors.surface,
         elevation: 0,
         leading: IconButton(
-          tooltip: 'Go back',
+          tooltip: AppLocalizations.of(context)!.goBack,
           icon: const Icon(Icons.arrow_back, color: AppColors.onSurface),
           onPressed: () => context.pop(),
         ),
@@ -51,13 +52,13 @@ class _SmsPermissionScreenState extends ConsumerState<SmsPermissionScreen> {
               const ProgressDots(currentStep: 3),
               const SizedBox(height: AppSizes.spacing32),
               Text(
-                'Auto-Capture Income',
+                AppLocalizations.of(context)!.autoCaptureIncome,
                 style: AppTextStyles.displayLarge(context),
                 textAlign: TextAlign.center,
               ),
               const SizedBox(height: AppSizes.spacing8),
               Text(
-                'Enable SMS processing to automatically log sales and expenses when bank SMS alerts arrive.',
+                AppLocalizations.of(context)!.enableSmsProcessing,
                 style: AppTextStyles.bodyMedium(context).copyWith(
                   color: AppColors.onSurfaceMuted,
                 ),
@@ -88,7 +89,7 @@ class _SmsPermissionScreenState extends ConsumerState<SmsPermissionScreen> {
               // Allow SMS button
               if (smsState.hasPermanentlyDenied)
                 AppButton(
-                  label: 'Enable in Settings',
+                  label: AppLocalizations.of(context)!.enableInSettings,
                   isLoading: state.isLoading,
                   onPressed: () async {
                     final service = ref.read(smsPermissionServiceProvider);
@@ -97,7 +98,7 @@ class _SmsPermissionScreenState extends ConsumerState<SmsPermissionScreen> {
                 )
               else
                 AppButton(
-                  label: 'Allow SMS',
+                  label: AppLocalizations.of(context)!.allowSms,
                   isLoading: state.isLoading,
                   onPressed: () async {
                     final status = await smsNotifier.requestPermission();
@@ -126,7 +127,7 @@ class _SmsPermissionScreenState extends ConsumerState<SmsPermissionScreen> {
 
               // Skip button
               AppButton(
-                label: 'Skip for now',
+                label: AppLocalizations.of(context)!.skipForNow,
                 variant: AppButtonVariant.text,
                 isLoading: state.isLoading,
                 onPressed: () async {
@@ -172,7 +173,7 @@ class _SmsPermissionScreenState extends ConsumerState<SmsPermissionScreen> {
               ),
               const SizedBox(width: AppSizes.spacing8),
               Text(
-                'Simulated bank message',
+                AppLocalizations.of(context)!.simulatedBankMessage,
                 style: AppTextStyles.labelSmall(context),
               ),
             ],
@@ -201,14 +202,14 @@ class _SmsPermissionScreenState extends ConsumerState<SmsPermissionScreen> {
               ),
               const SizedBox(width: AppSizes.spacing8),
               Text(
-                'PocketPlus Auto-Logs:',
+                AppLocalizations.of(context)!.pocketplusAutoLogs,
                 style: AppTextStyles.labelLarge(context).copyWith(
                   color: AppColors.primary,
                 ),
               ),
               const SizedBox(width: AppSizes.spacing8),
               Text(
-                'Income of ₹12,500.00',
+                AppLocalizations.of(context)!.incomeDemoAmount,
                 style: AppTextStyles.bodyMedium(context).copyWith(
                   fontWeight: FontWeight.bold,
                 ),

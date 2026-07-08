@@ -24,6 +24,7 @@ import 'package:pocket_plus/features/profiles/domain/entities/profile.dart';
 import 'package:pocket_plus/shared/models/profile_type.dart';
 import 'package:pocket_plus/shared/providers/firebase_providers.dart';
 import 'package:pocket_plus/features/home/presentation/home_providers.dart';
+import 'package:pocket_plus/l10n/app_localizations.dart';
 
 class FakeOnboardingRepository implements OnboardingRepository {
   bool saveOnboardingDataCalled = false;
@@ -199,6 +200,8 @@ void main() {
         analyticsServiceProvider.overrideWithValue(fakeFirebaseAnalytics),
       ],
       child: MaterialApp.router(
+        localizationsDelegates: AppLocalizations.localizationsDelegates,
+        supportedLocales: AppLocalizations.supportedLocales,
         routerConfig: router,
       ),
     );

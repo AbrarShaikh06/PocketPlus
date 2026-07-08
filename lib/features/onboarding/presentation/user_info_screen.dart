@@ -7,6 +7,7 @@ import '../../../core/constants/app_colors.dart';
 import '../../../core/constants/app_sizes.dart';
 import '../../../core/constants/app_text_styles.dart';
 import '../../../core/router/route_names.dart';
+import '../../../l10n/app_localizations.dart';
 import '../../../shared/models/supported_region.dart';
 import '../../../shared/widgets/widgets.dart';
 import 'onboarding_view_model.dart';
@@ -53,19 +54,18 @@ class _UserInfoScreenState extends ConsumerState<UserInfoScreen> {
 
   bool _validate() {
     setState(() {
-      _nameError = _nameController.text.trim().length < 2
-          ? 'Please enter your name'
-          : null;
+      final l = AppLocalizations.of(context)!;
+      _nameError =
+          _nameController.text.trim().length < 2 ? l.pleaseEnterName : null;
       final phone = _phoneController.text.trim();
-      _phoneError = phone.isNotEmpty && phone.length < 10
-          ? 'Enter a valid phone number'
-          : null;
+      _phoneError =
+          phone.isNotEmpty && phone.length < 10 ? l.enterValidPhone : null;
       final state = ref.read(onboardingViewModelProvider);
       final isBusinessOrCa = state.role == 'BUSINESS' || state.role == 'CA';
       final bizName = _businessNameController.text.trim();
       _businessNameError =
           isBusinessOrCa && (bizName.length < 2 || bizName.length > 200)
-              ? 'Name must be between 2 and 200 characters'
+              ? l.nameLength
               : null;
     });
     return _nameError == null &&
@@ -91,7 +91,7 @@ class _UserInfoScreenState extends ConsumerState<UserInfoScreen> {
       isExpanded: true,
       style: AppTextStyles.bodyLarge(context),
       decoration: InputDecoration(
-        labelText: 'Region',
+        labelText: AppLocalizations.of(context)!.region,
         labelStyle: AppTextStyles.bodyMedium(
           context,
           color: AppColors.onSurfaceMuted,
@@ -140,7 +140,7 @@ class _UserInfoScreenState extends ConsumerState<UserInfoScreen> {
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: IconButton(
-          tooltip: 'Go back',
+          tooltip: AppLocalizations.of(context)!.goBack,
           icon: const Icon(Icons.arrow_back, color: AppColors.primary),
           onPressed: () => context.pop(),
         ),
@@ -188,7 +188,7 @@ class _UserInfoScreenState extends ConsumerState<UserInfoScreen> {
                     ),
                     const SizedBox(height: AppSizes.spacing24),
                     Text(
-                      'Tell us about yourself',
+                      AppLocalizations.of(context)!.tellUsAboutYourself,
                       style: AppTextStyles.titleLarge(context).copyWith(
                         fontWeight: FontWeight.bold,
                         color: AppColors.onSurface,
@@ -198,8 +198,9 @@ class _UserInfoScreenState extends ConsumerState<UserInfoScreen> {
                     const SizedBox(height: AppSizes.spacing8),
                     Text(
                       isBusinessOrCa
-                          ? 'Enter your details and business name.'
-                          : 'Help us personalize your experience.',
+                          ? AppLocalizations.of(context)!
+                              .enterDetailsBusinessName
+                          : AppLocalizations.of(context)!.personalizeExperience,
                       style: AppTextStyles.bodyMedium(context).copyWith(
                         color: AppColors.onSurfaceMuted,
                       ),
@@ -208,8 +209,8 @@ class _UserInfoScreenState extends ConsumerState<UserInfoScreen> {
                     const SizedBox(height: AppSizes.spacing24),
                     AppTextField(
                       controller: _nameController,
-                      label: isBusinessOrCa ? 'Your Name' : 'Your Name',
-                      hint: 'e.g. Ravi Sharma',
+                      label: AppLocalizations.of(context)!.yourName,
+                      hint: AppLocalizations.of(context)!.nameHintExample,
                       errorText: _nameError,
                       onChanged: (_) => setState(() {}),
                     ),
@@ -217,8 +218,10 @@ class _UserInfoScreenState extends ConsumerState<UserInfoScreen> {
                     if (isBusinessOrCa) ...[
                       AppTextField(
                         controller: _businessNameController,
-                        label: 'Business / Practice Name',
-                        hint: 'e.g. Sharma General Store',
+                        label:
+                            AppLocalizations.of(context)!.businessPracticeName,
+                        hint:
+                            AppLocalizations.of(context)!.businessNameHintStore,
                         errorText: _businessNameError,
                         onChanged: (_) => setState(() {}),
                       ),
@@ -226,8 +229,8 @@ class _UserInfoScreenState extends ConsumerState<UserInfoScreen> {
                     ],
                     AppTextField(
                       controller: _phoneController,
-                      label: 'Phone Number',
-                      hint: 'e.g. 9876543210',
+                      label: AppLocalizations.of(context)!.phoneNumber,
+                      hint: AppLocalizations.of(context)!.phoneHintExample,
                       keyboardType: TextInputType.phone,
                       maxLength: 10,
                       inputFormatters: [
@@ -242,8 +245,8 @@ class _UserInfoScreenState extends ConsumerState<UserInfoScreen> {
                     const SizedBox(height: AppSizes.spacing16),
                     AppTextField(
                       controller: _ageController,
-                      label: 'Age (optional)',
-                      hint: 'e.g. 28',
+                      label: AppLocalizations.of(context)!.ageOptional,
+                      hint: AppLocalizations.of(context)!.ageHintExample,
                       keyboardType: TextInputType.number,
                       maxLength: 3,
                     ),
@@ -257,7 +260,7 @@ class _UserInfoScreenState extends ConsumerState<UserInfoScreen> {
                 vertical: AppSizes.spacing16,
               ),
               child: AppButton(
-                label: 'Next',
+                label: AppLocalizations.of(context)!.next,
                 onPressed: isNameFilled ? _onNext : null,
               ),
             ),

@@ -7,6 +7,7 @@ import 'package:pocket_plus/core/errors/failures.dart';
 import 'package:pocket_plus/features/onboarding/domain/onboarding_repository.dart';
 import 'package:pocket_plus/features/onboarding/presentation/onboarding_view_model.dart';
 import 'package:pocket_plus/features/onboarding/presentation/role_selection_screen.dart';
+import 'package:pocket_plus/l10n/app_localizations.dart';
 
 class FakeOnboardingRepository implements OnboardingRepository {
   bool saveOnboardingDataCalled = false;
@@ -175,6 +176,8 @@ void main() {
             onboardingRepositoryProvider.overrideWithValue(fakeRepository),
           ],
           child: const MaterialApp(
+            localizationsDelegates: AppLocalizations.localizationsDelegates,
+            supportedLocales: AppLocalizations.supportedLocales,
             home: RoleSelectionScreen(),
           ),
         ),

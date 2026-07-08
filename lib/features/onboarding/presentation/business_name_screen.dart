@@ -6,6 +6,7 @@ import '../../../core/constants/app_colors.dart';
 import '../../../core/constants/app_sizes.dart';
 import '../../../core/constants/app_text_styles.dart';
 import '../../../core/router/route_names.dart';
+import '../../../l10n/app_localizations.dart';
 import '../../../shared/widgets/widgets.dart';
 import 'onboarding_view_model.dart';
 import 'widgets/progress_dots.dart';
@@ -38,19 +39,16 @@ class _BusinessNameScreenState extends ConsumerState<BusinessNameScreen> {
     final state = ref.watch(onboardingViewModelProvider);
     final viewModel = ref.read(onboardingViewModelProvider.notifier);
 
+    final l = AppLocalizations.of(context)!;
     final isCa = state.role == 'CA';
-    final title = isCa ? 'Enter Practice Name' : "What's your business name?";
-    final subtitle = isCa
-        ? 'Let us know the name of your CA firm or practice.'
-        : 'This helps us personalize your ledger.';
+    final title = isCa ? l.enterPracticeName : l.whatsYourBusinessName;
+    final subtitle = isCa ? l.letUsKnowFirmName : l.personalizeYourLedger;
 
     final inputLength = state.businessName.trim().length;
     final showValidationError =
         state.businessName.isNotEmpty && (inputLength < 2 || inputLength > 200);
 
-    final errorText = showValidationError
-        ? 'Name must be between 2 and 200 characters.'
-        : null;
+    final errorText = showValidationError ? l.nameLengthPeriod : null;
 
     return Scaffold(
       backgroundColor: AppColors.surface,
@@ -58,7 +56,7 @@ class _BusinessNameScreenState extends ConsumerState<BusinessNameScreen> {
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: IconButton(
-          tooltip: 'Go back',
+          tooltip: l.goBack,
           icon: const Icon(Icons.arrow_back, color: AppColors.primary),
           onPressed: () => context.pop(),
         ),
@@ -135,10 +133,10 @@ class _BusinessNameScreenState extends ConsumerState<BusinessNameScreen> {
                     // Text Input field
                     AppTextField(
                       controller: _controller,
-                      label: isCa ? 'Practice / Firm Name' : 'Business Name',
+                      label: isCa ? l.practiceFirmName : l.businessNameLabel,
                       hint: isCa
-                          ? 'e.g. Verma & Associates'
-                          : 'e.g. Sharma General Store',
+                          ? l.practiceHintExample
+                          : l.businessNameHintStore,
                       errorText: errorText,
                       maxLength: 200,
                       onChanged: viewModel.updateBusinessName,
@@ -154,7 +152,7 @@ class _BusinessNameScreenState extends ConsumerState<BusinessNameScreen> {
                 vertical: AppSizes.spacing16,
               ),
               child: AppButton(
-                label: 'Next',
+                label: l.next,
                 onPressed: viewModel.isNameValid()
                     ? () => context.push(RouteNames.onboardingSms)
                     : null,

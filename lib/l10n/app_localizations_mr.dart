@@ -1970,4 +1970,154 @@ class AppLocalizationsMr extends AppLocalizations {
 
   @override
   String get npsVeryLikely => '10 — अत्यंत संभाव्य';
+
+  @override
+  String get chooseYourRole => 'तुमची भूमिका निवडा';
+
+  @override
+  String get selectAccountType =>
+      'तुमच्या आर्थिक ट्रॅकिंग गरजांशी जुळणारा खात्याचा प्रकार निवडा.';
+
+  @override
+  String get personalLedger => 'वैयक्तिक लेजर';
+
+  @override
+  String get personalLedgerDesc =>
+      'वैयक्तिक रोख प्रवाह, दैनंदिन खर्च आणि वैयक्तिक बचत ट्रॅक करा.';
+
+  @override
+  String get businessOwner => 'व्यवसाय मालक';
+
+  @override
+  String get businessOwnerDesc =>
+      'दुकान व्यवहार, खाते उधार लेजर, चलन निर्मिती आणि रिअल-टाइम बुक्स व्यवस्थापित करा.';
+
+  @override
+  String get pleaseEnterName => 'कृपया तुमचे नाव टाका';
+
+  @override
+  String get enterValidPhone => 'वैध फोन क्रमांक टाका';
+
+  @override
+  String get nameLength => 'नाव 2 ते 200 अक्षरांदरम्यान असावे';
+
+  @override
+  String get tellUsAboutYourself => 'आम्हाला तुमच्याबद्दल सांगा';
+
+  @override
+  String get yourName => 'तुमचे नाव';
+
+  @override
+  String get phoneNumber => 'फोन क्रमांक';
+
+  @override
+  String get ageOptional => 'वय (पर्यायी)';
+
+  @override
+  String get enterPracticeName => 'प्रॅक्टिसचे नाव टाका';
+
+  @override
+  String get letUsKnowFirmName =>
+      'आम्हाला तुमच्या CA फर्म किंवा प्रॅक्टिसचे नाव कळवा.';
+
+  @override
+  String get nameLengthPeriod => 'नाव 2 ते 200 अक्षरांदरम्यान असावे.';
+
+  @override
+  String get practiceFirmName => 'प्रॅक्टिस / फर्मचे नाव';
+
+  @override
+  String get autoCaptureIncome => 'उत्पन्न स्वयंचलित कॅप्चर';
+
+  @override
+  String get enableSmsProcessing =>
+      'बँक SMS सूचना आल्यावर विक्री आणि खर्च स्वयंचलितपणे नोंदवण्यासाठी SMS प्रक्रिया सक्षम करा.';
+
+  @override
+  String get enableInSettings => 'सेटिंग्जमध्ये सक्षम करा';
+
+  @override
+  String get allowSms => 'SMS ला परवानगी द्या';
+
+  @override
+  String analyticsLogErrorArg(String msg) {
+    return 'अॅनालिटिक्स लॉग त्रुटी: $msg';
+  }
+
+  @override
+  String get skipForNow => 'आत्ता वगळा';
+
+  @override
+  String get simulatedBankMessage => 'सिम्युलेटेड बँक संदेश';
+
+  @override
+  String get pocketplusAutoLogs => 'PocketPlus स्वयं नोंदवते:';
+
+  @override
+  String get incomeDemoAmount => '₹12,500.00 चे उत्पन्न';
+
+  @override
+  String get setupComplete => 'सेटअप पूर्ण!';
+
+  @override
+  String get ledgerConfigured =>
+      'तुमची लेजर प्रोफाइल यशस्वीरित्या कॉन्फिगर झाली आहे. आता तुम्ही तुमचे उत्पन्न ट्रॅक करण्यास आणि वाढवण्यास तयार आहात.';
+
+  @override
+  String get goToDashboard => 'डॅशबोर्डवर जा';
+
+  @override
+  String netProfitForMonthArg(String month, String amount) {
+    return '$month साठी निव्वळ नफा: $amount';
+  }
+
+  @override
+  String get netLoss => 'निव्वळ तोटा';
+
+  @override
+  String get transactionsLabel => 'व्यवहार';
+
+  @override
+  String get noRecentTransactions => 'अलीकडील व्यवहार नाहीत';
+
+  @override
+  String get quickActions => 'त्वरित क्रिया';
+
+  @override
+  String get captureSms => 'SMS कॅप्चर करा';
+
+  @override
+  String get enterDetailsBusinessName => 'तुमचे तपशील आणि व्यवसायाचे नाव टाका.';
+
+  @override
+  String get personalizeExperience =>
+      'तुमचा अनुभव वैयक्तिक करण्यात आम्हाला मदत करा.';
+
+  @override
+  String get nameHintExample => 'उदा. रवी शर्मा';
+
+  @override
+  String get businessPracticeName => 'व्यवसाय / प्रॅक्टिसचे नाव';
+
+  @override
+  String get businessNameHintStore => 'उदा. शर्मा जनरल स्टोअर';
+
+  @override
+  String get phoneHintExample => 'उदा. 9876543210';
+
+  @override
+  String get ageHintExample => 'उदा. 28';
+
+  @override
+  String get whatsYourBusinessName => 'तुमच्या व्यवसायाचे नाव काय आहे?';
+
+  @override
+  String get personalizeYourLedger =>
+      'हे तुमचे लेजर वैयक्तिक करण्यात आम्हाला मदत करते.';
+
+  @override
+  String get businessNameLabel => 'व्यवसायाचे नाव';
+
+  @override
+  String get practiceHintExample => 'उदा. वर्मा अँड असोसिएट्स';
 }

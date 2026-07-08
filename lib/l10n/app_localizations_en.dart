@@ -1969,4 +1969,153 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get npsVeryLikely => '10 — Very Likely';
+
+  @override
+  String get chooseYourRole => 'Choose Your Role';
+
+  @override
+  String get selectAccountType =>
+      'Select the type of account that matches your financial tracking needs.';
+
+  @override
+  String get personalLedger => 'Personal Ledger';
+
+  @override
+  String get personalLedgerDesc =>
+      'Track personal cash flows, daily expenses, and individual savings.';
+
+  @override
+  String get businessOwner => 'Business Owner';
+
+  @override
+  String get businessOwnerDesc =>
+      'Manage shop transactions, khata udhaar ledger, invoice generation, and real-time books.';
+
+  @override
+  String get pleaseEnterName => 'Please enter your name';
+
+  @override
+  String get enterValidPhone => 'Enter a valid phone number';
+
+  @override
+  String get nameLength => 'Name must be between 2 and 200 characters';
+
+  @override
+  String get tellUsAboutYourself => 'Tell us about yourself';
+
+  @override
+  String get yourName => 'Your Name';
+
+  @override
+  String get phoneNumber => 'Phone Number';
+
+  @override
+  String get ageOptional => 'Age (optional)';
+
+  @override
+  String get enterPracticeName => 'Enter Practice Name';
+
+  @override
+  String get letUsKnowFirmName =>
+      'Let us know the name of your CA firm or practice.';
+
+  @override
+  String get nameLengthPeriod => 'Name must be between 2 and 200 characters.';
+
+  @override
+  String get practiceFirmName => 'Practice / Firm Name';
+
+  @override
+  String get autoCaptureIncome => 'Auto-Capture Income';
+
+  @override
+  String get enableSmsProcessing =>
+      'Enable SMS processing to automatically log sales and expenses when bank SMS alerts arrive.';
+
+  @override
+  String get enableInSettings => 'Enable in Settings';
+
+  @override
+  String get allowSms => 'Allow SMS';
+
+  @override
+  String analyticsLogErrorArg(String msg) {
+    return 'Analytics log error: $msg';
+  }
+
+  @override
+  String get skipForNow => 'Skip for now';
+
+  @override
+  String get simulatedBankMessage => 'Simulated bank message';
+
+  @override
+  String get pocketplusAutoLogs => 'PocketPlus Auto-Logs:';
+
+  @override
+  String get incomeDemoAmount => 'Income of ₹12,500.00';
+
+  @override
+  String get setupComplete => 'Setup Complete!';
+
+  @override
+  String get ledgerConfigured =>
+      'Your ledger profile has been successfully configured. You are now ready to track and grow your income.';
+
+  @override
+  String get goToDashboard => 'Go to Dashboard';
+
+  @override
+  String netProfitForMonthArg(String month, String amount) {
+    return 'Net profit for $month: $amount';
+  }
+
+  @override
+  String get netLoss => 'Net Loss';
+
+  @override
+  String get transactionsLabel => 'Transactions';
+
+  @override
+  String get noRecentTransactions => 'No recent transactions';
+
+  @override
+  String get quickActions => 'Quick Actions';
+
+  @override
+  String get captureSms => 'Capture SMS';
+
+  @override
+  String get enterDetailsBusinessName =>
+      'Enter your details and business name.';
+
+  @override
+  String get personalizeExperience => 'Help us personalize your experience.';
+
+  @override
+  String get nameHintExample => 'e.g. Ravi Sharma';
+
+  @override
+  String get businessPracticeName => 'Business / Practice Name';
+
+  @override
+  String get businessNameHintStore => 'e.g. Sharma General Store';
+
+  @override
+  String get phoneHintExample => 'e.g. 9876543210';
+
+  @override
+  String get ageHintExample => 'e.g. 28';
+
+  @override
+  String get whatsYourBusinessName => 'What\'s your business name?';
+
+  @override
+  String get personalizeYourLedger => 'This helps us personalize your ledger.';
+
+  @override
+  String get businessNameLabel => 'Business Name';
+
+  @override
+  String get practiceHintExample => 'e.g. Verma & Associates';
 }

@@ -3722,6 +3722,282 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'10 — Very Likely'**
   String get npsVeryLikely;
+
+  /// No description provided for @chooseYourRole.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose Your Role'**
+  String get chooseYourRole;
+
+  /// No description provided for @selectAccountType.
+  ///
+  /// In en, this message translates to:
+  /// **'Select the type of account that matches your financial tracking needs.'**
+  String get selectAccountType;
+
+  /// No description provided for @personalLedger.
+  ///
+  /// In en, this message translates to:
+  /// **'Personal Ledger'**
+  String get personalLedger;
+
+  /// No description provided for @personalLedgerDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Track personal cash flows, daily expenses, and individual savings.'**
+  String get personalLedgerDesc;
+
+  /// No description provided for @businessOwner.
+  ///
+  /// In en, this message translates to:
+  /// **'Business Owner'**
+  String get businessOwner;
+
+  /// No description provided for @businessOwnerDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Manage shop transactions, khata udhaar ledger, invoice generation, and real-time books.'**
+  String get businessOwnerDesc;
+
+  /// No description provided for @pleaseEnterName.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter your name'**
+  String get pleaseEnterName;
+
+  /// No description provided for @enterValidPhone.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter a valid phone number'**
+  String get enterValidPhone;
+
+  /// No description provided for @nameLength.
+  ///
+  /// In en, this message translates to:
+  /// **'Name must be between 2 and 200 characters'**
+  String get nameLength;
+
+  /// No description provided for @tellUsAboutYourself.
+  ///
+  /// In en, this message translates to:
+  /// **'Tell us about yourself'**
+  String get tellUsAboutYourself;
+
+  /// No description provided for @yourName.
+  ///
+  /// In en, this message translates to:
+  /// **'Your Name'**
+  String get yourName;
+
+  /// No description provided for @phoneNumber.
+  ///
+  /// In en, this message translates to:
+  /// **'Phone Number'**
+  String get phoneNumber;
+
+  /// No description provided for @ageOptional.
+  ///
+  /// In en, this message translates to:
+  /// **'Age (optional)'**
+  String get ageOptional;
+
+  /// No description provided for @enterPracticeName.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter Practice Name'**
+  String get enterPracticeName;
+
+  /// No description provided for @letUsKnowFirmName.
+  ///
+  /// In en, this message translates to:
+  /// **'Let us know the name of your CA firm or practice.'**
+  String get letUsKnowFirmName;
+
+  /// No description provided for @nameLengthPeriod.
+  ///
+  /// In en, this message translates to:
+  /// **'Name must be between 2 and 200 characters.'**
+  String get nameLengthPeriod;
+
+  /// No description provided for @practiceFirmName.
+  ///
+  /// In en, this message translates to:
+  /// **'Practice / Firm Name'**
+  String get practiceFirmName;
+
+  /// No description provided for @autoCaptureIncome.
+  ///
+  /// In en, this message translates to:
+  /// **'Auto-Capture Income'**
+  String get autoCaptureIncome;
+
+  /// No description provided for @enableSmsProcessing.
+  ///
+  /// In en, this message translates to:
+  /// **'Enable SMS processing to automatically log sales and expenses when bank SMS alerts arrive.'**
+  String get enableSmsProcessing;
+
+  /// No description provided for @enableInSettings.
+  ///
+  /// In en, this message translates to:
+  /// **'Enable in Settings'**
+  String get enableInSettings;
+
+  /// No description provided for @allowSms.
+  ///
+  /// In en, this message translates to:
+  /// **'Allow SMS'**
+  String get allowSms;
+
+  /// No description provided for @analyticsLogErrorArg.
+  ///
+  /// In en, this message translates to:
+  /// **'Analytics log error: {msg}'**
+  String analyticsLogErrorArg(String msg);
+
+  /// No description provided for @skipForNow.
+  ///
+  /// In en, this message translates to:
+  /// **'Skip for now'**
+  String get skipForNow;
+
+  /// No description provided for @simulatedBankMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Simulated bank message'**
+  String get simulatedBankMessage;
+
+  /// No description provided for @pocketplusAutoLogs.
+  ///
+  /// In en, this message translates to:
+  /// **'PocketPlus Auto-Logs:'**
+  String get pocketplusAutoLogs;
+
+  /// No description provided for @incomeDemoAmount.
+  ///
+  /// In en, this message translates to:
+  /// **'Income of ₹12,500.00'**
+  String get incomeDemoAmount;
+
+  /// No description provided for @setupComplete.
+  ///
+  /// In en, this message translates to:
+  /// **'Setup Complete!'**
+  String get setupComplete;
+
+  /// No description provided for @ledgerConfigured.
+  ///
+  /// In en, this message translates to:
+  /// **'Your ledger profile has been successfully configured. You are now ready to track and grow your income.'**
+  String get ledgerConfigured;
+
+  /// No description provided for @goToDashboard.
+  ///
+  /// In en, this message translates to:
+  /// **'Go to Dashboard'**
+  String get goToDashboard;
+
+  /// No description provided for @netProfitForMonthArg.
+  ///
+  /// In en, this message translates to:
+  /// **'Net profit for {month}: {amount}'**
+  String netProfitForMonthArg(String month, String amount);
+
+  /// No description provided for @netLoss.
+  ///
+  /// In en, this message translates to:
+  /// **'Net Loss'**
+  String get netLoss;
+
+  /// No description provided for @transactionsLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Transactions'**
+  String get transactionsLabel;
+
+  /// No description provided for @noRecentTransactions.
+  ///
+  /// In en, this message translates to:
+  /// **'No recent transactions'**
+  String get noRecentTransactions;
+
+  /// No description provided for @quickActions.
+  ///
+  /// In en, this message translates to:
+  /// **'Quick Actions'**
+  String get quickActions;
+
+  /// No description provided for @captureSms.
+  ///
+  /// In en, this message translates to:
+  /// **'Capture SMS'**
+  String get captureSms;
+
+  /// No description provided for @enterDetailsBusinessName.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter your details and business name.'**
+  String get enterDetailsBusinessName;
+
+  /// No description provided for @personalizeExperience.
+  ///
+  /// In en, this message translates to:
+  /// **'Help us personalize your experience.'**
+  String get personalizeExperience;
+
+  /// No description provided for @nameHintExample.
+  ///
+  /// In en, this message translates to:
+  /// **'e.g. Ravi Sharma'**
+  String get nameHintExample;
+
+  /// No description provided for @businessPracticeName.
+  ///
+  /// In en, this message translates to:
+  /// **'Business / Practice Name'**
+  String get businessPracticeName;
+
+  /// No description provided for @businessNameHintStore.
+  ///
+  /// In en, this message translates to:
+  /// **'e.g. Sharma General Store'**
+  String get businessNameHintStore;
+
+  /// No description provided for @phoneHintExample.
+  ///
+  /// In en, this message translates to:
+  /// **'e.g. 9876543210'**
+  String get phoneHintExample;
+
+  /// No description provided for @ageHintExample.
+  ///
+  /// In en, this message translates to:
+  /// **'e.g. 28'**
+  String get ageHintExample;
+
+  /// No description provided for @whatsYourBusinessName.
+  ///
+  /// In en, this message translates to:
+  /// **'What\'s your business name?'**
+  String get whatsYourBusinessName;
+
+  /// No description provided for @personalizeYourLedger.
+  ///
+  /// In en, this message translates to:
+  /// **'This helps us personalize your ledger.'**
+  String get personalizeYourLedger;
+
+  /// No description provided for @businessNameLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Business Name'**
+  String get businessNameLabel;
+
+  /// No description provided for @practiceHintExample.
+  ///
+  /// In en, this message translates to:
+  /// **'e.g. Verma & Associates'**
+  String get practiceHintExample;
 }
 
 class _AppLocalizationsDelegate

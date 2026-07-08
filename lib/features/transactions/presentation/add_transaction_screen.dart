@@ -323,7 +323,7 @@ class _AddTransactionScreenState extends ConsumerState<AddTransactionScreen> {
             style: const TextStyle(color: Colors.white),
           ),
           leading: IconButton(
-            tooltip: 'Close',
+            tooltip: AppLocalizations.of(context)!.close,
             icon: const Icon(Icons.close, color: Colors.white),
             onPressed: () async {
               final shouldPop = await _onWillPop();

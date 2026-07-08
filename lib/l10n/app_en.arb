@@ -749,5 +749,68 @@
   "tabBug": "Bug",
   "tabNps": "NPS",
   "npsUnlikely": "0 — Unlikely",
-  "npsVeryLikely": "10 — Very Likely"
+  "npsVeryLikely": "10 — Very Likely",
+  "chooseYourRole": "Choose Your Role",
+  "selectAccountType": "Select the type of account that matches your financial tracking needs.",
+  "personalLedger": "Personal Ledger",
+  "personalLedgerDesc": "Track personal cash flows, daily expenses, and individual savings.",
+  "businessOwner": "Business Owner",
+  "businessOwnerDesc": "Manage shop transactions, khata udhaar ledger, invoice generation, and real-time books.",
+  "pleaseEnterName": "Please enter your name",
+  "enterValidPhone": "Enter a valid phone number",
+  "nameLength": "Name must be between 2 and 200 characters",
+  "tellUsAboutYourself": "Tell us about yourself",
+  "yourName": "Your Name",
+  "phoneNumber": "Phone Number",
+  "ageOptional": "Age (optional)",
+  "enterPracticeName": "Enter Practice Name",
+  "letUsKnowFirmName": "Let us know the name of your CA firm or practice.",
+  "nameLengthPeriod": "Name must be between 2 and 200 characters.",
+  "practiceFirmName": "Practice / Firm Name",
+  "autoCaptureIncome": "Auto-Capture Income",
+  "enableSmsProcessing": "Enable SMS processing to automatically log sales and expenses when bank SMS alerts arrive.",
+  "enableInSettings": "Enable in Settings",
+  "allowSms": "Allow SMS",
+  "analyticsLogErrorArg": "Analytics log error: {msg}",
+  "@analyticsLogErrorArg": {
+    "placeholders": {
+      "msg": {
+        "type": "String"
+      }
+    }
+  },
+  "skipForNow": "Skip for now",
+  "simulatedBankMessage": "Simulated bank message",
+  "pocketplusAutoLogs": "PocketPlus Auto-Logs:",
+  "incomeDemoAmount": "Income of ₹12,500.00",
+  "setupComplete": "Setup Complete!",
+  "ledgerConfigured": "Your ledger profile has been successfully configured. You are now ready to track and grow your income.",
+  "goToDashboard": "Go to Dashboard",
+  "netProfitForMonthArg": "Net profit for {month}: {amount}",
+  "@netProfitForMonthArg": {
+    "placeholders": {
+      "month": {
+        "type": "String"
+      },
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "netLoss": "Net Loss",
+  "transactionsLabel": "Transactions",
+  "noRecentTransactions": "No recent transactions",
+  "quickActions": "Quick Actions",
+  "captureSms": "Capture SMS",
+  "enterDetailsBusinessName": "Enter your details and business name.",
+  "personalizeExperience": "Help us personalize your experience.",
+  "nameHintExample": "e.g. Ravi Sharma",
+  "businessPracticeName": "Business / Practice Name",
+  "businessNameHintStore": "e.g. Sharma General Store",
+  "phoneHintExample": "e.g. 9876543210",
+  "ageHintExample": "e.g. 28",
+  "whatsYourBusinessName": "What's your business name?",
+  "personalizeYourLedger": "This helps us personalize your ledger.",
+  "businessNameLabel": "Business Name",
+  "practiceHintExample": "e.g. Verma & Associates"
 }

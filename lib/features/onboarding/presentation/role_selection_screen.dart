@@ -6,6 +6,7 @@ import '../../../core/constants/app_colors.dart';
 import '../../../core/constants/app_sizes.dart';
 import '../../../core/constants/app_text_styles.dart';
 import '../../../core/router/route_names.dart';
+import '../../../l10n/app_localizations.dart';
 import '../../../shared/widgets/widgets.dart';
 import 'onboarding_view_model.dart';
 import 'widgets/progress_dots.dart';
@@ -30,13 +31,13 @@ class RoleSelectionScreen extends ConsumerWidget {
               const ProgressDots(currentStep: 1),
               const SizedBox(height: AppSizes.spacing32),
               Text(
-                'Choose Your Role',
+                AppLocalizations.of(context)!.chooseYourRole,
                 style: AppTextStyles.displayLarge(context),
                 textAlign: TextAlign.center,
               ),
               const SizedBox(height: AppSizes.spacing8),
               Text(
-                'Select the type of account that matches your financial tracking needs.',
+                AppLocalizations.of(context)!.selectAccountType,
                 style: AppTextStyles.bodyMedium(context).copyWith(
                   color: AppColors.onSurfaceMuted,
                 ),
@@ -50,9 +51,9 @@ class RoleSelectionScreen extends ConsumerWidget {
                     _buildRoleCard(
                       context: context,
                       roleValue: 'PERSONAL',
-                      title: 'Personal Ledger',
+                      title: AppLocalizations.of(context)!.personalLedger,
                       description:
-                          'Track personal cash flows, daily expenses, and individual savings.',
+                          AppLocalizations.of(context)!.personalLedgerDesc,
                       icon: Icons.account_balance_wallet_outlined,
                       selectedRole: state.role,
                       onTap: () => viewModel.selectRole('PERSONAL'),
@@ -61,9 +62,9 @@ class RoleSelectionScreen extends ConsumerWidget {
                     _buildRoleCard(
                       context: context,
                       roleValue: 'BUSINESS',
-                      title: 'Business Owner',
+                      title: AppLocalizations.of(context)!.businessOwner,
                       description:
-                          'Manage shop transactions, khata udhaar ledger, invoice generation, and real-time books.',
+                          AppLocalizations.of(context)!.businessOwnerDesc,
                       icon: Icons.storefront_outlined,
                       selectedRole: state.role,
                       onTap: () => viewModel.selectRole('BUSINESS'),
@@ -73,7 +74,7 @@ class RoleSelectionScreen extends ConsumerWidget {
               ),
               const SizedBox(height: AppSizes.spacing16),
               AppButton(
-                label: 'Next',
+                label: AppLocalizations.of(context)!.next,
                 onPressed: state.role != null
                     ? () => context.push(RouteNames.onboardingInfo)
                     : null,

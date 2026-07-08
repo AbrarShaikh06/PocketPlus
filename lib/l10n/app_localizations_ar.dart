@@ -1965,4 +1965,152 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get npsVeryLikely => '10 — محتمل جدًا';
+
+  @override
+  String get chooseYourRole => 'اختر دورك';
+
+  @override
+  String get selectAccountType =>
+      'اختر نوع الحساب الذي يناسب احتياجات تتبعك المالي.';
+
+  @override
+  String get personalLedger => 'دفتر شخصي';
+
+  @override
+  String get personalLedgerDesc =>
+      'تتبّع التدفقات النقدية الشخصية والمصروفات اليومية والمدخرات الفردية.';
+
+  @override
+  String get businessOwner => 'صاحب عمل';
+
+  @override
+  String get businessOwnerDesc =>
+      'إدارة معاملات المتجر ودفتر الآجل (خاتا أدهار) وإنشاء الفواتير والدفاتر الفورية.';
+
+  @override
+  String get pleaseEnterName => 'يرجى إدخال اسمك';
+
+  @override
+  String get enterValidPhone => 'أدخل رقم هاتف صالح';
+
+  @override
+  String get nameLength => 'يجب أن يكون الاسم بين 2 و200 حرف';
+
+  @override
+  String get tellUsAboutYourself => 'أخبرنا عن نفسك';
+
+  @override
+  String get yourName => 'اسمك';
+
+  @override
+  String get phoneNumber => 'رقم الهاتف';
+
+  @override
+  String get ageOptional => 'العمر (اختياري)';
+
+  @override
+  String get enterPracticeName => 'أدخل اسم الممارسة';
+
+  @override
+  String get letUsKnowFirmName =>
+      'أخبرنا باسم شركة المحاسبة أو الممارسة الخاصة بك.';
+
+  @override
+  String get nameLengthPeriod => 'يجب أن يكون الاسم بين 2 و200 حرف.';
+
+  @override
+  String get practiceFirmName => 'اسم الممارسة / الشركة';
+
+  @override
+  String get autoCaptureIncome => 'التقاط الدخل تلقائيًا';
+
+  @override
+  String get enableSmsProcessing =>
+      'فعّل معالجة الرسائل لتسجيل المبيعات والمصروفات تلقائيًا عند وصول تنبيهات البنك.';
+
+  @override
+  String get enableInSettings => 'تفعيل في الإعدادات';
+
+  @override
+  String get allowSms => 'السماح بالرسائل';
+
+  @override
+  String analyticsLogErrorArg(String msg) {
+    return 'خطأ في سجل التحليلات: $msg';
+  }
+
+  @override
+  String get skipForNow => 'تخطّ الآن';
+
+  @override
+  String get simulatedBankMessage => 'رسالة بنكية محاكاة';
+
+  @override
+  String get pocketplusAutoLogs => 'يسجّل PocketPlus تلقائيًا:';
+
+  @override
+  String get incomeDemoAmount => 'دخل بقيمة ₹12,500.00';
+
+  @override
+  String get setupComplete => 'اكتمل الإعداد!';
+
+  @override
+  String get ledgerConfigured =>
+      'تم إعداد ملف دفترك بنجاح. أنت الآن جاهز لتتبع دخلك وتنميته.';
+
+  @override
+  String get goToDashboard => 'الانتقال إلى لوحة التحكم';
+
+  @override
+  String netProfitForMonthArg(String month, String amount) {
+    return 'صافي الربح لشهر $month: $amount';
+  }
+
+  @override
+  String get netLoss => 'صافي الخسارة';
+
+  @override
+  String get transactionsLabel => 'المعاملات';
+
+  @override
+  String get noRecentTransactions => 'لا توجد معاملات حديثة';
+
+  @override
+  String get quickActions => 'إجراءات سريعة';
+
+  @override
+  String get captureSms => 'التقاط الرسائل';
+
+  @override
+  String get enterDetailsBusinessName => 'أدخل بياناتك واسم عملك.';
+
+  @override
+  String get personalizeExperience => 'ساعدنا في تخصيص تجربتك.';
+
+  @override
+  String get nameHintExample => 'مثال: رافي شارما';
+
+  @override
+  String get businessPracticeName => 'اسم العمل / الممارسة';
+
+  @override
+  String get businessNameHintStore => 'مثال: متجر شارما العام';
+
+  @override
+  String get phoneHintExample => 'مثال: 9876543210';
+
+  @override
+  String get ageHintExample => 'مثال: 28';
+
+  @override
+  String get whatsYourBusinessName => 'ما اسم عملك؟';
+
+  @override
+  String get personalizeYourLedger => 'يساعدنا هذا في تخصيص دفترك.';
+
+  @override
+  String get businessNameLabel => 'اسم العمل';
+
+  @override
+  String get practiceHintExample => 'مثال: فيرما وشركاه';
 }
