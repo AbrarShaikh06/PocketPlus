@@ -1479,4 +1479,164 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get amountHintExample => 'مثال: 10000';
+
+  @override
+  String get invoicesTitle => 'الفواتير';
+
+  @override
+  String get invoiceFeatureBasic =>
+      'ميزة الفواتير متاحة في خطة Basic بـ ₹100/شهر';
+
+  @override
+  String get seePlans => 'عرض الخطط';
+
+  @override
+  String get createFirstInvoice => 'أنشئ فاتورتك الأولى';
+
+  @override
+  String get newInvoicePlus => '+ فاتورة جديدة';
+
+  @override
+  String get pendingPayment => 'دفع معلق';
+
+  @override
+  String get drafts => 'المسودات';
+
+  @override
+  String get paidSection => 'مدفوع';
+
+  @override
+  String get statusDraft => 'مسودة';
+
+  @override
+  String get statusSent => 'مُرسَل';
+
+  @override
+  String get statusPaid => 'مدفوع';
+
+  @override
+  String get statusPartial => 'جزئي';
+
+  @override
+  String get statusCancelled => 'ملغى';
+
+  @override
+  String get newInvoice => 'فاتورة جديدة';
+
+  @override
+  String get close => 'إغلاق';
+
+  @override
+  String get saveAsDraft => 'حفظ كمسودة';
+
+  @override
+  String get customer => 'العميل';
+
+  @override
+  String get customerNameRequired => 'اسم العميل *';
+
+  @override
+  String get fullName => 'الاسم الكامل';
+
+  @override
+  String get phoneOptional => 'الهاتف (اختياري)';
+
+  @override
+  String get issueDate => 'تاريخ الإصدار';
+
+  @override
+  String get dueDateOptional => 'تاريخ الاستحقاق (اختياري)';
+
+  @override
+  String get lineItems => 'البنود';
+
+  @override
+  String get addLineItem => 'إضافة بند';
+
+  @override
+  String itemNumber(int n) {
+    return 'البند $n';
+  }
+
+  @override
+  String get unitPrice => 'سعر الوحدة';
+
+  @override
+  String lineTotalArg(String amount) {
+    return 'إجمالي البند: $amount';
+  }
+
+  @override
+  String get gstTotal => 'إجمالي GST';
+
+  @override
+  String gstPercent(int percent) {
+    return 'GST $percent%';
+  }
+
+  @override
+  String get subtotal => 'المجموع الفرعي';
+
+  @override
+  String get discount => 'الخصم';
+
+  @override
+  String get grandTotal => 'الإجمالي الكلي';
+
+  @override
+  String get notesOptional => 'ملاحظات (اختياري)';
+
+  @override
+  String get invoiceTitle => 'فاتورة';
+
+  @override
+  String get invoiceNotFound => 'لم يتم العثور على الفاتورة';
+
+  @override
+  String get phone => 'الهاتف';
+
+  @override
+  String get dueDate => 'تاريخ الاستحقاق';
+
+  @override
+  String get items => 'البنود';
+
+  @override
+  String notesArg(String notes) {
+    return 'ملاحظات: $notes';
+  }
+
+  @override
+  String get markAsSent => 'وضع علامة كمُرسَل';
+
+  @override
+  String get markAsPaid => 'وضع علامة كمدفوع';
+
+  @override
+  String get shareViaWhatsapp => 'مشاركة عبر WhatsApp';
+
+  @override
+  String get downloadPdf => 'تنزيل PDF';
+
+  @override
+  String markInvoicePaidTitle(String number) {
+    return 'وضع علامة على $number كمدفوع؟';
+  }
+
+  @override
+  String markPaidIncomeBody(String amount) {
+    return 'سيؤدي هذا إلى إنشاء إدخال دخل بقيمة $amount.';
+  }
+
+  @override
+  String get markPaid => 'وضع علامة مدفوع';
+
+  @override
+  String get couldNotSave => 'تعذّر الحفظ. حاول مرة أخرى.';
+
+  @override
+  String get phoneHintIndian => 'رقم هندي من 10 أرقام';
+
+  @override
+  String get qtyHint => 'الكمية';
 }

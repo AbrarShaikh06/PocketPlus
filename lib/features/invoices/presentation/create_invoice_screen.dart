@@ -7,6 +7,7 @@ import '../../../core/constants/app_colors.dart';
 import '../../../core/constants/app_sizes.dart';
 import '../../../core/constants/app_text_styles.dart';
 import '../../../core/utils/currency_formatter.dart';
+import '../../../l10n/app_localizations.dart';
 import '../../../shared/widgets/widgets.dart';
 import 'package:pocket_plus/core/errors/error_localizer.dart';
 import 'invoice_view_model.dart';
@@ -28,11 +29,11 @@ class _CreateInvoiceScreenState extends ConsumerState<CreateInvoiceScreen> {
     return Scaffold(
       backgroundColor: AppColors.surface,
       appBar: AppBar(
-        title: const Text('New Invoice'),
+        title: Text(AppLocalizations.of(context)!.newInvoice),
         backgroundColor: AppColors.surface,
         elevation: 0,
         leading: IconButton(
-          tooltip: 'Close',
+          tooltip: AppLocalizations.of(context)!.close,
           icon: const Icon(Icons.close),
           onPressed: () => context.pop(),
         ),
@@ -51,7 +52,7 @@ class _CreateInvoiceScreenState extends ConsumerState<CreateInvoiceScreen> {
             _buildNotesSection(state, notifier),
             const SizedBox(height: AppSizes.spacing24),
             AppButton(
-              label: 'Save as Draft',
+              label: AppLocalizations.of(context)!.saveAsDraft,
               isLoading: state.isSaving,
               onPressed: state.isSaving ? null : () => _save(notifier),
             ),
@@ -80,18 +81,19 @@ class _CreateInvoiceScreenState extends ConsumerState<CreateInvoiceScreen> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text('Customer', style: AppTextStyles.titleMedium(context)),
+        Text(AppLocalizations.of(context)!.customer,
+            style: AppTextStyles.titleMedium(context)),
         const SizedBox(height: AppSizes.spacing12),
         AppTextField(
-          label: 'Customer Name *',
-          hint: 'Full name',
+          label: AppLocalizations.of(context)!.customerNameRequired,
+          hint: AppLocalizations.of(context)!.fullName,
           errorText: state.customerNameError,
           onChanged: (v) => notifier.setCustomerName(v),
         ),
         const SizedBox(height: AppSizes.spacing12),
         AppTextField(
-          label: 'Phone (optional)',
-          hint: '10-digit Indian number',
+          label: AppLocalizations.of(context)!.phoneOptional,
+          hint: AppLocalizations.of(context)!.phoneHintIndian,
           errorText: state.customerPhoneError,
           keyboardType: TextInputType.phone,
           maxLength: 10,
@@ -102,7 +104,7 @@ class _CreateInvoiceScreenState extends ConsumerState<CreateInvoiceScreen> {
           children: [
             Expanded(
               child: _DateField(
-                label: 'Issue Date',
+                label: AppLocalizations.of(context)!.issueDate,
                 date: state.issueDate,
                 onChanged: (d) => notifier.setIssueDate(d),
               ),
@@ -110,7 +112,7 @@ class _CreateInvoiceScreenState extends ConsumerState<CreateInvoiceScreen> {
             const SizedBox(width: AppSizes.spacing12),
             Expanded(
               child: _DateField(
-                label: 'Due Date (optional)',
+                label: AppLocalizations.of(context)!.dueDateOptional,
                 date: state.dueDate,
                 onChanged: (d) => notifier.setDueDate(d),
                 optional: true,
@@ -132,9 +134,10 @@ class _CreateInvoiceScreenState extends ConsumerState<CreateInvoiceScreen> {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text('Line Items', style: AppTextStyles.titleMedium(context)),
+            Text(AppLocalizations.of(context)!.lineItems,
+                style: AppTextStyles.titleMedium(context)),
             IconButton(
-              tooltip: 'Add line item',
+              tooltip: AppLocalizations.of(context)!.addLineItem,
               icon: const Icon(Icons.add_circle_outline),
               color: AppColors.primary,
               onPressed: notifier.addLineItem,
@@ -173,16 +176,20 @@ class _CreateInvoiceScreenState extends ConsumerState<CreateInvoiceScreen> {
       ),
       child: Column(
         children: [
-          _SummaryRow(label: 'Subtotal', amount: subtotal),
-          if (totalGst > 0) _SummaryRow(label: 'GST Total', amount: totalGst),
           _SummaryRow(
-            label: 'Discount',
+              label: AppLocalizations.of(context)!.subtotal, amount: subtotal),
+          if (totalGst > 0)
+            _SummaryRow(
+                label: AppLocalizations.of(context)!.gstTotal,
+                amount: totalGst),
+          _SummaryRow(
+            label: AppLocalizations.of(context)!.discount,
             amount: state.discount,
             isNegative: true,
           ),
           const Divider(),
           _SummaryRow(
-            label: 'Grand Total',
+            label: AppLocalizations.of(context)!.grandTotal,
             amount: grandTotal,
             isBold: true,
           ),
@@ -196,7 +203,7 @@ class _CreateInvoiceScreenState extends ConsumerState<CreateInvoiceScreen> {
     InvoiceViewModel notifier,
   ) {
     return AppTextField(
-      label: 'Notes (optional)',
+      label: AppLocalizations.of(context)!.notesOptional,
       maxLength: 1000,
       onChanged: (v) => notifier.setNotes(v),
     );
@@ -259,7 +266,7 @@ class _DateField extends StatelessWidget {
             Text(
               date != null
                   ? DateFormat('d MMM yyyy').format(date!)
-                  : 'Select date',
+                  : AppLocalizations.of(context)!.selectDate,
               style: AppTextStyles.bodyLarge(context),
             ),
           ],
@@ -298,7 +305,7 @@ class _LineItemCard extends StatelessWidget {
             children: [
               Expanded(
                 child: Text(
-                  'Item ${index + 1}',
+                  AppLocalizations.of(context)!.itemNumber(index + 1),
                   style: AppTextStyles.labelSmall(context),
                 ),
               ),
@@ -314,7 +321,7 @@ class _LineItemCard extends StatelessWidget {
             ],
           ),
           AppTextField(
-            hint: 'Description *',
+            hint: AppLocalizations.of(context)!.descriptionRequired,
             errorText: item.descriptionError,
             onChanged: (v) => notifier.updateLineItemDescription(index, v),
           ),
@@ -323,7 +330,7 @@ class _LineItemCard extends StatelessWidget {
             children: [
               Expanded(
                 child: AppTextField(
-                  hint: 'Qty',
+                  hint: AppLocalizations.of(context)!.qtyHint,
                   keyboardType: TextInputType.number,
                   onChanged: (v) => notifier.updateLineItemQuantity(index, v),
                 ),
@@ -331,7 +338,7 @@ class _LineItemCard extends StatelessWidget {
               const SizedBox(width: AppSizes.spacing8),
               Expanded(
                 child: AppTextField(
-                  hint: 'Unit Price',
+                  hint: AppLocalizations.of(context)!.unitPrice,
                   keyboardType: TextInputType.number,
                   onChanged: (v) => notifier.updateLineItemUnitPrice(index, v),
                 ),
@@ -347,7 +354,8 @@ class _LineItemCard extends StatelessWidget {
               ),
               const SizedBox(width: AppSizes.spacing16),
               Text(
-                'Line total: ${CurrencyFormatter.formatRupees(item.lineTotal)}',
+                AppLocalizations.of(context)!.lineTotalArg(
+                    CurrencyFormatter.formatRupees(item.lineTotal)),
                 style: AppTextStyles.bodyMedium(context),
               ),
             ],
@@ -379,12 +387,22 @@ class _GstDropdown extends StatelessWidget {
       child: DropdownButton<double>(
         value: value,
         underline: const SizedBox(),
-        items: const [
-          DropdownMenuItem(value: 0.0, child: Text('GST 0%')),
-          DropdownMenuItem(value: 5.0, child: Text('GST 5%')),
-          DropdownMenuItem(value: 12.0, child: Text('GST 12%')),
-          DropdownMenuItem(value: 18.0, child: Text('GST 18%')),
-          DropdownMenuItem(value: 28.0, child: Text('GST 28%')),
+        items: [
+          DropdownMenuItem(
+              value: 0.0,
+              child: Text(AppLocalizations.of(context)!.gstPercent(0))),
+          DropdownMenuItem(
+              value: 5.0,
+              child: Text(AppLocalizations.of(context)!.gstPercent(5))),
+          DropdownMenuItem(
+              value: 12.0,
+              child: Text(AppLocalizations.of(context)!.gstPercent(12))),
+          DropdownMenuItem(
+              value: 18.0,
+              child: Text(AppLocalizations.of(context)!.gstPercent(18))),
+          DropdownMenuItem(
+              value: 28.0,
+              child: Text(AppLocalizations.of(context)!.gstPercent(28))),
         ],
         onChanged: (v) {
           if (v != null) onChanged(v);

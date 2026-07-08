@@ -4,6 +4,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:pocket_plus/features/invoices/presentation/invoice_list_screen.dart';
 import 'package:pocket_plus/features/invoices/presentation/invoice_view_model.dart';
 import 'package:pocket_plus/features/profiles/profiles_providers.dart';
+import 'package:pocket_plus/l10n/app_localizations.dart';
 import 'package:pocket_plus/shared/models/models.dart';
 
 void main() {
@@ -15,8 +16,10 @@ void main() {
           userPlanProvider.overrideWith((ref) async => PlanType.free),
           invoiceListViewModelProvider.overrideWith((ref) => Stream.value([])),
         ],
-        child: const MaterialApp(
-          home: InvoiceListScreen(),
+        child: MaterialApp(
+          localizationsDelegates: AppLocalizations.localizationsDelegates,
+          supportedLocales: AppLocalizations.supportedLocales,
+          home: const InvoiceListScreen(),
         ),
       ),
     );
@@ -44,8 +47,10 @@ void main() {
           userPlanProvider.overrideWith((ref) async => PlanType.basic),
           invoiceListViewModelProvider.overrideWith((ref) => Stream.value([])),
         ],
-        child: const MaterialApp(
-          home: InvoiceListScreen(),
+        child: MaterialApp(
+          localizationsDelegates: AppLocalizations.localizationsDelegates,
+          supportedLocales: AppLocalizations.supportedLocales,
+          home: const InvoiceListScreen(),
         ),
       ),
     );

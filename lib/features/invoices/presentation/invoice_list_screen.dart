@@ -5,6 +5,7 @@ import 'package:go_router/go_router.dart';
 import '../../../core/constants/app_colors.dart';
 import '../../../core/constants/app_sizes.dart';
 import '../../../core/constants/app_text_styles.dart';
+import '../../../l10n/app_localizations.dart';
 import '../../../core/utils/currency_formatter.dart';
 import '../../../core/utils/date_formatter.dart';
 import '../../../shared/models/models.dart';
@@ -23,7 +24,7 @@ class InvoiceListScreen extends ConsumerWidget {
     return Scaffold(
       backgroundColor: AppColors.surface,
       appBar: AppBar(
-        title: const Text('Invoices'),
+        title: Text(AppLocalizations.of(context)!.invoicesTitle),
         backgroundColor: AppColors.surface,
         elevation: 0,
       ),
@@ -70,7 +71,7 @@ class InvoiceListScreen extends ConsumerWidget {
             ),
             const SizedBox(height: AppSizes.spacing24),
             Text(
-              'Invoice feature available on Basic ₹100/mo',
+              AppLocalizations.of(context)!.invoiceFeatureBasic,
               style: AppTextStyles.titleMedium(
                 context,
                 color: AppColors.onSurfaceMuted,
@@ -79,7 +80,7 @@ class InvoiceListScreen extends ConsumerWidget {
             ),
             const SizedBox(height: AppSizes.spacing24),
             AppButton(
-              label: 'See Plans',
+              label: AppLocalizations.of(context)!.seePlans,
               onPressed: () => context.push('/upgrade'),
             ),
           ],
@@ -99,19 +100,21 @@ class InvoiceListScreen extends ConsumerWidget {
         return _buildGroupedList(context, invoices);
       },
       loading: () => const LoadingShimmer(),
-      error: (e, _) => Center(child: Text('Error: $e')),
+      error: (e, _) => Center(
+        child: Text(AppLocalizations.of(context)!.errorWithMessage('$e')),
+      ),
     );
   }
 
   Widget _buildEmptyState(BuildContext context) {
     return EmptyState(
-      message: 'Create your first invoice',
+      message: AppLocalizations.of(context)!.createFirstInvoice,
       illustration: Icon(
         Icons.receipt_long_outlined,
         size: 80,
         color: AppColors.onSurfaceMuted.withValues(alpha: 0.5),
       ),
-      ctaLabel: '+ New Invoice',
+      ctaLabel: AppLocalizations.of(context)!.newInvoicePlus,
       onCtaPressed: () => context.push('/invoices/new'),
     );
   }
@@ -122,10 +125,11 @@ class InvoiceListScreen extends ConsumerWidget {
         invoices.where((i) => i.status == InvoiceStatus.draft).toList();
     final paid = invoices.where((i) => i.status == InvoiceStatus.paid).toList();
 
+    final l = AppLocalizations.of(context)!;
     final sections = <String, List<Invoice>>{};
-    if (sent.isNotEmpty) sections['Pending Payment'] = sent;
-    if (draft.isNotEmpty) sections['Drafts'] = draft;
-    if (paid.isNotEmpty) sections['Paid'] = paid;
+    if (sent.isNotEmpty) sections[l.pendingPayment] = sent;
+    if (draft.isNotEmpty) sections[l.drafts] = draft;
+    if (paid.isNotEmpty) sections[l.paidSection] = paid;
 
     return ListView(
       padding: const EdgeInsets.all(AppSizes.spacing16),
@@ -214,12 +218,13 @@ class _StatusChip extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l = AppLocalizations.of(context)!;
     final (Color color, String label) = switch (status) {
-      InvoiceStatus.draft => (AppColors.onSurfaceMuted, 'DRAFT'),
-      InvoiceStatus.sent => (AppColors.orange, 'SENT'),
-      InvoiceStatus.paid => (AppColors.primary, 'PAID'),
-      InvoiceStatus.partial => (AppColors.orange, 'PARTIAL'),
-      InvoiceStatus.cancelled => (AppColors.error, 'CANCELLED'),
+      InvoiceStatus.draft => (AppColors.onSurfaceMuted, l.statusDraft),
+      InvoiceStatus.sent => (AppColors.orange, l.statusSent),
+      InvoiceStatus.paid => (AppColors.primary, l.statusPaid),
+      InvoiceStatus.partial => (AppColors.orange, l.statusPartial),
+      InvoiceStatus.cancelled => (AppColors.error, l.statusCancelled),
     };
 
     return Container(

@@ -469,5 +469,96 @@
   },
   "updateBudget": "Update Budget",
   "budgetNameHint": "e.g. Monthly Groceries",
-  "amountHintExample": "e.g. 10000"
+  "amountHintExample": "e.g. 10000",
+  "invoicesTitle": "Invoices",
+  "invoiceFeatureBasic": "Invoice feature available on Basic ₹100/mo",
+  "seePlans": "See Plans",
+  "createFirstInvoice": "Create your first invoice",
+  "newInvoicePlus": "+ New Invoice",
+  "pendingPayment": "Pending Payment",
+  "drafts": "Drafts",
+  "paidSection": "Paid",
+  "statusDraft": "DRAFT",
+  "statusSent": "SENT",
+  "statusPaid": "PAID",
+  "statusPartial": "PARTIAL",
+  "statusCancelled": "CANCELLED",
+  "newInvoice": "New Invoice",
+  "close": "Close",
+  "saveAsDraft": "Save as Draft",
+  "customer": "Customer",
+  "customerNameRequired": "Customer Name *",
+  "fullName": "Full name",
+  "phoneOptional": "Phone (optional)",
+  "issueDate": "Issue Date",
+  "dueDateOptional": "Due Date (optional)",
+  "lineItems": "Line Items",
+  "addLineItem": "Add line item",
+  "itemNumber": "Item {n}",
+  "@itemNumber": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "unitPrice": "Unit Price",
+  "lineTotalArg": "Line total: {amount}",
+  "@lineTotalArg": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "gstTotal": "GST Total",
+  "gstPercent": "GST {percent}%",
+  "@gstPercent": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "subtotal": "Subtotal",
+  "discount": "Discount",
+  "grandTotal": "Grand Total",
+  "notesOptional": "Notes (optional)",
+  "invoiceTitle": "Invoice",
+  "invoiceNotFound": "Invoice not found",
+  "phone": "Phone",
+  "dueDate": "Due Date",
+  "items": "Items",
+  "notesArg": "Notes: {notes}",
+  "@notesArg": {
+    "placeholders": {
+      "notes": {
+        "type": "String"
+      }
+    }
+  },
+  "markAsSent": "Mark as Sent",
+  "markAsPaid": "Mark as Paid",
+  "shareViaWhatsapp": "Share via WhatsApp",
+  "downloadPdf": "Download PDF",
+  "markInvoicePaidTitle": "Mark {number} as paid?",
+  "@markInvoicePaidTitle": {
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "markPaidIncomeBody": "This will create an income entry of {amount}.",
+  "@markPaidIncomeBody": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "markPaid": "Mark Paid",
+  "couldNotSave": "Could not save. Please try again.",
+  "phoneHintIndian": "10-digit Indian number",
+  "qtyHint": "Qty"
 }

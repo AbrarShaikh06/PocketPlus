@@ -12,6 +12,7 @@ import 'package:share_plus/share_plus.dart';
 import '../../../core/constants/app_colors.dart';
 import '../../../core/constants/app_sizes.dart';
 import '../../../core/constants/app_text_styles.dart';
+import '../../../l10n/app_localizations.dart';
 import '../../../core/utils/currency_formatter.dart';
 import '../../../core/utils/date_formatter.dart';
 import '../../../core/analytics/analytics_service.dart';
@@ -66,14 +67,16 @@ class _InvoiceDetailScreenState extends ConsumerState<InvoiceDetailScreen> {
     return Scaffold(
       backgroundColor: AppColors.surface,
       appBar: AppBar(
-        title: Text(_invoice?.invoiceNumber ?? 'Invoice'),
+        title: Text(_invoice?.invoiceNumber ??
+            AppLocalizations.of(context)!.invoiceTitle),
         backgroundColor: AppColors.surface,
         elevation: 0,
       ),
       body: _isLoading
           ? const LoadingShimmer()
           : _invoice == null
-              ? const Center(child: Text('Invoice not found'))
+              ? Center(
+                  child: Text(AppLocalizations.of(context)!.invoiceNotFound))
               : _buildContent(),
     );
   }
@@ -87,12 +90,13 @@ class _InvoiceDetailScreenState extends ConsumerState<InvoiceDetailScreen> {
       InvoiceStatus.partial => AppColors.orange,
       InvoiceStatus.cancelled => AppColors.error,
     };
+    final l = AppLocalizations.of(context)!;
     final statusLabel = switch (invoice.status) {
-      InvoiceStatus.draft => 'DRAFT',
-      InvoiceStatus.sent => 'SENT',
-      InvoiceStatus.paid => 'PAID',
-      InvoiceStatus.partial => 'PARTIAL',
-      InvoiceStatus.cancelled => 'CANCELLED',
+      InvoiceStatus.draft => l.statusDraft,
+      InvoiceStatus.sent => l.statusSent,
+      InvoiceStatus.paid => l.statusPaid,
+      InvoiceStatus.partial => l.statusPartial,
+      InvoiceStatus.cancelled => l.statusCancelled,
     };
 
     return SingleChildScrollView(
@@ -120,24 +124,24 @@ class _InvoiceDetailScreenState extends ConsumerState<InvoiceDetailScreen> {
           const SizedBox(height: AppSizes.spacing16),
 
           // Invoice number and customer
-          _InfoRow(label: 'Invoice', value: invoice.invoiceNumber),
-          _InfoRow(label: 'Customer', value: invoice.customerName),
+          _InfoRow(label: l.invoiceTitle, value: invoice.invoiceNumber),
+          _InfoRow(label: l.customer, value: invoice.customerName),
           if (invoice.customerPhone != null)
-            _InfoRow(label: 'Phone', value: invoice.customerPhone!),
+            _InfoRow(label: l.phone, value: invoice.customerPhone!),
           _InfoRow(
-            label: 'Issue Date',
+            label: l.issueDate,
             value: DateFormatter.display(invoice.issueDate),
           ),
           if (invoice.dueDate != null)
             _InfoRow(
-              label: 'Due Date',
+              label: l.dueDate,
               value: DateFormatter.display(invoice.dueDate!),
             ),
 
           const SizedBox(height: AppSizes.spacing16),
 
           // Line items table
-          Text('Items', style: AppTextStyles.titleMedium(context)),
+          Text(l.items, style: AppTextStyles.titleMedium(context)),
           const SizedBox(height: AppSizes.spacing8),
           ...invoice.lineItems.map((item) {
             return Padding(
@@ -170,18 +174,18 @@ class _InvoiceDetailScreenState extends ConsumerState<InvoiceDetailScreen> {
           const SizedBox(height: AppSizes.spacing16),
 
           // Totals
-          _SummaryRow(label: 'Subtotal', amount: invoice.subtotal),
+          _SummaryRow(label: l.subtotal, amount: invoice.subtotal),
           if (invoice.totalGst > 0)
-            _SummaryRow(label: 'GST Total', amount: invoice.totalGst),
+            _SummaryRow(label: l.gstTotal, amount: invoice.totalGst),
           if (invoice.discount > 0)
             _SummaryRow(
-              label: 'Discount',
+              label: l.discount,
               amount: invoice.discount,
               isNegative: true,
             ),
           const Divider(),
           _SummaryRow(
-            label: 'Grand Total',
+            label: l.grandTotal,
             amount: invoice.grandTotal,
             isBold: true,
           ),
@@ -189,7 +193,7 @@ class _InvoiceDetailScreenState extends ConsumerState<InvoiceDetailScreen> {
           if (invoice.notes != null && invoice.notes!.isNotEmpty) ...[
             const SizedBox(height: AppSizes.spacing16),
             Text(
-              'Notes: ${invoice.notes}',
+              l.notesArg(invoice.notes!),
               style: AppTextStyles.bodyMedium(
                 context,
                 color: AppColors.onSurfaceMuted,
@@ -209,22 +213,23 @@ class _InvoiceDetailScreenState extends ConsumerState<InvoiceDetailScreen> {
   }
 
   List<Widget> _buildActionButtons(Invoice invoice) {
+    final l = AppLocalizations.of(context)!;
     switch (invoice.status) {
       case InvoiceStatus.draft:
         return [
           AppButton(
-            label: 'Mark as Sent',
+            label: l.markAsSent,
             onPressed: () => _markAsSent(),
           ),
           const SizedBox(height: AppSizes.spacing8),
           AppButton(
-            label: 'Edit',
+            label: l.edit,
             onPressed: () {},
             variant: AppButtonVariant.outline,
           ),
           const SizedBox(height: AppSizes.spacing8),
           AppButton(
-            label: 'Delete',
+            label: l.delete,
             onPressed: () => _deleteInvoice(),
             variant: AppButtonVariant.text,
           ),
@@ -232,12 +237,12 @@ class _InvoiceDetailScreenState extends ConsumerState<InvoiceDetailScreen> {
       case InvoiceStatus.sent:
         return [
           AppButton(
-            label: 'Mark as Paid',
+            label: l.markAsPaid,
             onPressed: () => _confirmMarkAsPaid(invoice),
           ),
           const SizedBox(height: AppSizes.spacing8),
           AppButton(
-            label: 'Share via WhatsApp',
+            label: l.shareViaWhatsapp,
             onPressed: () => _sharePdf(invoice),
             variant: AppButtonVariant.outline,
           ),
@@ -245,7 +250,7 @@ class _InvoiceDetailScreenState extends ConsumerState<InvoiceDetailScreen> {
       case InvoiceStatus.paid:
         return [
           AppButton(
-            label: 'Download PDF',
+            label: l.downloadPdf,
             onPressed: () => _sharePdf(invoice),
             variant: AppButtonVariant.outline,
           ),
@@ -295,24 +300,26 @@ class _InvoiceDetailScreenState extends ConsumerState<InvoiceDetailScreen> {
   }
 
   void _confirmMarkAsPaid(Invoice invoice) {
+    final l = AppLocalizations.of(context)!;
     showDialog(
       context: context,
       builder: (ctx) => AlertDialog(
-        title: Text('Mark ${invoice.invoiceNumber} as paid?'),
+        title: Text(l.markInvoicePaidTitle(invoice.invoiceNumber)),
         content: Text(
-          'This will create an income entry of ${CurrencyFormatter.formatRupees(invoice.grandTotal)}.',
+          l.markPaidIncomeBody(
+              CurrencyFormatter.formatRupees(invoice.grandTotal)),
         ),
         actions: [
           TextButton(
             onPressed: () => Navigator.of(ctx).pop(),
-            child: const Text('Cancel'),
+            child: Text(l.cancel),
           ),
           TextButton(
             onPressed: () {
               Navigator.of(ctx).pop();
               _markAsPaid();
             },
-            child: const Text('Mark Paid'),
+            child: Text(l.markPaid),
           ),
         ],
       ),
@@ -328,9 +335,9 @@ class _InvoiceDetailScreenState extends ConsumerState<InvoiceDetailScreen> {
         if (mounted) {
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
-              content: const Text('Could not save. Please try again.'),
+              content: Text(AppLocalizations.of(context)!.couldNotSave),
               action: SnackBarAction(
-                label: 'Retry',
+                label: AppLocalizations.of(context)!.retry,
                 onPressed: _markAsPaid,
               ),
             ),

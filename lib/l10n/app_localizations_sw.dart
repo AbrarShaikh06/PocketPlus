@@ -1483,4 +1483,164 @@ class AppLocalizationsSw extends AppLocalizations {
 
   @override
   String get amountHintExample => 'mf. 10000';
+
+  @override
+  String get invoicesTitle => 'Ankara';
+
+  @override
+  String get invoiceFeatureBasic =>
+      'Kipengele cha ankara kinapatikana kwenye Basic ₹100/mwezi';
+
+  @override
+  String get seePlans => 'Angalia Mipango';
+
+  @override
+  String get createFirstInvoice => 'Tengeneza ankara yako ya kwanza';
+
+  @override
+  String get newInvoicePlus => '+ Ankara Mpya';
+
+  @override
+  String get pendingPayment => 'Malipo Yanayosubiri';
+
+  @override
+  String get drafts => 'Rasimu';
+
+  @override
+  String get paidSection => 'Imelipwa';
+
+  @override
+  String get statusDraft => 'RASIMU';
+
+  @override
+  String get statusSent => 'IMETUMWA';
+
+  @override
+  String get statusPaid => 'IMELIPWA';
+
+  @override
+  String get statusPartial => 'SEHEMU';
+
+  @override
+  String get statusCancelled => 'IMEGHAIRIWA';
+
+  @override
+  String get newInvoice => 'Ankara Mpya';
+
+  @override
+  String get close => 'Funga';
+
+  @override
+  String get saveAsDraft => 'Hifadhi kama Rasimu';
+
+  @override
+  String get customer => 'Mteja';
+
+  @override
+  String get customerNameRequired => 'Jina la Mteja *';
+
+  @override
+  String get fullName => 'Jina kamili';
+
+  @override
+  String get phoneOptional => 'Simu (hiari)';
+
+  @override
+  String get issueDate => 'Tarehe ya Kutoa';
+
+  @override
+  String get dueDateOptional => 'Tarehe ya Mwisho (hiari)';
+
+  @override
+  String get lineItems => 'Vipengele';
+
+  @override
+  String get addLineItem => 'Ongeza kipengele';
+
+  @override
+  String itemNumber(int n) {
+    return 'Kipengele $n';
+  }
+
+  @override
+  String get unitPrice => 'Bei ya Kipimo';
+
+  @override
+  String lineTotalArg(String amount) {
+    return 'Jumla ya mstari: $amount';
+  }
+
+  @override
+  String get gstTotal => 'Jumla ya GST';
+
+  @override
+  String gstPercent(int percent) {
+    return 'GST $percent%';
+  }
+
+  @override
+  String get subtotal => 'Jumla ndogo';
+
+  @override
+  String get discount => 'Punguzo';
+
+  @override
+  String get grandTotal => 'Jumla Kuu';
+
+  @override
+  String get notesOptional => 'Vidokezo (hiari)';
+
+  @override
+  String get invoiceTitle => 'Ankara';
+
+  @override
+  String get invoiceNotFound => 'Ankara haikupatikana';
+
+  @override
+  String get phone => 'Simu';
+
+  @override
+  String get dueDate => 'Tarehe ya Mwisho';
+
+  @override
+  String get items => 'Vipengele';
+
+  @override
+  String notesArg(String notes) {
+    return 'Vidokezo: $notes';
+  }
+
+  @override
+  String get markAsSent => 'Weka alama kama Imetumwa';
+
+  @override
+  String get markAsPaid => 'Weka alama kama Imelipwa';
+
+  @override
+  String get shareViaWhatsapp => 'Shiriki kupitia WhatsApp';
+
+  @override
+  String get downloadPdf => 'Pakua PDF';
+
+  @override
+  String markInvoicePaidTitle(String number) {
+    return 'Weka alama $number kama imelipwa?';
+  }
+
+  @override
+  String markPaidIncomeBody(String amount) {
+    return 'Hii itaunda ingizo la mapato la $amount.';
+  }
+
+  @override
+  String get markPaid => 'Weka Imelipwa';
+
+  @override
+  String get couldNotSave => 'Imeshindwa kuhifadhi. Tafadhali jaribu tena.';
+
+  @override
+  String get phoneHintIndian => 'Namba ya Kihindi ya tarakimu 10';
+
+  @override
+  String get qtyHint => 'Idadi';
 }

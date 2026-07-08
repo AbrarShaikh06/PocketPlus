@@ -1479,4 +1479,164 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get amountHintExample => 'e.g. 10000';
+
+  @override
+  String get invoicesTitle => 'Invoices';
+
+  @override
+  String get invoiceFeatureBasic =>
+      'Invoice feature available on Basic ₹100/mo';
+
+  @override
+  String get seePlans => 'See Plans';
+
+  @override
+  String get createFirstInvoice => 'Create your first invoice';
+
+  @override
+  String get newInvoicePlus => '+ New Invoice';
+
+  @override
+  String get pendingPayment => 'Pending Payment';
+
+  @override
+  String get drafts => 'Drafts';
+
+  @override
+  String get paidSection => 'Paid';
+
+  @override
+  String get statusDraft => 'DRAFT';
+
+  @override
+  String get statusSent => 'SENT';
+
+  @override
+  String get statusPaid => 'PAID';
+
+  @override
+  String get statusPartial => 'PARTIAL';
+
+  @override
+  String get statusCancelled => 'CANCELLED';
+
+  @override
+  String get newInvoice => 'New Invoice';
+
+  @override
+  String get close => 'Close';
+
+  @override
+  String get saveAsDraft => 'Save as Draft';
+
+  @override
+  String get customer => 'Customer';
+
+  @override
+  String get customerNameRequired => 'Customer Name *';
+
+  @override
+  String get fullName => 'Full name';
+
+  @override
+  String get phoneOptional => 'Phone (optional)';
+
+  @override
+  String get issueDate => 'Issue Date';
+
+  @override
+  String get dueDateOptional => 'Due Date (optional)';
+
+  @override
+  String get lineItems => 'Line Items';
+
+  @override
+  String get addLineItem => 'Add line item';
+
+  @override
+  String itemNumber(int n) {
+    return 'Item $n';
+  }
+
+  @override
+  String get unitPrice => 'Unit Price';
+
+  @override
+  String lineTotalArg(String amount) {
+    return 'Line total: $amount';
+  }
+
+  @override
+  String get gstTotal => 'GST Total';
+
+  @override
+  String gstPercent(int percent) {
+    return 'GST $percent%';
+  }
+
+  @override
+  String get subtotal => 'Subtotal';
+
+  @override
+  String get discount => 'Discount';
+
+  @override
+  String get grandTotal => 'Grand Total';
+
+  @override
+  String get notesOptional => 'Notes (optional)';
+
+  @override
+  String get invoiceTitle => 'Invoice';
+
+  @override
+  String get invoiceNotFound => 'Invoice not found';
+
+  @override
+  String get phone => 'Phone';
+
+  @override
+  String get dueDate => 'Due Date';
+
+  @override
+  String get items => 'Items';
+
+  @override
+  String notesArg(String notes) {
+    return 'Notes: $notes';
+  }
+
+  @override
+  String get markAsSent => 'Mark as Sent';
+
+  @override
+  String get markAsPaid => 'Mark as Paid';
+
+  @override
+  String get shareViaWhatsapp => 'Share via WhatsApp';
+
+  @override
+  String get downloadPdf => 'Download PDF';
+
+  @override
+  String markInvoicePaidTitle(String number) {
+    return 'Mark $number as paid?';
+  }
+
+  @override
+  String markPaidIncomeBody(String amount) {
+    return 'This will create an income entry of $amount.';
+  }
+
+  @override
+  String get markPaid => 'Mark Paid';
+
+  @override
+  String get couldNotSave => 'Could not save. Please try again.';
+
+  @override
+  String get phoneHintIndian => '10-digit Indian number';
+
+  @override
+  String get qtyHint => 'Qty';
 }

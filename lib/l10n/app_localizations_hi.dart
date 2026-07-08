@@ -1482,4 +1482,163 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get amountHintExample => 'जैसे 10000';
+
+  @override
+  String get invoicesTitle => 'चालान';
+
+  @override
+  String get invoiceFeatureBasic => 'चालान सुविधा बेसिक ₹100/माह पर उपलब्ध';
+
+  @override
+  String get seePlans => 'योजनाएं देखें';
+
+  @override
+  String get createFirstInvoice => 'अपना पहला चालान बनाएं';
+
+  @override
+  String get newInvoicePlus => '+ नया चालान';
+
+  @override
+  String get pendingPayment => 'भुगतान लंबित';
+
+  @override
+  String get drafts => 'ड्राफ्ट';
+
+  @override
+  String get paidSection => 'भुगतान किया';
+
+  @override
+  String get statusDraft => 'ड्राफ्ट';
+
+  @override
+  String get statusSent => 'भेजा गया';
+
+  @override
+  String get statusPaid => 'भुगतान किया';
+
+  @override
+  String get statusPartial => 'आंशिक';
+
+  @override
+  String get statusCancelled => 'रद्द';
+
+  @override
+  String get newInvoice => 'नया चालान';
+
+  @override
+  String get close => 'बंद करें';
+
+  @override
+  String get saveAsDraft => 'ड्राफ्ट के रूप में सहेजें';
+
+  @override
+  String get customer => 'ग्राहक';
+
+  @override
+  String get customerNameRequired => 'ग्राहक का नाम *';
+
+  @override
+  String get fullName => 'पूरा नाम';
+
+  @override
+  String get phoneOptional => 'फ़ोन (वैकल्पिक)';
+
+  @override
+  String get issueDate => 'जारी तिथि';
+
+  @override
+  String get dueDateOptional => 'देय तिथि (वैकल्पिक)';
+
+  @override
+  String get lineItems => 'मद';
+
+  @override
+  String get addLineItem => 'मद जोड़ें';
+
+  @override
+  String itemNumber(int n) {
+    return 'मद $n';
+  }
+
+  @override
+  String get unitPrice => 'इकाई मूल्य';
+
+  @override
+  String lineTotalArg(String amount) {
+    return 'पंक्ति कुल: $amount';
+  }
+
+  @override
+  String get gstTotal => 'GST कुल';
+
+  @override
+  String gstPercent(int percent) {
+    return 'GST $percent%';
+  }
+
+  @override
+  String get subtotal => 'उप-योग';
+
+  @override
+  String get discount => 'छूट';
+
+  @override
+  String get grandTotal => 'कुल योग';
+
+  @override
+  String get notesOptional => 'नोट्स (वैकल्पिक)';
+
+  @override
+  String get invoiceTitle => 'चालान';
+
+  @override
+  String get invoiceNotFound => 'चालान नहीं मिला';
+
+  @override
+  String get phone => 'फ़ोन';
+
+  @override
+  String get dueDate => 'देय तिथि';
+
+  @override
+  String get items => 'मद';
+
+  @override
+  String notesArg(String notes) {
+    return 'नोट्स: $notes';
+  }
+
+  @override
+  String get markAsSent => 'भेजा गया चिह्नित करें';
+
+  @override
+  String get markAsPaid => 'भुगतान किया चिह्नित करें';
+
+  @override
+  String get shareViaWhatsapp => 'WhatsApp से साझा करें';
+
+  @override
+  String get downloadPdf => 'PDF डाउनलोड करें';
+
+  @override
+  String markInvoicePaidTitle(String number) {
+    return '$number को भुगतान किया चिह्नित करें?';
+  }
+
+  @override
+  String markPaidIncomeBody(String amount) {
+    return 'इससे $amount की आय प्रविष्टि बनेगी।';
+  }
+
+  @override
+  String get markPaid => 'भुगतान चिह्नित करें';
+
+  @override
+  String get couldNotSave => 'सहेजा नहीं जा सका। कृपया पुनः प्रयास करें।';
+
+  @override
+  String get phoneHintIndian => '10-अंकों का भारतीय नंबर';
+
+  @override
+  String get qtyHint => 'मात्रा';
 }

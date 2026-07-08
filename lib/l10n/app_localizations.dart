@@ -2840,6 +2840,300 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'e.g. 10000'**
   String get amountHintExample;
+
+  /// No description provided for @invoicesTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Invoices'**
+  String get invoicesTitle;
+
+  /// No description provided for @invoiceFeatureBasic.
+  ///
+  /// In en, this message translates to:
+  /// **'Invoice feature available on Basic ₹100/mo'**
+  String get invoiceFeatureBasic;
+
+  /// No description provided for @seePlans.
+  ///
+  /// In en, this message translates to:
+  /// **'See Plans'**
+  String get seePlans;
+
+  /// No description provided for @createFirstInvoice.
+  ///
+  /// In en, this message translates to:
+  /// **'Create your first invoice'**
+  String get createFirstInvoice;
+
+  /// No description provided for @newInvoicePlus.
+  ///
+  /// In en, this message translates to:
+  /// **'+ New Invoice'**
+  String get newInvoicePlus;
+
+  /// No description provided for @pendingPayment.
+  ///
+  /// In en, this message translates to:
+  /// **'Pending Payment'**
+  String get pendingPayment;
+
+  /// No description provided for @drafts.
+  ///
+  /// In en, this message translates to:
+  /// **'Drafts'**
+  String get drafts;
+
+  /// No description provided for @paidSection.
+  ///
+  /// In en, this message translates to:
+  /// **'Paid'**
+  String get paidSection;
+
+  /// No description provided for @statusDraft.
+  ///
+  /// In en, this message translates to:
+  /// **'DRAFT'**
+  String get statusDraft;
+
+  /// No description provided for @statusSent.
+  ///
+  /// In en, this message translates to:
+  /// **'SENT'**
+  String get statusSent;
+
+  /// No description provided for @statusPaid.
+  ///
+  /// In en, this message translates to:
+  /// **'PAID'**
+  String get statusPaid;
+
+  /// No description provided for @statusPartial.
+  ///
+  /// In en, this message translates to:
+  /// **'PARTIAL'**
+  String get statusPartial;
+
+  /// No description provided for @statusCancelled.
+  ///
+  /// In en, this message translates to:
+  /// **'CANCELLED'**
+  String get statusCancelled;
+
+  /// No description provided for @newInvoice.
+  ///
+  /// In en, this message translates to:
+  /// **'New Invoice'**
+  String get newInvoice;
+
+  /// No description provided for @close.
+  ///
+  /// In en, this message translates to:
+  /// **'Close'**
+  String get close;
+
+  /// No description provided for @saveAsDraft.
+  ///
+  /// In en, this message translates to:
+  /// **'Save as Draft'**
+  String get saveAsDraft;
+
+  /// No description provided for @customer.
+  ///
+  /// In en, this message translates to:
+  /// **'Customer'**
+  String get customer;
+
+  /// No description provided for @customerNameRequired.
+  ///
+  /// In en, this message translates to:
+  /// **'Customer Name *'**
+  String get customerNameRequired;
+
+  /// No description provided for @fullName.
+  ///
+  /// In en, this message translates to:
+  /// **'Full name'**
+  String get fullName;
+
+  /// No description provided for @phoneOptional.
+  ///
+  /// In en, this message translates to:
+  /// **'Phone (optional)'**
+  String get phoneOptional;
+
+  /// No description provided for @issueDate.
+  ///
+  /// In en, this message translates to:
+  /// **'Issue Date'**
+  String get issueDate;
+
+  /// No description provided for @dueDateOptional.
+  ///
+  /// In en, this message translates to:
+  /// **'Due Date (optional)'**
+  String get dueDateOptional;
+
+  /// No description provided for @lineItems.
+  ///
+  /// In en, this message translates to:
+  /// **'Line Items'**
+  String get lineItems;
+
+  /// No description provided for @addLineItem.
+  ///
+  /// In en, this message translates to:
+  /// **'Add line item'**
+  String get addLineItem;
+
+  /// No description provided for @itemNumber.
+  ///
+  /// In en, this message translates to:
+  /// **'Item {n}'**
+  String itemNumber(int n);
+
+  /// No description provided for @unitPrice.
+  ///
+  /// In en, this message translates to:
+  /// **'Unit Price'**
+  String get unitPrice;
+
+  /// No description provided for @lineTotalArg.
+  ///
+  /// In en, this message translates to:
+  /// **'Line total: {amount}'**
+  String lineTotalArg(String amount);
+
+  /// No description provided for @gstTotal.
+  ///
+  /// In en, this message translates to:
+  /// **'GST Total'**
+  String get gstTotal;
+
+  /// No description provided for @gstPercent.
+  ///
+  /// In en, this message translates to:
+  /// **'GST {percent}%'**
+  String gstPercent(int percent);
+
+  /// No description provided for @subtotal.
+  ///
+  /// In en, this message translates to:
+  /// **'Subtotal'**
+  String get subtotal;
+
+  /// No description provided for @discount.
+  ///
+  /// In en, this message translates to:
+  /// **'Discount'**
+  String get discount;
+
+  /// No description provided for @grandTotal.
+  ///
+  /// In en, this message translates to:
+  /// **'Grand Total'**
+  String get grandTotal;
+
+  /// No description provided for @notesOptional.
+  ///
+  /// In en, this message translates to:
+  /// **'Notes (optional)'**
+  String get notesOptional;
+
+  /// No description provided for @invoiceTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Invoice'**
+  String get invoiceTitle;
+
+  /// No description provided for @invoiceNotFound.
+  ///
+  /// In en, this message translates to:
+  /// **'Invoice not found'**
+  String get invoiceNotFound;
+
+  /// No description provided for @phone.
+  ///
+  /// In en, this message translates to:
+  /// **'Phone'**
+  String get phone;
+
+  /// No description provided for @dueDate.
+  ///
+  /// In en, this message translates to:
+  /// **'Due Date'**
+  String get dueDate;
+
+  /// No description provided for @items.
+  ///
+  /// In en, this message translates to:
+  /// **'Items'**
+  String get items;
+
+  /// No description provided for @notesArg.
+  ///
+  /// In en, this message translates to:
+  /// **'Notes: {notes}'**
+  String notesArg(String notes);
+
+  /// No description provided for @markAsSent.
+  ///
+  /// In en, this message translates to:
+  /// **'Mark as Sent'**
+  String get markAsSent;
+
+  /// No description provided for @markAsPaid.
+  ///
+  /// In en, this message translates to:
+  /// **'Mark as Paid'**
+  String get markAsPaid;
+
+  /// No description provided for @shareViaWhatsapp.
+  ///
+  /// In en, this message translates to:
+  /// **'Share via WhatsApp'**
+  String get shareViaWhatsapp;
+
+  /// No description provided for @downloadPdf.
+  ///
+  /// In en, this message translates to:
+  /// **'Download PDF'**
+  String get downloadPdf;
+
+  /// No description provided for @markInvoicePaidTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Mark {number} as paid?'**
+  String markInvoicePaidTitle(String number);
+
+  /// No description provided for @markPaidIncomeBody.
+  ///
+  /// In en, this message translates to:
+  /// **'This will create an income entry of {amount}.'**
+  String markPaidIncomeBody(String amount);
+
+  /// No description provided for @markPaid.
+  ///
+  /// In en, this message translates to:
+  /// **'Mark Paid'**
+  String get markPaid;
+
+  /// No description provided for @couldNotSave.
+  ///
+  /// In en, this message translates to:
+  /// **'Could not save. Please try again.'**
+  String get couldNotSave;
+
+  /// No description provided for @phoneHintIndian.
+  ///
+  /// In en, this message translates to:
+  /// **'10-digit Indian number'**
+  String get phoneHintIndian;
+
+  /// No description provided for @qtyHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Qty'**
+  String get qtyHint;
 }
 
 class _AppLocalizationsDelegate
