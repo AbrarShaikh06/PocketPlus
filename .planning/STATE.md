@@ -36,8 +36,8 @@ This document tracks the active development status, latest decisions, and blocke
 - **Localization sweep (in progress, 2026-07-07):** wiring hardcoded English into `.arb` for all 5 locales (en/hi/mr/ar/sw).
   - ✅ Wave 1: nav labels, exit dialog, biometric/PIN app-lock screens.
   - ✅ Wave 2: entire settings screen (31 keys).
-  - ⏳ Wave 3 (next session): invoices + budgets + reports on-screen strings (~90 strings, some interpolated → need ARB placeholders).
-  - ⏳ Wave 4 (next session): savings, sms_diagnostics, feedback, home, auth remnants + a CI grep guard against new hardcoded strings.
+  - ✅ Wave 3: reports + all three budget screens + all three invoice screens (~140 keys total; interpolations use ARB placeholders).
+  - ⏳ Wave 4 (remaining): savings, sms_diagnostics, feedback, home, auth remnants + a CI grep guard against new hardcoded strings.
   - **Decision:** the generated invoice/report **PDF stays English** (GST/accounting convention) — only on-screen UI is localized.
 
 ### Earlier this session

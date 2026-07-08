@@ -16,10 +16,10 @@ void main() {
           userPlanProvider.overrideWith((ref) async => PlanType.free),
           invoiceListViewModelProvider.overrideWith((ref) => Stream.value([])),
         ],
-        child: MaterialApp(
+        child: const MaterialApp(
           localizationsDelegates: AppLocalizations.localizationsDelegates,
           supportedLocales: AppLocalizations.supportedLocales,
-          home: const InvoiceListScreen(),
+          home: InvoiceListScreen(),
         ),
       ),
     );
@@ -47,10 +47,10 @@ void main() {
           userPlanProvider.overrideWith((ref) async => PlanType.basic),
           invoiceListViewModelProvider.overrideWith((ref) => Stream.value([])),
         ],
-        child: MaterialApp(
+        child: const MaterialApp(
           localizationsDelegates: AppLocalizations.localizationsDelegates,
           supportedLocales: AppLocalizations.supportedLocales,
-          home: const InvoiceListScreen(),
+          home: InvoiceListScreen(),
         ),
       ),
     );
