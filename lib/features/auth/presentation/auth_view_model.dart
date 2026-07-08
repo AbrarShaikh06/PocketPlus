@@ -66,13 +66,15 @@ class AuthViewModel extends Notifier<AuthState> {
   Future<String?> checkUsernameAvailability(String username) async {
     if (!isValidUsername(username)) return null;
     try {
-      final query = await ref
+      // Reads the public username index by document id (a `get`, not a
+      // collection query) so it works without listing the private `users`
+      // collection. See AuthRepositoryImpl for the write side.
+      final doc = await ref
           .read(firestoreProvider)
-          .collection('users')
-          .where('username', isEqualTo: username)
-          .limit(1)
+          .collection('usernames')
+          .doc(username.trim().toLowerCase())
           .get();
-      return query.docs.isEmpty ? null : ErrorCodes.usernameTaken;
+      return doc.exists ? ErrorCodes.usernameTaken : null;
     } catch (_) {
       return null;
     }

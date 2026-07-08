@@ -19,6 +19,20 @@ service cloud.firestore {
       allow delete: if false; // soft-delete only
     }
 
+    // Public username → account index (doc id = lowercased username).
+    // Keeps `users` private while letting signup uniqueness checks and
+    // username login resolve a single document. `get` is public (needed
+    // pre-auth); `list` is denied so usernames can't be enumerated. A doc
+    // can only be claimed by the signed-in owner it points to, and is
+    // immutable once written (so a username can't be silently reassigned).
+    match /usernames/{username} {
+      allow get: if true;
+      allow list: if false;
+      allow create: if isSignedIn()
+        && request.resource.data.uid == request.auth.uid;
+      allow update, delete: if false;
+    }
+
     // Business profiles.
     match /profiles/{id} {
       allow read: if isOwner(resource.data.userId);

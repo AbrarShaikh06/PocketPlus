@@ -13,6 +13,13 @@ class AuthRepositoryImpl implements AuthRepository {
 
   FirebaseAuth get _auth => FirebaseAuth.instance;
 
+  /// Public username→account index. Keyed by the lowercased username so the
+  /// `users` collection can stay private (owner-only) while login and the
+  /// uniqueness check use a single document `get` instead of a collection
+  /// query. Rules allow `get` but not `list`, so usernames can't be enumerated.
+  DocumentReference<Map<String, dynamic>> _usernameRef(String username) =>
+      _firestore.collection('usernames').doc(username.trim().toLowerCase());
+
   @override
   Future<Either<Failure, void>> signUp({
     required String username,
@@ -20,12 +27,8 @@ class AuthRepositoryImpl implements AuthRepository {
     required String password,
   }) async {
     try {
-      final existing = await _firestore
-          .collection('users')
-          .where('username', isEqualTo: username)
-          .limit(1)
-          .get();
-      if (existing.docs.isNotEmpty) {
+      final existing = await _usernameRef(username).get();
+      if (existing.exists) {
         return const Left(
           ConflictFailure(message: 'Username already exists.'),
         );
@@ -37,7 +40,12 @@ class AuthRepositoryImpl implements AuthRepository {
       );
       final uid = credential.user!.uid;
 
-      await _firestore.collection('users').doc(uid).set({
+      // Claim the username and create the profile atomically. If another
+      // signup claimed the same username between the check and here, the
+      // usernames write becomes an update (denied by rules) and the whole
+      // batch fails, rolling back cleanly.
+      final batch = _firestore.batch();
+      batch.set(_firestore.collection('users').doc(uid), {
         'uid': uid,
         'username': username,
         'email': email,
@@ -46,6 +54,12 @@ class AuthRepositoryImpl implements AuthRepository {
         'createdAt': FieldValue.serverTimestamp(),
         'lastLogin': FieldValue.serverTimestamp(),
       });
+      batch.set(_usernameRef(username), {
+        'uid': uid,
+        'email': email,
+        'username': username,
+      });
+      await batch.commit();
 
       return const Right(null);
     } catch (e) {
@@ -59,21 +73,17 @@ class AuthRepositoryImpl implements AuthRepository {
     required String password,
   }) async {
     try {
-      final query = await _firestore
-          .collection('users')
-          .where('username', isEqualTo: username)
-          .limit(1)
-          .get();
+      final doc = await _usernameRef(username).get();
 
-      if (query.docs.isEmpty) {
+      if (!doc.exists) {
         return const Left(
           AuthFailure(message: 'Username not found.'),
         );
       }
 
-      final userData = query.docs.first.data();
-      final email = userData['email'] as String;
-      final uid = query.docs.first.id;
+      final data = doc.data()!;
+      final email = data['email'] as String;
+      final uid = data['uid'] as String;
 
       await _dataSource.signInWithEmailAndPassword(email, password);
 
@@ -92,19 +102,15 @@ class AuthRepositoryImpl implements AuthRepository {
     String username,
   ) async {
     try {
-      final query = await _firestore
-          .collection('users')
-          .where('username', isEqualTo: username)
-          .limit(1)
-          .get();
+      final doc = await _usernameRef(username).get();
 
-      if (query.docs.isEmpty) {
+      if (!doc.exists) {
         return const Left(
           AuthFailure(message: 'Username not found.'),
         );
       }
 
-      final email = query.docs.first.data()['email'] as String;
+      final email = doc.data()!['email'] as String;
       await _dataSource.sendPasswordResetEmail(email);
       return const Right(null);
     } catch (e) {

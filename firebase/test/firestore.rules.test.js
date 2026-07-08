@@ -21,7 +21,17 @@ const {
   assertSucceeds,
   assertFails,
 } = require('@firebase/rules-unit-testing');
-const { doc, getDoc, setDoc, updateDoc, deleteDoc } = require('firebase/firestore');
+const {
+  doc,
+  collection,
+  getDoc,
+  getDocs,
+  setDoc,
+  updateDoc,
+  deleteDoc,
+  query,
+  where,
+} = require('firebase/firestore');
 
 const PROJECT_ID = 'demo-pocketplus';
 const ALICE = 'alice_uid';
@@ -182,6 +192,54 @@ describe('sms_dedup_log (doc id = {userId}_{smsHash})', () => {
     );
     await assertFails(
       setDoc(doc(db(MALLORY), 'sms_dedup_log', `${ALICE}_abc123`), {}),
+    );
+  });
+});
+
+describe('usernames (public username -> account index)', () => {
+  it('anyone (even unauthenticated) can get a username doc by id', async () => {
+    await seed('usernames/alice', { uid: ALICE, email: 'a@x.com' });
+    await assertSucceeds(getDoc(doc(db(null), 'usernames', 'alice')));
+    await assertSucceeds(getDoc(doc(db(MALLORY), 'usernames', 'alice')));
+  });
+
+  it('cannot be listed/enumerated', async () => {
+    await seed('usernames/alice', { uid: ALICE, email: 'a@x.com' });
+    await assertFails(getDocs(collection(db(null), 'usernames')));
+    await assertFails(
+      getDocs(query(collection(db(MALLORY), 'usernames'), where('uid', '==', ALICE))),
+    );
+  });
+
+  it('a signed-in user can claim a username pointing to their own uid', async () => {
+    await assertSucceeds(
+      setDoc(doc(db(ALICE), 'usernames', 'alice'), {
+        uid: ALICE,
+        email: 'a@x.com',
+        username: 'alice',
+      }),
+    );
+  });
+
+  it('cannot claim a username pointing at someone else', async () => {
+    await assertFails(
+      setDoc(doc(db(MALLORY), 'usernames', 'victim'), {
+        uid: ALICE,
+        email: 'a@x.com',
+      }),
+    );
+  });
+
+  it('is immutable once claimed (no reassignment or delete)', async () => {
+    await seed('usernames/alice', { uid: ALICE, email: 'a@x.com' });
+    // Even the owner cannot overwrite or delete it.
+    await assertFails(
+      setDoc(doc(db(ALICE), 'usernames', 'alice'), { uid: ALICE, email: 'b@x.com' }),
+    );
+    await assertFails(deleteDoc(doc(db(ALICE), 'usernames', 'alice')));
+    // And another user certainly cannot hijack it.
+    await assertFails(
+      setDoc(doc(db(MALLORY), 'usernames', 'alice'), { uid: MALLORY, email: 'm@x.com' }),
     );
   });
 });
