@@ -1351,4 +1351,132 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get confirmDelete => 'Confirm Delete';
+
+  @override
+  String get budgetOverview => 'Budget Overview';
+
+  @override
+  String get expensesLabel => 'Expenses';
+
+  @override
+  String get exportPdf => 'Export PDF';
+
+  @override
+  String get exporting => 'Exporting...';
+
+  @override
+  String get goBack => 'Go back';
+
+  @override
+  String get noTransactionsForPeriod =>
+      'No transactions exist for selected period';
+
+  @override
+  String get noTransactionsInPeriod => 'No transactions in this period.';
+
+  @override
+  String get notifications => 'Notifications';
+
+  @override
+  String get unaccounted => 'Unaccounted';
+
+  @override
+  String get viewFullHistory => 'View full transaction history';
+
+  @override
+  String get createBudget => 'Create Budget';
+
+  @override
+  String get noBudgetsMatchFilter => 'No budgets match this filter';
+
+  @override
+  String get paused => 'Paused';
+
+  @override
+  String get budgetNotFound => 'Budget not found';
+
+  @override
+  String get duplicate => 'Duplicate';
+
+  @override
+  String get pause => 'Pause';
+
+  @override
+  String get resume => 'Resume';
+
+  @override
+  String get dailyAvg => 'Daily Avg';
+
+  @override
+  String get weeklyAvg => 'Weekly Avg';
+
+  @override
+  String get forecast => 'Forecast';
+
+  @override
+  String get largestExpense => 'Largest Expense';
+
+  @override
+  String get mostFrequent => 'Most Frequent';
+
+  @override
+  String transactionsCount(int count) {
+    return 'Transactions ($count)';
+  }
+
+  @override
+  String get noTransactionsYetBudget => 'No transactions yet for this budget';
+
+  @override
+  String get categoryBreakdown => 'Category Breakdown';
+
+  @override
+  String get mostExpensiveDay => 'Most Expensive Day';
+
+  @override
+  String get averageDailySpending => 'Average Daily Spending';
+
+  @override
+  String get deleteBudget => 'Delete Budget';
+
+  @override
+  String get areYouSureUndone => 'Are you sure? This action cannot be undone.';
+
+  @override
+  String get editBudget => 'Edit Budget';
+
+  @override
+  String get budgetName => 'Budget Name';
+
+  @override
+  String get amountRupees => 'Amount (₹)';
+
+  @override
+  String get alert => 'Alert';
+
+  @override
+  String get appearance => 'Appearance';
+
+  @override
+  String get monthly => 'Monthly';
+
+  @override
+  String get endDate => 'End Date';
+
+  @override
+  String get notSet => 'Not set';
+
+  @override
+  String alertAtPercent(int percent) {
+    return 'Alert at $percent%';
+  }
+
+  @override
+  String get updateBudget => 'Update Budget';
+
+  @override
+  String get budgetNameHint => 'e.g. Monthly Groceries';
+
+  @override
+  String get amountHintExample => 'e.g. 10000';
 }

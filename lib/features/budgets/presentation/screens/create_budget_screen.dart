@@ -5,6 +5,7 @@ import 'package:go_router/go_router.dart';
 import '../../../../core/constants/app_colors.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/constants/app_text_styles.dart';
+import '../../../../l10n/app_localizations.dart';
 import '../../../../shared/widgets/app_button.dart';
 import '../../../../shared/widgets/app_text_field.dart';
 import '../../domain/entities/budget.dart';
@@ -65,7 +66,9 @@ class _CreateBudgetScreenState extends ConsumerState<CreateBudgetScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(state.isEditing ? 'Edit Budget' : 'Create Budget'),
+        title: Text(state.isEditing
+            ? AppLocalizations.of(context)!.editBudget
+            : AppLocalizations.of(context)!.createBudget),
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(AppSizes.spacing16),
@@ -73,16 +76,16 @@ class _CreateBudgetScreenState extends ConsumerState<CreateBudgetScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             AppTextField(
-              label: 'Budget Name',
-              hint: 'e.g. Monthly Groceries',
+              label: AppLocalizations.of(context)!.budgetName,
+              hint: AppLocalizations.of(context)!.budgetNameHint,
               errorText: state.nameError,
               onChanged: notifier.setName,
               controller: _nameController,
             ),
             const SizedBox(height: AppSizes.spacing16),
             AppTextField(
-              label: 'Amount (₹)',
-              hint: 'e.g. 10000',
+              label: AppLocalizations.of(context)!.amountRupees,
+              hint: AppLocalizations.of(context)!.amountHintExample,
               keyboardType: TextInputType.number,
               errorText: state.amountError,
               onChanged: notifier.setAmount,
@@ -93,13 +96,13 @@ class _CreateBudgetScreenState extends ConsumerState<CreateBudgetScreen> {
             const SizedBox(height: AppSizes.spacing16),
             _dateRangePicker(context, state, notifier),
             const SizedBox(height: AppSizes.spacing24),
-            _sectionHeader(context, 'Appearance'),
+            _sectionHeader(context, AppLocalizations.of(context)!.appearance),
             const SizedBox(height: AppSizes.spacing12),
             _colorPicker(context, state, notifier),
             const SizedBox(height: AppSizes.spacing16),
             _iconPicker(context, state, notifier),
             const SizedBox(height: AppSizes.spacing24),
-            _sectionHeader(context, 'Alert'),
+            _sectionHeader(context, AppLocalizations.of(context)!.alert),
             const SizedBox(height: AppSizes.spacing12),
             _thresholdSlider(context, state, notifier),
             if (state.saveError != null) ...[
@@ -112,7 +115,9 @@ class _CreateBudgetScreenState extends ConsumerState<CreateBudgetScreen> {
             ],
             const SizedBox(height: AppSizes.spacing32),
             AppButton(
-              label: state.isEditing ? 'Update Budget' : 'Create Budget',
+              label: state.isEditing
+                  ? AppLocalizations.of(context)!.updateBudget
+                  : AppLocalizations.of(context)!.createBudget,
               onPressed: () async {
                 final success = await notifier.save();
                 if (success && context.mounted) context.pop();

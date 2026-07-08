@@ -1351,4 +1351,132 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get confirmDelete => 'تأكيد الحذف';
+
+  @override
+  String get budgetOverview => 'نظرة عامة على الميزانية';
+
+  @override
+  String get expensesLabel => 'المصروفات';
+
+  @override
+  String get exportPdf => 'تصدير PDF';
+
+  @override
+  String get exporting => 'جارٍ التصدير...';
+
+  @override
+  String get goBack => 'العودة';
+
+  @override
+  String get noTransactionsForPeriod => 'لا توجد معاملات للفترة المحددة';
+
+  @override
+  String get noTransactionsInPeriod => 'لا توجد معاملات في هذه الفترة.';
+
+  @override
+  String get notifications => 'الإشعارات';
+
+  @override
+  String get unaccounted => 'غير محتسب';
+
+  @override
+  String get viewFullHistory => 'عرض سجل المعاملات الكامل';
+
+  @override
+  String get createBudget => 'إنشاء ميزانية';
+
+  @override
+  String get noBudgetsMatchFilter => 'لا توجد ميزانيات تطابق هذا الفلتر';
+
+  @override
+  String get paused => 'متوقف مؤقتًا';
+
+  @override
+  String get budgetNotFound => 'لم يتم العثور على الميزانية';
+
+  @override
+  String get duplicate => 'تكرار';
+
+  @override
+  String get pause => 'إيقاف مؤقت';
+
+  @override
+  String get resume => 'استئناف';
+
+  @override
+  String get dailyAvg => 'المتوسط اليومي';
+
+  @override
+  String get weeklyAvg => 'المتوسط الأسبوعي';
+
+  @override
+  String get forecast => 'التوقعات';
+
+  @override
+  String get largestExpense => 'أكبر مصروف';
+
+  @override
+  String get mostFrequent => 'الأكثر تكرارًا';
+
+  @override
+  String transactionsCount(int count) {
+    return 'المعاملات ($count)';
+  }
+
+  @override
+  String get noTransactionsYetBudget => 'لا توجد معاملات لهذه الميزانية بعد';
+
+  @override
+  String get categoryBreakdown => 'تفصيل الفئات';
+
+  @override
+  String get mostExpensiveDay => 'اليوم الأكثر تكلفة';
+
+  @override
+  String get averageDailySpending => 'متوسط الإنفاق اليومي';
+
+  @override
+  String get deleteBudget => 'حذف الميزانية';
+
+  @override
+  String get areYouSureUndone =>
+      'هل أنت متأكد؟ لا يمكن التراجع عن هذا الإجراء.';
+
+  @override
+  String get editBudget => 'تعديل الميزانية';
+
+  @override
+  String get budgetName => 'اسم الميزانية';
+
+  @override
+  String get amountRupees => 'المبلغ (₹)';
+
+  @override
+  String get alert => 'تنبيه';
+
+  @override
+  String get appearance => 'المظهر';
+
+  @override
+  String get monthly => 'شهري';
+
+  @override
+  String get endDate => 'تاريخ الانتهاء';
+
+  @override
+  String get notSet => 'غير محدد';
+
+  @override
+  String alertAtPercent(int percent) {
+    return 'تنبيه عند $percent%';
+  }
+
+  @override
+  String get updateBudget => 'تحديث الميزانية';
+
+  @override
+  String get budgetNameHint => 'مثال: بقالة شهرية';
+
+  @override
+  String get amountHintExample => 'مثال: 10000';
 }

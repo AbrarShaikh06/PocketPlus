@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 
 import '../../../../core/constants/app_colors.dart';
 import '../../../../core/constants/app_sizes.dart';
+import '../../../../l10n/app_localizations.dart';
 import '../../domain/entities/budget.dart';
 import '../providers/budget_providers.dart';
 import '../widgets/budget_card.dart';
@@ -27,10 +28,10 @@ class _BudgetListScreenState extends ConsumerState<BudgetListScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Budgets'),
+        title: Text(AppLocalizations.of(context)!.budgets),
         actions: [
           IconButton(
-            tooltip: 'Create budget',
+            tooltip: AppLocalizations.of(context)!.createBudget,
             icon: const Icon(Icons.add),
             onPressed: () => context.push('/budgets/new'),
           ),
@@ -77,7 +78,7 @@ class _BudgetListScreenState extends ConsumerState<BudgetListScreen> {
             padding: const EdgeInsets.all(AppSizes.spacing32),
             child: Center(
               child: Text(
-                'No budgets match this filter',
+                AppLocalizations.of(context)!.noBudgetsMatchFilter,
                 style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                       color: AppColors.onSurfaceMuted,
                     ),
@@ -88,7 +89,7 @@ class _BudgetListScreenState extends ConsumerState<BudgetListScreen> {
         if (paused.isNotEmpty) ...[
           const SizedBox(height: AppSizes.spacing16),
           Text(
-            'Paused',
+            AppLocalizations.of(context)!.paused,
             style: Theme.of(context).textTheme.titleMedium?.copyWith(
                   color: AppColors.onSurfaceMuted,
                 ),

@@ -2594,6 +2594,252 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Confirm Delete'**
   String get confirmDelete;
+
+  /// No description provided for @budgetOverview.
+  ///
+  /// In en, this message translates to:
+  /// **'Budget Overview'**
+  String get budgetOverview;
+
+  /// No description provided for @expensesLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Expenses'**
+  String get expensesLabel;
+
+  /// No description provided for @exportPdf.
+  ///
+  /// In en, this message translates to:
+  /// **'Export PDF'**
+  String get exportPdf;
+
+  /// No description provided for @exporting.
+  ///
+  /// In en, this message translates to:
+  /// **'Exporting...'**
+  String get exporting;
+
+  /// No description provided for @goBack.
+  ///
+  /// In en, this message translates to:
+  /// **'Go back'**
+  String get goBack;
+
+  /// No description provided for @noTransactionsForPeriod.
+  ///
+  /// In en, this message translates to:
+  /// **'No transactions exist for selected period'**
+  String get noTransactionsForPeriod;
+
+  /// No description provided for @noTransactionsInPeriod.
+  ///
+  /// In en, this message translates to:
+  /// **'No transactions in this period.'**
+  String get noTransactionsInPeriod;
+
+  /// No description provided for @notifications.
+  ///
+  /// In en, this message translates to:
+  /// **'Notifications'**
+  String get notifications;
+
+  /// No description provided for @unaccounted.
+  ///
+  /// In en, this message translates to:
+  /// **'Unaccounted'**
+  String get unaccounted;
+
+  /// No description provided for @viewFullHistory.
+  ///
+  /// In en, this message translates to:
+  /// **'View full transaction history'**
+  String get viewFullHistory;
+
+  /// No description provided for @createBudget.
+  ///
+  /// In en, this message translates to:
+  /// **'Create Budget'**
+  String get createBudget;
+
+  /// No description provided for @noBudgetsMatchFilter.
+  ///
+  /// In en, this message translates to:
+  /// **'No budgets match this filter'**
+  String get noBudgetsMatchFilter;
+
+  /// No description provided for @paused.
+  ///
+  /// In en, this message translates to:
+  /// **'Paused'**
+  String get paused;
+
+  /// No description provided for @budgetNotFound.
+  ///
+  /// In en, this message translates to:
+  /// **'Budget not found'**
+  String get budgetNotFound;
+
+  /// No description provided for @duplicate.
+  ///
+  /// In en, this message translates to:
+  /// **'Duplicate'**
+  String get duplicate;
+
+  /// No description provided for @pause.
+  ///
+  /// In en, this message translates to:
+  /// **'Pause'**
+  String get pause;
+
+  /// No description provided for @resume.
+  ///
+  /// In en, this message translates to:
+  /// **'Resume'**
+  String get resume;
+
+  /// No description provided for @dailyAvg.
+  ///
+  /// In en, this message translates to:
+  /// **'Daily Avg'**
+  String get dailyAvg;
+
+  /// No description provided for @weeklyAvg.
+  ///
+  /// In en, this message translates to:
+  /// **'Weekly Avg'**
+  String get weeklyAvg;
+
+  /// No description provided for @forecast.
+  ///
+  /// In en, this message translates to:
+  /// **'Forecast'**
+  String get forecast;
+
+  /// No description provided for @largestExpense.
+  ///
+  /// In en, this message translates to:
+  /// **'Largest Expense'**
+  String get largestExpense;
+
+  /// No description provided for @mostFrequent.
+  ///
+  /// In en, this message translates to:
+  /// **'Most Frequent'**
+  String get mostFrequent;
+
+  /// No description provided for @transactionsCount.
+  ///
+  /// In en, this message translates to:
+  /// **'Transactions ({count})'**
+  String transactionsCount(int count);
+
+  /// No description provided for @noTransactionsYetBudget.
+  ///
+  /// In en, this message translates to:
+  /// **'No transactions yet for this budget'**
+  String get noTransactionsYetBudget;
+
+  /// No description provided for @categoryBreakdown.
+  ///
+  /// In en, this message translates to:
+  /// **'Category Breakdown'**
+  String get categoryBreakdown;
+
+  /// No description provided for @mostExpensiveDay.
+  ///
+  /// In en, this message translates to:
+  /// **'Most Expensive Day'**
+  String get mostExpensiveDay;
+
+  /// No description provided for @averageDailySpending.
+  ///
+  /// In en, this message translates to:
+  /// **'Average Daily Spending'**
+  String get averageDailySpending;
+
+  /// No description provided for @deleteBudget.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete Budget'**
+  String get deleteBudget;
+
+  /// No description provided for @areYouSureUndone.
+  ///
+  /// In en, this message translates to:
+  /// **'Are you sure? This action cannot be undone.'**
+  String get areYouSureUndone;
+
+  /// No description provided for @editBudget.
+  ///
+  /// In en, this message translates to:
+  /// **'Edit Budget'**
+  String get editBudget;
+
+  /// No description provided for @budgetName.
+  ///
+  /// In en, this message translates to:
+  /// **'Budget Name'**
+  String get budgetName;
+
+  /// No description provided for @amountRupees.
+  ///
+  /// In en, this message translates to:
+  /// **'Amount (₹)'**
+  String get amountRupees;
+
+  /// No description provided for @alert.
+  ///
+  /// In en, this message translates to:
+  /// **'Alert'**
+  String get alert;
+
+  /// No description provided for @appearance.
+  ///
+  /// In en, this message translates to:
+  /// **'Appearance'**
+  String get appearance;
+
+  /// No description provided for @monthly.
+  ///
+  /// In en, this message translates to:
+  /// **'Monthly'**
+  String get monthly;
+
+  /// No description provided for @endDate.
+  ///
+  /// In en, this message translates to:
+  /// **'End Date'**
+  String get endDate;
+
+  /// No description provided for @notSet.
+  ///
+  /// In en, this message translates to:
+  /// **'Not set'**
+  String get notSet;
+
+  /// No description provided for @alertAtPercent.
+  ///
+  /// In en, this message translates to:
+  /// **'Alert at {percent}%'**
+  String alertAtPercent(int percent);
+
+  /// No description provided for @updateBudget.
+  ///
+  /// In en, this message translates to:
+  /// **'Update Budget'**
+  String get updateBudget;
+
+  /// No description provided for @budgetNameHint.
+  ///
+  /// In en, this message translates to:
+  /// **'e.g. Monthly Groceries'**
+  String get budgetNameHint;
+
+  /// No description provided for @amountHintExample.
+  ///
+  /// In en, this message translates to:
+  /// **'e.g. 10000'**
+  String get amountHintExample;
 }
 
 class _AppLocalizationsDelegate

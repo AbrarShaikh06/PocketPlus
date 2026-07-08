@@ -157,7 +157,7 @@ class _ReportsScreenState extends ConsumerState<ReportsScreen> {
       backgroundColor: AppColors.surface,
       appBar: AppBar(
         title: Text(
-          'Reports',
+          AppLocalizations.of(context)!.reports,
           style:
               AppTextStyles.titleMedium(context, color: Colors.white).copyWith(
             fontWeight: FontWeight.bold,
@@ -166,13 +166,13 @@ class _ReportsScreenState extends ConsumerState<ReportsScreen> {
         backgroundColor: AppColors.primary,
         elevation: 0,
         leading: IconButton(
-          tooltip: 'Go back',
+          tooltip: AppLocalizations.of(context)!.goBack,
           icon: const Icon(Icons.arrow_back, color: Colors.white),
           onPressed: () => context.pop(),
         ),
         actions: [
           IconButton(
-            tooltip: 'Notifications',
+            tooltip: AppLocalizations.of(context)!.notifications,
             icon: const Icon(Icons.notifications_none, color: Colors.white),
             onPressed: () {},
           ),
@@ -207,7 +207,7 @@ class _ReportsScreenState extends ConsumerState<ReportsScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Budget Overview',
+                          AppLocalizations.of(context)!.budgetOverview,
                           style: Theme.of(context).textTheme.titleMedium,
                         ),
                         const SizedBox(height: 12),
@@ -249,9 +249,9 @@ class _ReportsScreenState extends ConsumerState<ReportsScreen> {
               const SizedBox(height: AppSizes.spacing24),
               const LoadingShimmerList(itemCount: 4),
             ] else if (txns.isEmpty) ...[
-              const EmptyState(
-                message: 'No transactions exist for selected period',
-                illustration: Icon(
+              EmptyState(
+                message: AppLocalizations.of(context)!.noTransactionsForPeriod,
+                illustration: const Icon(
                   Icons.receipt_long_outlined,
                   size: 48,
                   color: AppColors.onSurfaceMuted,
@@ -276,7 +276,9 @@ class _ReportsScreenState extends ConsumerState<ReportsScreen> {
 
               // Action Buttons Layout
               AppButton(
-                label: state.isExporting ? 'Exporting...' : 'Export PDF',
+                label: state.isExporting
+                    ? AppLocalizations.of(context)!.exporting
+                    : AppLocalizations.of(context)!.exportPdf,
                 icon: state.isExporting ? null : Icons.picture_as_pdf,
                 onPressed: state.isExporting
                     ? null
@@ -424,7 +426,7 @@ class _NetProfitHero extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  'Net Profit',
+                  AppLocalizations.of(context)!.netProfit,
                   style: AppTextStyles.bodyMedium(
                     context,
                     color: Colors.white.withValues(alpha: 0.7),
@@ -471,7 +473,7 @@ class _IncomeExpenseSplitRow extends StatelessWidget {
       children: [
         Expanded(
           child: _StatTile(
-            title: 'Income',
+            title: AppLocalizations.of(context)!.income,
             amount: summary?.totalIncome ?? 0,
             accentColor: AppColors.income,
             backgroundColor: AppColors.primary,
@@ -481,7 +483,7 @@ class _IncomeExpenseSplitRow extends StatelessWidget {
         const SizedBox(width: AppSizes.spacing16),
         Expanded(
           child: _StatTile(
-            title: 'Expenses',
+            title: AppLocalizations.of(context)!.expensesLabel,
             amount: summary?.totalExpense ?? 0,
             accentColor: AppColors.expense,
             backgroundColor: AppColors.expense,
@@ -597,7 +599,7 @@ class _RecentTransactionsCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Recent Transactions',
+              AppLocalizations.of(context)!.recentTransactions,
               style: AppTextStyles.titleMedium(
                 context,
                 color: AppColors.primary,
@@ -609,7 +611,7 @@ class _RecentTransactionsCard extends StatelessWidget {
                 padding:
                     const EdgeInsets.symmetric(vertical: AppSizes.spacing16),
                 child: Text(
-                  'No transactions in this period.',
+                  AppLocalizations.of(context)!.noTransactionsInPeriod,
                   style: AppTextStyles.bodyMedium(
                     context,
                     color: AppColors.onSurfaceMuted,
@@ -630,7 +632,7 @@ class _RecentTransactionsCard extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: AppButton(
-                label: 'View full transaction history',
+                label: AppLocalizations.of(context)!.viewFullHistory,
                 variant: AppButtonVariant.outline,
                 onPressed: onViewAll,
               ),

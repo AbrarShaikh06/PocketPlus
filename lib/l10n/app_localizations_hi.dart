@@ -1353,4 +1353,133 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get confirmDelete => 'हटाना पुष्टि करें';
+
+  @override
+  String get budgetOverview => 'बजट अवलोकन';
+
+  @override
+  String get expensesLabel => 'खर्च';
+
+  @override
+  String get exportPdf => 'PDF निर्यात करें';
+
+  @override
+  String get exporting => 'निर्यात हो रहा है...';
+
+  @override
+  String get goBack => 'वापस जाएं';
+
+  @override
+  String get noTransactionsForPeriod =>
+      'चयनित अवधि के लिए कोई लेनदेन मौजूद नहीं है';
+
+  @override
+  String get noTransactionsInPeriod => 'इस अवधि में कोई लेनदेन नहीं।';
+
+  @override
+  String get notifications => 'सूचनाएं';
+
+  @override
+  String get unaccounted => 'अलेखांकित';
+
+  @override
+  String get viewFullHistory => 'पूरा लेनदेन इतिहास देखें';
+
+  @override
+  String get createBudget => 'बजट बनाएं';
+
+  @override
+  String get noBudgetsMatchFilter => 'इस फ़िल्टर से कोई बजट मेल नहीं खाता';
+
+  @override
+  String get paused => 'रोका गया';
+
+  @override
+  String get budgetNotFound => 'बजट नहीं मिला';
+
+  @override
+  String get duplicate => 'डुप्लिकेट';
+
+  @override
+  String get pause => 'रोकें';
+
+  @override
+  String get resume => 'फिर से शुरू करें';
+
+  @override
+  String get dailyAvg => 'दैनिक औसत';
+
+  @override
+  String get weeklyAvg => 'साप्ताहिक औसत';
+
+  @override
+  String get forecast => 'पूर्वानुमान';
+
+  @override
+  String get largestExpense => 'सबसे बड़ा खर्च';
+
+  @override
+  String get mostFrequent => 'सबसे अधिक बार';
+
+  @override
+  String transactionsCount(int count) {
+    return 'लेनदेन ($count)';
+  }
+
+  @override
+  String get noTransactionsYetBudget => 'इस बजट के लिए अभी तक कोई लेनदेन नहीं';
+
+  @override
+  String get categoryBreakdown => 'श्रेणी विवरण';
+
+  @override
+  String get mostExpensiveDay => 'सबसे महंगा दिन';
+
+  @override
+  String get averageDailySpending => 'औसत दैनिक खर्च';
+
+  @override
+  String get deleteBudget => 'बजट हटाएं';
+
+  @override
+  String get areYouSureUndone =>
+      'क्या आप निश्चित हैं? यह क्रिया पूर्ववत नहीं की जा सकती।';
+
+  @override
+  String get editBudget => 'बजट संपादित करें';
+
+  @override
+  String get budgetName => 'बजट का नाम';
+
+  @override
+  String get amountRupees => 'राशि (₹)';
+
+  @override
+  String get alert => 'अलर्ट';
+
+  @override
+  String get appearance => 'रूप';
+
+  @override
+  String get monthly => 'मासिक';
+
+  @override
+  String get endDate => 'समाप्ति तिथि';
+
+  @override
+  String get notSet => 'सेट नहीं';
+
+  @override
+  String alertAtPercent(int percent) {
+    return '$percent% पर अलर्ट';
+  }
+
+  @override
+  String get updateBudget => 'बजट अपडेट करें';
+
+  @override
+  String get budgetNameHint => 'जैसे मासिक किराना';
+
+  @override
+  String get amountHintExample => 'जैसे 10000';
 }

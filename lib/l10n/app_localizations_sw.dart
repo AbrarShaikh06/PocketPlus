@@ -1353,4 +1353,134 @@ class AppLocalizationsSw extends AppLocalizations {
 
   @override
   String get confirmDelete => 'Thibitisha Kufuta';
+
+  @override
+  String get budgetOverview => 'Muhtasari wa Bajeti';
+
+  @override
+  String get expensesLabel => 'Matumizi';
+
+  @override
+  String get exportPdf => 'Hamisha PDF';
+
+  @override
+  String get exporting => 'Inahamisha...';
+
+  @override
+  String get goBack => 'Rudi nyuma';
+
+  @override
+  String get noTransactionsForPeriod =>
+      'Hakuna miamala kwa kipindi kilichochaguliwa';
+
+  @override
+  String get noTransactionsInPeriod => 'Hakuna miamala katika kipindi hiki.';
+
+  @override
+  String get notifications => 'Arifa';
+
+  @override
+  String get unaccounted => 'Isiyohesabiwa';
+
+  @override
+  String get viewFullHistory => 'Tazama historia kamili ya miamala';
+
+  @override
+  String get createBudget => 'Tengeneza Bajeti';
+
+  @override
+  String get noBudgetsMatchFilter =>
+      'Hakuna bajeti zinazolingana na kichujio hiki';
+
+  @override
+  String get paused => 'Imesimamishwa';
+
+  @override
+  String get budgetNotFound => 'Bajeti haikupatikana';
+
+  @override
+  String get duplicate => 'Nakili';
+
+  @override
+  String get pause => 'Simamisha';
+
+  @override
+  String get resume => 'Endelea';
+
+  @override
+  String get dailyAvg => 'Wastani wa Kila Siku';
+
+  @override
+  String get weeklyAvg => 'Wastani wa Kila Wiki';
+
+  @override
+  String get forecast => 'Utabiri';
+
+  @override
+  String get largestExpense => 'Matumizi Makubwa Zaidi';
+
+  @override
+  String get mostFrequent => 'Ya Mara Kwa Mara Zaidi';
+
+  @override
+  String transactionsCount(int count) {
+    return 'Miamala ($count)';
+  }
+
+  @override
+  String get noTransactionsYetBudget => 'Bado hakuna miamala kwa bajeti hii';
+
+  @override
+  String get categoryBreakdown => 'Mchanganuo wa Kategoria';
+
+  @override
+  String get mostExpensiveDay => 'Siku ya Gharama Kubwa Zaidi';
+
+  @override
+  String get averageDailySpending => 'Wastani wa Matumizi ya Kila Siku';
+
+  @override
+  String get deleteBudget => 'Futa Bajeti';
+
+  @override
+  String get areYouSureUndone =>
+      'Una uhakika? Kitendo hiki hakiwezi kutenduliwa.';
+
+  @override
+  String get editBudget => 'Hariri Bajeti';
+
+  @override
+  String get budgetName => 'Jina la Bajeti';
+
+  @override
+  String get amountRupees => 'Kiasi (₹)';
+
+  @override
+  String get alert => 'Arifa';
+
+  @override
+  String get appearance => 'Muonekano';
+
+  @override
+  String get monthly => 'Kila Mwezi';
+
+  @override
+  String get endDate => 'Tarehe ya Mwisho';
+
+  @override
+  String get notSet => 'Haijawekwa';
+
+  @override
+  String alertAtPercent(int percent) {
+    return 'Arifa kwa $percent%';
+  }
+
+  @override
+  String get updateBudget => 'Sasisha Bajeti';
+
+  @override
+  String get budgetNameHint => 'mf. Manunuzi ya Kila Mwezi';
+
+  @override
+  String get amountHintExample => 'mf. 10000';
 }

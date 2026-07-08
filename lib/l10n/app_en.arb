@@ -414,5 +414,60 @@
   "continueAction": "Continue",
   "typeDeleteToConfirm": "Type DELETE to confirm",
   "typeDeleteHint": "Type DELETE",
-  "confirmDelete": "Confirm Delete"
+  "confirmDelete": "Confirm Delete",
+  "budgetOverview": "Budget Overview",
+  "expensesLabel": "Expenses",
+  "exportPdf": "Export PDF",
+  "exporting": "Exporting...",
+  "goBack": "Go back",
+  "noTransactionsForPeriod": "No transactions exist for selected period",
+  "noTransactionsInPeriod": "No transactions in this period.",
+  "notifications": "Notifications",
+  "unaccounted": "Unaccounted",
+  "viewFullHistory": "View full transaction history",
+  "createBudget": "Create Budget",
+  "noBudgetsMatchFilter": "No budgets match this filter",
+  "paused": "Paused",
+  "budgetNotFound": "Budget not found",
+  "duplicate": "Duplicate",
+  "pause": "Pause",
+  "resume": "Resume",
+  "dailyAvg": "Daily Avg",
+  "weeklyAvg": "Weekly Avg",
+  "forecast": "Forecast",
+  "largestExpense": "Largest Expense",
+  "mostFrequent": "Most Frequent",
+  "transactionsCount": "Transactions ({count})",
+  "@transactionsCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "noTransactionsYetBudget": "No transactions yet for this budget",
+  "categoryBreakdown": "Category Breakdown",
+  "mostExpensiveDay": "Most Expensive Day",
+  "averageDailySpending": "Average Daily Spending",
+  "deleteBudget": "Delete Budget",
+  "areYouSureUndone": "Are you sure? This action cannot be undone.",
+  "editBudget": "Edit Budget",
+  "budgetName": "Budget Name",
+  "amountRupees": "Amount (₹)",
+  "alert": "Alert",
+  "appearance": "Appearance",
+  "monthly": "Monthly",
+  "endDate": "End Date",
+  "notSet": "Not set",
+  "alertAtPercent": "Alert at {percent}%",
+  "@alertAtPercent": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "updateBudget": "Update Budget",
+  "budgetNameHint": "e.g. Monthly Groceries",
+  "amountHintExample": "e.g. 10000"
 }

@@ -5,6 +5,7 @@ import 'package:go_router/go_router.dart';
 import '../../../../core/constants/app_colors.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/constants/app_text_styles.dart';
+import '../../../../l10n/app_localizations.dart';
 import '../../../../core/utils/currency_formatter.dart';
 import '../../../../shared/widgets/app_card.dart';
 import '../../../../shared/widgets/empty_state.dart';
@@ -36,7 +37,9 @@ class BudgetDetailScreen extends ConsumerWidget {
     if (budget == null) {
       return Scaffold(
         appBar: AppBar(),
-        body: const Center(child: Text('Budget not found')),
+        body: Center(
+          child: Text(AppLocalizations.of(context)!.budgetNotFound),
+        ),
       );
     }
 
@@ -76,20 +79,22 @@ class BudgetDetailScreen extends ConsumerWidget {
         actions: [
           PopupMenuButton<BudgetAction>(
             onSelected: (action) => _handleAction(context, ref, action, budget),
-            itemBuilder: (context) => [
-              if (!budget.isPaused)
-                const PopupMenuItem(
-                    value: BudgetAction.pause, child: Text('Pause')),
-              if (budget.isPaused)
-                const PopupMenuItem(
-                    value: BudgetAction.resume, child: Text('Resume')),
-              const PopupMenuItem(
-                  value: BudgetAction.edit, child: Text('Edit')),
-              const PopupMenuItem(
-                  value: BudgetAction.duplicate, child: Text('Duplicate')),
-              const PopupMenuItem(
-                  value: BudgetAction.delete, child: Text('Delete')),
-            ],
+            itemBuilder: (context) {
+              final l = AppLocalizations.of(context)!;
+              return [
+                if (!budget.isPaused)
+                  PopupMenuItem(
+                      value: BudgetAction.pause, child: Text(l.pause)),
+                if (budget.isPaused)
+                  PopupMenuItem(
+                      value: BudgetAction.resume, child: Text(l.resume)),
+                PopupMenuItem(value: BudgetAction.edit, child: Text(l.edit)),
+                PopupMenuItem(
+                    value: BudgetAction.duplicate, child: Text(l.duplicate)),
+                PopupMenuItem(
+                    value: BudgetAction.delete, child: Text(l.delete)),
+              ];
+            },
           ),
         ],
       ),
@@ -130,15 +135,21 @@ class BudgetDetailScreen extends ConsumerWidget {
             Row(
               children: [
                 Expanded(
-                    child: _statCard(context, 'Daily Avg',
+                    child: _statCard(
+                        context,
+                        AppLocalizations.of(context)!.dailyAvg,
                         CurrencyFormatter.format(dailyAvg))),
                 const SizedBox(width: AppSizes.spacing8),
                 Expanded(
-                    child: _statCard(context, 'Weekly Avg',
+                    child: _statCard(
+                        context,
+                        AppLocalizations.of(context)!.weeklyAvg,
                         CurrencyFormatter.format(weeklyAvg))),
                 const SizedBox(width: AppSizes.spacing8),
                 Expanded(
-                    child: _statCard(context, 'Forecast',
+                    child: _statCard(
+                        context,
+                        AppLocalizations.of(context)!.forecast,
                         CurrencyFormatter.format(forecast))),
               ],
             ),
@@ -146,7 +157,8 @@ class BudgetDetailScreen extends ConsumerWidget {
             BudgetForecastCard(budget: budget),
             const SizedBox(height: AppSizes.spacing24),
             // Insights
-            Text('Insights', style: AppTextStyles.titleMedium(context)),
+            Text(AppLocalizations.of(context)!.insights,
+                style: AppTextStyles.titleMedium(context)),
             const SizedBox(height: AppSizes.spacing12),
             ..._generateInsights(
                 context, budget, calculator, contributingTxns, categories),
@@ -159,7 +171,7 @@ class BudgetDetailScreen extends ConsumerWidget {
             const SizedBox(height: AppSizes.spacing24),
             // Largest expense
             if (largestExpense != null) ...[
-              Text('Largest Expense',
+              Text(AppLocalizations.of(context)!.largestExpense,
                   style: AppTextStyles.titleMedium(context)),
               const SizedBox(height: AppSizes.spacing8),
               _expenseTile(context, largestExpense,
@@ -170,7 +182,7 @@ class BudgetDetailScreen extends ConsumerWidget {
             if (mostFrequentMerchant != null) ...[
               BudgetInsightCard(
                 icon: Icons.store,
-                title: 'Most Frequent',
+                title: AppLocalizations.of(context)!.mostFrequent,
                 subtitle:
                     '${mostFrequentMerchant.key} · ${mostFrequentMerchant.value} transactions',
                 color: AppColors.blue,
@@ -178,11 +190,15 @@ class BudgetDetailScreen extends ConsumerWidget {
               const SizedBox(height: AppSizes.spacing24),
             ],
             // Transactions
-            Text('Transactions (${contributingTxns.length})',
+            Text(
+                AppLocalizations.of(context)!
+                    .transactionsCount(contributingTxns.length),
                 style: AppTextStyles.titleMedium(context)),
             const SizedBox(height: AppSizes.spacing8),
             if (contributingTxns.isEmpty)
-              const EmptyState(message: 'No transactions yet for this budget')
+              EmptyState(
+                  message:
+                      AppLocalizations.of(context)!.noTransactionsYetBudget)
             else
               ...contributingTxns.take(20).map(
                     (txn) => Padding(
@@ -276,7 +292,8 @@ class BudgetDetailScreen extends ConsumerWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text('Category Breakdown', style: AppTextStyles.titleMedium(context)),
+        Text(AppLocalizations.of(context)!.categoryBreakdown,
+            style: AppTextStyles.titleMedium(context)),
         const SizedBox(height: AppSizes.spacing8),
         ...perCategory.entries.map((e) {
           final cat = categoryMap[e.key];
@@ -325,7 +342,7 @@ class BudgetDetailScreen extends ConsumerWidget {
       insights.add(
         BudgetInsightCard(
           icon: Icons.calendar_view_week,
-          title: 'Most Expensive Day',
+          title: AppLocalizations.of(context)!.mostExpensiveDay,
           subtitle:
               '${dayNames[mostExpensiveDay.key - 1]} · ${CurrencyFormatter.format(mostExpensiveDay.value)}',
           color: AppColors.orange,
@@ -339,7 +356,7 @@ class BudgetDetailScreen extends ConsumerWidget {
       insights.add(
         BudgetInsightCard(
           icon: Icons.trending_up,
-          title: 'Average Daily Spending',
+          title: AppLocalizations.of(context)!.averageDailySpending,
           subtitle:
               CurrencyFormatter.format(calculator.computeDailyAverage(budget)),
           color: AppColors.blue,
@@ -401,14 +418,15 @@ class BudgetDetailScreen extends ConsumerWidget {
   }
 
   void _confirmDelete(BuildContext context, WidgetRef ref, String budgetId) {
+    final l = AppLocalizations.of(context)!;
     showDialog(
       context: context,
       builder: (ctx) => AlertDialog(
-        title: const Text('Delete Budget'),
-        content: const Text('Are you sure? This action cannot be undone.'),
+        title: Text(l.deleteBudget),
+        content: Text(l.areYouSureUndone),
         actions: [
           TextButton(
-              onPressed: () => Navigator.pop(ctx), child: const Text('Cancel')),
+              onPressed: () => Navigator.pop(ctx), child: Text(l.cancel)),
           TextButton(
             onPressed: () {
               Navigator.pop(ctx);
@@ -416,7 +434,7 @@ class BudgetDetailScreen extends ConsumerWidget {
               context.pop();
             },
             child:
-                const Text('Delete', style: TextStyle(color: AppColors.error)),
+                Text(l.delete, style: const TextStyle(color: AppColors.error)),
           ),
         ],
       ),
