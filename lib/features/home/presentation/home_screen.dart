@@ -310,7 +310,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
         elevation: 0,
         leading: Builder(
           builder: (context) => IconButton(
-            tooltip: 'Open menu',
+            tooltip: AppLocalizations.of(context)!.openMenu,
             icon: const Icon(Icons.menu, color: Colors.white),
             onPressed: () => Scaffold.of(context).openDrawer(),
           ),
@@ -421,7 +421,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                   ),
                   _DrawerNavItem(
                     icon: Icons.feedback_outlined,
-                    label: 'Feedback',
+                    label: AppLocalizations.of(context)!.feedbackTitle,
                     onTap: () {
                       Navigator.pop(context);
                       context.push(RouteNames.feedback);
@@ -908,11 +908,11 @@ class _HomeDashboardBody extends ConsumerWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text('Budget Overview',
+                          Text(AppLocalizations.of(context)!.budgetOverview,
                               style: Theme.of(context).textTheme.titleMedium),
                           TextButton(
                             onPressed: () => context.go('/budgets'),
-                            child: const Text('See All'),
+                            child: Text(AppLocalizations.of(context)!.seeAll),
                           ),
                         ],
                       ),

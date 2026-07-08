@@ -1643,4 +1643,333 @@ class AppLocalizationsSw extends AppLocalizations {
 
   @override
   String get qtyHint => 'Idadi';
+
+  @override
+  String get feedbackTitle => 'Maoni';
+
+  @override
+  String get openMenu => 'Fungua menyu';
+
+  @override
+  String get seeAll => 'Ona Zote';
+
+  @override
+  String failedToDeleteArg(String msg) {
+    return 'Imeshindwa kufuta: $msg';
+  }
+
+  @override
+  String failedToLoadGoalsArg(String msg) {
+    return 'Imeshindwa kupakia malengo ya akiba: $msg';
+  }
+
+  @override
+  String goalDeletedArg(String name) {
+    return 'Lengo \"$name\" limefutwa';
+  }
+
+  @override
+  String get dreamName => 'Jina la Ndoto';
+
+  @override
+  String get enterAmountRupees => 'Weka kiasi kwa Rupia';
+
+  @override
+  String get notesDescriptionOptional => 'Vidokezo / Maelezo (Hiari)';
+
+  @override
+  String get saveDream => 'Hifadhi Ndoto';
+
+  @override
+  String get targetAmountRupees => 'Kiasi Lengwa (₹)';
+
+  @override
+  String get whyDreamImportant => 'Kwa nini ndoto hii ni muhimu kwako?';
+
+  @override
+  String get change => 'Badilisha';
+
+  @override
+  String get editGoal => 'Hariri lengo';
+
+  @override
+  String get goalName => 'Jina la Lengo';
+
+  @override
+  String get goalUpdatedSuccess => 'Lengo limesasishwa kwa mafanikio';
+
+  @override
+  String get markAsAchieved => 'Weka alama kama Imefikiwa';
+
+  @override
+  String get savingsGoalNotFound => 'Lengo la akiba halikupatikana';
+
+  @override
+  String get updateGoal => 'Sasisha Lengo';
+
+  @override
+  String errorLoadingEntriesArg(String msg) {
+    return 'Hitilafu kupakia ingizo: $msg';
+  }
+
+  @override
+  String failedWithMessage(String msg) {
+    return 'Imeshindwa: $msg';
+  }
+
+  @override
+  String get achievedOn => 'Ilifikiwa Tarehe';
+
+  @override
+  String get amountSaved => 'Kiasi Kilichohifadhiwa';
+
+  @override
+  String get goalCreated => 'Lengo Limeundwa';
+
+  @override
+  String get viewMyGoals => 'Ona Malengo Yangu';
+
+  @override
+  String get addToDream => 'Ongeza kwenye Ndoto';
+
+  @override
+  String get noteOptional => 'Kidokezo (hiari)';
+
+  @override
+  String get chatWithUs => 'Ongea nasi';
+
+  @override
+  String get couldNotLaunchWhatsapp => 'Imeshindwa kufungua WhatsApp.';
+
+  @override
+  String get foundAnIssue => 'Umepata tatizo?';
+
+  @override
+  String get rateYourExperience => 'Kadiria uzoefu wako';
+
+  @override
+  String get reportABug => 'Ripoti Hitilafu';
+
+  @override
+  String get requestAFeature => 'Omba Kipengele';
+
+  @override
+  String get submitFeedback => 'Wasilisha Maoni';
+
+  @override
+  String get suggestAnIdea => 'Pendekeza wazo';
+
+  @override
+  String get talkOnWhatsapp => 'Ongea kwenye WhatsApp';
+
+  @override
+  String get thankYouFeedback => 'Asante kwa maoni yako!';
+
+  @override
+  String get passwordResetSent =>
+      'Barua ya kuweka upya nywila imetumwa. Angalia kikasha chako.';
+
+  @override
+  String get confirmEntry => 'Thibitisha Ingizo';
+
+  @override
+  String get enterMerchantName => 'Weka jina la mfanyabiashara';
+
+  @override
+  String get dreamNameHint => 'mf. Gari la usafirishaji, Ghala jipya';
+
+  @override
+  String amountSavedArg(String amount) {
+    return '$amount zimehifadhiwa';
+  }
+
+  @override
+  String ofAmountArg(String amount) {
+    return 'kati ya $amount';
+  }
+
+  @override
+  String get achievedBadge => 'Imefikiwa 🎉';
+
+  @override
+  String percentCompleted(int percent) {
+    return '$percent% Imekamilika';
+  }
+
+  @override
+  String daysRemainingArg(int days) {
+    return 'siku $days zimebaki';
+  }
+
+  @override
+  String get reachedSavingsDream => 'Umefikia ndoto hii ya akiba! 🎉';
+
+  @override
+  String get contributionHistory => 'Historia ya Michango';
+
+  @override
+  String get noMoneyAddedYet =>
+      'Bado hakuna pesa iliyoongezwa.\nAnza kuhifadhi leo!';
+
+  @override
+  String get noTargetDateSet => 'Hakuna tarehe lengwa iliyowekwa';
+
+  @override
+  String targetDateArg(String date) {
+    return 'Tarehe Lengwa: $date';
+  }
+
+  @override
+  String get dreamAchieved => 'Ndoto Imefikiwa!';
+
+  @override
+  String get youDidIt => 'Umefanikiwa! 🎉';
+
+  @override
+  String get yourDisciplineMsg =>
+      'Nidhamu yako ilifanya hili liwezekane.\nEndelea kuota na kuhifadhi!';
+
+  @override
+  String addToGoalArg(String name) {
+    return 'Ongeza kwenye $name';
+  }
+
+  @override
+  String get howMuchAddedToday => 'Umeongeza kiasi gani kwenye ndoto yako leo?';
+
+  @override
+  String dateArg(String date) {
+    return 'Tarehe: $date';
+  }
+
+  @override
+  String targetArg(String amount) {
+    return 'Lengo: $amount';
+  }
+
+  @override
+  String get completeLabel => 'Kamili';
+
+  @override
+  String get goalAchievedBadge => 'Lengo Limefikiwa! 🎉';
+
+  @override
+  String get unknownMerchant => 'Mfanyabiashara Asiyejulikana';
+
+  @override
+  String get autoCaptureBadge => 'KUNASA-KIOTOMATIKI';
+
+  @override
+  String get showLess => 'Onyesha kidogo';
+
+  @override
+  String get showMore => 'Onyesha zaidi';
+
+  @override
+  String get amountLabelUpper => 'KIASI';
+
+  @override
+  String get paidToLabel => 'IMELIPWA KWA';
+
+  @override
+  String get selectCategoryUpper => 'CHAGUA KATEGORIA';
+
+  @override
+  String get notABusinessTransaction => 'Si muamala wa biashara';
+
+  @override
+  String get npsPoor => 'Duni';
+
+  @override
+  String get npsFair => 'Wastani';
+
+  @override
+  String get npsGood => 'Nzuri';
+
+  @override
+  String get npsVeryGood => 'Nzuri Sana';
+
+  @override
+  String get npsExcellent => 'Bora Kabisa';
+
+  @override
+  String get categoryGeneral => 'Jumla';
+
+  @override
+  String get categoryFeature => 'Kipengele';
+
+  @override
+  String get describeExperienceHint => 'Eleza uzoefu wako (angalau herufi 10)';
+
+  @override
+  String get suggestAFeatureTitle => 'Pendekeza Kipengele';
+
+  @override
+  String get whatFeaturesWouldYouLike =>
+      'Ungependa kuona vipengele gani katika PocketPlus kudhibiti leja zako vizuri?';
+
+  @override
+  String get whatFeatureBuildHint =>
+      'Ungependa tujenge kipengele gani? (angalau herufi 10)';
+
+  @override
+  String get encounteredIssue =>
+      'Umekumbana na tatizo? Tafadhali lieleze, na uambatanishe picha ya skrini kama hiari.';
+
+  @override
+  String get describeBugHint =>
+      'Tafadhali eleza hitilafu kwa kina (angalau herufi 10)';
+
+  @override
+  String get attachScreenshot => 'Ambatisha Picha ya Skrini';
+
+  @override
+  String get changeScreenshot => 'Badilisha Picha ya Skrini';
+
+  @override
+  String get ratePocketplus => 'Kadiria PocketPlus';
+
+  @override
+  String get howLikelyRecommend =>
+      'Kuna uwezekano gani wa kutupendekeza kwa mfanyabiashara mwingine?';
+
+  @override
+  String get chatOnWhatsapp => 'Ongea nasi kwenye WhatsApp';
+
+  @override
+  String get startANewDream => '✨  Anza Ndoto Mpya';
+
+  @override
+  String get npsDetractor => 'Mkosoaji';
+
+  @override
+  String get npsPassive => 'Asiyejali';
+
+  @override
+  String get npsPromoter => 'Mtangazaji';
+
+  @override
+  String get weAreHereToHelp => 'Tuko hapa kukusaidia';
+
+  @override
+  String get howCanWeMakeBetter =>
+      'Tunawezaje kuboresha PocketPlus kwa biashara yako leo?';
+
+  @override
+  String get tabGeneral => 'Jumla';
+
+  @override
+  String get tabFeature => 'Kipengele';
+
+  @override
+  String get tabBug => 'Hitilafu';
+
+  @override
+  String get tabNps => 'NPS';
+
+  @override
+  String get npsUnlikely => '0 — Haiwezekani';
+
+  @override
+  String get npsVeryLikely => '10 — Inawezekana Sana';
 }

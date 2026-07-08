@@ -6,6 +6,7 @@ import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/constants/app_text_styles.dart';
 import '../../../../core/router/route_names.dart';
 import '../../../../core/utils/currency_formatter.dart';
+import '../../../../l10n/app_localizations.dart';
 import '../../../../shared/widgets/app_button.dart';
 import '../../domain/savings_goal.dart';
 import 'savings_progress_bar.dart';
@@ -124,7 +125,8 @@ class DreamCard extends StatelessWidget {
                       ),
                       const SizedBox(height: 2),
                       Text(
-                        'Target: ${CurrencyFormatter.formatRupees(goal.targetAmount)}',
+                        AppLocalizations.of(context)!.targetArg(
+                            CurrencyFormatter.formatRupees(goal.targetAmount)),
                         style: AppTextStyles.labelSmall(
                           context,
                           color: AppColors.onSurfaceMuted,
@@ -152,7 +154,7 @@ class DreamCard extends StatelessWidget {
                     ),
                     const SizedBox(height: 2),
                     Text(
-                      'Complete',
+                      AppLocalizations.of(context)!.completeLabel,
                       style: AppTextStyles.labelSmall(
                         context,
                         color: AppColors.onSurfaceMuted,
@@ -195,7 +197,7 @@ class DreamCard extends StatelessWidget {
             if (!goal.isAchieved) ...[
               const SizedBox(height: AppSizes.spacing16),
               AppButton(
-                label: 'Add Money Today',
+                label: AppLocalizations.of(context)!.addMoneyToday,
                 variant: AppButtonVariant.outline,
                 onPressed: onAddMoney,
               ),
@@ -210,7 +212,7 @@ class DreamCard extends StatelessWidget {
                 ),
                 child: Center(
                   child: Text(
-                    'Goal Achieved! 🎉',
+                    AppLocalizations.of(context)!.goalAchievedBadge,
                     style: AppTextStyles.labelLarge(context).copyWith(
                       color: AppColors.primary,
                       fontWeight: FontWeight.bold,

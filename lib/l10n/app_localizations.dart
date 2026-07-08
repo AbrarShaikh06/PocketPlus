@@ -3134,6 +3134,594 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Qty'**
   String get qtyHint;
+
+  /// No description provided for @feedbackTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Feedback'**
+  String get feedbackTitle;
+
+  /// No description provided for @openMenu.
+  ///
+  /// In en, this message translates to:
+  /// **'Open menu'**
+  String get openMenu;
+
+  /// No description provided for @seeAll.
+  ///
+  /// In en, this message translates to:
+  /// **'See All'**
+  String get seeAll;
+
+  /// No description provided for @failedToDeleteArg.
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to delete: {msg}'**
+  String failedToDeleteArg(String msg);
+
+  /// No description provided for @failedToLoadGoalsArg.
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to load savings goals: {msg}'**
+  String failedToLoadGoalsArg(String msg);
+
+  /// No description provided for @goalDeletedArg.
+  ///
+  /// In en, this message translates to:
+  /// **'Goal \"{name}\" deleted'**
+  String goalDeletedArg(String name);
+
+  /// No description provided for @dreamName.
+  ///
+  /// In en, this message translates to:
+  /// **'Dream Name'**
+  String get dreamName;
+
+  /// No description provided for @enterAmountRupees.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter amount in Rupees'**
+  String get enterAmountRupees;
+
+  /// No description provided for @notesDescriptionOptional.
+  ///
+  /// In en, this message translates to:
+  /// **'Notes / Description (Optional)'**
+  String get notesDescriptionOptional;
+
+  /// No description provided for @saveDream.
+  ///
+  /// In en, this message translates to:
+  /// **'Save Dream'**
+  String get saveDream;
+
+  /// No description provided for @targetAmountRupees.
+  ///
+  /// In en, this message translates to:
+  /// **'Target Amount (₹)'**
+  String get targetAmountRupees;
+
+  /// No description provided for @whyDreamImportant.
+  ///
+  /// In en, this message translates to:
+  /// **'Why is this dream important to you?'**
+  String get whyDreamImportant;
+
+  /// No description provided for @change.
+  ///
+  /// In en, this message translates to:
+  /// **'Change'**
+  String get change;
+
+  /// No description provided for @editGoal.
+  ///
+  /// In en, this message translates to:
+  /// **'Edit goal'**
+  String get editGoal;
+
+  /// No description provided for @goalName.
+  ///
+  /// In en, this message translates to:
+  /// **'Goal Name'**
+  String get goalName;
+
+  /// No description provided for @goalUpdatedSuccess.
+  ///
+  /// In en, this message translates to:
+  /// **'Goal updated successfully'**
+  String get goalUpdatedSuccess;
+
+  /// No description provided for @markAsAchieved.
+  ///
+  /// In en, this message translates to:
+  /// **'Mark as Achieved'**
+  String get markAsAchieved;
+
+  /// No description provided for @savingsGoalNotFound.
+  ///
+  /// In en, this message translates to:
+  /// **'Savings Goal not found'**
+  String get savingsGoalNotFound;
+
+  /// No description provided for @updateGoal.
+  ///
+  /// In en, this message translates to:
+  /// **'Update Goal'**
+  String get updateGoal;
+
+  /// No description provided for @errorLoadingEntriesArg.
+  ///
+  /// In en, this message translates to:
+  /// **'Error loading entries: {msg}'**
+  String errorLoadingEntriesArg(String msg);
+
+  /// No description provided for @failedWithMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Failed: {msg}'**
+  String failedWithMessage(String msg);
+
+  /// No description provided for @achievedOn.
+  ///
+  /// In en, this message translates to:
+  /// **'Achieved On'**
+  String get achievedOn;
+
+  /// No description provided for @amountSaved.
+  ///
+  /// In en, this message translates to:
+  /// **'Amount Saved'**
+  String get amountSaved;
+
+  /// No description provided for @goalCreated.
+  ///
+  /// In en, this message translates to:
+  /// **'Goal Created'**
+  String get goalCreated;
+
+  /// No description provided for @viewMyGoals.
+  ///
+  /// In en, this message translates to:
+  /// **'View My Goals'**
+  String get viewMyGoals;
+
+  /// No description provided for @addToDream.
+  ///
+  /// In en, this message translates to:
+  /// **'Add to Dream'**
+  String get addToDream;
+
+  /// No description provided for @noteOptional.
+  ///
+  /// In en, this message translates to:
+  /// **'Note (optional)'**
+  String get noteOptional;
+
+  /// No description provided for @chatWithUs.
+  ///
+  /// In en, this message translates to:
+  /// **'Chat with us'**
+  String get chatWithUs;
+
+  /// No description provided for @couldNotLaunchWhatsapp.
+  ///
+  /// In en, this message translates to:
+  /// **'Could not launch WhatsApp.'**
+  String get couldNotLaunchWhatsapp;
+
+  /// No description provided for @foundAnIssue.
+  ///
+  /// In en, this message translates to:
+  /// **'Found an issue?'**
+  String get foundAnIssue;
+
+  /// No description provided for @rateYourExperience.
+  ///
+  /// In en, this message translates to:
+  /// **'Rate your experience'**
+  String get rateYourExperience;
+
+  /// No description provided for @reportABug.
+  ///
+  /// In en, this message translates to:
+  /// **'Report a Bug'**
+  String get reportABug;
+
+  /// No description provided for @requestAFeature.
+  ///
+  /// In en, this message translates to:
+  /// **'Request a Feature'**
+  String get requestAFeature;
+
+  /// No description provided for @submitFeedback.
+  ///
+  /// In en, this message translates to:
+  /// **'Submit Feedback'**
+  String get submitFeedback;
+
+  /// No description provided for @suggestAnIdea.
+  ///
+  /// In en, this message translates to:
+  /// **'Suggest an idea'**
+  String get suggestAnIdea;
+
+  /// No description provided for @talkOnWhatsapp.
+  ///
+  /// In en, this message translates to:
+  /// **'Talk on WhatsApp'**
+  String get talkOnWhatsapp;
+
+  /// No description provided for @thankYouFeedback.
+  ///
+  /// In en, this message translates to:
+  /// **'Thank you for your feedback!'**
+  String get thankYouFeedback;
+
+  /// No description provided for @passwordResetSent.
+  ///
+  /// In en, this message translates to:
+  /// **'Password reset email sent. Check your inbox.'**
+  String get passwordResetSent;
+
+  /// No description provided for @confirmEntry.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm Entry'**
+  String get confirmEntry;
+
+  /// No description provided for @enterMerchantName.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter merchant name'**
+  String get enterMerchantName;
+
+  /// No description provided for @dreamNameHint.
+  ///
+  /// In en, this message translates to:
+  /// **'e.g., Delivery Auto, New Godown'**
+  String get dreamNameHint;
+
+  /// No description provided for @amountSavedArg.
+  ///
+  /// In en, this message translates to:
+  /// **'{amount} saved'**
+  String amountSavedArg(String amount);
+
+  /// No description provided for @ofAmountArg.
+  ///
+  /// In en, this message translates to:
+  /// **'of {amount}'**
+  String ofAmountArg(String amount);
+
+  /// No description provided for @achievedBadge.
+  ///
+  /// In en, this message translates to:
+  /// **'Achieved 🎉'**
+  String get achievedBadge;
+
+  /// No description provided for @percentCompleted.
+  ///
+  /// In en, this message translates to:
+  /// **'{percent}% Completed'**
+  String percentCompleted(int percent);
+
+  /// No description provided for @daysRemainingArg.
+  ///
+  /// In en, this message translates to:
+  /// **'{days} days remaining'**
+  String daysRemainingArg(int days);
+
+  /// No description provided for @reachedSavingsDream.
+  ///
+  /// In en, this message translates to:
+  /// **'You reached this savings dream! 🎉'**
+  String get reachedSavingsDream;
+
+  /// No description provided for @contributionHistory.
+  ///
+  /// In en, this message translates to:
+  /// **'Contribution History'**
+  String get contributionHistory;
+
+  /// No description provided for @noMoneyAddedYet.
+  ///
+  /// In en, this message translates to:
+  /// **'No money added yet.\nStart saving today!'**
+  String get noMoneyAddedYet;
+
+  /// No description provided for @noTargetDateSet.
+  ///
+  /// In en, this message translates to:
+  /// **'No Target Date set'**
+  String get noTargetDateSet;
+
+  /// No description provided for @targetDateArg.
+  ///
+  /// In en, this message translates to:
+  /// **'Target Date: {date}'**
+  String targetDateArg(String date);
+
+  /// No description provided for @dreamAchieved.
+  ///
+  /// In en, this message translates to:
+  /// **'Dream Achieved!'**
+  String get dreamAchieved;
+
+  /// No description provided for @youDidIt.
+  ///
+  /// In en, this message translates to:
+  /// **'You Did It! 🎉'**
+  String get youDidIt;
+
+  /// No description provided for @yourDisciplineMsg.
+  ///
+  /// In en, this message translates to:
+  /// **'Your discipline made this possible.\nKeep dreaming and saving!'**
+  String get yourDisciplineMsg;
+
+  /// No description provided for @addToGoalArg.
+  ///
+  /// In en, this message translates to:
+  /// **'Add to {name}'**
+  String addToGoalArg(String name);
+
+  /// No description provided for @howMuchAddedToday.
+  ///
+  /// In en, this message translates to:
+  /// **'How much have you added to your dream today?'**
+  String get howMuchAddedToday;
+
+  /// No description provided for @dateArg.
+  ///
+  /// In en, this message translates to:
+  /// **'Date: {date}'**
+  String dateArg(String date);
+
+  /// No description provided for @targetArg.
+  ///
+  /// In en, this message translates to:
+  /// **'Target: {amount}'**
+  String targetArg(String amount);
+
+  /// No description provided for @completeLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Complete'**
+  String get completeLabel;
+
+  /// No description provided for @goalAchievedBadge.
+  ///
+  /// In en, this message translates to:
+  /// **'Goal Achieved! 🎉'**
+  String get goalAchievedBadge;
+
+  /// No description provided for @unknownMerchant.
+  ///
+  /// In en, this message translates to:
+  /// **'Unknown Merchant'**
+  String get unknownMerchant;
+
+  /// No description provided for @autoCaptureBadge.
+  ///
+  /// In en, this message translates to:
+  /// **'AUTO-CAPTURE'**
+  String get autoCaptureBadge;
+
+  /// No description provided for @showLess.
+  ///
+  /// In en, this message translates to:
+  /// **'Show less'**
+  String get showLess;
+
+  /// No description provided for @showMore.
+  ///
+  /// In en, this message translates to:
+  /// **'Show more'**
+  String get showMore;
+
+  /// No description provided for @amountLabelUpper.
+  ///
+  /// In en, this message translates to:
+  /// **'AMOUNT'**
+  String get amountLabelUpper;
+
+  /// No description provided for @paidToLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'PAID TO'**
+  String get paidToLabel;
+
+  /// No description provided for @selectCategoryUpper.
+  ///
+  /// In en, this message translates to:
+  /// **'SELECT CATEGORY'**
+  String get selectCategoryUpper;
+
+  /// No description provided for @notABusinessTransaction.
+  ///
+  /// In en, this message translates to:
+  /// **'Not a business transaction'**
+  String get notABusinessTransaction;
+
+  /// No description provided for @npsPoor.
+  ///
+  /// In en, this message translates to:
+  /// **'Poor'**
+  String get npsPoor;
+
+  /// No description provided for @npsFair.
+  ///
+  /// In en, this message translates to:
+  /// **'Fair'**
+  String get npsFair;
+
+  /// No description provided for @npsGood.
+  ///
+  /// In en, this message translates to:
+  /// **'Good'**
+  String get npsGood;
+
+  /// No description provided for @npsVeryGood.
+  ///
+  /// In en, this message translates to:
+  /// **'Very Good'**
+  String get npsVeryGood;
+
+  /// No description provided for @npsExcellent.
+  ///
+  /// In en, this message translates to:
+  /// **'Excellent'**
+  String get npsExcellent;
+
+  /// No description provided for @categoryGeneral.
+  ///
+  /// In en, this message translates to:
+  /// **'General'**
+  String get categoryGeneral;
+
+  /// No description provided for @categoryFeature.
+  ///
+  /// In en, this message translates to:
+  /// **'Feature'**
+  String get categoryFeature;
+
+  /// No description provided for @describeExperienceHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Describe your experience (min 10 characters)'**
+  String get describeExperienceHint;
+
+  /// No description provided for @suggestAFeatureTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Suggest a Feature'**
+  String get suggestAFeatureTitle;
+
+  /// No description provided for @whatFeaturesWouldYouLike.
+  ///
+  /// In en, this message translates to:
+  /// **'What features would you like to see in PocketPlus to manage your ledgers better?'**
+  String get whatFeaturesWouldYouLike;
+
+  /// No description provided for @whatFeatureBuildHint.
+  ///
+  /// In en, this message translates to:
+  /// **'What feature would you like us to build? (min 10 characters)'**
+  String get whatFeatureBuildHint;
+
+  /// No description provided for @encounteredIssue.
+  ///
+  /// In en, this message translates to:
+  /// **'Encountered an issue? Please describe it, and optionally attach a screenshot.'**
+  String get encounteredIssue;
+
+  /// No description provided for @describeBugHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Please describe the bug in detail (min 10 characters)'**
+  String get describeBugHint;
+
+  /// No description provided for @attachScreenshot.
+  ///
+  /// In en, this message translates to:
+  /// **'Attach Screenshot'**
+  String get attachScreenshot;
+
+  /// No description provided for @changeScreenshot.
+  ///
+  /// In en, this message translates to:
+  /// **'Change Screenshot'**
+  String get changeScreenshot;
+
+  /// No description provided for @ratePocketplus.
+  ///
+  /// In en, this message translates to:
+  /// **'Rate PocketPlus'**
+  String get ratePocketplus;
+
+  /// No description provided for @howLikelyRecommend.
+  ///
+  /// In en, this message translates to:
+  /// **'How likely are you to recommend us to another merchant?'**
+  String get howLikelyRecommend;
+
+  /// No description provided for @chatOnWhatsapp.
+  ///
+  /// In en, this message translates to:
+  /// **'Chat with us on WhatsApp'**
+  String get chatOnWhatsapp;
+
+  /// No description provided for @startANewDream.
+  ///
+  /// In en, this message translates to:
+  /// **'✨  Start a New Dream'**
+  String get startANewDream;
+
+  /// No description provided for @npsDetractor.
+  ///
+  /// In en, this message translates to:
+  /// **'Detractor'**
+  String get npsDetractor;
+
+  /// No description provided for @npsPassive.
+  ///
+  /// In en, this message translates to:
+  /// **'Passive'**
+  String get npsPassive;
+
+  /// No description provided for @npsPromoter.
+  ///
+  /// In en, this message translates to:
+  /// **'Promoter'**
+  String get npsPromoter;
+
+  /// No description provided for @weAreHereToHelp.
+  ///
+  /// In en, this message translates to:
+  /// **'We\'re here to help'**
+  String get weAreHereToHelp;
+
+  /// No description provided for @howCanWeMakeBetter.
+  ///
+  /// In en, this message translates to:
+  /// **'How can we make PocketPlus better for your business today?'**
+  String get howCanWeMakeBetter;
+
+  /// No description provided for @tabGeneral.
+  ///
+  /// In en, this message translates to:
+  /// **'General'**
+  String get tabGeneral;
+
+  /// No description provided for @tabFeature.
+  ///
+  /// In en, this message translates to:
+  /// **'Feature'**
+  String get tabFeature;
+
+  /// No description provided for @tabBug.
+  ///
+  /// In en, this message translates to:
+  /// **'Bug'**
+  String get tabBug;
+
+  /// No description provided for @tabNps.
+  ///
+  /// In en, this message translates to:
+  /// **'NPS'**
+  String get tabNps;
+
+  /// No description provided for @npsUnlikely.
+  ///
+  /// In en, this message translates to:
+  /// **'0 — Unlikely'**
+  String get npsUnlikely;
+
+  /// No description provided for @npsVeryLikely.
+  ///
+  /// In en, this message translates to:
+  /// **'10 — Very Likely'**
+  String get npsVeryLikely;
 }
 
 class _AppLocalizationsDelegate

@@ -9,6 +9,7 @@ import 'package:uuid/uuid.dart';
 import '../../../core/constants/app_colors.dart';
 import '../../../core/constants/app_sizes.dart';
 import '../../../core/constants/app_text_styles.dart';
+import '../../../l10n/app_localizations.dart';
 import '../../../shared/providers/firebase_providers.dart';
 import '../../../shared/widgets/app_button.dart';
 import '../domain/entities/feedback_item.dart';
@@ -35,13 +36,21 @@ class _FeedbackScreenState extends ConsumerState<FeedbackScreen>
   static const String _supportNumber =
       String.fromEnvironment('SUPPORT_WHATSAPP', defaultValue: '9999999999');
 
-  static const List<String> _ratingLabels = [
-    'Poor',
-    'Fair',
-    'Good',
-    'Very Good',
-    'Excellent',
-  ];
+  String _ratingLabel(int rating) {
+    final l = AppLocalizations.of(context)!;
+    switch (rating) {
+      case 1:
+        return l.npsPoor;
+      case 2:
+        return l.npsFair;
+      case 3:
+        return l.npsGood;
+      case 4:
+        return l.npsVeryGood;
+      default:
+        return l.npsExcellent;
+    }
+  }
 
   @override
   void initState() {
@@ -83,9 +92,10 @@ class _FeedbackScreenState extends ConsumerState<FeedbackScreen>
   }
 
   String _getNpsLabel(double value) {
-    if (value <= 6) return 'Detractor';
-    if (value <= 8) return 'Passive';
-    return 'Promoter';
+    final l = AppLocalizations.of(context)!;
+    if (value <= 6) return l.npsDetractor;
+    if (value <= 8) return l.npsPassive;
+    return l.npsPromoter;
   }
 
   bool _isFormValid() {
@@ -116,7 +126,9 @@ class _FeedbackScreenState extends ConsumerState<FeedbackScreen>
     } catch (_) {
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('Could not launch WhatsApp.')),
+          SnackBar(
+            content: Text(AppLocalizations.of(context)!.couldNotLaunchWhatsapp),
+          ),
         );
       }
     }
@@ -192,8 +204,8 @@ class _FeedbackScreenState extends ConsumerState<FeedbackScreen>
               );
 
           ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(
-              content: Text('Thank you for your feedback!'),
+            SnackBar(
+              content: Text(AppLocalizations.of(context)!.thankYouFeedback),
               backgroundColor: AppColors.primary,
             ),
           );
@@ -211,7 +223,7 @@ class _FeedbackScreenState extends ConsumerState<FeedbackScreen>
       backgroundColor: AppColors.surface,
       appBar: AppBar(
         title: Text(
-          'Send Feedback',
+          AppLocalizations.of(context)!.sendFeedback,
           style:
               AppTextStyles.titleLarge(context, color: Colors.white).copyWith(
             fontWeight: FontWeight.bold,
@@ -271,7 +283,7 @@ class _FeedbackScreenState extends ConsumerState<FeedbackScreen>
         ),
         const SizedBox(height: AppSizes.spacing12),
         Text(
-          "We're here to help",
+          AppLocalizations.of(context)!.weAreHereToHelp,
           textAlign: TextAlign.center,
           style: AppTextStyles.displayLarge(context).copyWith(
             color: AppColors.primary,
@@ -280,7 +292,7 @@ class _FeedbackScreenState extends ConsumerState<FeedbackScreen>
         ),
         const SizedBox(height: AppSizes.spacing8),
         Text(
-          'How can we make PocketPlus better for your business today?',
+          AppLocalizations.of(context)!.howCanWeMakeBetter,
           textAlign: TextAlign.center,
           style: AppTextStyles.bodyMedium(
             context,
@@ -302,29 +314,29 @@ class _FeedbackScreenState extends ConsumerState<FeedbackScreen>
       children: [
         _buildBentoCard(
           icon: Icons.star_rounded,
-          title: 'Send Feedback',
-          subtitle: 'Rate your experience',
+          title: AppLocalizations.of(context)!.sendFeedback,
+          subtitle: AppLocalizations.of(context)!.rateYourExperience,
           color: AppColors.primary,
           onTap: () => _tabController.animateTo(0),
         ),
         _buildBentoCard(
           icon: Icons.lightbulb_rounded,
-          title: 'Request a Feature',
-          subtitle: 'Suggest an idea',
+          title: AppLocalizations.of(context)!.requestAFeature,
+          subtitle: AppLocalizations.of(context)!.suggestAnIdea,
           color: AppColors.blue,
           onTap: () => _tabController.animateTo(1),
         ),
         _buildBentoCard(
           icon: Icons.bug_report_rounded,
-          title: 'Report a Bug',
-          subtitle: 'Found an issue?',
+          title: AppLocalizations.of(context)!.reportABug,
+          subtitle: AppLocalizations.of(context)!.foundAnIssue,
           color: AppColors.error,
           onTap: () => _tabController.animateTo(2),
         ),
         _buildBentoCard(
           icon: Icons.chat_rounded,
-          title: 'Talk on WhatsApp',
-          subtitle: 'Chat with us',
+          title: AppLocalizations.of(context)!.talkOnWhatsapp,
+          subtitle: AppLocalizations.of(context)!.chatWithUs,
           color: const Color(0xFF25D366),
           onTap: _launchWhatsApp,
         ),
@@ -408,11 +420,11 @@ class _FeedbackScreenState extends ConsumerState<FeedbackScreen>
         ),
         unselectedLabelStyle: AppTextStyles.labelLarge(context),
         tabAlignment: TabAlignment.start,
-        tabs: const [
-          Tab(text: 'General'),
-          Tab(text: 'Feature'),
-          Tab(text: 'Bug'),
-          Tab(text: 'NPS'),
+        tabs: [
+          Tab(text: AppLocalizations.of(context)!.tabGeneral),
+          Tab(text: AppLocalizations.of(context)!.tabFeature),
+          Tab(text: AppLocalizations.of(context)!.tabBug),
+          Tab(text: AppLocalizations.of(context)!.tabNps),
         ],
       ),
     );
@@ -445,7 +457,7 @@ class _FeedbackScreenState extends ConsumerState<FeedbackScreen>
         children: [
           Center(
             child: Text(
-              'Rate your experience',
+              AppLocalizations.of(context)!.rateYourExperience,
               style: AppTextStyles.titleMedium(context).copyWith(
                 fontWeight: FontWeight.bold,
                 color: AppColors.onSurface,
@@ -479,7 +491,7 @@ class _FeedbackScreenState extends ConsumerState<FeedbackScreen>
           const SizedBox(height: AppSizes.spacing8),
           Center(
             child: Text(
-              _ratingLabels[_rating - 1],
+              _ratingLabel(_rating),
               style: AppTextStyles.labelLarge(
                 context,
                 color: AppColors.primary,
@@ -487,7 +499,8 @@ class _FeedbackScreenState extends ConsumerState<FeedbackScreen>
             ),
           ),
           const SizedBox(height: AppSizes.spacing16),
-          _buildMessageField('Describe your experience (min 10 characters)'),
+          _buildMessageField(
+              AppLocalizations.of(context)!.describeExperienceHint),
         ],
       ),
     );
@@ -521,7 +534,7 @@ class _FeedbackScreenState extends ConsumerState<FeedbackScreen>
               ),
               const SizedBox(width: AppSizes.spacing12),
               Text(
-                'Suggest a Feature',
+                AppLocalizations.of(context)!.suggestAFeatureTitle,
                 style: AppTextStyles.titleMedium(context).copyWith(
                   fontWeight: FontWeight.bold,
                   color: AppColors.onSurface,
@@ -531,7 +544,7 @@ class _FeedbackScreenState extends ConsumerState<FeedbackScreen>
           ),
           const SizedBox(height: AppSizes.spacing8),
           Text(
-            'What features would you like to see in PocketPlus to manage your ledgers better?',
+            AppLocalizations.of(context)!.whatFeaturesWouldYouLike,
             style: AppTextStyles.bodyMedium(
               context,
               color: AppColors.onSurfaceMuted,
@@ -539,7 +552,7 @@ class _FeedbackScreenState extends ConsumerState<FeedbackScreen>
           ),
           const SizedBox(height: AppSizes.spacing20),
           _buildMessageField(
-            'What feature would you like us to build? (min 10 characters)',
+            AppLocalizations.of(context)!.whatFeatureBuildHint,
           ),
         ],
       ),
@@ -574,7 +587,7 @@ class _FeedbackScreenState extends ConsumerState<FeedbackScreen>
               ),
               const SizedBox(width: AppSizes.spacing12),
               Text(
-                'Report a Bug',
+                AppLocalizations.of(context)!.reportABug,
                 style: AppTextStyles.titleMedium(context).copyWith(
                   fontWeight: FontWeight.bold,
                   color: AppColors.onSurface,
@@ -584,7 +597,7 @@ class _FeedbackScreenState extends ConsumerState<FeedbackScreen>
           ),
           const SizedBox(height: AppSizes.spacing8),
           Text(
-            'Encountered an issue? Please describe it, and optionally attach a screenshot.',
+            AppLocalizations.of(context)!.encounteredIssue,
             style: AppTextStyles.bodyMedium(
               context,
               color: AppColors.onSurfaceMuted,
@@ -592,7 +605,7 @@ class _FeedbackScreenState extends ConsumerState<FeedbackScreen>
           ),
           const SizedBox(height: AppSizes.spacing20),
           _buildMessageField(
-            'Please describe the bug in detail (min 10 characters)',
+            AppLocalizations.of(context)!.describeBugHint,
           ),
           const SizedBox(height: AppSizes.spacing16),
           OutlinedButton.icon(
@@ -605,8 +618,8 @@ class _FeedbackScreenState extends ConsumerState<FeedbackScreen>
             ),
             label: Text(
               _screenshotPath == null
-                  ? 'Attach Screenshot'
-                  : 'Change Screenshot',
+                  ? AppLocalizations.of(context)!.attachScreenshot
+                  : AppLocalizations.of(context)!.changeScreenshot,
             ),
             style: OutlinedButton.styleFrom(
               foregroundColor: AppColors.primary,
@@ -683,7 +696,7 @@ class _FeedbackScreenState extends ConsumerState<FeedbackScreen>
         children: [
           Center(
             child: Text(
-              'Rate PocketPlus',
+              AppLocalizations.of(context)!.ratePocketplus,
               style: AppTextStyles.titleMedium(context).copyWith(
                 fontWeight: FontWeight.bold,
                 color: AppColors.onSurface,
@@ -693,7 +706,7 @@ class _FeedbackScreenState extends ConsumerState<FeedbackScreen>
           const SizedBox(height: AppSizes.spacing8),
           Center(
             child: Text(
-              'How likely are you to recommend us to another merchant?',
+              AppLocalizations.of(context)!.howLikelyRecommend,
               textAlign: TextAlign.center,
               style: AppTextStyles.bodyMedium(
                 context,
@@ -774,14 +787,14 @@ class _FeedbackScreenState extends ConsumerState<FeedbackScreen>
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  '0 \u2014 Unlikely',
+                  AppLocalizations.of(context)!.npsUnlikely,
                   style: AppTextStyles.labelSmall(
                     context,
                     color: AppColors.onSurfaceMuted,
                   ),
                 ),
                 Text(
-                  '10 \u2014 Very Likely',
+                  AppLocalizations.of(context)!.npsVeryLikely,
                   style: AppTextStyles.labelSmall(
                     context,
                     color: AppColors.onSurfaceMuted,
@@ -843,7 +856,7 @@ class _FeedbackScreenState extends ConsumerState<FeedbackScreen>
             color: Color(0xFF25D366),
           ),
           label: Text(
-            'Chat with us on WhatsApp',
+            AppLocalizations.of(context)!.chatOnWhatsapp,
             style: AppTextStyles.labelLarge(
               context,
               color: const Color(0xFF25D366),
@@ -863,7 +876,7 @@ class _FeedbackScreenState extends ConsumerState<FeedbackScreen>
         SizedBox(
           height: 50,
           child: AppButton(
-            label: 'Submit Feedback',
+            label: AppLocalizations.of(context)!.submitFeedback,
             onPressed: _isFormValid() ? _submitFeedback : null,
           ),
         ),

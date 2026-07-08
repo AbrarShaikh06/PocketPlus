@@ -1639,4 +1639,330 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get qtyHint => 'الكمية';
+
+  @override
+  String get feedbackTitle => 'الملاحظات';
+
+  @override
+  String get openMenu => 'فتح القائمة';
+
+  @override
+  String get seeAll => 'عرض الكل';
+
+  @override
+  String failedToDeleteArg(String msg) {
+    return 'فشل الحذف: $msg';
+  }
+
+  @override
+  String failedToLoadGoalsArg(String msg) {
+    return 'فشل تحميل أهداف الادخار: $msg';
+  }
+
+  @override
+  String goalDeletedArg(String name) {
+    return 'تم حذف الهدف \"$name\"';
+  }
+
+  @override
+  String get dreamName => 'اسم الحلم';
+
+  @override
+  String get enterAmountRupees => 'أدخل المبلغ بالروبية';
+
+  @override
+  String get notesDescriptionOptional => 'ملاحظات / وصف (اختياري)';
+
+  @override
+  String get saveDream => 'حفظ الحلم';
+
+  @override
+  String get targetAmountRupees => 'المبلغ المستهدف (₹)';
+
+  @override
+  String get whyDreamImportant => 'لماذا هذا الحلم مهم لك؟';
+
+  @override
+  String get change => 'تغيير';
+
+  @override
+  String get editGoal => 'تعديل الهدف';
+
+  @override
+  String get goalName => 'اسم الهدف';
+
+  @override
+  String get goalUpdatedSuccess => 'تم تحديث الهدف بنجاح';
+
+  @override
+  String get markAsAchieved => 'وضع علامة كمُحقَّق';
+
+  @override
+  String get savingsGoalNotFound => 'لم يتم العثور على هدف الادخار';
+
+  @override
+  String get updateGoal => 'تحديث الهدف';
+
+  @override
+  String errorLoadingEntriesArg(String msg) {
+    return 'خطأ في تحميل الإدخالات: $msg';
+  }
+
+  @override
+  String failedWithMessage(String msg) {
+    return 'فشل: $msg';
+  }
+
+  @override
+  String get achievedOn => 'تاريخ التحقيق';
+
+  @override
+  String get amountSaved => 'المبلغ المُدَّخَر';
+
+  @override
+  String get goalCreated => 'تم إنشاء الهدف';
+
+  @override
+  String get viewMyGoals => 'عرض أهدافي';
+
+  @override
+  String get addToDream => 'أضف إلى الحلم';
+
+  @override
+  String get noteOptional => 'ملاحظة (اختياري)';
+
+  @override
+  String get chatWithUs => 'تحدّث معنا';
+
+  @override
+  String get couldNotLaunchWhatsapp => 'تعذّر فتح WhatsApp.';
+
+  @override
+  String get foundAnIssue => 'وجدت مشكلة؟';
+
+  @override
+  String get rateYourExperience => 'قيّم تجربتك';
+
+  @override
+  String get reportABug => 'الإبلاغ عن خطأ';
+
+  @override
+  String get requestAFeature => 'طلب ميزة';
+
+  @override
+  String get submitFeedback => 'إرسال الملاحظات';
+
+  @override
+  String get suggestAnIdea => 'اقترح فكرة';
+
+  @override
+  String get talkOnWhatsapp => 'تحدّث على WhatsApp';
+
+  @override
+  String get thankYouFeedback => 'شكرًا على ملاحظاتك!';
+
+  @override
+  String get passwordResetSent =>
+      'تم إرسال بريد إعادة تعيين كلمة المرور. تحقق من صندوق الوارد.';
+
+  @override
+  String get confirmEntry => 'تأكيد الإدخال';
+
+  @override
+  String get enterMerchantName => 'أدخل اسم التاجر';
+
+  @override
+  String get dreamNameHint => 'مثال: مركبة توصيل، مستودع جديد';
+
+  @override
+  String amountSavedArg(String amount) {
+    return 'تم ادخار $amount';
+  }
+
+  @override
+  String ofAmountArg(String amount) {
+    return 'من $amount';
+  }
+
+  @override
+  String get achievedBadge => 'تم التحقيق 🎉';
+
+  @override
+  String percentCompleted(int percent) {
+    return 'اكتمل $percent%';
+  }
+
+  @override
+  String daysRemainingArg(int days) {
+    return '$days يومًا متبقيًا';
+  }
+
+  @override
+  String get reachedSavingsDream => 'لقد حققت حلم الادخار هذا! 🎉';
+
+  @override
+  String get contributionHistory => 'سجل المساهمات';
+
+  @override
+  String get noMoneyAddedYet =>
+      'لم تتم إضافة أي أموال بعد.\nابدأ الادخار اليوم!';
+
+  @override
+  String get noTargetDateSet => 'لم يتم تحديد تاريخ مستهدف';
+
+  @override
+  String targetDateArg(String date) {
+    return 'التاريخ المستهدف: $date';
+  }
+
+  @override
+  String get dreamAchieved => 'تحقق الحلم!';
+
+  @override
+  String get youDidIt => 'لقد فعلتها! 🎉';
+
+  @override
+  String get yourDisciplineMsg =>
+      'انضباطك جعل هذا ممكنًا.\nواصل الحلم والادخار!';
+
+  @override
+  String addToGoalArg(String name) {
+    return 'أضف إلى $name';
+  }
+
+  @override
+  String get howMuchAddedToday => 'كم أضفت إلى حلمك اليوم؟';
+
+  @override
+  String dateArg(String date) {
+    return 'التاريخ: $date';
+  }
+
+  @override
+  String targetArg(String amount) {
+    return 'الهدف: $amount';
+  }
+
+  @override
+  String get completeLabel => 'مكتمل';
+
+  @override
+  String get goalAchievedBadge => 'تم تحقيق الهدف! 🎉';
+
+  @override
+  String get unknownMerchant => 'تاجر غير معروف';
+
+  @override
+  String get autoCaptureBadge => 'التقاط تلقائي';
+
+  @override
+  String get showLess => 'عرض أقل';
+
+  @override
+  String get showMore => 'عرض المزيد';
+
+  @override
+  String get amountLabelUpper => 'المبلغ';
+
+  @override
+  String get paidToLabel => 'مدفوع إلى';
+
+  @override
+  String get selectCategoryUpper => 'اختر الفئة';
+
+  @override
+  String get notABusinessTransaction => 'ليست معاملة تجارية';
+
+  @override
+  String get npsPoor => 'ضعيف';
+
+  @override
+  String get npsFair => 'مقبول';
+
+  @override
+  String get npsGood => 'جيد';
+
+  @override
+  String get npsVeryGood => 'جيد جدًا';
+
+  @override
+  String get npsExcellent => 'ممتاز';
+
+  @override
+  String get categoryGeneral => 'عام';
+
+  @override
+  String get categoryFeature => 'ميزة';
+
+  @override
+  String get describeExperienceHint => 'صف تجربتك (10 أحرف على الأقل)';
+
+  @override
+  String get suggestAFeatureTitle => 'اقترح ميزة';
+
+  @override
+  String get whatFeaturesWouldYouLike =>
+      'ما الميزات التي تود رؤيتها في PocketPlus لإدارة دفاترك بشكل أفضل؟';
+
+  @override
+  String get whatFeatureBuildHint =>
+      'ما الميزة التي تريد منا بناءها؟ (10 أحرف على الأقل)';
+
+  @override
+  String get encounteredIssue =>
+      'واجهت مشكلة؟ يرجى وصفها، وإرفاق لقطة شاشة اختياريًا.';
+
+  @override
+  String get describeBugHint => 'يرجى وصف الخطأ بالتفصيل (10 أحرف على الأقل)';
+
+  @override
+  String get attachScreenshot => 'إرفاق لقطة شاشة';
+
+  @override
+  String get changeScreenshot => 'تغيير لقطة الشاشة';
+
+  @override
+  String get ratePocketplus => 'قيّم PocketPlus';
+
+  @override
+  String get howLikelyRecommend => 'ما مدى احتمال أن توصي بنا لتاجر آخر؟';
+
+  @override
+  String get chatOnWhatsapp => 'تحدّث معنا على WhatsApp';
+
+  @override
+  String get startANewDream => '✨  ابدأ حلمًا جديدًا';
+
+  @override
+  String get npsDetractor => 'منتقد';
+
+  @override
+  String get npsPassive => 'محايد';
+
+  @override
+  String get npsPromoter => 'مروّج';
+
+  @override
+  String get weAreHereToHelp => 'نحن هنا لمساعدتك';
+
+  @override
+  String get howCanWeMakeBetter => 'كيف يمكننا تحسين PocketPlus لعملك اليوم؟';
+
+  @override
+  String get tabGeneral => 'عام';
+
+  @override
+  String get tabFeature => 'ميزة';
+
+  @override
+  String get tabBug => 'خطأ';
+
+  @override
+  String get tabNps => 'NPS';
+
+  @override
+  String get npsUnlikely => '0 — غير محتمل';
+
+  @override
+  String get npsVeryLikely => '10 — محتمل جدًا';
 }

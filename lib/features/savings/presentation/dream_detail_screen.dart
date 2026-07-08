@@ -7,6 +7,7 @@ import '../../../core/constants/app_sizes.dart';
 import '../../../core/constants/app_text_styles.dart';
 import '../../../core/router/route_names.dart';
 import '../../../core/utils/currency_formatter.dart';
+import '../../../l10n/app_localizations.dart';
 import '../../../shared/widgets/app_button.dart';
 import '../../../shared/widgets/app_text_field.dart';
 import '../../../shared/widgets/loading_shimmer.dart';
@@ -83,13 +84,13 @@ class _DreamDetailScreenState extends ConsumerState<DreamDetailScreen> {
                   const SizedBox(height: AppSizes.spacing16),
                   AppTextField(
                     controller: nameController,
-                    label: 'Goal Name',
+                    label: AppLocalizations.of(context)!.goalName,
                     maxLength: 100,
                   ),
                   const SizedBox(height: AppSizes.spacing12),
                   AppTextField(
                     controller: amountController,
-                    label: 'Target Amount (₹)',
+                    label: AppLocalizations.of(context)!.targetAmountRupees,
                     keyboardType: TextInputType.number,
                   ),
                   const SizedBox(height: AppSizes.spacing12),
@@ -98,14 +99,15 @@ class _DreamDetailScreenState extends ConsumerState<DreamDetailScreen> {
                       Expanded(
                         child: Text(
                           pickedDate == null
-                              ? 'No Target Date set'
-                              : 'Target Date: ${pickedDate!.day}/${pickedDate!.month}/${pickedDate!.year}',
+                              ? AppLocalizations.of(context)!.noTargetDateSet
+                              : AppLocalizations.of(context)!.targetDateArg(
+                                  '${pickedDate!.day}/${pickedDate!.month}/${pickedDate!.year}'),
                           style: AppTextStyles.bodyMedium(context),
                         ),
                       ),
                       TextButton.icon(
                         icon: const Icon(Icons.calendar_today, size: 18),
-                        label: const Text('Change'),
+                        label: Text(AppLocalizations.of(context)!.change),
                         onPressed: () async {
                           final picked = await showDatePicker(
                             context: context,
@@ -126,12 +128,13 @@ class _DreamDetailScreenState extends ConsumerState<DreamDetailScreen> {
                   const SizedBox(height: AppSizes.spacing12),
                   AppTextField(
                     controller: notesController,
-                    label: 'Notes / Description (Optional)',
+                    label:
+                        AppLocalizations.of(context)!.notesDescriptionOptional,
                     maxLength: 200,
                   ),
                   const SizedBox(height: AppSizes.spacing20),
                   AppButton(
-                    label: 'Update Goal',
+                    label: AppLocalizations.of(context)!.updateGoal,
                     onPressed: () async {
                       final name = nameController.text.trim();
                       final amountVal =
@@ -160,13 +163,17 @@ class _DreamDetailScreenState extends ConsumerState<DreamDetailScreen> {
 
                       result.fold(
                         (f) => ScaffoldMessenger.of(context).showSnackBar(
-                          SnackBar(content: Text('Error: ${f.message}')),
+                          SnackBar(
+                            content: Text(AppLocalizations.of(context)!
+                                .errorWithMessage(f.message)),
+                          ),
                         ),
                         (_) {
                           context.pop();
                           ScaffoldMessenger.of(context).showSnackBar(
-                            const SnackBar(
-                              content: Text('Goal updated successfully'),
+                            SnackBar(
+                              content: Text(AppLocalizations.of(context)!
+                                  .goalUpdatedSuccess),
                             ),
                           );
                         },
@@ -196,7 +203,10 @@ class _DreamDetailScreenState extends ConsumerState<DreamDetailScreen> {
       (failure) {
         if (mounted) {
           ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(content: Text('Failed: ${failure.message}')),
+            SnackBar(
+              content: Text(AppLocalizations.of(context)!
+                  .failedWithMessage(failure.message)),
+            ),
           );
         }
       },
@@ -243,8 +253,9 @@ class _DreamDetailScreenState extends ConsumerState<DreamDetailScreen> {
       data: (goals) {
         final goalIndex = goals.indexWhere((g) => g.id == widget.goalId);
         if (goalIndex == -1) {
-          return const Scaffold(
-            body: Center(child: Text('Savings Goal not found')),
+          return Scaffold(
+            body: Center(
+                child: Text(AppLocalizations.of(context)!.savingsGoalNotFound)),
           );
         }
 
@@ -286,7 +297,7 @@ class _DreamDetailScreenState extends ConsumerState<DreamDetailScreen> {
             ),
             actions: [
               IconButton(
-                tooltip: 'Edit goal',
+                tooltip: AppLocalizations.of(context)!.editGoal,
                 icon: const Icon(Icons.edit_outlined),
                 onPressed: () => _showEditGoalDialog(context, goal),
               ),
@@ -356,7 +367,9 @@ class _DreamDetailScreenState extends ConsumerState<DreamDetailScreen> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text(
-                                  '${CurrencyFormatter.formatRupees(goal.savedAmount)} saved',
+                                  AppLocalizations.of(context)!.amountSavedArg(
+                                      CurrencyFormatter.formatRupees(
+                                          goal.savedAmount)),
                                   style:
                                       AppTextStyles.bodyLarge(context).copyWith(
                                     fontWeight: FontWeight.bold,
@@ -364,7 +377,9 @@ class _DreamDetailScreenState extends ConsumerState<DreamDetailScreen> {
                                   ),
                                 ),
                                 Text(
-                                  'of ${CurrencyFormatter.formatRupees(goal.targetAmount)}',
+                                  AppLocalizations.of(context)!.ofAmountArg(
+                                      CurrencyFormatter.formatRupees(
+                                          goal.targetAmount)),
                                   style: AppTextStyles.bodyMedium(context)
                                       .copyWith(
                                     color: AppColors.onSurfaceMuted,
@@ -390,8 +405,10 @@ class _DreamDetailScreenState extends ConsumerState<DreamDetailScreen> {
                                   ),
                                   child: Text(
                                     isAchieved
-                                        ? 'Achieved 🎉'
-                                        : '$percentInt% Completed',
+                                        ? AppLocalizations.of(context)!
+                                            .achievedBadge
+                                        : AppLocalizations.of(context)!
+                                            .percentCompleted(percentInt),
                                     style: AppTextStyles.labelSmall(context)
                                         .copyWith(
                                       color: isAchieved
@@ -403,7 +420,8 @@ class _DreamDetailScreenState extends ConsumerState<DreamDetailScreen> {
                                 ),
                                 if (daysLeft != null && !isAchieved)
                                   Text(
-                                    '$daysLeft days remaining',
+                                    AppLocalizations.of(context)!
+                                        .daysRemainingArg(daysLeft),
                                     style: AppTextStyles.labelSmall(context),
                                   ),
                               ],
@@ -417,13 +435,13 @@ class _DreamDetailScreenState extends ConsumerState<DreamDetailScreen> {
                     // Actions
                     if (!isAchieved) ...[
                       AppButton(
-                        label: 'Add Money Today',
+                        label: AppLocalizations.of(context)!.addMoneyToday,
                         onPressed: () =>
                             _showAddMoneyBottomSheet(context, goal),
                       ),
                       const SizedBox(height: AppSizes.spacing12),
                       AppButton(
-                        label: 'Mark as Achieved',
+                        label: AppLocalizations.of(context)!.markAsAchieved,
                         variant: AppButtonVariant.outline,
                         onPressed: () => _markAsAchieved(goal),
                       ),
@@ -436,7 +454,7 @@ class _DreamDetailScreenState extends ConsumerState<DreamDetailScreen> {
                         ),
                         child: Center(
                           child: Text(
-                            'You reached this savings dream! 🎉',
+                            AppLocalizations.of(context)!.reachedSavingsDream,
                             style: AppTextStyles.titleMedium(context).copyWith(
                               color: AppColors.primary,
                             ),
@@ -448,7 +466,7 @@ class _DreamDetailScreenState extends ConsumerState<DreamDetailScreen> {
 
                     // Contribution History
                     Text(
-                      'Contribution History',
+                      AppLocalizations.of(context)!.contributionHistory,
                       style: AppTextStyles.titleMedium(context),
                     ),
                     const SizedBox(height: AppSizes.spacing12),
@@ -461,7 +479,7 @@ class _DreamDetailScreenState extends ConsumerState<DreamDetailScreen> {
                               padding:
                                   const EdgeInsets.symmetric(vertical: 24.0),
                               child: Text(
-                                'No money added yet.\nStart saving today!',
+                                AppLocalizations.of(context)!.noMoneyAddedYet,
                                 style: AppTextStyles.bodyMedium(
                                   context,
                                   color: AppColors.onSurfaceMuted,
@@ -504,7 +522,8 @@ class _DreamDetailScreenState extends ConsumerState<DreamDetailScreen> {
                         );
                       },
                       loading: () => const LoadingShimmerList(itemCount: 2),
-                      error: (err, _) => Text('Error loading entries: $err'),
+                      error: (err, _) => Text(AppLocalizations.of(context)!
+                          .errorLoadingEntriesArg('$err')),
                     ),
                   ],
                 ),
@@ -518,7 +537,9 @@ class _DreamDetailScreenState extends ConsumerState<DreamDetailScreen> {
         body: Center(child: CircularProgressIndicator()),
       ),
       error: (err, _) => Scaffold(
-        body: Center(child: Text('Error: $err')),
+        body: Center(
+            child:
+                Text(AppLocalizations.of(context)!.errorWithMessage('$err'))),
       ),
     );
   }

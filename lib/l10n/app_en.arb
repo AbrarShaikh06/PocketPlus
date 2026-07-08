@@ -560,5 +560,194 @@
   "markPaid": "Mark Paid",
   "couldNotSave": "Could not save. Please try again.",
   "phoneHintIndian": "10-digit Indian number",
-  "qtyHint": "Qty"
+  "qtyHint": "Qty",
+  "feedbackTitle": "Feedback",
+  "openMenu": "Open menu",
+  "seeAll": "See All",
+  "failedToDeleteArg": "Failed to delete: {msg}",
+  "@failedToDeleteArg": {
+    "placeholders": {
+      "msg": {
+        "type": "String"
+      }
+    }
+  },
+  "failedToLoadGoalsArg": "Failed to load savings goals: {msg}",
+  "@failedToLoadGoalsArg": {
+    "placeholders": {
+      "msg": {
+        "type": "String"
+      }
+    }
+  },
+  "goalDeletedArg": "Goal \"{name}\" deleted",
+  "@goalDeletedArg": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "dreamName": "Dream Name",
+  "enterAmountRupees": "Enter amount in Rupees",
+  "notesDescriptionOptional": "Notes / Description (Optional)",
+  "saveDream": "Save Dream",
+  "targetAmountRupees": "Target Amount (₹)",
+  "whyDreamImportant": "Why is this dream important to you?",
+  "change": "Change",
+  "editGoal": "Edit goal",
+  "goalName": "Goal Name",
+  "goalUpdatedSuccess": "Goal updated successfully",
+  "markAsAchieved": "Mark as Achieved",
+  "savingsGoalNotFound": "Savings Goal not found",
+  "updateGoal": "Update Goal",
+  "errorLoadingEntriesArg": "Error loading entries: {msg}",
+  "@errorLoadingEntriesArg": {
+    "placeholders": {
+      "msg": {
+        "type": "String"
+      }
+    }
+  },
+  "failedWithMessage": "Failed: {msg}",
+  "@failedWithMessage": {
+    "placeholders": {
+      "msg": {
+        "type": "String"
+      }
+    }
+  },
+  "achievedOn": "Achieved On",
+  "amountSaved": "Amount Saved",
+  "goalCreated": "Goal Created",
+  "viewMyGoals": "View My Goals",
+  "addToDream": "Add to Dream",
+  "noteOptional": "Note (optional)",
+  "chatWithUs": "Chat with us",
+  "couldNotLaunchWhatsapp": "Could not launch WhatsApp.",
+  "foundAnIssue": "Found an issue?",
+  "rateYourExperience": "Rate your experience",
+  "reportABug": "Report a Bug",
+  "requestAFeature": "Request a Feature",
+  "submitFeedback": "Submit Feedback",
+  "suggestAnIdea": "Suggest an idea",
+  "talkOnWhatsapp": "Talk on WhatsApp",
+  "thankYouFeedback": "Thank you for your feedback!",
+  "passwordResetSent": "Password reset email sent. Check your inbox.",
+  "confirmEntry": "Confirm Entry",
+  "enterMerchantName": "Enter merchant name",
+  "dreamNameHint": "e.g., Delivery Auto, New Godown",
+  "amountSavedArg": "{amount} saved",
+  "@amountSavedArg": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "ofAmountArg": "of {amount}",
+  "@ofAmountArg": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "achievedBadge": "Achieved 🎉",
+  "percentCompleted": "{percent}% Completed",
+  "@percentCompleted": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "daysRemainingArg": "{days} days remaining",
+  "@daysRemainingArg": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "reachedSavingsDream": "You reached this savings dream! 🎉",
+  "contributionHistory": "Contribution History",
+  "noMoneyAddedYet": "No money added yet.\nStart saving today!",
+  "noTargetDateSet": "No Target Date set",
+  "targetDateArg": "Target Date: {date}",
+  "@targetDateArg": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "dreamAchieved": "Dream Achieved!",
+  "youDidIt": "You Did It! 🎉",
+  "yourDisciplineMsg": "Your discipline made this possible.\nKeep dreaming and saving!",
+  "addToGoalArg": "Add to {name}",
+  "@addToGoalArg": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "howMuchAddedToday": "How much have you added to your dream today?",
+  "dateArg": "Date: {date}",
+  "@dateArg": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "targetArg": "Target: {amount}",
+  "@targetArg": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "completeLabel": "Complete",
+  "goalAchievedBadge": "Goal Achieved! 🎉",
+  "unknownMerchant": "Unknown Merchant",
+  "autoCaptureBadge": "AUTO-CAPTURE",
+  "showLess": "Show less",
+  "showMore": "Show more",
+  "amountLabelUpper": "AMOUNT",
+  "paidToLabel": "PAID TO",
+  "selectCategoryUpper": "SELECT CATEGORY",
+  "notABusinessTransaction": "Not a business transaction",
+  "npsPoor": "Poor",
+  "npsFair": "Fair",
+  "npsGood": "Good",
+  "npsVeryGood": "Very Good",
+  "npsExcellent": "Excellent",
+  "categoryGeneral": "General",
+  "categoryFeature": "Feature",
+  "describeExperienceHint": "Describe your experience (min 10 characters)",
+  "suggestAFeatureTitle": "Suggest a Feature",
+  "whatFeaturesWouldYouLike": "What features would you like to see in PocketPlus to manage your ledgers better?",
+  "whatFeatureBuildHint": "What feature would you like us to build? (min 10 characters)",
+  "encounteredIssue": "Encountered an issue? Please describe it, and optionally attach a screenshot.",
+  "describeBugHint": "Please describe the bug in detail (min 10 characters)",
+  "attachScreenshot": "Attach Screenshot",
+  "changeScreenshot": "Change Screenshot",
+  "ratePocketplus": "Rate PocketPlus",
+  "howLikelyRecommend": "How likely are you to recommend us to another merchant?",
+  "chatOnWhatsapp": "Chat with us on WhatsApp",
+  "startANewDream": "✨  Start a New Dream",
+  "npsDetractor": "Detractor",
+  "npsPassive": "Passive",
+  "npsPromoter": "Promoter",
+  "weAreHereToHelp": "We're here to help",
+  "howCanWeMakeBetter": "How can we make PocketPlus better for your business today?",
+  "tabGeneral": "General",
+  "tabFeature": "Feature",
+  "tabBug": "Bug",
+  "tabNps": "NPS",
+  "npsUnlikely": "0 — Unlikely",
+  "npsVeryLikely": "10 — Very Likely"
 }

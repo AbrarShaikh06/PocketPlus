@@ -8,6 +8,7 @@ import '../../../core/constants/app_sizes.dart';
 import '../../../core/constants/app_text_styles.dart';
 import '../../../core/utils/currency_formatter.dart';
 import '../../../core/router/route_names.dart';
+import '../../../l10n/app_localizations.dart';
 import '../../../shared/widgets/app_button.dart';
 import 'savings_providers.dart';
 import 'widgets/confetti_animation.dart';
@@ -146,7 +147,7 @@ class _GoalRewardScreenState extends ConsumerState<GoalRewardScreen>
                   const Text('🎉', style: TextStyle(fontSize: 64)),
                   const SizedBox(height: AppSizes.spacing16),
                   Text(
-                    'Dream Achieved!',
+                    AppLocalizations.of(context)!.dreamAchieved,
                     style:
                         AppTextStyles.titleLarge(context, color: Colors.white),
                   ),
@@ -156,7 +157,7 @@ class _GoalRewardScreenState extends ConsumerState<GoalRewardScreen>
                       horizontal: AppSizes.spacing24,
                     ),
                     child: AppButton(
-                      label: 'View My Goals',
+                      label: AppLocalizations.of(context)!.viewMyGoals,
                       onPressed: () => context.go(RouteNames.savings),
                     ),
                   ),
@@ -185,7 +186,7 @@ class _GoalRewardScreenState extends ConsumerState<GoalRewardScreen>
         backgroundColor: AppColors.primary,
         body: Center(
           child: AppButton(
-            label: 'Go Back',
+            label: AppLocalizations.of(context)!.goBack,
             onPressed: () => context.go(RouteNames.savings),
           ),
         ),
@@ -281,7 +282,7 @@ class _GoalRewardScreenState extends ConsumerState<GoalRewardScreen>
 
                       // Congratulations headline
                       Text(
-                        'You Did It! 🎉',
+                        AppLocalizations.of(context)!.youDidIt,
                         style: AppTextStyles.displayLarge(
                           context,
                           color: Colors.white,
@@ -320,7 +321,7 @@ class _GoalRewardScreenState extends ConsumerState<GoalRewardScreen>
                           children: [
                             _StatRow(
                               icon: Icons.savings_rounded,
-                              label: 'Amount Saved',
+                              label: AppLocalizations.of(context)!.amountSaved,
                               value: CurrencyFormatter.formatRupees(
                                 goal.savedAmount,
                               ),
@@ -333,7 +334,7 @@ class _GoalRewardScreenState extends ConsumerState<GoalRewardScreen>
                             const SizedBox(height: AppSizes.spacing16),
                             _StatRow(
                               icon: Icons.calendar_today_rounded,
-                              label: 'Goal Created',
+                              label: AppLocalizations.of(context)!.goalCreated,
                               value:
                                   '${goal.createdAt.day}/${goal.createdAt.month}/${goal.createdAt.year}',
                             ),
@@ -346,7 +347,7 @@ class _GoalRewardScreenState extends ConsumerState<GoalRewardScreen>
                               const SizedBox(height: AppSizes.spacing16),
                               _StatRow(
                                 icon: Icons.emoji_events_rounded,
-                                label: 'Achieved On',
+                                label: AppLocalizations.of(context)!.achievedOn,
                                 value:
                                     '${goal.achievedAt!.day}/${goal.achievedAt!.month}/${goal.achievedAt!.year}',
                               ),
@@ -357,7 +358,7 @@ class _GoalRewardScreenState extends ConsumerState<GoalRewardScreen>
                       const SizedBox(height: AppSizes.spacing12),
 
                       Text(
-                        'Your discipline made this possible.\nKeep dreaming and saving!',
+                        AppLocalizations.of(context)!.yourDisciplineMsg,
                         style: AppTextStyles.bodyMedium(
                           context,
                           color: Colors.white.withValues(alpha: 0.7),
@@ -368,13 +369,13 @@ class _GoalRewardScreenState extends ConsumerState<GoalRewardScreen>
 
                       // ── CTA buttons ────────────────────────────────
                       _GlassButton(
-                        label: '✨  Start a New Dream',
+                        label: AppLocalizations.of(context)!.startANewDream,
                         onPressed: () => context.go(RouteNames.savingsNew),
                         isPrimary: true,
                       ),
                       const SizedBox(height: AppSizes.spacing12),
                       _GlassButton(
-                        label: 'View My Goals',
+                        label: AppLocalizations.of(context)!.viewMyGoals,
                         onPressed: () => context.go(RouteNames.savings),
                         isPrimary: false,
                       ),

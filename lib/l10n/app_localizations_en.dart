@@ -1639,4 +1639,334 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get qtyHint => 'Qty';
+
+  @override
+  String get feedbackTitle => 'Feedback';
+
+  @override
+  String get openMenu => 'Open menu';
+
+  @override
+  String get seeAll => 'See All';
+
+  @override
+  String failedToDeleteArg(String msg) {
+    return 'Failed to delete: $msg';
+  }
+
+  @override
+  String failedToLoadGoalsArg(String msg) {
+    return 'Failed to load savings goals: $msg';
+  }
+
+  @override
+  String goalDeletedArg(String name) {
+    return 'Goal \"$name\" deleted';
+  }
+
+  @override
+  String get dreamName => 'Dream Name';
+
+  @override
+  String get enterAmountRupees => 'Enter amount in Rupees';
+
+  @override
+  String get notesDescriptionOptional => 'Notes / Description (Optional)';
+
+  @override
+  String get saveDream => 'Save Dream';
+
+  @override
+  String get targetAmountRupees => 'Target Amount (₹)';
+
+  @override
+  String get whyDreamImportant => 'Why is this dream important to you?';
+
+  @override
+  String get change => 'Change';
+
+  @override
+  String get editGoal => 'Edit goal';
+
+  @override
+  String get goalName => 'Goal Name';
+
+  @override
+  String get goalUpdatedSuccess => 'Goal updated successfully';
+
+  @override
+  String get markAsAchieved => 'Mark as Achieved';
+
+  @override
+  String get savingsGoalNotFound => 'Savings Goal not found';
+
+  @override
+  String get updateGoal => 'Update Goal';
+
+  @override
+  String errorLoadingEntriesArg(String msg) {
+    return 'Error loading entries: $msg';
+  }
+
+  @override
+  String failedWithMessage(String msg) {
+    return 'Failed: $msg';
+  }
+
+  @override
+  String get achievedOn => 'Achieved On';
+
+  @override
+  String get amountSaved => 'Amount Saved';
+
+  @override
+  String get goalCreated => 'Goal Created';
+
+  @override
+  String get viewMyGoals => 'View My Goals';
+
+  @override
+  String get addToDream => 'Add to Dream';
+
+  @override
+  String get noteOptional => 'Note (optional)';
+
+  @override
+  String get chatWithUs => 'Chat with us';
+
+  @override
+  String get couldNotLaunchWhatsapp => 'Could not launch WhatsApp.';
+
+  @override
+  String get foundAnIssue => 'Found an issue?';
+
+  @override
+  String get rateYourExperience => 'Rate your experience';
+
+  @override
+  String get reportABug => 'Report a Bug';
+
+  @override
+  String get requestAFeature => 'Request a Feature';
+
+  @override
+  String get submitFeedback => 'Submit Feedback';
+
+  @override
+  String get suggestAnIdea => 'Suggest an idea';
+
+  @override
+  String get talkOnWhatsapp => 'Talk on WhatsApp';
+
+  @override
+  String get thankYouFeedback => 'Thank you for your feedback!';
+
+  @override
+  String get passwordResetSent =>
+      'Password reset email sent. Check your inbox.';
+
+  @override
+  String get confirmEntry => 'Confirm Entry';
+
+  @override
+  String get enterMerchantName => 'Enter merchant name';
+
+  @override
+  String get dreamNameHint => 'e.g., Delivery Auto, New Godown';
+
+  @override
+  String amountSavedArg(String amount) {
+    return '$amount saved';
+  }
+
+  @override
+  String ofAmountArg(String amount) {
+    return 'of $amount';
+  }
+
+  @override
+  String get achievedBadge => 'Achieved 🎉';
+
+  @override
+  String percentCompleted(int percent) {
+    return '$percent% Completed';
+  }
+
+  @override
+  String daysRemainingArg(int days) {
+    return '$days days remaining';
+  }
+
+  @override
+  String get reachedSavingsDream => 'You reached this savings dream! 🎉';
+
+  @override
+  String get contributionHistory => 'Contribution History';
+
+  @override
+  String get noMoneyAddedYet => 'No money added yet.\nStart saving today!';
+
+  @override
+  String get noTargetDateSet => 'No Target Date set';
+
+  @override
+  String targetDateArg(String date) {
+    return 'Target Date: $date';
+  }
+
+  @override
+  String get dreamAchieved => 'Dream Achieved!';
+
+  @override
+  String get youDidIt => 'You Did It! 🎉';
+
+  @override
+  String get yourDisciplineMsg =>
+      'Your discipline made this possible.\nKeep dreaming and saving!';
+
+  @override
+  String addToGoalArg(String name) {
+    return 'Add to $name';
+  }
+
+  @override
+  String get howMuchAddedToday =>
+      'How much have you added to your dream today?';
+
+  @override
+  String dateArg(String date) {
+    return 'Date: $date';
+  }
+
+  @override
+  String targetArg(String amount) {
+    return 'Target: $amount';
+  }
+
+  @override
+  String get completeLabel => 'Complete';
+
+  @override
+  String get goalAchievedBadge => 'Goal Achieved! 🎉';
+
+  @override
+  String get unknownMerchant => 'Unknown Merchant';
+
+  @override
+  String get autoCaptureBadge => 'AUTO-CAPTURE';
+
+  @override
+  String get showLess => 'Show less';
+
+  @override
+  String get showMore => 'Show more';
+
+  @override
+  String get amountLabelUpper => 'AMOUNT';
+
+  @override
+  String get paidToLabel => 'PAID TO';
+
+  @override
+  String get selectCategoryUpper => 'SELECT CATEGORY';
+
+  @override
+  String get notABusinessTransaction => 'Not a business transaction';
+
+  @override
+  String get npsPoor => 'Poor';
+
+  @override
+  String get npsFair => 'Fair';
+
+  @override
+  String get npsGood => 'Good';
+
+  @override
+  String get npsVeryGood => 'Very Good';
+
+  @override
+  String get npsExcellent => 'Excellent';
+
+  @override
+  String get categoryGeneral => 'General';
+
+  @override
+  String get categoryFeature => 'Feature';
+
+  @override
+  String get describeExperienceHint =>
+      'Describe your experience (min 10 characters)';
+
+  @override
+  String get suggestAFeatureTitle => 'Suggest a Feature';
+
+  @override
+  String get whatFeaturesWouldYouLike =>
+      'What features would you like to see in PocketPlus to manage your ledgers better?';
+
+  @override
+  String get whatFeatureBuildHint =>
+      'What feature would you like us to build? (min 10 characters)';
+
+  @override
+  String get encounteredIssue =>
+      'Encountered an issue? Please describe it, and optionally attach a screenshot.';
+
+  @override
+  String get describeBugHint =>
+      'Please describe the bug in detail (min 10 characters)';
+
+  @override
+  String get attachScreenshot => 'Attach Screenshot';
+
+  @override
+  String get changeScreenshot => 'Change Screenshot';
+
+  @override
+  String get ratePocketplus => 'Rate PocketPlus';
+
+  @override
+  String get howLikelyRecommend =>
+      'How likely are you to recommend us to another merchant?';
+
+  @override
+  String get chatOnWhatsapp => 'Chat with us on WhatsApp';
+
+  @override
+  String get startANewDream => '✨  Start a New Dream';
+
+  @override
+  String get npsDetractor => 'Detractor';
+
+  @override
+  String get npsPassive => 'Passive';
+
+  @override
+  String get npsPromoter => 'Promoter';
+
+  @override
+  String get weAreHereToHelp => 'We\'re here to help';
+
+  @override
+  String get howCanWeMakeBetter =>
+      'How can we make PocketPlus better for your business today?';
+
+  @override
+  String get tabGeneral => 'General';
+
+  @override
+  String get tabFeature => 'Feature';
+
+  @override
+  String get tabBug => 'Bug';
+
+  @override
+  String get tabNps => 'NPS';
+
+  @override
+  String get npsUnlikely => '0 — Unlikely';
+
+  @override
+  String get npsVeryLikely => '10 — Very Likely';
 }

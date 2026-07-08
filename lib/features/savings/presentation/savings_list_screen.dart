@@ -7,6 +7,7 @@ import '../../../core/constants/app_sizes.dart';
 import '../../../core/constants/app_text_styles.dart';
 import '../../../core/router/route_names.dart';
 import '../../../core/utils/currency_formatter.dart';
+import '../../../l10n/app_localizations.dart';
 import '../../../shared/widgets/empty_state.dart';
 import '../../../shared/widgets/loading_shimmer.dart';
 import '../domain/savings_goal.dart';
@@ -53,7 +54,12 @@ class _SavingsListScreenState extends ConsumerState<SavingsListScreen> {
       (failure) {
         if (mounted) {
           ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(content: Text('Failed to delete: ${failure.message}')),
+            SnackBar(
+              content: Text(
+                AppLocalizations.of(context)!
+                    .failedToDeleteArg(failure.message),
+              ),
+            ),
           );
         }
       },
@@ -62,10 +68,11 @@ class _SavingsListScreenState extends ConsumerState<SavingsListScreen> {
           ScaffoldMessenger.of(context).clearSnackBars();
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
-              content: Text('Goal "${goal.name}" deleted'),
+              content:
+                  Text(AppLocalizations.of(context)!.goalDeletedArg(goal.name)),
               duration: const Duration(seconds: 5),
               action: SnackBarAction(
-                label: 'Undo',
+                label: AppLocalizations.of(context)!.undo,
                 textColor: AppColors.primaryLight,
                 onPressed: () async {
                   await repository.restoreGoal(goal.id);
@@ -100,7 +107,7 @@ class _SavingsListScreenState extends ConsumerState<SavingsListScreen> {
         iconTheme: const IconThemeData(color: Colors.white),
         actions: [
           IconButton(
-            tooltip: 'Notifications',
+            tooltip: AppLocalizations.of(context)!.notifications,
             icon: const Icon(Icons.notifications_none, color: Colors.white),
             onPressed: () {},
           ),
@@ -242,8 +249,9 @@ class _SavingsListScreenState extends ConsumerState<SavingsListScreen> {
           child: Padding(
             padding: const EdgeInsets.all(AppSizes.spacing24),
             child: EmptyState(
-              message: 'Failed to load savings goals: $err',
-              ctaLabel: 'Retry',
+              message:
+                  AppLocalizations.of(context)!.failedToLoadGoalsArg('$err'),
+              ctaLabel: AppLocalizations.of(context)!.retry,
               onCtaPressed: () => ref.invalidate(savingsGoalsStreamProvider),
             ),
           ),

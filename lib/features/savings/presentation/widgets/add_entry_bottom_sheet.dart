@@ -5,6 +5,7 @@ import 'package:go_router/go_router.dart';
 import '../../../../core/constants/app_colors.dart';
 import '../../../../core/constants/app_sizes.dart';
 import '../../../../core/constants/app_text_styles.dart';
+import '../../../../l10n/app_localizations.dart';
 import '../../../../shared/widgets/app_button.dart';
 import '../../../../shared/widgets/app_text_field.dart';
 import '../../domain/savings_goal.dart';
@@ -51,11 +52,11 @@ class _AddSavingsEntryBottomSheetState
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                'Add to ${widget.goal.name}',
+                AppLocalizations.of(context)!.addToGoalArg(widget.goal.name),
                 style: AppTextStyles.titleMedium(context),
               ),
               IconButton(
-                tooltip: 'Close',
+                tooltip: AppLocalizations.of(context)!.close,
                 icon: const Icon(Icons.close),
                 onPressed: () => context.pop(),
               ),
@@ -63,7 +64,7 @@ class _AddSavingsEntryBottomSheetState
           ),
           const SizedBox(height: AppSizes.spacing12),
           Text(
-            'How much have you added to your dream today?',
+            AppLocalizations.of(context)!.howMuchAddedToday,
             style: AppTextStyles.bodyMedium(context).copyWith(
               color: AppColors.onSurfaceMuted,
             ),
@@ -98,21 +99,22 @@ class _AddSavingsEntryBottomSheetState
               Expanded(
                 child: Text(
                   state.entryDate == null
-                      ? 'Select date'
-                      : 'Date: ${_formatDate(state.entryDate!)}',
+                      ? AppLocalizations.of(context)!.selectDate
+                      : AppLocalizations.of(context)!
+                          .dateArg(_formatDate(state.entryDate!)),
                   style: AppTextStyles.bodyMedium(context),
                 ),
               ),
               TextButton.icon(
                 icon: const Icon(Icons.calendar_today, size: 18),
-                label: const Text('Change'),
+                label: Text(AppLocalizations.of(context)!.change),
                 onPressed: () => _selectDate(context, state, notifier),
               ),
             ],
           ),
           const SizedBox(height: AppSizes.spacing12),
           AppTextField(
-            hint: 'Note (optional)',
+            hint: AppLocalizations.of(context)!.noteOptional,
             maxLength: 200,
             onChanged: (value) => notifier.setNote(value),
           ),
@@ -131,14 +133,14 @@ class _AddSavingsEntryBottomSheetState
                 ),
                 TextButton(
                   onPressed: () => _save(notifier),
-                  child: const Text('Retry'),
+                  child: Text(AppLocalizations.of(context)!.retry),
                 ),
               ],
             ),
           ],
           const SizedBox(height: AppSizes.spacing16),
           AppButton(
-            label: 'Add to Dream',
+            label: AppLocalizations.of(context)!.addToDream,
             isLoading: state.isSaving,
             onPressed: state.isSaving ? null : () => _save(notifier),
           ),

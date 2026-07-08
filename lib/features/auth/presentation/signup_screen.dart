@@ -147,7 +147,7 @@ class _SignupScreenState extends ConsumerState<SignupScreen> {
         backgroundColor: AppColors.surface,
         elevation: 0,
         leading: IconButton(
-          tooltip: 'Go back',
+          tooltip: AppLocalizations.of(context)!.goBack,
           icon: const Icon(Icons.arrow_back, color: AppColors.onSurface),
           onPressed: () => context.pop(),
         ),

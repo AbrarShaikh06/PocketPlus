@@ -6,6 +6,7 @@ import 'package:pocket_plus/core/errors/error_localizer.dart';
 import '../../../core/constants/app_colors.dart';
 import '../../../core/constants/app_sizes.dart';
 import '../../../core/constants/app_text_styles.dart';
+import '../../../l10n/app_localizations.dart';
 import '../../../shared/widgets/app_button.dart';
 import '../../../shared/widgets/app_text_field.dart';
 import '../domain/savings_goal.dart';
@@ -122,8 +123,8 @@ class _CreateDreamScreenState extends ConsumerState<CreateDreamScreen> {
             // Dream Name Input
             AppTextField(
               controller: _nameController,
-              label: 'Dream Name',
-              hint: 'e.g., Delivery Auto, New Godown',
+              label: AppLocalizations.of(context)!.dreamName,
+              hint: AppLocalizations.of(context)!.dreamNameHint,
               errorText: state.nameError,
               maxLength: 100,
               onChanged: (value) => notifier.setName(value),
@@ -133,8 +134,8 @@ class _CreateDreamScreenState extends ConsumerState<CreateDreamScreen> {
             // Target Amount Input
             AppTextField(
               controller: _amountController,
-              label: 'Target Amount (₹)',
-              hint: 'Enter amount in Rupees',
+              label: AppLocalizations.of(context)!.targetAmountRupees,
+              hint: AppLocalizations.of(context)!.enterAmountRupees,
               keyboardType:
                   const TextInputType.numberWithOptions(decimal: true),
               errorText: state.targetAmountError,
@@ -234,8 +235,8 @@ class _CreateDreamScreenState extends ConsumerState<CreateDreamScreen> {
             // Notes Input
             AppTextField(
               controller: _notesController,
-              label: 'Notes / Description (Optional)',
-              hint: 'Why is this dream important to you?',
+              label: AppLocalizations.of(context)!.notesDescriptionOptional,
+              hint: AppLocalizations.of(context)!.whyDreamImportant,
               maxLength: 200,
               onChanged: (value) => notifier.setNotes(value),
             ),
@@ -253,7 +254,7 @@ class _CreateDreamScreenState extends ConsumerState<CreateDreamScreen> {
 
             // Save Button
             AppButton(
-              label: 'Save Dream',
+              label: AppLocalizations.of(context)!.saveDream,
               isLoading: state.isSaving,
               onPressed:
                   isFormValid && !state.isSaving ? () => _save(notifier) : null,

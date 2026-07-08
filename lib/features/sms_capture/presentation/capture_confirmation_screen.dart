@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../core/constants/app_colors.dart';
 import '../../../core/constants/app_sizes.dart';
 import '../../../core/constants/app_text_styles.dart';
+import '../../../l10n/app_localizations.dart';
 import '../../../core/analytics/analytics_service.dart';
 import '../../../core/utils/currency_formatter.dart';
 import '../../../shared/widgets/app_button.dart';
@@ -109,12 +110,12 @@ class _CaptureConfirmationScreenState
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: IconButton(
-          tooltip: 'Close',
+          tooltip: AppLocalizations.of(context)!.close,
           icon: const Icon(Icons.close, color: AppColors.primary),
           onPressed: () => Navigator.of(context).pop(),
         ),
         title: Text(
-          'AUTO-CAPTURE',
+          AppLocalizations.of(context)!.autoCaptureBadge,
           style: AppTextStyles.labelLarge(context).copyWith(
             color: AppColors.primary.withValues(alpha: 0.6),
             letterSpacing: 2,
@@ -210,7 +211,9 @@ class _CaptureConfirmationScreenState
                   InkWell(
                     onTap: () => setState(() => _isExpanded = !_isExpanded),
                     child: Text(
-                      _isExpanded ? 'Show less' : 'Show more',
+                      _isExpanded
+                          ? AppLocalizations.of(context)!.showLess
+                          : AppLocalizations.of(context)!.showMore,
                       style: AppTextStyles.labelLarge(context).copyWith(
                         color: AppColors.secondary,
                         fontWeight: FontWeight.bold,
@@ -230,7 +233,7 @@ class _CaptureConfirmationScreenState
     return Column(
       children: [
         Text(
-          'AMOUNT',
+          AppLocalizations.of(context)!.amountLabelUpper,
           style: AppTextStyles.labelSmall(context).copyWith(
             color: AppColors.secondary,
             fontWeight: FontWeight.bold,
@@ -271,7 +274,7 @@ class _CaptureConfirmationScreenState
         Padding(
           padding: const EdgeInsets.only(left: 4, bottom: 4),
           child: Text(
-            'PAID TO',
+            AppLocalizations.of(context)!.paidToLabel,
             style: AppTextStyles.labelSmall(context).copyWith(
               color: AppColors.secondary,
               fontWeight: FontWeight.bold,
@@ -298,7 +301,7 @@ class _CaptureConfirmationScreenState
             decoration: InputDecoration(
               border: InputBorder.none,
               icon: const Icon(Icons.storefront, color: AppColors.secondary),
-              hintText: 'Enter merchant name',
+              hintText: AppLocalizations.of(context)!.enterMerchantName,
               hintStyle: const TextStyle(color: AppColors.onSurfaceMuted),
               enabled: isMerchantEditable,
             ),
@@ -318,7 +321,7 @@ class _CaptureConfirmationScreenState
         Padding(
           padding: const EdgeInsets.only(left: 4, bottom: 8),
           child: Text(
-            'SELECT CATEGORY',
+            AppLocalizations.of(context)!.selectCategoryUpper,
             style: AppTextStyles.labelSmall(context).copyWith(
               color: AppColors.secondary,
               fontWeight: FontWeight.bold,
@@ -398,7 +401,7 @@ class _CaptureConfirmationScreenState
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           AppButton(
-            label: 'Confirm Entry',
+            label: AppLocalizations.of(context)!.confirmEntry,
             icon: Icons.check_circle,
             isLoading: state.isSaving,
             onPressed: state.selectedCategoryId == null
@@ -427,7 +430,7 @@ class _CaptureConfirmationScreenState
                 }
               },
               child: Text(
-                'Not a business transaction',
+                AppLocalizations.of(context)!.notABusinessTransaction,
                 style: AppTextStyles.labelLarge(context).copyWith(
                   color: AppColors.primary,
                   fontWeight: FontWeight.bold,

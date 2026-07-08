@@ -6,6 +6,7 @@ import 'package:pocket_plus/features/home/presentation/home_providers.dart';
 import 'package:pocket_plus/features/profiles/domain/entities/profile.dart';
 import 'package:pocket_plus/features/savings/presentation/create_dream_screen.dart';
 import 'package:pocket_plus/features/savings/presentation/widgets/savings_progress_bar.dart';
+import 'package:pocket_plus/l10n/app_localizations.dart';
 import 'package:pocket_plus/shared/widgets/app_button.dart';
 import 'package:pocket_plus/shared/models/models.dart';
 
@@ -101,6 +102,8 @@ void main() {
             currentProfileProvider.overrideWithValue(testProfile),
           ],
           child: const MaterialApp(
+            localizationsDelegates: AppLocalizations.localizationsDelegates,
+            supportedLocales: AppLocalizations.supportedLocales,
             home: CreateDreamScreen(),
           ),
         ),
@@ -122,6 +125,8 @@ void main() {
             currentProfileProvider.overrideWithValue(testProfile),
           ],
           child: const MaterialApp(
+            localizationsDelegates: AppLocalizations.localizationsDelegates,
+            supportedLocales: AppLocalizations.supportedLocales,
             home: CreateDreamScreen(),
           ),
         ),
@@ -147,6 +152,8 @@ void main() {
             currentProfileProvider.overrideWithValue(testProfile),
           ],
           child: const MaterialApp(
+            localizationsDelegates: AppLocalizations.localizationsDelegates,
+            supportedLocales: AppLocalizations.supportedLocales,
             home: CreateDreamScreen(),
           ),
         ),

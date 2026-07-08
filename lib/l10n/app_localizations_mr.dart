@@ -1642,4 +1642,332 @@ class AppLocalizationsMr extends AppLocalizations {
 
   @override
   String get qtyHint => 'प्रमाण';
+
+  @override
+  String get feedbackTitle => 'अभिप्राय';
+
+  @override
+  String get openMenu => 'मेनू उघडा';
+
+  @override
+  String get seeAll => 'सर्व पहा';
+
+  @override
+  String failedToDeleteArg(String msg) {
+    return 'हटवण्यात अयशस्वी: $msg';
+  }
+
+  @override
+  String failedToLoadGoalsArg(String msg) {
+    return 'बचत उद्दिष्टे लोड करण्यात अयशस्वी: $msg';
+  }
+
+  @override
+  String goalDeletedArg(String name) {
+    return 'उद्दिष्ट \"$name\" हटवले';
+  }
+
+  @override
+  String get dreamName => 'स्वप्नाचे नाव';
+
+  @override
+  String get enterAmountRupees => 'रक्कम रुपयांत टाका';
+
+  @override
+  String get notesDescriptionOptional => 'नोट्स / वर्णन (पर्यायी)';
+
+  @override
+  String get saveDream => 'स्वप्न जतन करा';
+
+  @override
+  String get targetAmountRupees => 'लक्ष्य रक्कम (₹)';
+
+  @override
+  String get whyDreamImportant => 'हे स्वप्न तुमच्यासाठी का महत्त्वाचे आहे?';
+
+  @override
+  String get change => 'बदला';
+
+  @override
+  String get editGoal => 'उद्दिष्ट संपादित करा';
+
+  @override
+  String get goalName => 'उद्दिष्टाचे नाव';
+
+  @override
+  String get goalUpdatedSuccess => 'उद्दिष्ट यशस्वीरित्या अपडेट केले';
+
+  @override
+  String get markAsAchieved => 'साध्य म्हणून चिन्हांकित करा';
+
+  @override
+  String get savingsGoalNotFound => 'बचत उद्दिष्ट सापडले नाही';
+
+  @override
+  String get updateGoal => 'उद्दिष्ट अपडेट करा';
+
+  @override
+  String errorLoadingEntriesArg(String msg) {
+    return 'नोंदी लोड करताना त्रुटी: $msg';
+  }
+
+  @override
+  String failedWithMessage(String msg) {
+    return 'अयशस्वी: $msg';
+  }
+
+  @override
+  String get achievedOn => 'साध्य तारीख';
+
+  @override
+  String get amountSaved => 'जतन केलेली रक्कम';
+
+  @override
+  String get goalCreated => 'उद्दिष्ट तयार केले';
+
+  @override
+  String get viewMyGoals => 'माझी उद्दिष्टे पहा';
+
+  @override
+  String get addToDream => 'स्वप्नात जोडा';
+
+  @override
+  String get noteOptional => 'नोट (पर्यायी)';
+
+  @override
+  String get chatWithUs => 'आमच्याशी चॅट करा';
+
+  @override
+  String get couldNotLaunchWhatsapp => 'WhatsApp सुरू करता आले नाही.';
+
+  @override
+  String get foundAnIssue => 'समस्या आढळली?';
+
+  @override
+  String get rateYourExperience => 'तुमचा अनुभव रेट करा';
+
+  @override
+  String get reportABug => 'बग नोंदवा';
+
+  @override
+  String get requestAFeature => 'वैशिष्ट्याची विनंती करा';
+
+  @override
+  String get submitFeedback => 'अभिप्राय सबमिट करा';
+
+  @override
+  String get suggestAnIdea => 'एक कल्पना सुचवा';
+
+  @override
+  String get talkOnWhatsapp => 'WhatsApp वर बोला';
+
+  @override
+  String get thankYouFeedback => 'तुमच्या अभिप्रायाबद्दल धन्यवाद!';
+
+  @override
+  String get passwordResetSent =>
+      'पासवर्ड रीसेट ईमेल पाठवला. तुमचा इनबॉक्स तपासा.';
+
+  @override
+  String get confirmEntry => 'नोंद निश्चित करा';
+
+  @override
+  String get enterMerchantName => 'व्यापाऱ्याचे नाव टाका';
+
+  @override
+  String get dreamNameHint => 'उदा. डिलिव्हरी ऑटो, नवीन गोदाम';
+
+  @override
+  String amountSavedArg(String amount) {
+    return '$amount जतन केले';
+  }
+
+  @override
+  String ofAmountArg(String amount) {
+    return '$amount पैकी';
+  }
+
+  @override
+  String get achievedBadge => 'साध्य 🎉';
+
+  @override
+  String percentCompleted(int percent) {
+    return '$percent% पूर्ण';
+  }
+
+  @override
+  String daysRemainingArg(int days) {
+    return '$days दिवस शिल्लक';
+  }
+
+  @override
+  String get reachedSavingsDream => 'तुम्ही हे बचत स्वप्न गाठले! 🎉';
+
+  @override
+  String get contributionHistory => 'योगदान इतिहास';
+
+  @override
+  String get noMoneyAddedYet => 'अद्याप पैसे जोडलेले नाहीत.\nआजच बचत सुरू करा!';
+
+  @override
+  String get noTargetDateSet => 'कोणतीही लक्ष्य तारीख सेट नाही';
+
+  @override
+  String targetDateArg(String date) {
+    return 'लक्ष्य तारीख: $date';
+  }
+
+  @override
+  String get dreamAchieved => 'स्वप्न साध्य झाले!';
+
+  @override
+  String get youDidIt => 'तुम्ही केलेत! 🎉';
+
+  @override
+  String get yourDisciplineMsg =>
+      'तुमच्या शिस्तीमुळे हे शक्य झाले.\nस्वप्न पाहत आणि बचत करत राहा!';
+
+  @override
+  String addToGoalArg(String name) {
+    return '$name मध्ये जोडा';
+  }
+
+  @override
+  String get howMuchAddedToday => 'आज तुम्ही तुमच्या स्वप्नात किती जोडले?';
+
+  @override
+  String dateArg(String date) {
+    return 'तारीख: $date';
+  }
+
+  @override
+  String targetArg(String amount) {
+    return 'लक्ष्य: $amount';
+  }
+
+  @override
+  String get completeLabel => 'पूर्ण';
+
+  @override
+  String get goalAchievedBadge => 'उद्दिष्ट साध्य! 🎉';
+
+  @override
+  String get unknownMerchant => 'अज्ञात व्यापारी';
+
+  @override
+  String get autoCaptureBadge => 'ऑटो-कॅप्चर';
+
+  @override
+  String get showLess => 'कमी दाखवा';
+
+  @override
+  String get showMore => 'अधिक दाखवा';
+
+  @override
+  String get amountLabelUpper => 'रक्कम';
+
+  @override
+  String get paidToLabel => 'यांना दिले';
+
+  @override
+  String get selectCategoryUpper => 'श्रेणी निवडा';
+
+  @override
+  String get notABusinessTransaction => 'व्यवसाय व्यवहार नाही';
+
+  @override
+  String get npsPoor => 'कमकुवत';
+
+  @override
+  String get npsFair => 'बरे';
+
+  @override
+  String get npsGood => 'चांगले';
+
+  @override
+  String get npsVeryGood => 'खूप चांगले';
+
+  @override
+  String get npsExcellent => 'उत्कृष्ट';
+
+  @override
+  String get categoryGeneral => 'सामान्य';
+
+  @override
+  String get categoryFeature => 'वैशिष्ट्य';
+
+  @override
+  String get describeExperienceHint => 'तुमचा अनुभव सांगा (किमान 10 अक्षरे)';
+
+  @override
+  String get suggestAFeatureTitle => 'एक वैशिष्ट्य सुचवा';
+
+  @override
+  String get whatFeaturesWouldYouLike =>
+      'तुमचे लेजर अधिक चांगल्या प्रकारे व्यवस्थापित करण्यासाठी तुम्हाला PocketPlus मध्ये कोणती वैशिष्ट्ये हवी आहेत?';
+
+  @override
+  String get whatFeatureBuildHint =>
+      'आम्ही कोणते वैशिष्ट्य तयार करावे असे तुम्हाला वाटते? (किमान 10 अक्षरे)';
+
+  @override
+  String get encounteredIssue =>
+      'समस्या आली? कृपया तिचे वर्णन करा, आणि पर्यायाने स्क्रीनशॉट जोडा.';
+
+  @override
+  String get describeBugHint =>
+      'कृपया बगचे तपशीलवार वर्णन करा (किमान 10 अक्षरे)';
+
+  @override
+  String get attachScreenshot => 'स्क्रीनशॉट जोडा';
+
+  @override
+  String get changeScreenshot => 'स्क्रीनशॉट बदला';
+
+  @override
+  String get ratePocketplus => 'PocketPlus ला रेट करा';
+
+  @override
+  String get howLikelyRecommend =>
+      'तुम्ही दुसऱ्या व्यापाऱ्याला आमची शिफारस करण्याची किती शक्यता आहे?';
+
+  @override
+  String get chatOnWhatsapp => 'WhatsApp वर आमच्याशी चॅट करा';
+
+  @override
+  String get startANewDream => '✨  नवीन स्वप्न सुरू करा';
+
+  @override
+  String get npsDetractor => 'टीकाकार';
+
+  @override
+  String get npsPassive => 'निष्क्रिय';
+
+  @override
+  String get npsPromoter => 'प्रवर्तक';
+
+  @override
+  String get weAreHereToHelp => 'आम्ही मदतीसाठी येथे आहोत';
+
+  @override
+  String get howCanWeMakeBetter =>
+      'आज आम्ही तुमच्या व्यवसायासाठी PocketPlus कसे अधिक चांगले करू शकतो?';
+
+  @override
+  String get tabGeneral => 'सामान्य';
+
+  @override
+  String get tabFeature => 'वैशिष्ट्य';
+
+  @override
+  String get tabBug => 'बग';
+
+  @override
+  String get tabNps => 'NPS';
+
+  @override
+  String get npsUnlikely => '0 — असंभाव्य';
+
+  @override
+  String get npsVeryLikely => '10 — अत्यंत संभाव्य';
 }
