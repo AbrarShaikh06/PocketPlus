@@ -15,8 +15,12 @@ import '../../transactions/transactions_providers.dart';
 import '../../../shared/providers/firebase_providers.dart';
 
 final userProfilesProvider = StreamProvider<List<Profile>>((ref) {
-  final auth = ref.watch(firebaseAuthProvider);
-  final userId = auth.currentUser?.uid;
+  // Watch the auth *stream* (not FirebaseAuth.instance, which never notifies)
+  // so this rebuilds and starts the real query once the user resolves. Reading
+  // currentUser off the stable instance provider would cache an empty result
+  // if it happened to run before sign-in completed — leaving the home screen
+  // stuck on its loading skeleton forever.
+  final userId = ref.watch(authStateChangesProvider).asData?.value?.uid;
   if (userId == null) return Stream.value([]);
   return ref.watch(profileRepositoryProvider).watchProfiles(userId);
 });

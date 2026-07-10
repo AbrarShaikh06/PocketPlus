@@ -260,6 +260,37 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     );
   }
 
+  /// Creates the one default profile a brand-new account needs. Guarded so it
+  /// runs at most once per session; safe to call repeatedly from build.
+  Future<void> _ensureDefaultProfile() async {
+    if (_creatingDefaultProfile || _defaultProfileCreationFailed) return;
+    final userId = ref.read(authStateChangesProvider).asData?.value?.uid;
+    if (userId == null) return;
+    // Re-check the latest value in case a profile arrived since scheduling.
+    final profiles = ref.read(userProfilesProvider).asData?.value;
+    if (profiles == null || profiles.isNotEmpty) return;
+
+    _creatingDefaultProfile = true;
+    final result =
+        await ref.read(profileRepositoryProvider).createDefaultProfile(userId);
+    if (!mounted) return;
+    result.fold(
+      (failure) {
+        AppLogger.error(
+          'Failed to create default profile',
+          error: failure.message,
+        );
+        setState(() => _defaultProfileCreationFailed = true);
+        _creatingDefaultProfile = false;
+      },
+      (_) {
+        // The profiles stream re-emits with the new profile; clear the flag.
+        setState(() => _defaultProfileCreationFailed = false);
+        _creatingDefaultProfile = false;
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final currentProfile = ref.watch(currentProfileProvider);
@@ -272,34 +303,16 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     ref.watch(userDocProvider);
     _maybeStartTutorial();
 
-    ref.listen<AsyncValue<List<Profile>>>(userProfilesProvider,
-        (previous, next) {
-      next.whenData((profiles) async {
-        if (profiles.isNotEmpty || _creatingDefaultProfile) return;
-        final userId = ref.read(firebaseAuthProvider).currentUser?.uid;
-        if (userId == null) return;
-
-        _creatingDefaultProfile = true;
-        final result = await ref
-            .read(profileRepositoryProvider)
-            .createDefaultProfile(userId);
-        if (!mounted) return;
-        result.fold(
-          (failure) {
-            AppLogger.error(
-              'Failed to create default profile',
-              error: failure.message,
-            );
-            setState(() => _defaultProfileCreationFailed = true);
-            _creatingDefaultProfile = false;
-          },
-          (_) {
-            // Stream will re-emit with the new profile; clear the failure flag.
-            setState(() => _defaultProfileCreationFailed = false);
-            _creatingDefaultProfile = false;
-          },
-        );
-      });
+    // Brand-new accounts have no profile yet (onboarding doesn't create one),
+    // so home creates a default one. Trigger off the CURRENT value — checking
+    // profilesAsync directly rather than only via ref.listen, which never
+    // delivers the value already present when this widget first builds and so
+    // would leave a first-time user stuck on the skeleton indefinitely.
+    profilesAsync.whenData((profiles) {
+      if (profiles.isEmpty) {
+        WidgetsBinding.instance
+            .addPostFrameCallback((_) => _ensureDefaultProfile());
+      }
     });
 
     return Scaffold(
