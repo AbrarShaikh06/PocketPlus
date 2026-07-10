@@ -460,9 +460,9 @@ class _InvoiceDetailScreenState extends ConsumerState<InvoiceDetailScreen> {
                   children: [
                     _pdfCell(item.description),
                     _pdfCell('${item.quantity}'),
-                    _pdfCell(CurrencyFormatter.formatRupees(item.unitPrice)),
+                    _pdfCell(CurrencyFormatter.formatPdf(item.unitPrice)),
                     _pdfCell('${item.gstPercent}%'),
-                    _pdfCell(CurrencyFormatter.formatRupees(item.lineTotal)),
+                    _pdfCell(CurrencyFormatter.formatPdf(item.lineTotal)),
                   ],
                 );
               }),
@@ -491,16 +491,16 @@ class _InvoiceDetailScreenState extends ConsumerState<InvoiceDetailScreen> {
               pw.Column(
                 crossAxisAlignment: pw.CrossAxisAlignment.end,
                 children: [
-                  pw.Text(CurrencyFormatter.formatRupees(invoice.subtotal)),
+                  pw.Text(CurrencyFormatter.formatPdf(invoice.subtotal)),
                   if (invoice.totalGst > 0)
-                    pw.Text(CurrencyFormatter.formatRupees(invoice.totalGst)),
+                    pw.Text(CurrencyFormatter.formatPdf(invoice.totalGst)),
                   if (invoice.discount > 0)
                     pw.Text(
-                      '-${CurrencyFormatter.formatRupees(invoice.discount)}',
+                      '-${CurrencyFormatter.formatPdf(invoice.discount)}',
                     ),
                   pw.SizedBox(height: 5),
                   pw.Text(
-                    CurrencyFormatter.formatRupees(invoice.grandTotal),
+                    CurrencyFormatter.formatPdf(invoice.grandTotal),
                     style: const pw.TextStyle(
                       fontWeight: pw.FontWeight.bold,
                       fontSize: 16,

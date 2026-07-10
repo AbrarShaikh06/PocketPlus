@@ -8,6 +8,12 @@ void main() {
       expect(CurrencyFormatter.formatRupees(4505000), '₹45,050.00');
     });
 
+    test('formatPdf uses ASCII Rs (₹ glyph missing from PDF fonts)', () {
+      expect(CurrencyFormatter.formatPdf(45050), 'Rs 450.50');
+      expect(CurrencyFormatter.formatPdf(4505000), 'Rs 45,050.00');
+      expect(CurrencyFormatter.formatPdf(45050).contains('₹'), isFalse);
+    });
+
     test('parseToPaise converts decimal string to integer paise', () {
       expect(CurrencyFormatter.parseToPaise('450.50'), 45050);
     });

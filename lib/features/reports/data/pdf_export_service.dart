@@ -63,12 +63,14 @@ class PdfExportService {
           ),
           pw.SizedBox(height: 12),
           pw.Text(
-            'Total Income: ${CurrencyFormatter.format(summary.totalIncome)}',
+            'Total Income: ${CurrencyFormatter.formatPdf(summary.totalIncome)}',
           ),
           pw.Text(
-            'Total Expense: ${CurrencyFormatter.format(summary.totalExpense)}',
+            'Total Expense: ${CurrencyFormatter.formatPdf(summary.totalExpense)}',
           ),
-          pw.Text('Net Profit: ${CurrencyFormatter.format(summary.netProfit)}'),
+          pw.Text(
+            'Net Profit: ${CurrencyFormatter.formatPdf(summary.netProfit)}',
+          ),
           pw.SizedBox(height: 16),
           pw.TableHelper.fromTextArray(
             headers: ['Date', 'Type', 'Amount', 'Note'],
@@ -77,7 +79,7 @@ class PdfExportService {
                   (t) => [
                     df.format(t.transactionDate),
                     t.type.name.toUpperCase(),
-                    CurrencyFormatter.format(t.amount),
+                    CurrencyFormatter.formatPdf(t.amount),
                     t.merchantName ?? t.note ?? '',
                   ],
                 )

@@ -29,6 +29,11 @@ abstract final class CurrencyFormatter {
     );
   }
 
+  /// PDF-safe formatting. The bundled PDF fonts (Helvetica) have no ₹ glyph,
+  /// so generated documents use an ASCII "Rs" prefix instead — use this for
+  /// ALL amounts written into PDFs.
+  static String formatPdf(int amount) => format(amount, symbol: 'Rs ');
+
   @Deprecated('Use format() with default params or formatWithProfile() instead')
   static String formatRupees(int paise) {
     return format(paise);
