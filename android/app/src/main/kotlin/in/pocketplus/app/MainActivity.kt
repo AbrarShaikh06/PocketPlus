@@ -2,11 +2,14 @@ package `in`.pocketplus.app
 
 import android.database.Cursor
 import android.net.Uri
+import android.os.Handler
+import android.os.Looper
 import android.provider.Telephony
 import android.util.Log
 import io.flutter.embedding.android.FlutterFragmentActivity
 import io.flutter.embedding.engine.FlutterEngine
 import io.flutter.plugin.common.MethodChannel
+import java.util.concurrent.Executors
 
 // FlutterFragmentActivity (not FlutterActivity) is required by local_auth so
 // the biometric prompt can attach to a FragmentActivity host.
@@ -15,21 +18,29 @@ class MainActivity: FlutterFragmentActivity() {
         var channel: MethodChannel? = null
     }
 
+    // Inbox scans run off the UI thread: querying hundreds of SMS via the
+    // content resolver on the platform main thread visibly janks the app.
+    private val scanExecutor = Executors.newSingleThreadExecutor()
+    private val mainHandler = Handler(Looper.getMainLooper())
+
     override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
         super.configureFlutterEngine(flutterEngine)
         channel = MethodChannel(flutterEngine.dartExecutor.binaryMessenger, "pocketplus/sms")
         // Share channel with SmsReceiver for fallback
         SmsReceiver.setChannel(channel)
-        
+
         channel?.setMethodCallHandler { call, result ->
             when (call.method) {
                 "scanInbox" -> {
-                    try {
-                        val messages = scanSmsInbox()
-                        result.success(messages)
-                    } catch (e: Exception) {
-                        Log.e("MainActivity", "scanInbox failed: ${e.message}")
-                        result.error("SCAN_FAILED", e.message, null)
+                    scanExecutor.execute {
+                        try {
+                            val messages = scanSmsInbox()
+                            // Channel results must be delivered on the main thread.
+                            mainHandler.post { result.success(messages) }
+                        } catch (e: Exception) {
+                            Log.e("MainActivity", "scanInbox failed: ${e.message}")
+                            mainHandler.post { result.error("SCAN_FAILED", e.message, null) }
+                        }
                     }
                 }
                 else -> result.notImplemented()
@@ -99,6 +110,7 @@ class MainActivity: FlutterFragmentActivity() {
     override fun onDestroy() {
         channel?.setMethodCallHandler(null)
         channel = null
+        scanExecutor.shutdown()
         super.onDestroy()
     }
 }

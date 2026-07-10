@@ -30,6 +30,14 @@ class SmsCaptureService with WidgetsBindingObserver {
   String? _lastError;
   bool _autoSaveEnabled = false;
 
+  /// Guards against overlapping scans (init + resume + profile-detected can
+  /// all fire close together) and against re-scanning the whole inbox on
+  /// every app resume — each scan costs hundreds of parses and Firestore
+  /// dedup reads, which is what made the app feel laggy.
+  bool _isScanning = false;
+  DateTime? _lastScanCompletedAt;
+  static const _scanCooldown = Duration(minutes: 15);
+
   // Diagnostics data for the debug screen
   int get totalSmsProcessed => _totalSmsProcessed;
   int get totalParsed => _totalParsed;
@@ -72,7 +80,7 @@ class SmsCaptureService with WidgetsBindingObserver {
 
   Future<void> retryScan() async {
     AppLogger.info('[SmsCaptureService] Manual retry scan triggered');
-    await _checkPermissionAndScan();
+    await _checkPermissionAndScan(force: true);
   }
 
   @override
@@ -99,17 +107,17 @@ class SmsCaptureService with WidgetsBindingObserver {
     AppLogger.debug('[SmsCaptureService] Listener restarted');
   }
 
-  Future<void> _checkPermissionAndScan() async {
+  Future<void> _checkPermissionAndScan({bool force = false}) async {
     final hasPermission = await _permissionService.isGranted();
     AppLogger.debug(
       '[SmsCaptureService] SMS Permission Granted: $hasPermission',
     );
     if (hasPermission) {
-      await _scanHistoricalSms();
+      await _scanHistoricalSms(force: force);
     }
   }
 
-  Future<void> _scanHistoricalSms() async {
+  Future<void> _scanHistoricalSms({bool force = false}) async {
     final profile = _ref.read(currentProfileProvider);
     final userId = profile?.userId;
     if (userId == null) {
@@ -118,6 +126,22 @@ class SmsCaptureService with WidgetsBindingObserver {
       );
       return;
     }
+    if (_isScanning) {
+      AppLogger.debug(
+        '[SmsCaptureService] Scan already in progress, skipping',
+      );
+      return;
+    }
+    final last = _lastScanCompletedAt;
+    if (!force &&
+        last != null &&
+        DateTime.now().difference(last) < _scanCooldown) {
+      AppLogger.debug(
+        '[SmsCaptureService] Scan cooldown active (last: $last), skipping',
+      );
+      return;
+    }
+    _isScanning = true;
     try {
       AppLogger.info(
         '[SmsCaptureService] Starting historical SMS scan for user=$userId',
@@ -146,19 +170,27 @@ class SmsCaptureService with WidgetsBindingObserver {
               senderId: senderId,
               timestampMillis: timestamp,
             );
-            _processHistoricalSms(rawSms, userId);
+            // Sequential, not fire-and-forget: dispatching hundreds of
+            // concurrent parses + Firestore dedup transactions overwhelmed
+            // the UI isolate and network and made the whole app lag.
+            await _processHistoricalSms(rawSms, userId);
           }
         }
-        if (i % 10 == 9) {
-          await Future.delayed(const Duration(milliseconds: 100));
+        // Yield to the event loop between messages so frames can render.
+        await Future<void>.delayed(Duration.zero);
+        if (i % 25 == 24) {
+          await Future<void>.delayed(const Duration(milliseconds: 50));
         }
       }
+      _lastScanCompletedAt = DateTime.now();
       AppLogger.info(
-        '[SmsCaptureService] Historical scan dispatched. Processed=$processed, totalCandidate=$_totalSmsProcessed',
+        '[SmsCaptureService] Historical scan complete. Processed=$processed, totalCandidate=$_totalSmsProcessed',
       );
     } catch (e) {
       _lastError = e.toString();
       AppLogger.error('[SmsCaptureService] Historical scan failed', error: e);
+    } finally {
+      _isScanning = false;
     }
   }
 
